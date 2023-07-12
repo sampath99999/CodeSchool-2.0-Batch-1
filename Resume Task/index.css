@@ -1,0 +1,31 @@
+#demo {
+    color: darkslategrey;
+}
+#demo1{
+    background-color:bisque;
+    font-style: italic;  
+}
+#resume-title{
+    background-color:bisque;
+  font-style: italic;
+}
+#tech{
+    background-color: bisque;
+    font-style: italic;
+}
+#project{
+    background-color: bisque;
+    font-style: italic;
+}
+h4{
+    color: indianred;
+    background-color: azure;
+    text-decoration: underline;
+}
+#decla{
+    background-color: bisque;
+    font-style: italic;
+}  
+body{
+    border: 2px solid ivory;
+}
