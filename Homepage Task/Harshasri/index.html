@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="bg-container">
+        <div class="header">
+            <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png" alt="logo" class="logo-image" />
+            <div class="top-section">
+            <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/SRI-CHANDRASEKHAR-RAO.png" alt="logo1" />
+            <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/SRI-HARISH-RAO.png" alt="logo2" />
+        </div>
+        </div>
+        <div class="navbar">
+            <ul class="nav-links">
+                <li><a href="#" target="_blank" class="anchor">HOME</a></li>
+                <li><a href="#" target="_blank" class="anchor">PAYSLIP</a></li>
+                <li><a href="#" target="_blank" class="anchor">UTR REPORT</a></li>
+                <li><a href="#" target="_blank" class="anchor">BUDGET VOLUMES</a></li>
+                
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">CHALLANS
+                            <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/menu-arrow.png
+                            " alt="up-arrow" style="height: 8px; width: 10px;"/>
+                        </button>
+                        <div class="dropdown-content">
+                        <a href="#" class="drops">Challan Form</a>
+                        <a href="#" class="drops">Challan Form for e-Seva(Transport)</a>
+                        <a href="#" class="drops">CHALLAN FORM FOR TSTSL</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">CYBER TRESURY
+                            <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/menu-arrow.png
+                            " alt="up-arrow" style="height: 10px; width: 10px;"/>
+                        </button>
+                        <div class="dropdown-content">
+                        <a href="#" class="drops">Cyber Challan Details</a>
+                        <a href="#" class="drops">Mines and Geology Challans</a>
+                        
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#" target="_blank" class="anchor">GPF LEDGER</a></li>
+               
+
+            </ul>
+        </div>
+        <div class="body">
+            <div class="left-container">
+                <div class="login-container">
+                    <h1 class="login-heading">User Login</h1>
+                    <form>
+                        <div class="login-section">
+                            <input type="text" placeholder="User Name" class="input-feild">
+                            <input type="password" placeholder="Password" class="input-feild">
+                            <div class="captcha-container">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPoAAAAoCAYAAADXGucZAAAACXBIWXMAAA7EAAAOxAGVKw4bAAANKkl
+                                EQVR4nO2da3Cc5XXHf+/e76v71bpbSmxJFpLANgYbA6k9UAgZkg8wBAghaZnitDPwoWkmmcEfkrSkZUgnBZKmk+Bm2iaQNkk9IRdoEzv1hYxsLM
+                                kXLFl3yZJWt11r77d+WOvduyXk3Vd61/v79D77nt090uqvc57znOdZYdeBx8PkyZMnp1FstAN58uTJPnmh58lzC5AXep48twB5oefJcwuQF/o68
+                                FvMG+3CLc+pr7zAqa+8sNFuyAbVRjsgF5abG5jfvwd7Vxvu+ho6nziEZmFpo926ZUgU9e5vvLJBnsiTvNDXiKNjO9Of+VNxbO9qp/Td4xvoUe4T
+                                K+68sG+OvNCv46kqx97Zhrummvo3jiTdL+jpY/yL0bG9e0de6BkmH7Wzx7qE/qmWQVqKFtGrAgwvWTjS35ppvyRl8K+fZ/6+u8Rx1Y9/jmbRHmd
+                                jGB5DtWgnUGgFwHGbvH/mzUI+akvDuoS+p3qKfbWTALw/VS57oRuGxuKE7uhqp+S9PyTZWT84z/y9ewDwFxXgqt+CYWRCMj8zScCgx11bjbu+Bv
+                                3IOOZLg5K8bz5qbwzrEro7EH2aUe3PmDMbhbWnl/EvPC6O7Z1tqYXe0ysKPWLXLluhn/331wjptACU/eI3WRX6Zo/aJXolDVY1RrWCa74Q4w4/s
+                                +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" />
+                                <button>
+                                    <img class="captcha" src="https://cdn.iconscout.com/icon/free/png-256/free-refresh-reload-recycle-synchronize-retry-30557.png" />
+                                
+                                </button>
+
+                            </div>
+                            <input type="password" placeholder="Enter Captcha" class="input-feild">
+                            <div class="sign-in-container">
+                                <p class="error">Forgot Password?</p>
+                                <button class="signin">SIGN IN</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="bottom-container">
+                    <div>
+                        <p class="para">Important Notification to all PAO Branches!</p>
+                        <p class="para1 blink">All cheques numbers will now be same as token numbers in PAO.</p>
+                    </div>
+                    <div class="bottom-left">
+                        <button class="signin">Click Here</button>
+                        <p class="heading2">for Budget 2023-24</p>
+                    </div>
+                    <div class="bottom-left left1">
+                        <button class="signin">Click Here</button>
+                        <p class="heading2">for Cadre Strength</p>
+                    </div>
+                    <div class="bottom-left left1">
+                        <button class="signin">Click Here</button>
+                        <p class="heading2">for Bank Deposits</p>
+                    </div>
+                    <div class="bottom-container1">
+                        <button class="attention">Attention DDO's</button>
+                        <div>
+                            <p class="para1">Divisional Accounts Officers(W) Grade.II - Adopting the seniority published by the Director of Works Accounts, Andhra Pradesh - Provisional seniority list issued - Objections called for - Objections disposed - Final seniority list issued - Regarding.</p>
+                            <button class="signin">Click here to Download</button>
+                        </div>
+                        <div>
+                            <p class="para1">Divisional Accounts Officer (W) Gr.II - Final seniority list for the panel year 2014-15 to 2020-21-Issued-Reg</p>
+                            <button class="signin">Click here to Download</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-container">
+                
+                    <img class="image1" src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/banners/26.jpg" />
+
+                    <div class="bottom-content">
+                        <p class="heading1">Budget 2023-24</p>
+                        <p class="heading2">
+                            The Hon’ble Minister of BC Welfare, Food and Civil Supplies, and Consumer Affairs Sri.Gangula Kamalakar,
+                            the Hon’ble Minister for Excise &amp; Prohibition Sri. Srinivas Goud, the Hon'ble Minister
+                            of Roads, Buildings and Legislative Affairs &amp; Housing Department of Telangana Sri.V.
+                            Prashanth Reddy,the Hon'ble Minister for Animal Husbandry, Fisheries and Cinematography Sri.Talasani Srinivas Yadav,Special Chief Secretary
+                            Sri. K. Ramakrishna Rao,the Hon’ble Finance Minister Sri. Harish Rao,the Hon’ble Chief Minister Sri. K. Chandrashekar Rao and others.
+                        </p>
+                    </div>
+             
+                <div class="bottom2">
+                    <div class="inner-bg">
+                        <div>
+                            <h1 class="heading3">
+                                IFMIS Hotline Number
+                            </h1>
+                            <p class="para2">11AM-5PM On all working days</p>
+                        </div>
+                        <h1>7042420033</h1>
+                    </div>
+                    <div class="download-container">
+                        <div class="finance-left">
+                            <h3 class="heading3">Finance Department, Telangana</h3>
+                            <p class="para2">Responsible for proper deployment of the State's Finances, the Telangana State Finance Department ensures maintenance of accounts of all the financial transactions. The Finance Department is also responsible for the administration of the fiscal policy of the State.</p>
+                        </div>
+                        <div class="playstore-container">
+                            <a href="#" class="anchor1">Download Android App</a>
+                            <img style="width:100px"  src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/download_app.png"/>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="three-parts">
+                <div class="first-part">
+                    <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/news_icon.png"/>
+                    <h1 class="first-head">Latest News/Note</h1>
+                    <p class="first-para scroll">All the HODs and DDO are hereby informed that the remuneration pertains to Contract/Honorarium based services
+                         will be paid through IFMIS-DBT mode only from the month of November, 2022. All the departments hereby are requested to strictly 
+                         adhered to update the information of the persons engaged on contract/honorarium basis in 27 column proforma in Finance (HRM.VII)
+                         Department with relevant information immediately. Updating of bills in regular.
+                         
+
+
+
+                    </p>
+                </div>
+                <div class="first-part">
+                    <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/video_icon.png"/>
+                    <h1 class="first-head">View Demo</h1>
+                    <p class="first-para">Demo :
+                        Watch the demo to know more about how to different products and services on IFMIS
+                    </p>
+                </div>
+                <div class="first-part">
+                    <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/vison_icon.png"/>
+                    <h1 class="first-head">Our Vision</h1>
+                    <p class="first-para">We have developed IFMIS with the vision that Financial Technology shall be able to function using cutting-edge technology that ensures data security, efficiency and transparency.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

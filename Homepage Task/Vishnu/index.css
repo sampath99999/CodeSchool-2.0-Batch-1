@@ -1,0 +1,311 @@
+.para{
+    border: 1px solid black;
+    background-color: red;
+}
+
+body{
+    margin: 0px;
+}
+
+.main-container{
+    background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-first-image{
+    margin-left: 10%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.logo-image{
+    margin-left: 12%;
+    margin-bottom: 15px;
+}
+.header-second-image{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+}   
+nav li{
+    list-style-type: none;
+    display: inline-block;  
+    margin-left: 40px; 
+    color: #fff;
+    list-style-type: none;
+    
+   
+} 
+nav li a:hover li{
+    background-color: blue;
+   
+}
+
+nav{
+    background-color: #00498d;  
+    margin: 0;
+    padding-left: 140px;
+    
+}
+
+.cyber-section{
+    width:200px;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+
+.menu-dropdown .dropbtn {
+  
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 10px 10px;
+    background-color: inherit;
+    margin: 0;
+  }
+  
+ a:hover, .menu-dropdown:hover .dropbtn {
+    background-color: #4d79ff;
+  }
+ 
+
+  .menu-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 300px;
+   
+  }
+  
+  .menu-content a {
+    
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    background-color:#fff;;
+  }
+  
+  .menu-content a:hover {
+    background-color: #4d79ff;
+  }
+  
+  .menu-dropdown:hover .menu-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+/*form css*/
+.title{
+    font-size: 17px;
+    color: #40464e;
+    font-weight: 600;
+    margin-bottom: 12px;
+   
+}
+.icon{
+    display: inline;
+   margin-left: 8px;
+    
+}
+.icon img{
+    position: relative;
+    top: 3px;
+}
+
+.text{
+    display: inline;
+
+}
+input{
+    padding: 7px;
+    border: none;
+    outline: none;
+}
+.text_field{
+    border: 1px solid black;
+    width: 54%;
+    margin-bottom: 9px;
+}
+.Captcha{
+    display: inline;
+}
+.captcha-section button{
+    height: 40px;
+    position: relative;
+    right: 4px;
+    top: -16px;
+}
+.forgot-section{
+    display: inline;
+    
+}
+.login{
+    display: inline;
+    
+}
+.outer_forgot{
+    width: 54%;
+}
+.forgot-password{
+    text-decoration: none;
+    color: #b6b6b6;
+    font-size: 14px;
+    margin-right: 25px;
+}
+.Sign_In{
+    color:#ffffff;
+    background-color:green;
+    padding: 9px;
+    border: none;
+    border-radius: 4px;
+}
+.Note-section{
+    padding: 10px 25px;
+    background-color:#fff3cd;
+}
+.common-button{
+    font-size: 13px;
+    background: #00944d;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 2px;
+    font-weight: 700;
+    margin-right: 2px;
+    border: none;
+   
+}
+.common-para{
+    margin-left: 9px;
+}
+.first-notification{
+    background: #374659;
+    color: #fff;
+    padding: 13px 26px;
+    border: 1px dashed #a06800;
+}
+.second-notification{
+    background: #374659;
+    color: #fff;
+    padding: 13px 26px;
+    border: 1px dashed #a06800;
+}
+.third-notification{
+    background: #374659;
+    color: #fff;
+    padding: 13px 26px;
+    border: 1px dashed #a06800;
+}
+.Attention-section{
+    color: #e80600;
+    border: 1px solid #d4a855;
+    padding: 1px 5px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    background: #ffe9c1;
+    text-align: center;
+    border-radius: 5px
+}
+.blog{
+    margin-bottom: 10px; 
+    color: #ff0000; 
+    font-weight: bold; 
+    font-size: 11px;
+}
+.blog-link{
+    margin-bottom: 10px
+}
+.blog-link a{
+    font-size: 13px; 
+    background: #00944d; 
+    color: #fff; text-decoration: none; 
+    padding: 5px 10px;
+    border-radius: 2px; 
+    font-weight: 700; 
+    margin-right: 2px;
+}
+/*carousel.css*/
+
+.carousel-data{
+    position: static;
+    background: #08254f;
+    margin-top: 0px;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 10px;
+    position: relative;
+    top: -4px;
+}
+
+.phone-section{
+    background-image: url("https://ifmis.telangana.gov.in/images/newUi/phone_icon.png");
+    display: flex;
+    justify-content: space-around;
+    height: 50px;   
+    color: #fff;
+    font-family: sans-serif;
+}
+.phone_title{
+    font-size: 23px;
+    font-weight: 300;
+}
+.phone_info span{
+    font-size: 12px;
+}
+.phone_number{
+    font-size: 25px;
+    font-weight: 500;
+}
+.govt-section{
+    display: flex;
+    align-items: center;
+}
+.app_title{
+    text-align: center;
+    
+}
+.app_title a{
+    color: black;
+}
+.right-container{
+    background: #eee;
+}
+/*video.css*/
+.video-container{
+    width: 40%;
+    background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/bg-sec.jpg");
+    color: white;
+    padding: 12px;
+    font-family: 'Open Sans',sans-serif;
+}
+
+video{
+  width: 100%;
+  border: none;
+}
+.video-content h1{
+    font-size: 22px;
+} 
+.video-content hr{
+    height: 7px;
+    background-color: blue;
+    width: 10px;
+}
+.second-card{
+   display: flex;
+   flex-direction: row;
+}
+
+
+
+.second-card-first-section{
+    width: 50%;
+}
