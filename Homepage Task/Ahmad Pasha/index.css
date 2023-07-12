@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .top-section {
+    background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
+    background-size: cover;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 10px;
+    margin-bottom: 0;
+  }
+  
+  .sign-up-form {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    background-color: white;
+  }
+  input[type="text"] {
+    padding: 4%;
+    margin-bottom: 4%;
+    border-radius: 5%;
+  }
+  input[type="password"] {
+    padding: 4%;
+    margin-bottom: 8%;
+    border-radius: 5%;
+  }
+  .img {
+    width: 100%;
+    height: 100%;
+  }
+  .nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    color: white;
+    /* background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/bg-sec.jpg"); */
+    background-color: #00498d;
+    background-size: cover;
+    list-style: none;
+    /* padding: 1%; */
+    margin: 0;
+  }
+  .sign-btn {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .yellow-bg {
+    background-color: #fff3cd;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 10%;
+  }
+  
+  .Attention {
+    border: 1px solid #d4a855;
+    text-align: center;
+    color: red;
+    background-color: #ffe9c1;
+  }
+  
+  .red-lines {
+    color: red;
+    font-weight: 600;
+    font-size: 90%;
+  }
+  .btn-download {
+    color: white;
+    background-color: green;
+    font-weight: 600;
+    border-radius: 3%;
+    border: none;
+    font-size: 80%;
+    padding: 5%;
+  }
+  
+  .sub-lines {
+    color: #6f4d21;
+    font-size: 100%;
+  }
+  
+  .box-1 {
+    border: 1px dashed #6f4d21;
+    background-color: #374659;
+    padding: 2%;
+    color: white;
+    margin: 0 !important;
+  }
+  
+  .btn {
+    margin-top: 0;
+    color: white;
+    background-color: green;
+    font-weight: 600;
+    border-radius: 3%;
+  
+    border: none;
+    font-size: 90%;
+    padding: 3%;
+  }
+  .blink {
+    color: red;
+    animation: blinking 1s infinite;
+    font-weight: 600;
+  }
+  @keyframes blinking {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  #captchaHolder {
+    height: 90px;
+  }
+  .reload i {
+    position: relative;
+    bottom: 37px;
+    font-size: 30px;
+    text-align: end;
+  }
+  .cap-reload {
+    border: 1px solid black;
+    margin-bottom: 10px;
+  }
+  
+  @media screen and (max-width: 999px) {
+    .header-images {
+      display: none;
+    }
+    .footer-sec {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  
+  @media screen and (min-width: 1000px) {
+    #main-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      background-image: url("	https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/login-bg.png");
+    }
+  
+    .footer-sec {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+     
+    }
+    
+    .foot-box{
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .foot-box img{
+      width: 20%;
+      margin: 0;
+    }
+  
+    .con-1 {
+      width: 20%;
+    }
+    .con-2 {
+      background-color: #dedede;
+      padding: 20px;
+      width: 55%;
+    }
+  
+   
+  }
+  
+  .footer-sec {
+    background-image: url("	https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/login-bg.png");
+    text-align: center;
+  }
+  
+  video {
+    width: 100%;
+    height: auto;
+  }
+  
+  #video-section {
+    background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/bg-sec.jpg");
+    color: white;
+    font-family: roboto;
+    padding: 10%;
+    margin-top: 15%;
+  }
+  
+  #carousel {
+    background-color: #000066;
+    color: white;
+    font-family: roboto;
+    padding: 0;
+  }
+  
+  #carousel p{
+       margin: 15px;
+  }
+  
+  .cr-img {
+    width: 100%;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0063c0;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a,
+  .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover,
+  .dropdown:hover .dropbtn {
+    background-color: #037bef;
+    color: white;
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #037bef;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .fa {
+    position: relative;
+    bottom: 3px;
+  }
+  a:active {
+    background-color: #037bef;
+  }
+  
+  .line-num {
+    display: flex;
+    background-image: url("https://ifmis.telangana.gov.in/images/newUi/phone_icon.png");
+    background-size: cover;
+    justify-content: space-around;
+    color: white;
+    padding: 10%;
+  }
+  
+  .Download-link-con {
+    margin-top: 9%;
+    margin-bottom: 3%;
+  }
+  
