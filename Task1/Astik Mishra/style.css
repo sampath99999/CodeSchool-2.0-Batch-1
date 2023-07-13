@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+header{
+    background: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg") 0 0 no-repeat #f1f1f1;
+    background-size: cover;
+    min-height: 110px;
+    justify-content: center;
+    margin: auto;
+}
+.logo{
+    align-items: center;
+    justify-content: center;
+}
