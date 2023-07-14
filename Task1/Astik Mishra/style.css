@@ -1,16 +1,110 @@
 *{
     margin: 0;
     padding: 0;
-    align-items: center;
+    font-family: sans-serif;
 }
-header{
+
+/* Header Section Style Start */
+.header{
     background: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg") 0 0 no-repeat #f1f1f1;
     background-size: cover;
     min-height: 110px;
+    width: 100%;
     justify-content: center;
-    margin: auto;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: #00498d solid 5px;
+    border-bottom: #ffbff9 solid 5px;
+}
+.right_content{
+    display: flex;
+    width: 70%;
+    justify-content: left;
+    gap: 0.5%;
 }
 .logo{
+    margin-left: 1%;
+    float: left;
+}
+.middle_content{
+    color: #f1f1f1;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    margin-left: 8%;
+}
+.middle_content button{
+    background-color: rgba(132, 132, 132, 0.7);
+    gap: 5px;
+    border: none; 
+    color: white;
+    padding: 18px 21px;
+    font-size: 23px;
+    cursor: pointer;
+}
+.last_login{
+    gap: 5px;
+}
+.middle_content .last_login label{
+    display: block;
+    color: rgba(255, 255, 255, 0.7);
+}
+.user_info{
+    color: #f1f1f1;
+    list-style: none;
+    margin-right: 0%;
+    size: 20px;
+    background-color: rgba(132, 132, 132, 0.7);
+}
+.user_info ul{
+    display: flex;
+    gap: 20px;
     align-items: center;
     justify-content: center;
+    padding: 18px 21px 16px 21px;
 }
+.user_info ul li{
+    list-style-type: none;
+}
+.user_info ul li label{
+    display: block;
+    font-size: 16px;
+}
+.user_info ul li i{
+    font-size: 25px;
+}
+
+/* Header Section Style End */
+
+/* Main Content Style Start */
+    .main_content{
+        width: 100%;
+        display: flex;
+    }
+    /* Nav Section Style Start */
+    .side_nav{
+        width: 16%;
+        color: white;
+        background-color: #0d2445;
+        border-right: rgba(255, 255, 255, 0.6) solid 10px;
+    }
+    .side_nav ul li{
+        padding: 15px;
+        border-bottom: rgba(255, 253, 253, 0.1) solid 0.05px;
+        font-size: 18px;
+    }
+    .nav_content li label{
+        list-style-type: none;
+        margin-left: 20px;
+    }
+    /* Nav Section Style End */
+
+    /* Add Employee Style Start */
+    .add_emp{
+        width: 84%;
+        border-left: #d5d5d5 solid 20px;
+        border-top: #d5d5d5 solid 20px;
+    }
+    /* Add Employee Style End */
