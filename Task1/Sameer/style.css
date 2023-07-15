@@ -22,6 +22,9 @@ body{
     padding: 1px 1px;
     margin: 1px 1px;
 }
+.navbar_top_btn_right{
+    margin-left:300px;
+}
 p{color: white;}
 .button {
     background-color: #5f7181;
