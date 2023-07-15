@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IFMIS</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="nav-bar">
+      <div class="nav-bar-things">
+        <div class="nav-bar-down">
+          <img
+            src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png"/>
+          <img src="https://ifmis.telangana.gov.in/login#" alt="" />
+        </div>
+        <div class="nav-bar-contents">
+          <button><i class="fa fa-bars"></i></button>
+          <button><i class="fa fa-home">&nbsp;</i> MODULES</button>
+          <button><i class="fa fa-user">&nbsp;</i> Profile</button>
+          <button><i class="fa fa-sign-out">&nbsp;</i>Logout</button>
+        </div>
+        <div id="text-content">
+          <div><p>Last login:</p></div>
+          <div><p>12-Jul-2023</p></div>
+          <div><p>05:10PM</p></div>
+        </div>
+      </div>
+      <div class="last-drop-down">
+        <button class="drop-down-hover">
+          <div class="drop-down-link">
+            <div>&nbsp;&nbsp;<i class="fa fa-user">&nbsp;&nbsp;</i></div>
+            <div class="text">
+              <div class="User-name">
+                <p><b>WELCOME RAMAKRISHNA</b></p>
+              </div>
+              <div class="down-text">
+                <p>(2230934034)</p>
+              </div>
+            </div>
+            <div>
+              <i class="fa fa-angle-down"></i>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+    <div
+      class="second-line"
+      style="background-color: #f0b2b9; height: 4px"
+    ></div>
+    <div class="full-container">
+      <div class="first-cont">
+        <div class="home">
+          <i class="fa fa-home"></i>
+          <a href="" style="font-size: 15px">Home</a>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar-item"><a href="">Employee Masters</a></div>
+          <div class="sidebar-item"><a href="">Create Bill IDs</a></div>
+          <div class="sidebar-item"><a href="">Employee Approval</a></div>
+          <div class="sidebar-item"><a href="">Bill IDs</a></div>
+          <div class="sidebar-item"><a href="">Remove Bill ID</a></div>
+          <div class="sidebar-item"><a href="">Leaves</a></div>
+          <div class="sidebar-item"><a href="">Transfer/Depute/For. Ser.</a></div>
+          <div class="sidebar-item"><a href="">Suspension </a></div>
+          <div class="sidebar-item"><a href="">Retirement </a></div>
+          <div class="sidebar-item"><a href="">Employee Acceptance </a></div>
+          <div class="sidebar-item"><a href="">Exempt Emp Salary Days </a></div>
+          <div class="sidebar-item"><a href="">Map Legal Heir </a></div>
+          <div class="sidebar-item"><a href="">Promotions </a></div>
+          <div class="sidebar-item"><a href="">DA Enhancement</a></div>
+          <div class="sidebar-item"><a href="">Demotions </a></div>
+          <div class="sidebar-item"><a href="">Emp Yearly Increment </a></div>
+          <div class="sidebar-item"><a href="">Add Employee </a></div>
+          <div class="sidebar-item"><a href="">FR 22B</a></div>
+          <div class="sidebar-item"><a href="">Automatric Adv Scheme </a></div>
+          <div class="sidebar-item"><a href="">Short close loan</a></div>
+          <div class="sidebar-item"><a href="">Salary recovery challan </a></div>
+          <div class="sidebar-item"><a href="">Employee expired </a></div>
+          <div class="sidebar-item"><a href="">Continual Absence </a></div>
+          <!-- <div class="sidebar-item">I</div> -->
+        </div>
+      </div>
+      <div class="second-cont">
+        <div class="EMP">
+          <h3>Add Employee</h3>
+        </div>
+        <div
+          style="
+            height: 50px;
+            background-color: #fdf8e4;
+            padding: 20px;
+            max-width: 100%;
+            margin-top: 20px;
+            border-radius: 6px;
+            padding-bottom: 40px;
+            color: brown;
+            margin-left: 8px;
+          "
+        >
+          <b>Note:</b> <br />
+          <p style="margin-left: 26px; margin-bottom: 7px">
+            1. Any Employee added by you will have to be approved by your
+            conserned auditor
+          </p>
+          <p style="margin-left: 26px">
+            2. If you do not find the correct designation or department, please
+            contact the technical team so that they will add the particular into
+            the DB
+          </p>
+        </div>
+        <div class="emp-middle"><b>Employee Basic Details</b></div>
+
+        <div class="form-emp-details">
+          <form action="#">
+            <div class="form-first">
+              <div class="first-row">
+                <label >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select Scale Type</label>
+                <select class="select-down">
+                  <option value="volvo">Select</option>
+                  <option value="saab">Emp</option>
+                  <option value="opel">Emp</option>
+                  <option value="audi">Emp</option>
+                </select>
+                &nbsp; <span class="fa fa-info" ></span> <span>Employee Code</span>
+                <input type="text" placeholder="  Employee Code" class="input-ec" />
+                <!-- <label for="cars">&nbsp;&nbsp;&nbsp;Select Scale Type</label>
+                <select class="select-down">
+                  <option value="volvo">Select</option>
+                  <option value="saab">Emp</option>
+                  <option value="opel">Emp</option>
+                  <option value="audi">Emp</option>
+                </select> -->
+              </div>
+              <div class="second-row">
+              &nbsp;  <span class="fa fa-user"></span>
+                <span>Employee Name</span>
+              <input type="text" placeholder=" Employee Name" class="emp-name-input">
+              <span>&nbsp;&nbsp;Employee Sur-Name</span>
+   <input type="text" placeholder=" Surname" class="emp-surname-input">
+   <!-- <span class="fa fa-address-book-o" style="padding: 0px;">&#xf2ba</span>
+              <select class="select-row-down2">
+                      
+                  <option value="volvo">Select</option>
+                <option value="saab">Emp</option>
+                <option value="opel">Emp</option>
+                <option value="audi">Emp</option>
+              </select> -->
+              <span class="fa fa-address-book-o">&#xf2ba</span> 
+              <label >Select Cader</label>
+              <select class="select-down2">
+                <option>Select</option>
+                <option>Emp1</option>
+                <option >Emp2</option>
+                <option >Emp3</option>
+              </select>
+              </div>
+              <div class="third-row">
+               &nbsp; <span class="fa fa-transgender-alt"></span>
+                <label >Gender</label>
+                <select class="select-down3">
+                  <option>Select</option>
+                  <option>Male</option>
+                  <option >Female</option>
+                  <option >Prefer not to say</option>
+                </select>
+               &nbsp; <span class="fa fa-briefcase"></span>
+                <label >Current Working Status</label>
+                <select class="select-down4">
+                  <option>Select</option>
+                  <option>Working</option>
+                  <option>Not Working</option>
+                  <option>Retired</option>
+                </select>
+               <label> &nbsp;&nbsp; Sub Type</label>
+                <select class="select-down5">
+                  <option>Select</option>
+                  <option>Mr</option>
+                  <option>Mrs</option>
+                  <option>Miss</option>
+                </select>
+              </div>
+              <div class="fourth-row">
+             &nbsp;  <span class="fa fa-calendar"></span>&nbsp;
+             <label>Date Of Birth:</label>
+             <input type="date" class="DOB" style="border: 0; ">
+             &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="fa fa-id-card"></span>
+             <label>Designation</label>
+                <select class="select-down6">
+                  <option>Select</option>
+                  <option>Accountant</option>
+                  <option>Revenue Officer</option>
+                  <option>Branch Officer</option>
+                </select>
+                <span class="fa fa-building"></span> Department
+                <span style="margin-left: 105px;">POLICE</span>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="other-details"><b>Other Details</b></div>
+        <form action="#">
+          <div class="second-form">
+          <div class="first-row-2">
+         &nbsp; <span class="fa fa-credit-card"></span>&nbsp;
+         <span> TSGLI No</span>
+         <input type="text" placeholder=" TSGLI No" class="tsgli-no-input">
+         &nbsp;<span class="fa fa-file-o">&#xf016</span>
+         <span>CPS/GPF Type</span>
+         <input type="radio" class="radio1">
+         <label>GPF</label>
+         <input type="radio" class="radio2">
+         <label>CPS</label>
+         &nbsp;<span class="fa fa-list-ol" style="margin-left: 40px;"></span>
+         <span>GPF No</span>
+         <input type="text" placeholder=" GPF/CPS No" class="gpf-no">
+          </div>
+          <div class="second-row-2">
+           &nbsp; <span class="fa fa-address-card"></span>
+           <span>Aadhaar No</span>
+           <input type="text" placeholder=" Aadhaar No" class="aadhar-input">
+           <span class="fa fa-user-plus"></span>
+           <label>Marital Status</label>
+                <select class="select-down-3">
+                  <option>Select</option>
+                 <option>Single</option>
+                  <option >Married</option>
+                </select>
+                <span class="fa fa-archive"></span>
+                <span>PAN No</span>
+                <input type="text" placeholder=" PAN No" class="pan-no">
+        </div>
+        <div class="third-row-2">
+          &nbsp;&nbsp;&nbsp;<span class="fa fa-envelope"></span>
+         <span>Email ID</span>
+          <input type="email" placeholder=" Email ID" class="email">
+          <!-- <div style="margin-left: 230px; font-size: 10px;">(Ex:ramesh@gmail.com)</div> -->
+          <span class="fa fa-map-marker"></span>
+          <!-- <span>Employee Address</span> -->
+          <label for="w3review">Employee Address</label>
+<textarea rows="3" cols="27" style="margin-left: 84px;border-radius: 5px;margin-bottom:-29px;"></textarea>
+<span class="fa fa-phone-square"></span>
+<span>Mobile No</span>
+<input type="text" placeholder=" Employee Mobile No" class="mobile-no">
+<span style="margin-left: 230px; font-size: 10px;">(Ex: ramesh@gmail.com)</span>
+<span style="margin-left: 689px; font-size: 10px;">(Ex: 9666108491) (*Pay Slip will be sent to mobile no.)</span>
+        </div>
+        <div class="fourth-row-2">
+          &nbsp;&nbsp;&nbsp;<span style=" font-size: 15px;">Earned Leaves Left (as of today):</span>
+          <input type="text" placeholder=" Earned Leaves." class="leaves">
+          <span style="margin-left: 5px; font-size: 15px;">Half Pay Leaves Left(as of today):</span>
+          <input type="text" placeholder=" Half Pay Leaves." class="half-leaves">
+        </div>
+        </div>
+      </form>  
+      <div class="bank-details"><b>Bank Details</b></div> 
+      <form>
+        <div class="third-form">
+          <div class="first-row-3">
+            &nbsp;&nbsp; <span class="fa fa-university"></span>
+            <span>Bank Account No</span>
+           <input type="password" placeholder=" Account No" class="account">
+           <span class="fa fa-university"></span>
+           <span>Confirm Bank Account</span>
+           <input type="password" placeholder=" Confirm Account No" class="confirm-account">  
+          </div>
+          <div class="second-row-3">
+             &nbsp;&nbsp; <span class="fa fa-chevron-circle-left"></span>
+             <span> Enter IFSC</span>
+             <input type="text" placeholder=" IFSC" class="ifsc">
+             <span class="fa fa-money">&#xf0d6</span>
+             <span>Bank Name</span>
+             <input type="text" placeholder=" Bank Name" class="bank-name">
+             <span class="fa fa-money">&#xf0d6</span>
+             <span>Branch</span>
+             <input type="text" placeholder=" Branch" class="branch">
+          </div>
+          <div class="third-row-3">
+           &nbsp;&nbsp;&nbsp; <span style="font-size: 13px;">Upload Necessary Documents(proceedings/GO/joining order/proof of employment etc..);</span>
+           <label class="select-file"></label>
+           <input type="file" class="choose-file" placeholder="No File Chosen"> 
+           <button class="btn-add" type="submit">
+             <span>Add</span></button><br>
+             <label><b style="margin-left: 16px;" >Auditor:</b></label>
+             <select class="select-down-9">
+              <option><b>SELECT</b></option>
+               <option>AGM</option>
+              <option>DGM</option>
+               <option >Section Officer</option>
+             </select>
+          </div>
+          <div class="fourth-row-3">
+          <button class="btn-creat-employee" type="submit">
+            <span>CREATE EMPLOYEE</span></button>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+  </body>
+</html>
