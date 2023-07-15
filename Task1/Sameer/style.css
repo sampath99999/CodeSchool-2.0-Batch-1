@@ -1,0 +1,114 @@
+body{
+    margin: 5px;
+   font-size: small;
+}
+.body_container{
+    display: flex;
+    background-color:#d6d6d6;
+    
+}
+.navbar_top{
+    background: url(https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg);
+    display: flex;
+    list-style: none;
+    align-items: center;
+    height: 80px;
+}
+.navbar_top_img{
+    padding: 10px;
+}
+.navbar_top_btn{
+    display: flex;
+    padding: 1px 1px;
+    margin: 1px 1px;
+}
+p{color: white;}
+.button {
+    background-color: #5f7181;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .navbar_top_btn_right{
+    float: right;
+  }
+.navbar_vertical{
+    margin: 2px;
+    padding: 15px;
+    background-color: #1c364e;
+    width: 250px;
+   
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.navbar_vertical li{
+    display: block;
+    margin: 0;
+}
+.navbar_vertical a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.container{
+    flex: 1;
+    padding: 20px;
+    color: black;
+    margin:15px 15px;
+}
+.dashed_line{
+    border: 1px dashed rgb(205, 205, 233);
+}
+.note{
+    color:rgb(154, 12, 36);
+    background-color: #fcf8e3;
+    padding: 10px;
+}
+.form-row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    gap:50px;
+    font-weight: bold;
+}
+.form-row label{
+    flex-basis: 100px;
+    flex-shrink: 0;
+    margin-right: 10px;
+
+}
+.form-row select{
+    width: 170px;
+}
+.heading{
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    border-right: none;
+    border-left: none;
+    padding: 1px;
+    text-align: center;
+    background:#f4f2f2;
+}
+.doc{
+    border-top:1px solid black;
+    border-bottom: 1px solid black;
+    border-right: none;
+    border-left: none;
+    padding: 10px;
+}
+.create_employee{
+    padding: 25px;
+    text-align: center;
+
+}
