@@ -28,6 +28,7 @@
     margin-left: 1%;
     float: left;
 }
+
 .middle_content{
     color: #f1f1f1;
     display: flex;
@@ -44,6 +45,9 @@
     font-size: 23px;
     cursor: pointer;
 }
+.middle_content button:hover{
+    background-color: #d5d5d59f;
+}
 .last_login{
     gap: 5px;
 }
@@ -57,6 +61,32 @@
     margin-right: 0%;
     size: 20px;
     background-color: rgba(132, 132, 132, 0.7);
+    position: relative;
+    display: inline-block;
+}
+.dropdown{
+    display: none;
+    width: 100%;
+    position: absolute;
+}
+.dropdown a{
+    display: block;
+    text-decoration: none;
+    color: #f1f1f1;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: rgba(132, 132, 132, 0.7);
+}
+.dropdown a:hover{
+    background-color: #d5d5d5;
+    color: black;
+}
+.user_info:hover{
+    background-color: #d5d5d59f;
+}
+.user_info:hover .dropdown{
+    display: block;
 }
 .user_info ul{
     display: flex;
@@ -95,6 +125,10 @@
         border-bottom: rgba(255, 253, 253, 0.1) solid 0.05px;
         font-size: 18px;
     }
+    .side_nav ul li:hover{
+        background-color: #d5d5d543;
+        border-left: #ffbff9 solid 4px;
+    }
     .nav_content li label{
         list-style-type: none;
         margin-left: 20px;
@@ -103,8 +137,122 @@
 
     /* Add Employee Style Start */
     .add_emp{
+        padding-left: 5px;
         width: 84%;
         border-left: #d5d5d5 solid 20px;
         border-top: #d5d5d5 solid 20px;
     }
+    .label{
+        margin: 20px 0 15px 15px;
+        border: white solid 10px;
+        border-radius: 2%;
+        font-size: 22
+        px;
+    }
+    .line{
+        margin-top: 10px;
+        border: 0.5px dashed #0d2445;
+    }
+    .note{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #fff5c9;
+        color: rgb(206, 53, 53);
+    }
+    .note strong{
+        margin: 1% 1%;
+    }
+    .note ol{
+        margin: 0 0 0 70px;
+        padding-top: 3px;
+    }
+        /* Form style Start*/
+        form{
+            font-size: 20px;
+        }
+        .details-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-top: 2px groove #f0f0f0;
+            border-bottom: 2px groove #f0f0f0;
+            background-color: #f9f9f9;
+            padding: 6px 0px;
+            color: #333333;
+          }
+          .details-contents {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+          }
+          .details-contents > * {
+            border-bottom: 1px groove #d6d6d6;
+            padding: 4px 0px;
+          }
+          form span {
+            color: red;
+            font-weight: bolder;
+          }
+          .example {
+            font-size: 8px;
+            margin-top: 3px;
+          }
+          #documents {
+            border: 1px solid #4f4f4f;
+            padding: 0px 3px;
+          }
+          .zebra {
+            background-color: #f9f9f9;
+          }
+          #add {
+            background-color: #5db85b;
+            color: white;
+            border: 0px;
+            font-size: 12px;
+            border-radius: 4px;
+            padding: 6px 10px;
+            margin: 0px 12px;
+          }
+          .doc-container {
+            margin: 25px 0px;
+            border-top: 2px groove #f0f0f0;
+            border-bottom: 2px groove #f0f0f0;
+            font-size: 11px;
+          }
+          .doc-sub {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-template-rows: 1fr 1fr;
+            width: 70%;
+          }
+          .doc-sub > * {
+            padding: 6px 10px;
+          }
+          .doc-qus {
+            padding-right: 0px;
+          }
+          .submit {
+            display: flex;
+            justify-content: center;
+          }
+          .sub-final {
+            background-color: #1b354d;
+            color: white;
+            padding: 6px 28px;
+            border: 0px;
+            border-radius: 4px;
+            font-size: 11px;
+            cursor: pointer;
+            margin-top: -8px;
+          }
+          
+          .fill-up {
+            width: 90%;
+            font-size: 12px;
+            color: black;
+          }
+          .ext {
+            width: 93%;
+            color: black;
+          }
+        /* Form Style End  */
     /* Add Employee Style End */
