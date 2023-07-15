@@ -1,0 +1,39 @@
+.hi{
+    font-size: 50px;
+    text-align: center;
+    color: rgb(5, 42, 81);
+}
+.hello{
+    font-size: 40px;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+table{
+    width: 90%;
+}
+th{
+    height: 60px;
+}
+td{
+    text-align: center;
+}
+.krk{
+    font-size: 20px;
+}
+h3{
+    color: rgb(57, 145, 200);
+}
+.Rama{
+    padding-left: 160px;
+}
+.krishna{
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    padding-left: 100px;
+    line-height:  160%;	
+}
+ 
+   
