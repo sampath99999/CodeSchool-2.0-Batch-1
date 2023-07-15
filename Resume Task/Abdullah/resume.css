@@ -1,0 +1,110 @@
+.title{
+    text-align: center;
+    color: rgb(0, 255, 128);
+    background-color: grey;
+    display: inline-block;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+padding bottom: 25px;
+
+}
+#personal_details{
+    color: darkgreen;
+    size: 10px;
+    background-color: grey;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 0px;
+    /* padding: 5px;  */
+}
+#edu_details{
+size: 10px;
+color: brown;
+text-align: center;
+background-color: grey;
+font-size: 20px;
+display: inline-block;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 0px;
+    padding-top: 5px;
+    margin-top:0px;
+}
+.per{
+    color: pink;
+    text-align: left;
+    background-color: grey;
+    text-align: center;
+    border: 1px solid;
+    margin-top: 0px !important;
+    position: relative;
+    top:-3px;
+    display: inline-block;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+
+}
+.edu{
+    color:darkblue;
+    background-color: grey;
+    text-align: left;
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
+    display: inline-block;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: -10px;
+    margin-top: 0px;
+}
+span{
+    color:darkmagenta;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: -10px;
+    background-color: grey;
+}
+P{
+    font-size: larger;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: -20px;
+    padding-bottom: 10px;
+    background-color: grey;
+}
+#skills{
+    color: crimson;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: grey;
+}
+
+.skill_set{
+    color:gold;
+    background-color: grey;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: -18px;
+}

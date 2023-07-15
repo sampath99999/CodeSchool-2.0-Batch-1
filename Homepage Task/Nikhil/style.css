@@ -1,0 +1,228 @@
+body {
+    background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/login-bg.png");
+  }
+  .top {
+    background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
+    height: 20vh;
+    padding-left: 5%;
+    margin-top: -9px;
+    padding: 10px;
+    height: auto;
+    margin-left: -50px;
+    margin-right: -50px;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+  }
+  .toptwo {
+    padding-top: 10px;
+    margin-left: 90px;
+  }
+  .bottomtwo {
+    padding-right: 14%;
+   margin-bottom: -15px;
+  }
+  nav {
+    text-align: center;
+  }
+  .navbar{
+    color:white;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #00498d;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: -8px;
+    margin-left: -8px;
+  }
+  nav ul li {
+    display: inline-block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  nav ul li a:hover {
+    background-color: #0e65a8;
+    color:black;
+  }
+  nav li ul {
+    display: none;
+    position: absolute;
+    background-color: lightblue;
+    color:white;
+  }
+  nav ul li:hover > ul {
+    display: inherit;
+  }
+  nav ul li ul li {
+    width: 200px;
+    float: none;
+    display: list-item;
+    position: relative;
+    color:white;
+  }
+  nav ul li a:hover {
+    background-color: #2a6d91;
+    width:100%;
+    margin-left: -15px;
+  }
+  .left {
+    background-color: green;
+    width: 10%;
+    border-radius: 5%;
+  }
+  .User {
+    width: 25%;
+    margin-left: 15%;
+    background-color: white;
+    height:110%;
+   
+  }
+  .User h3{
+    text-align: left;
+    margin-left: 30px;
+  }
+  .User input {
+    margin-bottom: 10px;
+    height: 25px;
+    padding: 10px;
+    width: 80%;
+    color: grey;
+  }
+  .User a:hover {
+    color: blue;
+  }
+  .last{
+    display:flex;
+    gap:10px;
+    height:50px;
+    margin-bottom: 30px;
+    
+  }
+  .last a {
+    color: grey;
+    text-decoration: none;
+    padding-top: 30px;
+    
+  }
+  .last button {
+    background-color: rgb(84, 147, 84);
+    color: white;
+    padding: 10px;
+    width: 120px;
+    margin-left: 120px;
+    margin-right: 25px;
+    border-radius: 5px;
+  }
+  .bottom {
+    background-color: antiquewhite;
+    height: 85%;
+  }
+  .below {
+    background-color: #374659;
+    width: 375px;
+  
+    margin-left: -30px;
+    margin-right: 30px;
+  }
+  .below1 {
+    background-color: #374659;
+    border-bottom: dotted brown;
+    padding: 10px;
+    color: white;
+  
+  }
+  .below2 {
+    background-color: #374659;
+    border-bottom: dotted brown;
+    padding: 10px;
+    color: white;
+  }
+  .below3 {
+    background-color: #374659;
+    padding: 10px;
+    color: white;
+  }
+  .below1 button,
+  .below2 button,
+  .below3 button {
+    background-color: green;
+    color: white;
+  }
+  .middle {
+    margin-top: 10px;
+    background-color: grey;
+    margin-top: -1px;
+  }
+  .middle img {
+    padding-left: 15px;
+    padding: 10px;
+  }
+  .total {
+    display: flex;
+    margin-top: 0px;
+
+  }
+  .bottom {
+    padding-left: 30px;
+    padding-top: 10px;
+  }
+  
+  .blink p {
+    font-family: serif;
+    color: red;
+  
+    animation: animate 1.5s linear infinite;
+  }
+  h1{
+    background-color: #ffe9c1;
+    width:90%;
+    height: 30px;
+  }
+  .text{
+    color: red;
+  }
+  .buttons button{
+    background-color: green;
+    color:white;
+  
+  }
+  .image2{
+    background-image: url('https://ifmis.telangana.gov.in/images/newUi/phone_icon.png');
+    color:white;
+    display: flex;
+    justify-content: space-between;
+   
+  }
+  .abc{
+    color:brown;
+  }
+  .item1{
+    padding: 10px;
+  }
+  .bottomContainer{
+    display: flex;
+  }
+  @keyframes animate {
+    0% {
+      opacity: 0;
+    }
+  
+    50% {
+      opacity: 0.7;
+    }
+  
+    100% {
+      opacity: 0;
+    }
+  }
