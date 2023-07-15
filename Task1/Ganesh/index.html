@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- An Header with LOGO, and User Profile Details -->
+    <header>
+        <div class="main-wrapper">
+            <div class="logo-wrapper">
+                <img style="width: 180px;" src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png" alt="IFMIS-Logo">
+            </div>
+            <div class="menu-wrapper">
+                <li>
+                    <img style="width: 12px; -webkit-filter: grayscale(1) invert(1); filter: grayscale(1) invert(1);" src="images/bars-solid.svg" alt="menu">
+                </li>
+                <li>
+                    <img style="width: 12px; -webkit-filter: grayscale(1) invert(1); filter: grayscale(1) invert(1);" src="images/house-chimney-solid.svg" alt="menu">
+                    MODULES
+                </li>
+                <li>
+                    <img style="width: 12px;  -webkit-filter: grayscale(1) invert(1); filter: grayscale(1) invert(1);" src="images/user-regular.svg" alt="menu">
+                    Profile
+                </li>
+                <li>
+                    <img style="width: 12px; -webkit-filter: grayscale(1) invert(1); filter: grayscale(1) invert(1);" src="images/right-from-bracket-solid.svg" alt="menu">
+                    Logout
+                </li>
+            </div>
+            <div class="time-wrapper">Last Login: <b>13-Jul-2023 07:30 PM</b></div>
+            <div class="login-wrapper">
+                <div class="login-logo">
+                    <img style="width: 12px; float: left; -webkit-filter: grayscale(1) invert(1); filter: grayscale(1) invert(1);" src="images/user-regular.svg" alt="menu">
+                </div>
+                <div style="display: inline; width: 150px;">
+                    <b>WELCOME G.SATYANARAYANA</b>
+                    (25001002018)
+                </div>
+                <div class="login-logo">
+                    <img style="width: 12px; float: right; -webkit-filter: grayscale(1) invert(1); filter: grayscale(1) invert(1);" src="images/caret-down-solid.svg" alt="menu">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Body with left(vertical navbar) and right(contents of menu) container -->
+    <div class="main-container">
+    <!-- VERTICAL NAVBAR -->
+    <div class="left-container">
+        <li style="margin-left: -15px;"><i style="padding-right: 7px;" class="fa-solid fa-house fa-sm"></i>Home</li>
+        <li>Employee Masters</li>
+        <li>Create Bills IDs</li>
+        <li>Employee Approvals</li>
+        <li>Bill IDs</li>
+        <li>Remove Bill ID</li>
+        <li>Leaves</li>
+        <li>Transfers/ Depute/ For. Ser.</li>
+        <li>Suspension</li>
+        <li>Retirement</li>
+        <li>Employee Acceptance</li>
+        <li>Exempt Emp Salary Days</li>
+        <li>Map Legal Heir</li>
+        <li>Promotions</li>
+        <li>DA Enhancement</li>
+        <li>Demotions</li>
+        <li>Emp Yearly Increment</li>
+        <li>Add Employee</li>
+        <li>FR 22B</li>
+        <li>Automatic Adv Scheme</li>
+        <li>Short close loan</li>
+        <li>Salary recovery challan</li>
+        <li>Employee Expired</li>
+        <li>Continual Absense</li>
+    </div>
+    <!-- BODY OF CONTENTS -->
+    <div class="right-container">
+        <div class="header-container">
+            <p class="title">Add Employee</p>
+            <div class="note">
+                <b>Note:</b>
+                <ol class="indentation">
+                    <li>Any Employee Added by you will have to be approved by your concerned auditor</li>
+                    <li>If you do not find the correct designation or department, please contact the technical team so that they will add the particulars into the DB</li>
+                </ol>
+            </div>
+        </div>
+        <form action="#" method="post">
+            <!-- EMPLOYEE BASIC DETAILS -->
+            <div class="details-container">
+                <div class="details-title"><strong>Employee Basic Details</strong></div>
+                <div class="details-contents">
+                    <!-- ROW 1 -->
+                    <div>
+                        <label for="scale-type">Select Scale Type<span> *</span></label>
+                    </div>
+                    <div>
+                        <select class="fill-up ext" name="scale-type" id="scale-type">
+                            <option value="Select">SELECT</option>
+                            <option value="Small">Small</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Large">Large</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="emp-code"><i class="fa-sharp fa-solid fa-info fa-sm"></i>Employee Code</label>
+                    </div>
+                    <div>
+                        <input class="fill-up" type="text" id="emp-code" name="employee_code" placeholder="Employee Code">
+                    </div>
+                    <div></div><div></div> <!--Blank Divs-->
+                    <!-- ROW 2 -->
+                    <div class="zebra">
+                        <label for="emp-name"><i class="fa-solid fa-user fa-sm"></i>Employee Name <span>*</span></label>
+                    </div>
+                    <div class="zebra">
+                        <input class="fill-up" type="text" id="emp-name" name="employee_name" placeholder="Employee Name">
+                    </div>
+                    <div class="zebra">
+                        <label for="emp-srname">Employee Sur-Name</label>
+                    </div>
+                    <div class="zebra">
+                        <input class="fill-up" type="text" id="emp-srname" name="employee_surname" placeholder="Surname">
+                    </div>
+                    <div class="zebra">
+                        <label for="cader"><i class="fa-regular fa-id-badge fa-sm"></i>Select Cader<span> *</span></label>
+                    </div>
+                    <div class="zebra">
+                        <select class="fill-up ext" name="Select Cader" id="cader">
+                            <option value="Select">SELECT</option>
+                            <option value="ZONE-1">ZONE-1</option>
+                            <option value="ZONE-2">ZONE-2</option>
+                            <option value="ZONE-3">ZONE-3</option>
+                            <option value="ZONE-4">ZONE-4</option>
+                            <option value="ZONE-5">ZONE-5</option>
+                        </select>
+                    </div>
+                    <!-- ROW 3 -->
+                    <div>
+                        <label for="Gender"><i class="fa-solid fa-transgender fa-sm"></i>Gender:<span> *</span></label>
+                    </div>
+                    <div>
+                        <select class="fill-up ext" name="Gender" id="Gender">
+                            <option value="Select">SELECT</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="work-status"><i class="fa-solid fa-briefcase fa-sm"></i>Current Working Status:<span> *</span></label>
+                    </div>
+                    <div>
+                        <select class="fill-up ext" name="Current Work Status" id="work-status">
+                            <option value="Select">SELECT</option>
+                            <option value="Worker">Worker</option>
+                            <option value="Employee">Employee</option>
+                            <option value="Self-Employed">Self-Employed</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="work-sub-type">Sub Type<span> *</span></label>
+                    </div>
+                    <div>
+                        <select class="fill-up ext" name="Sub Type" id="work-sub-type">
+                            <option value="Select">SELECT</option>
+                            <option value="Full-Time">Full-Time</option>
+                            <option value="Part-Time">Part-Time</option>
+                            <option value="Temporary">Temporary</option>
+                            <option value="Contract">Contract</option>
+                            <option value="Internship">Internship</option>
+                            <option value="Apprenticeship">Apprenticeship</option>
+                        </select>
+                    </div>
+                    <!-- ROW 4 -->
+                    <div class="zebra">
+                        <label for="date-of-birth"><i class="fa-solid fa-calendar-days fa-sm"></i>Date of Birth: <span>*</span></label>
+                    </div>
+                    <div class="zebra">
+                        <input type="date" id="date-of-birth" name="Date of Birth">
+                    </div>
+                    <div class="zebra">
+                        <label for="designation"><i class="fa-regular fa-id-card fa-sm"></i>Designation<span> *</span></label>
+                    </div>
+                    <div class="zebra">
+                        <select class="fill-up ext" name="Designation" id="designation">
+                            <option value="Select">SELECT</option>
+                            <option value="Group-A">Group-A</option>
+                            <option value="Group-B">Group-B</option>
+                            <option value="Group-C">Group-C</option>
+                            <option value="Group-D">Group-D</option>
+                        </select>
+                    </div>
+                    <div class="zebra">
+                        <label for="department"><i class="fa-sharp fa-solid fa-building fa-sm"></i>Department</label>
+                    </div>
+                    <div class="zebra">
+                        POLICE
+                        <!-- <select name="Depatment" id="department">
+                            <option value="POLICE">POLICE</option>
+                            <option value="IAS">IAS</option>
+                        </select> -->
+                    </div>
+                </div>
+            </div>
+            <!-- OTHER DETAILSs -->
+            <div class="details-container">
+                <div class="details-title" style="background-color: transparent;"><strong>Other Details</strong></div>
+                <div class="details-contents" id="other">
+                    <!-- ROW 1 -->
+                    <div class="zebra">
+                        <label for="TSGLI-NO"><i class="fa-regular fa-credit-card fa-sm"></i>TSGLI No</label>
+                    </div>
+                    <div class="zebra">
+                        <input class="fill-up" type="text" id="TSGLI-NO" name="TSGLI Number" placeholder="TSGLI No">
+                    </div>
+                    <div class="zebra">
+                        <label for="type"><i class="fa-sharp fa-solid fa-file fa-sm"></i>CPS/GPF Type:</label>
+                    </div>
+                    <div class="zebra">
+                        <input type="radio" id="type" name="GPF Type" value="GPF" >
+                        <label for="gpf-type">GPF</label>
+                        <input type="radio" id="type" name="CPS Type" value="CPS" >
+                        <label>CPS</label>
+                    </div>
+                    <div class="zebra">
+                        <label for="gpf-no"><i class="fa-regular fa-list-ol fa-sm"></i>GPF No.</label>
+                    </div>
+                    <div class="zebra">
+                        <input class="fill-up" type="text" id="gpf-no" name="GPF Number" placeholder="GPF/CPS No.">
+                    </div>
+                    <!-- ROW 2 -->
+                    <div>
+                        <label for="aadhar-no"><i class="fa-regular fa-id-card fa-sm"></i>Aadhar No</label>
+                    </div>
+                    <div>
+                        <input class="fill-up" type="text" id="aadhar-no" name="Aadhar Number" placeholder="Aadhar No">
+                    </div>
+                    <div>
+                        <label for="marital-stat"><i class="fa-solid fa-user-plus fa-sm"></i>Marital Status<span> *</span></label>
+                    </div>
+                    <div>
+                        <select class="fill-up ext" name="Marital Status" id="marital-stat">
+                            <option value="Select">SELECT</option>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="pan-no"><i class="fa-light fa-address-card fa-sm"></i>PAN No</label>
+                    </div>
+                    <div>
+                        <input class="fill-up" type="text" id="pan-no" name="PAN Number" placeholder="PAN No">
+                    </div>
+                    <!-- ROW 3 -->
+                    <div class="zebra">
+                        <label for="mail-id"><i class="fa-solid fa-envelope fa-sm"></i>Email ID</label>
+                    </div>
+                    <div class="zebra">
+                        <input class="fill-up" type="email" id="mail-id" name="Email ID">
+                        <p class="example">(Ex:ramesh@gmail.com)</p>
+                    </div>
+                    <div class="zebra">
+                        <label for="emp-add"><i class="fa-solid fa-location-dot fa-sm"></i>Employee Address</label>
+                    </div>
+                    <div class="zebra">
+                        <textarea class="fill-up" name="Employee Address" id="emp-add"></textarea>
+                    </div>
+                    <div class="zebra">
+                        <label for="phone"><i class="fa-solid fa-phone fa-sm"></i>Mobile No <span>*</span></label>
+                    </div>
+                    <div class="zebra">
+                        <input class="fill-up" type="tel" id="phone" name="Mobile Number" placeholder="Employee Mobile No.">
+                        <p class="example">(Ex:9601408787) (*Pay Slip will be sent to mobile no.)</p>
+                    </div>
+                    <!-- ROW 4 -->
+                    <div>
+                        <label for="earned-leaves">Earned Leaves Left (as of today):</label>
+                    </div>
+                    <div>
+                        <input class="fill-up" type="text" id="earned-leaves" name="Earned Leaves Left">
+                    </div>
+                    <div>
+                        <label for="half-leaves">Half Pay Leaves Left (as of today):</label>
+                    </div>
+                    <div>
+                        <input class="fill-up" type="text" id="half-leaves" name="Half Pay Leaves Left">
+                    </div>
+                    <div></div><div></div> <!--Blank Div-->
+                </div>
+            </div>
+            <!-- BANK DETAILS -->
+            <div class="details-container">
+                <div class="details-title"><strong>Bank Details</strong></div>
+                <div class="details-contents" id="other">
+                    <!-- ROW 1 -->
+                    <div>
+                        <label for="account-no"><i class="fa-solid fa-building-columns fa-sm"></i>Bank Account No <span>*</span></label>
+                    </div>
+                    <div>
+                        <input class="fill-up" type="password" id="account-no" name="Bank Account Number" placeholder="Bank Account No">
+                    </div>
+                    <div>
+                        <label for="confirm-account"><i class="fa-solid fa-building-columns fa-sm"></i>Confirm Bank Account <span>*</span></label>
+                    </div>
+                    <div>
+                        <input class="fill-up" type="text" id="confirm-account" name="Confirm Account Number" placeholder="Confirm Bank Account">
+                    </div>
+                    <div></div><div></div> <!--Blank Div-->
+                    <!-- ROW 2 -->
+                    <div class="zebra">
+                        <label for="ifsc"><i class="fa-solid fa-circle-arrow-left fa-sm"></i>Enter IFSC<span> *</span></label>
+                    </div>
+                    <div class="zebra">
+                        <input style="width: 60%; margin-right: 5px;" type="text" id="ifsc" name="ISFC Code" placeholder="IFSC"><button style="cursor: pointer;" type="button">Search</button>
+                    </div>
+                    <div class="zebra">
+                        <label for="bnk-name"><i class="fa-regular fa-money-bill fa-sm"></i>Bank Name</label>
+                    </div>
+                    <div class="zebra">
+                        <!-- <input type="text" id="bnk-name" name="Bank Name"> --> --
+                    </div>
+                    <div class="zebra">
+                        <label for="branch"><i class="fa-regular fa-money-bill fa-sm"></i>Branch</label>
+                    </div>
+                    <div class="zebra">
+                        <!-- <input type="text" name="Branch" id="branch"> --> --
+                    </div>
+                </div>
+            </div>
+            <!-- DOCUMENTS AND AUDIT -->
+            <div class="doc-container">
+                <div class="doc-sub">
+                    <div class="doc-qus">
+                        <label for="documents">Upload necessary Documents(proceedings/GO/joining order/proof of employment etc..):</label>
+                    </div>
+                    <div>
+                        <input type="file" name="Necessary Documents" id="documents">
+                        <button style="display: inline; cursor: pointer;" id="add" type="button">Add</button>
+                    </div>
+                    <div class="doc-qus">
+                        <label class="indentation" for="audit"><strong>Auditor:</strong></label>
+                    </div>
+                    <div>
+                        <select class="fill-up ext" name="Auditor" id="audit">
+                            <option value="Select">SELECT</option>
+                            <option value="Internal">Internal</option>
+                            <option value="External">External</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- FINAL SUBMIT -->
+            <div class="submit">
+                <input class="sub-final" type="submit" value="CREATE EMPLOYEE">
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
