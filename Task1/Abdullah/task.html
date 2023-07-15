@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="task.css">
+</head>
+<body>
+    <div class="header">
+        <div class="logo"><img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png" alt=""></div>
+        <div class="navbar">
+           <p><img class="logo-menu" src="https://previews.123rf.com/images/fokaspokas/fokaspokas1809/fokaspokas180900164/108564673-hamburger-menu-web-icon-white-icon-with-shadow-on-transparent-background.jpg" alt="https://www.clipartmax.com/png/middle/36-365828_navbar-toggle-icon-menu-hamburger-png-white.png"></p>
+           <p>
+            <img class="logo-home" src="https://static.vecteezy.com/system/resources/previews/000/425/085/original/house-icon-vector-illustration.jpg" alt="">
+            MODULE
+            </p> 
+            <P>Profiles</P>
+            <p>Logout</p>
+        </div>
+        <div class="sub">
+            <ul>
+                <li>lastLogin:</li>
+                <li>12-june-2023</li>
+                <li>5:10 PM</li>
+
+            </ul>
+        </div>
+        <div class="dropdown">
+            <input type="checkbox" id="toggle" class="dropdown-toggle">
+            <label for="toggle" class="dropdown-label"> 
+                <img class="contactlogo" src="https://e7.pngegg.com/pngimages/518/64/png-clipart-person-icon-computer-icons-user-profile-symbol-person-miscellaneous-monochrome-thumbnail.png" alt="">
+                WELCOME G.SATYANARAYANA
+                <br>
+                (25001002018)
+                <br>
+                <img class="drop-symbol" src="https://cdn4.iconfinder.com/data/icons/ios-edge-glyph-3/25/Down-Carrot-512.png" alt="">
+            </label>
+            <ul class="dropdown-menu">
+              <li>Option 1</li>
+              <li>Option 2</li>
+              <li>Option 3</li>
+            </ul>
+        </div>    
+    </div>
+    <div class="main">
+        <div class="sidenav">
+         <a href="#"><img class="nav-home-logo" src="https://static.vecteezy.com/system/resources/previews/000/425/085/original/house-icon-vector-illustration.jpg" alt=""> HOME</a>
+         <a href="#">Employee Masters</a>
+         <a href="#">Create Bills IDs</a>
+         <a href="#">Employee Approvals</a>
+         <a href="#">Bill IDs</a>
+         <a href="#">Remove Bill ID</a>
+         <a href="#">Leaves</a>
+         <a href="#">Transfers/Depute/For.Ser.</a>
+         <a href="#">Suspension</a>
+         <a href="#">Retirement</a>
+         <a href="#">Employee Acceptance</a>
+         <a href="#">Excempt Emp Salary Days</a>
+         <a href="#">Map Legal Heir</a>
+         <a href="#">Promotions</a>
+         <a href="#">DA Enhancements</a>
+         <a href="#">Demotions</a>
+         <a href="#">Employee Yearly Increament</a>
+         <a href="#">Add Employee</a>
+         <a href="#">FR 22B</a>
+         <a href="#">Automatic Adv Scheme</a>
+         <a href="#">Short Close Loan</a>
+         <a href="#">Salary Recovery Challan</a>
+         <a href="#">Employee Expired</a>
+         <a href="#">Continual Abscence</a>
+        </div>
+        <div class="details">
+            <div class="add-employee">
+                <a href="">
+                    Add Employee
+                </a>
+            </div>
+               <div class="note">
+                 <a href="">
+                    <b>Note:</b>
+                 </a>
+                 <ol>
+                    <li>1. Any employee added by you will have to be approved by concerned auditor</li>
+                    <li>2. If you do not fin the correct designation or department, please contact the technical team so that they will add the particulars into DB</li>
+                 </ol>
+               </div>
+               <div class="Employee-Basic_details">
+                 <h4 id="header">
+                    Employee Basic Details
+                 </h4>
+               </div>
+               <div class="line-1">
+                 <form>
+                    <label id="scale-type-label"><b>Scale Type *</b></label>
+                    <select name="Scale-Type" id="Scale-Type">
+                        <option value="" selected="selected">SELECT</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                 </form>
+
+                 <form>
+                    <label id="scale-type-label"><b>Employee Code</b></label>
+                    <input type="text" id="Employee-code" value="Employee code">
+                 </form>
+               </div>
+               <div class="line-2">
+                <form>
+                    <label for="" id="employee-name-label"><b>Employee Name*</b></label>
+                    <input type="text" id="Employee-name" value="Employee Name"> 
+                </form>
+                <form>
+                    <label for="" id="employee-name-labe2"><b>Employee Sur-Name</b></label>
+                    <input type="text" id="Employee-Surname" value="Surname"> 
+                </form>
+
+                <form>
+                    <label for="Select" id="employee-name-labe3"><b>Select Cader</b></label>
+                    <select name="cader" id="cader">
+                    <option value="" selected="selected">SELECT</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    </select>
+                </form>
+               </div>
+               <div class="line-3">
+                 <form action="">
+                    <label for="" id="line-3-label1"><b>Gender</b></label>
+                    <select name="" id="gender">
+                    <option value="" selected="selected">SELECT</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    </select>
+                    
+                 </form>
+                 <form action="">
+                    <label for="" id="line-3-label2"><b>Current Working status</b></label>
+                    <select name="" id="Current-working-status">
+                        <option value="" selected="selected">SELECT</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                 </form>
+                 <form action="">
+                    <label for="" id="line-3label3"><b>Sub Type</b></label>
+                    <select name="" id="subtype">
+                        <option value="" selected="selected">SELECT</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                 </form>
+               </div>
+               <div class="line-4">
+                <form action="">
+                    <label for="" id="line-4-label-1"><b>Date of Birth</b></label>
+                    <input type="text" id="date-of-birth" value="DOB">
+                    <img id="cal-img" src="https://static.vecteezy.com/system/resources/previews/005/988/959/non_2x/calendar-icon-free-vector.jpg" alt="">
+                </form>
+                <form action="">
+                    <label for="" id="Designation"><img id="designation-logo" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/employer-certificate-1-683268.png?f=avif&w=256" alt=""><b>Designation</b></label>
+                    <select name="" id="Designation-select">
+                        <option value="" selected="selected">SELECT</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+
+                    </select>
+                </form>
+                <form action="">
+                    <label for="" id="department"><img id="dapartmentlogo" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/finance-logo-8429977-6640678.png?f=avif&w=256" alt=""><b>Department</b></label>
+                    POLICE
+                </form>
+               </div>
+               <div class="other-details">
+                 <h4 id="header2">
+                   Other details
+                 </h4>
+               </div>
+               <div class="other-details-line1">
+                <form action="">
+                    <label for="" id="tsgli-label"> <img style="height: 15px; width: 15px;" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/id-5606973-4685664.png?f=avif&w=256" alt=""><b>TSGLI No</b></label>
+                    <input type="text" id="tsgli-input" value="TSGLI no">
+                </form>
+                <form action="">
+                    <label for="" id="radiobutton-label"><b><img style="width: 15px; height: 15px;" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/document-3710968-3094861.png?f=avif&w=256" alt="">CPS/GPF Type:</b></label>
+                    <div id="radio">
+                    <input type="radio" id="CPS" value="CPS">
+                    <label for="">CPS</label>
+                    <input type="radio" id="GPF" value="GPF">
+                    <label for="">GPF</label>
+                    </div>
+                </form>
+                <form action="">
+                    <label for="" id="GPF-no-label"><img style="width: 15px; height: 15px;" src="https://cdn.iconscout.com/icon/free/png-512/free-list-189-433283.png?f=avif&w=256" alt=""><b>GPF no.</b></label>
+                    <input type="text" id="GPF-no-input" value="GPF/CPS no.">
+                </form>
+               </div>
+               <div class="other-details-line2">
+                <form action="">
+                    <label for="" id="adhaar-label"><img style="height: 22px; width: 20px;" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/aadhar-1888068-5489845.png?f=avif&w=256" alt=""><b>Adhaar No</b></label>
+                    <input type="text" id="adhaar-input" value="Adhaar No">
+                </form>
+                <form action="">
+                    <label for="" id="marital-status-label"><img id="marital-logo" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/add-friends-2796169-2325901.png?f=avif&w=256" alt=""><b>marital Status</b></label>
+                    <select name="" id="marital-select">
+                        <option value="" selected="selected">SELECT</option>
+                        <option value=""></option>
+                        <option value=""></option>
+                        <option value=""></option>
+                    </select>
+                </form>
+                <form action="">
+                    <label for="" id="PAN-label"><img style="width: 18px; height: 18px;" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/id-12-87385.png?f=avif&w=256" alt=""><b>PAN No</b></label>
+                    <input type="text" id="PAN-input" value="PAN No">
+                </form>
+               </div>
+               <div class="other-details-line3">
+                <form action="">
+                    <label for="" id="email-label"><b><img style="height: 15px; width: 15px;" src="https://cdn.iconscout.com/icon/free/png-512/free-email-797-574582.png?f=avif&w=256" alt="">Email Id</b></label>
+                    <input type="text" id="email-input" value="Email Id">
+                    <br>
+                    <a href="">(Ex: ramesh@gmail.com)</a>
+                </form>
+                <form action="">
+                    <div class="textarea">
+                        <label for="" id="employee-address-label"><b><img style="width: 15px; height: 15px;" src="https://cdn.iconscout.com/icon/free/png-512/free-location-pin-1589961-1346918.png?f=avif&w=256" alt="">Employee Address</b></label>
+                    <!-- <input type="text-area" id="employee-address-input" value="Employee-Address"> -->
+                    <textarea name="" id="employee-address-input" cols="10" rows="2"></textarea>
+                    </div>
+                </form>
+                <form action="">
+                    <label for="" id="mobile-label"><b><img style="width: 15px; height: 15px;" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/mobile-3292269-2778138.png?f=avif&w=256" alt="">Mobile No*</b></label>
+                    <input type="text" id="mobile-input" value="Mobile No">
+                </form>
+               </div>
+               <div class="other-details-line4">
+                <form action="">
+                    <label for="" id="earnedleaves-label"><b>Earned Leaves Left(As of today):</b></label>
+                    <input type="text" name="" id="earnedleaves-input" value="Earned leaves">
+                </form>
+                <form action="">
+                    <label for="" id="halfpay-label"><b>half Pay leaves Left(As of today):</b></label>
+                    <input type="text" id="halfpay-input" value="Half-pay">
+                </form>
+               </div>
+               <div class="bank-details">
+                <h4>Bank Details</h4>
+               </div>
+               <div class="bank-details-line1">
+                <form action="">
+                    <label for="" id="bank-acc-label"><b><img style="width: 15px; height: 15px;" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/bank-71-85594.png?f=avif&w=256" alt="">Bank Account No*</b></label>
+                    <input type="password" id="ban-acc-input" >
+                </form>
+                <form action="">
+                    <label for="" id="confirm-ban-acc-label"><b><img style="width: 15px; height: 15px;" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/bank-71-85594.png?f=avif&w=256" alt="">Confirm Bank Account No*</b></label>
+                    <input type="text" id="confirm-bank-acc-input" value="Confim Bank Account">
+                </form>
+               </div>
+               <div class="bank-details-line2">
+                <form action="">
+                    <label for="" id="ifsc-label"><b>ENTER IFSC*</b></label>
+                    <input type="text" id="ifsc-input" value="IFSC">
+                    <input type="text" id="search" value="search">
+                </form>
+                <form action="">
+                    <label for="" id="bank-name-label"><b><img style="width: 15px; height: 15px;" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/bank-66-85589.png?f=avif&w=256" alt="">Bank Name</b></label>
+                    <a href="" id="bankname-input"><b><b>--</b></b></a>
+                </form>
+                <form action="">
+                    <label for="" id="branch-label"><b><img style="height: 15px; width: 15px;" src="https://cdn.iconscout.com/icon/premium/png-512-thumb/bank-66-85589.png?f=avif&w=256" alt="">Branch</b></label>
+                    <a href="" id="branch-input" ><b>--</b></a>
+                </form>
+               </div>
+               <div class="file">
+                 <form action="">
+                    
+                        <label for="" id="file-label">Upload Necessary Documents(Proceedings/GO/Joining order/Proof <br>Of Employeement etc...):</label>
+                    
+                    <input type="file" id="file-input">
+                    <button id="button" type="button" onclick="alert('Files added successfully')">
+                        Add
+                    </button>
+
+                 </form>
+               </div>
+               <div class="auditor">
+                <form action="">
+                    <label for="" id="auditor-label"><b>Auditor:</b></label>
+                    <select name="" id="auditor-select">
+                        <option value="" selected="selected"> SELECT</option>
+                        <option value=""></option>
+                        <option value=""></option>
+
+                    </select>
+                </form>
+
+               </div>
+               <div class="Create-Employee">
+                <a href="">
+                    CREATE EMPLOYEE
+                </a>
+               </div>
+        </div>
+    </div>
+</body>
+</html>

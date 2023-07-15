@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | IFMIS</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="https://d20exy1ygbh3sg.cloudfront.net/fms/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- Header -->
+    <header class="logo">
+        <div class="container">
+            <div class="img"><img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png" alt=""></div>
+            <div class="modules"><button class="button" style="background-color: grey; color: #ECF0F1;  padding: 8px 8px; width: 10px;"><i class="fa-solid fa-bars" ></i>&nbsp;</button>
+              <button class="button" style="background-color: grey; color: #ECF0F1;  padding: 8px 8px; width: 39%;"><i class="fa-sharp fa-solid fa-house" ></i>&nbsp; Modules </i>&nbsp;
+              </button>
+              <button class="button" style="background-color: grey; color: #ECF0F1;  padding: 10px 10px; width: 35%; "><i class="fa-solid fa-user">&nbsp; </i>&nbsp; Profile </i>&nbsp;</button>
+              <button class="button" style="background-color: grey; color: #ECF0F1;  padding: 8px 8px; width: 35%; ">  <i class="fa-sharp fa-solid fa-arrow-right-from-bracket"> &nbsp; </i>&nbsp;Logout  </i>&nbsp;</button>
+              <p style=" color: white; padding-left: 1rem;  width: 35%; font-size: 12px;">Last login: <br> 12-june-2023 <br> 05:10 PM </p>
+              </div>
+      
+            <div class="drop">
+                <a href="">
+            <i class="fa-solid fa-user"></i> &nbsp; WELCOME G SATYANARAYANA &nbsp; <i class="arrow down"></i><br> (25001002018)
+        </a>
+      </div>
+        </div>
+      </header>
+
+
+
+
+<!-- Sidebar -->
+
+<div class="sidebar" style="border-right:25px solid lightgrey; border-top: 4px solid pink;">
+    <header> <i class="fa-sharp fa-solid fa-house">&nbsp; Home </i></header>
+    <ul>
+        <li>Employee Masters</li>
+        <li>Create Bill IDs</li>
+        <li>Employee Approvals</li>
+        <li>Bill IDs</li>
+        <li>Remove Bill ID</li>
+        <li>Leaves</li>
+        <li>Transfers/Depute/For.ser</li>
+        <li>Suspension</li>
+        <li>Retirement</li>
+        <li>Employee Acceptance</li>
+        <li>Exempt Emp Salary Days</li>
+        <li>Map Legal Heir</li>
+        <li>Promotions</li>
+        <li>DA Enhancement</li>
+        <li>Demotions</li>
+        <li>Employee Yearly Increment</li>
+        <li>Add Empployee</li>
+        <li>FR 22B</li>
+        <li>Automatic Adv Scheme</li>
+        <li>Short Close Loan</li>
+        <li>Salary Recovery Challan</li>
+        <li>Employee Expired</li>
+        <li>Continual Absence</li>
+</div>
+
+<div style="border: 4px solid pink;"></div>
+
+<!-- Note-Section -->
+
+<div class="note-section" style="border-top: 8px solid lightgrey; border-left: 20px solid  lightgrey; margin-left: 0%;">
+    <div>
+        <p>Add Employee</p>
+        <br>
+        <p>---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+        <br>
+          <dl id="Note">
+            <dt>Note:</dt>
+            <dd> &nbsp; &nbsp;  &nbsp; &nbsp;1. Any Employee Added by you will have to be approved by your concerned auditor.</dd>
+            <dd>  &nbsp; &nbsp;  &nbsp; &nbsp; 2. If you donot find the correct designation or department,please contact the technical team so that they will add the particulars into the DB.</dd>
+            <br>
+          </dl>
+          </div>
+         
+<!-- Form -->
+
+
+    <div style="border: 2px solid gray; border-left: none; border-right: none; border-bottom: none;" class="emp-form" >
+        <p style="text-align: center; background-color: #ECF0F1; border-bottom: 2px solid grey;"><strong> Employee Basic Details</strong></p>
+        <table class="invisible-lines" class="fields">
+            <tr style="background-color: #F7F9F9;" class="input-field">
+              <td>Select Scale Type</td>
+              <td style="padding-left: 8rem;"><select id="scale-type">
+                <option value="scale1">SELECT </option>
+                <option value="scale2">Scale 1</option>
+                <option value="scale3">Scale 2</option>
+              </select></td>
+             <td style="padding-left: 13rem;"> <label> <i class="fa-solid fa-info"></i>&nbsp; Employee Code</label></td>
+                <td style="padding-left: 2rem;"> <input type="text" placeholder="Employee Code" required></td>
+                <td></td>
+            </tr>
+            <tr class="input-field" style="background-color: #ECF0F1">
+                <td >
+                    <label><i class="fa-solid fa-user"></i>&nbsp; Employee Name</label></td>
+                <td style="padding-left: 8rem;"> <input type="text" placeholder="Employee Name" required></td>
+                <td style="padding-left: 13rem;"><label><i class="fa-solid fa-user"></i>&nbsp; Employee Sur-Name</label></td>
+                <td style="padding-left: 2rem;"> <input type="text" placeholder="Employee Sur-Name" required></td>
+                <td style="padding-left: 9rem;"><i class="fa-solid fa-id-badge"></i>&nbsp;Select Cader</td>
+              <td><select id="scale-type">
+                <option value="scale1">SELECT </option>
+                <option value="scale2">Scale 1</option>
+                <option value="scale3">Scale 2</option>
+              </select></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+
+              </tr>
+
+              <tr class="input-field" style="background-color: #F7F9F9" >
+                <td><i class="fa-solid fa-transgender"></i>&nbsp;Gender</td>
+              <td style="padding-left: 8rem;"><select id="scale-type">   
+                <option value="scale1">SELECT</option>
+                <option value="scale2">Male</option>
+                <option value="scale3">Female</option>
+                <option value="scale3">Others</option>
+              </select></td>
+
+              <td style="padding-left: 13rem;"><i class="fa-solid fa-briefcase"></i>&nbsp;Current Working Status</td>
+              <td style="padding-left: 2rem;"><select id="scale-type"> 
+                <option value="scale1">SELECT</option>
+                <option value="scale2">Employeed</option>
+                <option value="scale3">Unemployeed</option></select></td>
+              <td style="padding-left: 9rem;">Sub Type</td>
+              <td><select id="scale-type">  
+                <option value="scale1">SELECT</option>
+                <option value="scale2">Scale 1</option>
+                <option value="scale3">Scale 2</option>
+              </select></td>
+              </tr>
+
+              <tr class="input-field" style="background-color: #ECF0F1">
+                <td>  <label><i class="fa-solid fa-calendar-days"></i>&nbsp;Date of Birth</label></td>
+                <td style="padding-left: 8rem;"><input type="date" placeholder="DOB" required></td>
+                <td style="padding-left: 13rem;"><i class="fa-solid fa-id-card"></i>&nbsp;Designation</td>
+              <td style="padding-left: 2rem;"><select id="scale-type">    
+                <option value="scale1">SELECT</option>
+                <option value="scale2">Software Devloper</option>
+                <option value="scale3">Software Testing</option>
+              </select></td>     
+                <td style="padding-left: 9rem;"><label><i class="fa-solid fa-building"></i>&nbsp;Department</label></td>
+                <td>POLICE</td> 
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              </table> 
+
+
+              <div style="border: 2px solid gray; border-left: none; border-right: none;" >
+                <p style="text-align: center; padding: 5 px; background-color:#F7F9F9; border-bottom: 2px solid grey; position: relative;"><strong> Other Details</strong></p>
+                <table class="invisible-lines" class="fields">
+                    <tr  style="background-color: #ECF0F1" class="input-field">
+                        <td><label><i class="fa-regular fa-credit-card"></i>&nbsp;TSGLI No</label></td>
+                        <td style="padding-left: 2.5rem;"> <input type="text" placeholder="TSGLI No" required></td>
+                        <td style="padding-left: 13rem;"><i class="fa-solid fa-paste"></i>&nbsp;CPS/GPF Type</td>
+                        <td><label for=""></label>
+                            <input type="radio" name="" id="d" style="color: blue;">GPF
+                            <input type="radio" name="" id="d">CPS</td>
+                          <td style="padding-left: 7rem;"><label><i class="fa-solid fa-list-ol"></i>&nbsp;GPF No</label></td>
+                        <td> <input type="text" placeholder="GPS/CPF" required></td>
+                      </tr>
+
+                      <tr  style="background-color: #FBFCFC" class="input-field">
+                        <td ><label><i class="fa-regular fa-id-card"></i>&nbsp;Aadhar No</label></td>
+                        <td style="padding-left: 2.5rem;"> <input type="text" placeholder="Aadhar No" required></td>
+                        <td style="padding-left: 13rem;"><i class="fa-solid fa-user-plus"></i>&nbsp;Marital Status</td>
+                        <td><select id="scale-type">                         
+                          <option value="scale1">SELECT</option>
+                          <option value="scale2">Married</option>
+                          <option value="scale3">Unmarried</option>
+                          <option value="scale3">Single</option>
+                          <option value="scale3">Divorcee</option>
+                        </select></td>
+                        <td style="padding-left: 7rem;"><label><i class="fa-solid fa-box-archive"></i>&nbsp;PAN No</label></td>
+                        <td> <input type="text" placeholder="PAN No" required></td>
+                    </tr>
+
+                    <tr class="input-field" style="background-color: #ECF0F1">
+                        <td><label><i class="fa-solid fa-envelope"></i>&nbsp;Email ID</label></td>
+                        <td style="padding-left: 2.5rem;"> <input type="text" placeholder="Email ID" required></td>
+                    <td style="padding-left: 13rem;"><label for="add"><i class="fa-sharp fa-solid fa-location-dot"></i>&nbsp; Employee Address:</label></td>
+                    <td> <textarea name="" id="add" cols="25" rows="2"></textarea></td>
+                    <td style="padding-left: 7rem;"><label><i class="fa-solid fa-phone"></i>&nbsp;Mobile No</label></td>
+                        <td> <input type="text" placeholder="Mobile No" required></td>
+                    </tr>
+                    <tr class="input-field">
+                        <td><label>Earned Leaves Left(as of today):</label></td>
+                        <td style="padding-left: 2.5rem;"> <input type="text" placeholder="Earned Leaves" required></td>
+                        <td style="padding-left: 13rem;"><label>Half Pay Leaves(as of today):</label></td>
+                        <td> <input type="text" placeholder="Half Pay Leaves" required></td>
+                    </tr>
+                      </table>   
+    </div>
+
+
+
+    <div style="border: 2px solid grey; border-left: none; border-right: none; border-bottom: none;"  >
+        <p style="text-align: center; padding: 5 px; background-color: #ECF0F1; border-bottom: 2px solid grey;"><strong> Bank Details</strong></p>
+        <table class="invisible-lines" class="fields">
+            <tr  style="background-color: #FBFCFC" class="input-field">
+                <td><label><i class="fa-solid fa-building-columns"></i>&nbsp;Bank Account No</label></td>
+                <td style="padding-left: 8rem;"> <input type="text" placeholder="Bank Account No" required></td>               
+                  <td style="padding-left: 2rem;"><label><i class="fa-solid fa-building-columns"></i>&nbsp;Confirm Bank Account No</label></td>
+                <td style="padding-left: 1rem;"> <input type="text" placeholder="Confirm Bank Account" required></td>
+              </tr>
+             
+            <tr class="input-field" style="background-color: #ECF0F1">
+                <td ><label style="width: 25%;"><i class="fa-solid fa-chevron-left"></i>&nbsp;Enter IFSC</label></td>
+                <td style="padding-left: 8rem; "> <input type="text" placeholder="IFSC" required>
+                    <input type="text" placeholder="SEARCH" required></td>
+            <td style="padding-left: 2rem;"><label><i class="fa-regular fa-money-bill-1"></i>&nbsp;Bank Name</label></td>
+                <td style="padding-left: 3rem;">---</td>
+                <td style="padding-left: 8rem;"><label><i class="fa-regular fa-money-bill-1"></i>&nbsp;Branch</label></td>
+                <td>---</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+              </table> 
+              <br style="background-color: #ECF0F1;">
+</div>
+</div>
+<div>
+    Upload necessary Documents(proceddings/GO/joining order/proof of <br> employement etc..): 
+
+    <input type="file" name="" id="" style="padding-left: 20rem;">
+
+
+    <button style=" border: none;
+    color: white;
+    background-color: #239B56;
+    padding: 10px 10px;
+    border-radius: 10%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;" id="btn">Add</button>
+    <br>
+</div>
+
+<div>
+
+   <table class="invisible-lines" class="fields">
+    <tr style="background-color: #F7F9F9" class="input-field; padding-top: 1rem; ">
+      <td style="padding-left: 5rem;"> <b>Auditor:</b></td>
+      <td style="padding-left: 8rem;"><select id="scale-type">
+        <option value="scale1">SELECT &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </option>
+        <option value="scale2">Scale 1</option>
+        <option value="scale3">Scale 2</option>
+      </select></td>
+      </tr>
+      </table>
+</div>
+<div style="padding-left: 40rem;">
+    <button style=" border: none;
+    color: white;
+    background-color: #08254f;
+    padding: 12px 40px;
+    /* border-radius: 10%; */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;" id="btn"><b>CREATE EMPLOYEE</b></button>
+</div>
+</body>
+</html>
