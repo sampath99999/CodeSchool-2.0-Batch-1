@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFMIS</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../Sameer/style.css">
+</head>
+<body>
+        <div class="navbar_top">
+            <div class="navbar_top_img">
+            <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png"alt="logo">
+             </div>
+            <div class="navbar_top_btn">
+            <li><button class="button" href=""</button><i class="fa fa-align-justify"></i></li>
+            <li><button class="button" href=""><i class="fa fa-home"></i>MODULES</button></li>
+            <li><button class="button" href=""><i class="fa fa-user-o"></i>Profile</button></li>
+            <li><button class="button" href=""><i class="fa fa-"></i>LOGOUT</button></li>
+            <p style="margin: 10px;">last login:<br>12-jul-2023<br>05:10pm</p>
+        </div> 
+        <div class="navbar_top_btn_right">
+        <li><button class="button" href=""><i class="fa fa-user"></i>Welcome G Satyanarayana<br>(25001002010)</button></li>
+        </div>
+        
+    </div>
+    <div class="body_container">
+    <div class="navbar_vertical">
+        <ul class="navbar">
+        <li><a href=""><i class="fa fa-home"></i>Home</a></li>
+        <li><a href="">Employee Master</a></li>
+        <li><a href="">Create Bill IDs</a></li>
+        <li><a href="">Employee Approavals</a></li>
+        <li><a href="">Bill IDs</a></li>
+        <li><a href="">Remove Bill ID</a></li>
+        <li><a href="">Leaves</a></li>
+        <li><a href="">Transfers/Depute/For.Ser.</a></li>
+        <li><a href="">Suspension</a></li>
+        <li><a href="">Retirement</a></li>
+        <li><a href="">Employee Acceptence</a></li>
+        <li><a href="">Exempt Emp Salary Days</a></li>
+        <li><a href="">Map Legal Heir</a></li>
+        <li><a href="">Promotions</a></li>
+        <li><a href="">DA Enhancement</a></li>
+    </ul>
+</div>
+    <div class="container" style="background-color: white;">
+        <h2>Add Employee</h2>
+        <hr class="dashed_line">
+        <div class="note">
+        <span>
+            <h3>Note:</h3>
+            <ol>
+                <li>Any Employee Added by you will have to be approved by your concerned auditor</li>
+                <li>If you don not find the correct designated or department,please contact the technical team so that they will add the particular into the DB </li>
+            </ol>
+        </span>
+    </div>
+    <div class="heading">
+        <h3>Employee Basic Details</h3>
+    </div>
+    <form>
+        <div class="form-row">
+            <label>Select Scale Type*</label>
+            <select>  
+                <option value="">Select</option>  
+                <option value="">Demo1</option>  
+                <option value="">Demo2</option>  
+                <option value="">Demo3</option>    
+            </select>
+            <label>Employee Code</label>
+            <input type="text" placeholder="Employee Name">
+        </div>
+        <div class="form-row" style="background-color: #f4f2f2;">
+            <label>Employee Name*</label>
+            <input type="text" placeholder="Employee Name">
+            <label>Employee Sur-Name</label>
+            <input type="text" placeholder="Surname">
+            <label><i class="fa fa-address-book-o">Select Cader*</i></label>
+            <select>  
+                <option value="">Select</option>  
+                <option value="">Demo1</option>  
+                <option value="">Demo2</option>  
+                <option value="">Demo3</option>    
+            </select>
+        </div>
+        <div class="form-row">
+            <label><i class="fa fa-transgender-alt">Gender:*</i></label>
+            <select>  
+                <option value="">Select</option>  
+                <option value="">Male</option>  
+                <option value="">Female</option>  
+                <option value="">Others</option>    
+            </select>
+            <label><i class="fa fa-briefcase">Current Working  Status:*</i></label>
+            <select>  
+                <option value="">Select</option>  
+                <option value="">Demo1</option>  
+                <option value="">Demo2</option>  
+                <option value="">Demo3</option>    
+            </select>
+            <label>Sub Type*</label>
+            <select>  
+                <option value="">Select</option>  
+                <option value="">Demo1</option>  
+                <option value="">Demo2</option>  
+                <option value="">Demo3</option>    
+            </select>
+        </div>
+        <div class="form-row" style="background-color: #f4f2f2;">
+            <label><li class="fa fa-calendar">Date of Birth:*</li></label>
+            <input type="text" placeholder="DOB">
+            <label><li class="fa fa-address-card"></li>Designation*</label>
+            <select>  
+                <option value="">Select</option>  
+                <option value="">Demo1</option>  
+                <option value="">Demo2</option>  
+                <option value="">Demo3</option>    
+            </select>
+            <label><li class="fa fa-building"></li>Department</label>
+            <input type="text"placeholder="Police">
+        </div>
+    </form>
+    <div class="heading" style="background-color: white;">
+        <h3>Others Details</h3>
+    </div>
+        <div class="form-row" style="background-color: #f4f2f2;">
+            <label><li class="fa fa-drivers-license-o"></li>TSGLI No</label>
+                 <input type="text" placeholder="TSGLI No">
+            <label><li class="fa fa-file-text-o"></li>CPS/GPF Type:</label>
+                <input type="radio">CPS
+                <input type="radio">GPF
+            <label><li class="fa fa-sort-amount-desc"></li>GPF No.</label>
+                 <input type="text"placeholder="GPF/CPS No.">
+        </div>
+        <div class="form-row">
+            <label><li class="fa fa-id-card"></li>Aadhaar no*</label>
+            <input type="text" placeholder="Aadhar No">
+            <label><li class="fa fa-user-plus"></li>Martial Status*</label>
+            <select>  
+                <option value="">Select</option>  
+                <option value="">Single</option>  
+                <option value="">Married</option>  
+                <option value="">Divorece</option>    
+            </select>
+            <label><li class="fa fa-archive"></li>PAN No</label>
+            <input type="text"placeholder="PAN No">
+        </div>
+        <div class="form-row" style="background-color: #f4f2f2;">
+            <label><li class="fa fa-envelope"></li>Email ID</label>
+            <input type="email"placeholder="Enter Your email">
+            <label><li class="fa fa-map-marker"></li>Employee Address</label>
+            <textarea cols="20" rows="2"></textarea>
+            <label><li class="fa fa-phone-square"></li>Mobile No*</label>
+            <input type="text" placeholder="Employee Mobile No.">
+        </div>
+        <div class="form-row">
+            <label>Earned Leaves Left(as of today):</label>
+            <input type="text" placeholder="Earned Leaves.">
+    
+            <label>Half Pay Leaves Left(as of Today):</label>
+            <input type="text"placeholder="Half Pay Leaves.">
+        </div>
+    <div class="heading">
+        <h3>Bank Details</h3>
+    </div>
+    <div class="form-row">
+        <label><li class="fa fa-university"></li>Bank Acount No*</label>
+        <input type="password"placeholder="*********">
+        <label><li class="fa fa-university"></li>Confirm Bank Account*</label>
+        <input type="text" placeholder="Confirm Bank Account">
+    </div>
+    <div class="form-row" style="background-color:#f4f2f2;">
+        <label>IFSC</label>
+            <input type="text" placeholder="Enter IFSC">
+                <button>Search</button>
+        <label><li class="fa fa-credit-card"></li>Bank Name</label>
+        <label><li class="fa fa-credit-card"></li>Branch</label>
+    </div>
+    <div class="doc">
+    <div class="form-row">
+        <lavel>Upload necessary Documents(proeedings/GO/joining order/proof of employment etc..)</lavel>
+        <input type="file" placeholder="No file chosen">
+        <input style="background-color: #5db85b;color: white; border: none;font-weight: bold;" type="submit"value="Add"><br>
+    </div>
+    <div class="form-row">
+        <label>Auditor:</label>
+        <select>  
+            <option value="">Select</option>  
+            <option value="">Demo1</option>  
+            <option value="">Demo2</option>  
+            <option value="">Demo3</option>    
+        </select>
+    </div>
+    </div>
+    <div class="create_employee">
+        <input style="background-color: #0f3550;color: white; border: none; font-weight: bold; font-size: large;" type="submit"value="CREATE EMPLOYEE">
+    </div>
+    </div>
+</form>
+</div>
+</body>
+</html>
