@@ -1,0 +1,24 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.left-profile-image{
+width: 280px;
+height: 0px;
+display: flex;
+margin: 20px;
+ padding-left: 50px;
+}
+.left-profile-image img{
+    height: 150px;
+    width :150px;
+    border-radius:50%;
+    border-right:5px solid rgb(138, 50, 215); 
+    border-top: 5px solid rgb(138, 50, 215); 
+    border-bottom: 5px solid rgb(138, 50, 215);
+}
+/* img{
+    height: 45%;
+    width: 10%;
+} */
