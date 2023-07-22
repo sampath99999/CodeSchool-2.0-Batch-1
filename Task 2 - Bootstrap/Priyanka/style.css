@@ -1,3 +1,14 @@
+
+body{
+
+  font-size: 14px;
+  font-style: normal;
+}
+
+.container1{
+  width: 100%;
+}
+
 .nav-link{
     font-weight: 600;
     cursor: pointer;
@@ -19,6 +30,9 @@
     overflow: hidden;
     background-color: lightgray;
     cursor: pointer;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
   }
 
   .circle-image img {
@@ -188,7 +202,7 @@
         border: none;
       }
 
-      .progress-bar1 {
+      /* .progress-bar1 {
         flex-direction: column;
         justify-content: center;
         overflow: hidden;
@@ -219,7 +233,7 @@
         white-space: nowrap;
         background-color: orange;
         cursor: pointer;
-    }
+    } */
 
     .play-button{
         display: inline-flex;
@@ -277,7 +291,7 @@
   .parent1 {
     display: flex;
     justify-content: space-between;
-    width: 500px;
+    width: 400px;
     height: 40px;
     background-color: #9166F8;
     color: white;
