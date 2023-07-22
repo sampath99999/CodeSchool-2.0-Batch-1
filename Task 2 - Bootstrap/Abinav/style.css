@@ -1,0 +1,252 @@
+.navbar-brand{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.navbar{
+    margin: 0px !important;
+    padding: 0px !important;
+    justify-content:  !important;
+    
+}
+body{
+    background-color: aquamarine;
+}
+.kingu{
+    color:green;
+}
+.para{
+    padding-top: 8px;
+    margin: 0px;
+    font-size: 16px;
+    padding-left: 18px;
+    font-weight: 600;
+    padding-bottom: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.para2{
+    font-size: 11px;
+    padding: 0px;
+    margin: 0px;
+    padding-left: 18px;
+    padding-bottom: 30px;
+}
+.card-title{
+    padding: 0px !important;
+    margin: 0px !important;
+    font-weight: 600 !important;
+    }
+.card-text{
+    font-size: 10px !important;
+    padding-bottom: 1px;
+    margin: 0px !important;
+    font-weight: 450 !important;
+}
+.cb{
+    align-items: center !important;
+    padding-left: 40px ;
+    text-align: center;
+    padding-top: 20px;
+}
+.box1
+{
+    height: 230px;
+    width: auto;
+    background-color:white;
+    
+}
+#mainbox{
+    margin-top: 20px;
+}
+.vertical-dotted-line {
+    border-left: 1px dotted #000; /* Adjust the color here if needed */
+    height: 200px; /* Adjust the height of the line */
+  }
+  .form-check-input{
+    background-color: rgb(145, 96, 33) !important;
+  }
+  .nav-link{
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    margin-left: 0px !important;
+  }
+  .pic
+  {
+    margin-left: 30px;
+  }
+  .ad{
+    font-size: 400px;  
+}
+.progresstext{
+    font-size: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    height: 8px !important;
+}
+.progress-bar{
+    background-color: rgb(146, 104, 245) !important;
+    height: 6px !important;
+    size: 80px !important;
+
+}
+.progress{
+    height: 10px !important;
+}
+.box2{
+    height: 420px;
+    background-color: white;
+}
+.button1{
+    background-color: #9166F8;
+    border-radius: 50px;
+    color: white;
+    border: 1px solid white;
+    height: 40px;
+    width: 40px;
+    margin-top: 20px;
+}
+.btsub{
+    font-weight: 500;
+    padding-left: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.btsub2{
+   padding: 0px;
+   margin: 0px;
+    padding-left: 40px;
+}
+.nop{
+
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+.nop1{
+    padding-top: 0px;
+    margin-top: 0px;
+}
+#pog2{
+    background-color:#0EA5E9 !important;
+    height: 8px !important;
+}
+.thilak{
+    background-color: #9166F8;
+    border-radius: 24px;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    height: 45px;
+    width: 45px;
+    
+}
+#pog4{
+    background-color: rgb(152, 208, 152) !important;
+    height: 8px !important;
+}
+#pog5{
+    background-color: rgb(232, 232, 149) !important;
+    height: 8px !important;
+}
+.box3{
+    background-color: white;
+    height: 650PX;
+    margin-right: 0x;
+    padding-top: 0px;
+}
+.pk1{
+    font-size: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+#pk2
+{
+    margin: 0px;
+    padding: 0px;
+}
+.downpara{
+    font-size: 13px;
+}
+#flex{
+    background-color: rgb(142, 216, 142) !important;
+}
+#ceck{
+    background-color: violet !important;
+}
+#b3{
+    background-color: yellow !important;
+}
+#b4{
+    background-color: rgb(126, 192, 249) !important;
+}
+#b5{
+    background-color: green !important  ;
+}
+#b2{
+    background-color:aliceblue;
+}
+.box6{
+    height: 350px;
+    background-color: white;
+    margin: 20px;
+}
+.b8{
+    background-color: #000;
+    border-radius: 25px;
+    height: 45px;
+}
+.b9{
+    background-color: #9166F8;
+    border-radius: 23px;
+    border: none;
+    height: 45px;
+}
+.b10{
+    background-color: #0EA5E9;
+    border: none;
+    height:45px;
+    border-radius: 23px;
+}
+.b11{
+    border-radius: 23px;
+    background-color: #11B981 !important;
+    border: none;
+    height: 45px;
+}
+.b12{
+    background-color: rgb(241, 206, 78);
+    border-radius: 23px;
+    height: 45px;
+    border: none;
+}
+#bks
+{
+    background-color: #9166F8 !important;
+}
+
+.b13{
+    background-color: #E11D48;
+    height: 45px !important;
+    border: none;
+    border-radius: 23px;
+}
+.thilak2{
+    background-color: #E9E0FE;
+    border: none;
+    margin-top: 10px;
+    color: violet;
+    height: 35px;
+    border-radius: 6px;
+    width: 70px;
+}
+#abi{
+    color: white !important;
+    padding-left: 80px !important;
+    height: 40000px !important;
+    width: 5000px !important;
+    size: 5000px !important;
+}
+.table{
+    margin-left: 500px !important;
+}
