@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<nav class=" navbar   navbar-expand-sm  bg-light">
+  <div class="container-fluid">
+    <div class="navbar-left d-flex">
+   
+    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon "></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <a class="navbar-brand" href="#">Qoduby</a>
+      <ul class="navbar-nav ">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dashboards</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link</a></li>
+            <li><a class="dropdown-item" href="#">Another link</a></li>
+            <li><a class="dropdown-item" href="#">A third link</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Projects</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link</a></li>
+            <li><a class="dropdown-item" href="#">Another link</a></li>
+            <li><a class="dropdown-item" href="#">A third link</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Apps</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link</a></li>
+            <li><a class="dropdown-item" href="#">Another link</a></li>
+            <li><a class="dropdown-item" href="#">A third link</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Pages</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link</a></li>
+            <li><a class="dropdown-item" href="#">Another link</a></li>
+            <li><a class="dropdown-item" href="#">A third link</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link inactive dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Help</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Link</a></li>
+            <li><a class="dropdown-item" href="#">Another link</a></li>
+            <li><a class="dropdown-item" href="#">A third link</a></li>
+          </ul>
+        </li>
+        </div>
+      </div>
+        <div class="navbar-right ">
+          <button class="rounded-circle border border-white p-2"><i class="bi bi-search"></i></button>
+          <button class="rounded-circle border border-white p-2"><i class="bi bi-chat-left"></i></button>
+          <button class="rounded-circle border border-white p-2"><i class="bi bi-hdd"></i></button>
+          <button class="rounded-circle border border-white p-2"><i class="bi bi-bell"></i></button>
+          <button class="border border-white rounded-circle p-2"><img style="width:27px;height:27px;" src="image.png"></button>
+       </div>  
+ 
+  </div>
+</nav>
+<div class="total d-flex">
+<div class="col-left col-2 p-5 d-none d-md-block">
+ <img  class="  rounded-circle" src="image.png" alt="" style="width: 100px;height: 100px; border: 4px solid #9166F8;">
+ <h4>Barry Tone</h4>
+ <p>UI/UX Designer</p>
+ <div class="row border">
+    <div class="col p-2 ">
+        <i class="home ms-4 bi bi-house-door"></i>
+        <p>Dashboard</p>
+    </div>
+    <div class="col p-2">
+        <i class="bi bi-grid ms-3"></i>
+        <p>Projects</p>
+    </div>
+ </div>
+ <div class="row border">
+    <div class="col p-2">
+        <i class="bi bi-kanban ms-4"></i>
+        <p>Kanban</p>
+    </div>
+    <div class="col p-2 ">
+        <i class="bi bi-plus-square ms-4"></i>
+        <p>AddProject</p>
+    </div>
+ </div>
+ <div class="row border">
+    <div class="col p-2">
+        <i class="bi bi-file-earmark ms-3"></i>
+        <p class="ps-2">Files</p>
+    </div>
+    <div class="col p-2">
+        <i class="bi bi-people ms-3"></i>
+        <p>Team</p>
+    </div>
+ </div>
+ <div class="row border">
+    <div class="col p-2">
+        <i class="bi bi-calendar4 ms-3"></i>
+        <p>Calendar</p>
+    </div>
+    <div class="col p-2">
+        <i class="bi bi-clipboard ms-3"></i>
+        <p>Invoices</p>
+    </div>
+ </div>
+ <div class="row">
+    <div class="col">
+        <div class="text d-flex justify-content-between">
+        <p>Last Project</p>
+        <p>60%</p>
+    </div>
+        <div class="progress ">
+            <div class="pbar progress-bar p-5 " role="progressbar" aria-valuenow="60"
+            aria-valuemin="0" aria-valuemax="100" style="width:60%">
+              
+            </div>
+          </div>
+ </div>
+</div>
+</div>
+<div class="col-right col-10">
+    <div class="row_1 d-block d-md-flex">
+        <div class="col_1 d-flex">
+           <img src="image1.png" alt="" style="width:200px;height:100px;">
+           <div class="d-block bg-white">
+           <p>Project Design</p>
+           <h5>5 Project</h5>
+        </div>
+        </div>
+        <div class="col_2 d-flex">
+            <img src="image2.png" alt="" style="width:200px;height:100px">
+            <div class="d-block bg-white ">
+                <p>Visual Identity</p>
+                <h5>5 Project</h5>
+    
+            </div>
+        </div>
+        <div class="col_3 d-flex">
+            <img src="image1.png" alt="" style="width:200px;height:100px;">
+            <div class="d-block bg-white">
+            <p>Web Development</p>
+            <h5>3 Project</h5>
+        </div>
+        </div>
+        <div class="col_4 d-flex">
+            <img src="image2.png" alt="" style="width:200px;height:100px">
+            <div class="d-block bg-white">
+            <p>Illustration Works</p>
+            <h5>7 Project</h5>
+        </div>
+        </div>
+    </div>
+    <div class=" row-2 d-block d-md-flex">
+    <div class="row_2 m-3 p-3 ">
+       <div class="d-block">
+        <div class="row_2_1 d-block d-md-flex bg-white ">
+            
+            <div class=" violett row_2_1_col_1  p-5 pb-0 d-block align-items-center ms-3 mb-3">
+                <i class="bi bi-house-door p-3 mt-3 border rounded-circle"></i>
+             <p class="pt-3">Projects</p>
+             <h3>48</h3>
+            </div>
+            <div class=" row_2_1_col_2 p-5 d-block bg-info ms-3 mb-3">
+                <i class="bi bi-paperclip p-3 mt-3 border rounded-circle"></i>
+                <p class="pt-3">Ongoing</p>
+                <h3>16</h3>
+            </div>
+            <div class="row_2_1_col_3 p-5 d-block bg-light ms-3 mb-3">
+                <i class="bi bi-house-door border rounded-circle p-3 mt-3"></i>
+                <p class="pt-3">Completed</p>
+                <h3>27</h3>
+            </div>
+            <div class="row_2_1_col_4 p-2 d-block  mb-3">
+                <h6>Our Team</h6>
+                <p class="">Team Members</p>
+                <div class="d-flex">
+                <img class="rounded-circle" src="girl.png" alt="" style="width:50px;height:50px;">
+                <img class="rounded-circle" src="girl.png" alt="" style="width:50px;height:50px;"><p class="border rounded-circle p-2 ">+7</p></div>
+               
+                <div class="border p-5 ms-3 mt-2">
+                <div class="spinner-border text-info " role="status">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+            </div>
+        </div></div>
+        <div class="row_2_2 bg-white ms-3 mt-3 ">
+            <div class="row_2_2_1 d-block d-md-flex border">
+          <div class=" button row_2_2_col_1   p-3  ">
+            <div class="d-flex">
+        <i class=" icon bi bi-play border-0 rounded-circle mt-4 p-1 align-items-center" ></i>
+        <div class="d-block"> 
+        
+          <p class=" start pt-3 ms-2 p-0">Start From</p>
+           <div class=" d-flex">
+          <i class=" bi bi-clock"></i>
+          <p class="mt-0">9:00  a.m</p></div></div>
+         </div> </div>
+          <div class="row_2_2_col_2 mt-3  p-3">
+            <h5>IOS Development Project</h5>
+            <div class="d-flex">
+                <i class="bi bi-chat"></i>
+                <p>,  7 Comments</p>
+            </div>
+          </div>
+          <div class="row_2_2_col_3  p-3 mt-3">
+            <p>48% Complete</p>
+            <div class="progress">
+                <div class="pbar progress-bar p-5 " role="progressbar" aria-valuenow="48"
+                aria-valuemin="0" aria-valuemax="100" style="width:10%">
+                  
+                </div>
+              </div>
+
+          </div>
+          <div class="row_2_2_col_4  ms-4 ps-1">
+            <button class=" vio m-5 border-0 p-2">Detail</button>
+          </div>
+        </div>
+        <div class="row_2_2_2 d-block d-md-flex  border">
+            <div class=" button row_2_2_col_1  p-3  ">
+              <div class="d-flex">
+          <i class=" icon bi bi-play border-0 rounded-circle mt-4 p-1 align-items-center" ></i>
+          <div class="d-block"> 
+          
+            <p class="start pt-3 ms-2 p-0">Start From</p>
+             <div class=" d-flex">
+            <i class=" bi bi-clock"></i>
+            <p class="mt-0">9:00  a.m</p></div></div>
+           </div> </div>
+            <div class="row_2_2_col_2 mt-3 d-block  ms-2 p-3">
+              <h5 class="">Web Design Project</h5>
+              <div class="d-flex">
+                  <i class="bi bi-chat"></i>
+                  <p>,  3 Comments</p>
+              </div>
+            </div>
+            <div class="row_2_2_col_3 m-4 p-3 ps-4 mt-3">
+              <p>22% Complete</p>
+              <div class="progress">
+                  <div class="pbar progress-bar p-5 " role="progressbar" aria-valuenow="48"
+                  aria-valuemin="0" aria-valuemax="100" style="width:22%">
+                    
+                  </div>
+                </div>
+  
+            </div>
+            <div class="row_2_2_col_4  ms-3 ">
+              <button class=" vio m-5 border-0 p-2">Detail</button>
+            </div>
+          </div>
+          <div class="row_2_2_3  d-block d-md-flex  border">
+            <div class=" button row_2_2_col_1  p-3  ">
+              <div class="d-flex">
+          <i class=" icon bi bi-play border-0 rounded-circle mt-4 p-1 align-items-center" ></i>
+          <div class="d-block"> 
+          
+            <p class="start pt-3 ms-2 p-0">Start From</p>
+             <div class=" d-flex">
+            <i class=" bi bi-clock"></i>
+            <p class="mt-0">9:00  a.m</p></div></div>
+           </div> </div>
+            <div class="row_2_2_col_2 mt-3 d-block m-3  p-3">
+              <h5>SEO Research Project</h5>
+              <div class="d-flex">
+                  <i class="bi bi-chat"></i>
+                  <p>,  7 Comments</p>
+              </div>
+            </div>
+            <div class="row_2_2_col_3  p-3 mt-3">
+              <p>48% Complete</p>
+              <div class="progress">
+                  <div class="pbar progress-bar p-5 " role="progressbar" aria-valuenow="48"
+                  aria-valuemin="0" aria-valuemax="100" style="width:10%">
+                    
+                  </div>
+                </div>
+  
+            </div>
+            <div class="row_2_2_col_4  ms-4 p-1">
+              <button class=" vio m-5 border-0 p-2">Detail</button>
+            </div>
+          </div>
+          <div class="row_2_2_4 d-block d-md-flex  border">
+            <div class=" button row_2_2_col_1  p-3   ">
+              <div class="d-flex">
+          <i class=" icon bi bi-play border-0 rounded-circle mt-4 p-1 align-items-center" ></i>
+          <div class="d-block"> 
+          
+            <p class="start pt-3 ms-2 p-0">Start From</p>
+             <div class=" d-flex">
+            <i class=" bi bi-clock"></i>
+            <p class="mt-0">9:00  a.m</p></div></div>
+           </div> </div>
+            <div class="row_2_2_col_2 mt-3 d-block  me-5 p-3">
+              <h5>ProtoType Project</h5>
+              <div class="d-flex">
+                  <i class="bi bi-chat"></i>
+                  <p>,  7 Comments</p>
+              </div>
+            </div>
+            <div class="row_2_2_col_3  p-3 mt-3">
+              <p>48% Complete</p>
+              <div class="progress">
+                  <div class="pbar progress-bar p-5 " role="progressbar" aria-valuenow="48"
+                  aria-valuemin="0" aria-valuemax="100" style="width:10%">
+                    
+                  </div>
+                </div>
+  
+            </div>
+            <div class="row_2_2_col_4  ms-5">
+              <button class=" vio m-5 border-0 p-2">Detail</button>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <div class="row_2_col_2 col-12 col-md-4 bg-white p-5 mb-3  ms-0 mt-2">
+       <p class="mt-0">Project Time</p> 
+       <div class="d-flex justify-content-between">
+        <div class="one">
+       <p>May 2023</p>
+    </div>
+    <div class="two">
+       <p>&lt;&gt;</p>
+    </div>
+    </div>
+     <div class="d-flex">
+    <div class="col-2">
+        <p>MON</p>
+        <p>-</p>
+        <p>7</p>
+        <p>14</p>
+        <p>21</p>
+        <p>28</p>
+    </div>
+    <div class="col-2">
+        <p>TUE </p>
+        <p>1</p>
+        <p>8</p>
+        <p>15</p>
+        <p>22</p>
+        <p>29</p>
+    </div>
+    <div class="col-2">
+        <p>WED</p>
+        <p>2</p>
+        <p>9</p>
+        <p>16</p>
+        <p>23</p>
+        <p>30</p>
+    </div>
+    
+    <div class="col-2">
+        <p>THU</p>
+        <p>3</p>
+        <p>10</p>
+        <p>17</p>
+        <p>24</p>
+        
+    </div>
+    <div class="col-2">
+        <p>FRI</p>
+        <p >4</p>
+        <p>11</p>
+        <p>18</p>
+        <p>25</p>
+       
+        
+    </div>
+    <div class="col-2">
+        <p>SAT</p>
+        <p>5</p>
+        <p>12</p>
+        <p>19</p>
+        <p>26</p>
+    </div>
+    <div class="col-2">
+        <p>SUN</p>
+        <p>6</p>
+        <p>13</p>
+        <p>20</p>
+        <p>27</p>
+       
+        
+    </div> 
+    
+<!-- <table>
+  <tr class="">
+  <th>MON</th>
+  <th>TUE</th>
+  <th>WED</th>
+  <th>THU</th>
+  <th>FRI</th>
+  <th>SAT</th>
+  <th>SUN</th>
+  </tr>
+  <tr>
+    <td>-</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+  </tr>
+</table> -->
+
+</div>
+<div class="abcd">
+    <div class="d-flex ">
+    <i class=" check bi bi-check2 border rounded" style="height:20px;margin-top: 25px;"></i>
+    <div class="block border-bottom p-2 ">
+<h6>Create New Component in React</h6>
+<p class="g"style="height:10px;">2 Days Remaining</p>
+</div>
+    </div></div>
+    <div class="abcd">
+        <div class="d-flex ">
+        <i class="bg-success check bi bi-check2 border rounded" style="height:20px;margin-top: 25px;"></i>
+        <div class="block border-bottom p-2 ">
+    <h6>Improve Workflow in Figma</h6>
+    <p class="g"style="height:10px;">3 Days Remaining</p>
+    </div>
+        </div></div>
+        <div class="abcd">
+            <div class="d-flex ">
+            <i class="bg-secondary check bi bi-check2 border rounded" style="height:20px;margin-top: 25px;"></i>
+            <div class="block border-bottom p-2 ">
+        <h6>Create Darkmode for IOS</h6>
+        <p class="g"style="height:10px;">6 Days Remaining</p>
+        </div>
+            </div></div>
+            <div class="abcd">
+                <div class="d-flex ">
+                <i class="bg-warning check bi bi-check2 border rounded" style="height:20px;margin-top: 25px;"></i>
+                <div class="block border-bottom p-2 ">
+            <h6>Client Review for Feedback</h6>
+            <p class="g"style="height:10px;">6 Days Remaining</p>
+            </div>
+                </div></div>
+                <div class="abcd">
+                    <div class="d-flex ">
+                    <i class="bg-info check bi bi-check2 border rounded" style="height:20px;margin-top: 25px;"></i>
+                    <div class="block border-bottom p-2 ">
+                <h6>Create wireframe for app</h6>
+                <p class="g"style="height:10px;">6 Days Remaining</p>
+                </div>
+                    </div></div>
+                    <div class="abcd">
+                        <div class="d-flex ">
+                        <i class="bg-success check bi bi-check2 border rounded" style="height:20px;margin-top: 25px;"></i>
+                        <div class="block border-bottom p-2 ">
+                    <h6>Project design for Sketch</h6>
+                    <p class="g"style="height:10px;">6 Days Remaining</p>
+                    </div>
+                        </div></div>
+    
+</div></div>
+<div class="row_3 ms-5 bg-white " id="">
+  <div class="col d-none d-md-block">
+  <div class="row_3_1">
+  <p class="ms-2 p-2">projects Timeline</p>
+ 
+  <div class=" first col-6 rounded-pill d-flex justify-content-between text-white">
+    <div class="d-flex">
+    <img class="rounded-circle ps-2 p-1" src="girl.png" alt="">
+    <p class="ms-1 pt-2">Web Backend</p></div>
+    <p class="me-1 pt-2">Development</p>
+  </div>
+</div>
+<div class="row_3_2 d-flex">
+  <div class=" second mt-4 col-4 rounded-pill d-flex justify-content-between text-white">
+    <div class="d-flex">
+    <img class="rounded-circle ps-2 p-1" src="girl.png" alt="">
+    <p class="ms-1 pt-2">Web Backend</p></div>
+    <p class="me-1 pt-2">Development</p>
+  </div>
+  <div class=" first mt-4 col-6 bg-info rounded-pill d-flex justify-content-between text-white">
+    <div class="d-flex">
+    <img class="rounded-circle ps-2 p-1" src="girl.png" alt="">
+    <p class="ms-1 pt-2">Web Backend</p></div>
+    <p class="me-1 pt-2">Development</p>
+  </div></div>
+  <div class="row_3_3">
+    <div class=" mt-4 col-8 rounded-pill d-flex bg-success justify-content-between text-white">
+      <div class="d-flex">
+      <img class="rounded-circle ps-2 p-1" src="girl.png" alt="">
+      <p class="ms-1 pt-2">Web Backend</p></div>
+      <p class="me-1 pt-2">Development</p>
+    </div>
+  </div>
+  <div class="row_3_4 d-flex">
+    <div class="  first bg-warning mt-4 col-4 rounded-pill d-flex justify-content-between text-white">
+      <div class="d-flex">
+      <img class="rounded-circle ps-2 p-1" src="girl.png" alt="">
+      <p class="ms-1 pt-2">Web Backend</p></div>
+      <p class="me-1 pt-2">Development</p>
+    </div>
+    <div class=" fifth mt-4 col-4 bg-danger rounded-pill d-flex justify-content-between text-white">
+      <div class="d-flex">
+      <img class="rounded-circle ps-2 p-1" src="girl.png" alt="">
+      <p class="ms-1 pt-2">Web Backend</p></div>
+      <p class="me-1 pt-2">Development</p>
+    </div></div>
+</div></div>
+<div class="row_4 ms-5 bg-white mt-3 d-flex justify-content-between">
+  <div class="d-flex">
+  <p>2023 &nbsp;</p>
+  <i class="bi bi-c-square"></i>
+  <p>Qoduby</p></div>
+  <div><a href="#">Support</a>
+  <a href="#">Reference</a>
+<a href="#">Documentation</a></div>
+</div>
+</div></div>
+</body>
+</html>
