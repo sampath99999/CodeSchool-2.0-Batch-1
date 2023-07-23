@@ -1,0 +1,264 @@
+/* Header-Style-Start */
+nav{
+    background-color: white;
+    margin: 20px;
+}
+.icon-ul{
+    gap: 4px;
+}
+.icon{
+    padding: 13px;
+    color: grey;
+    background-color: rgba(182, 182, 182, 0.114);
+}
+/* Header-Style-End */
+/* Main-style-Start */
+.main{
+    width: 100%;
+    position: sticky;
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20210207/pngtree-simple-gray-solid-color-background-image_557027.jpg");
+    background-size: cover;
+}
+.left-content{
+    width: 25%;
+    float: left;
+    background-color: rgba(182, 182, 182, 0.216);
+    text-align: center;
+    padding: 30px;
+}
+.user{
+    margin-top: 20px;
+}
+.user-img{
+    border: 5px solid white;
+}
+.content{
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+    border: 1px dashed black;
+    margin-bottom: 10px;
+    /* padding-left: 30px; */
+}
+.content-grid{
+    padding: 30%;
+    /* gap: 10px; */
+    margin: auto;
+    border: 1px dashed black;
+}
+.right-content{
+    width: 75%;
+    float: right;
+    background-color:rgba(182, 182, 182, 0.216) ;
+}
+.projects{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.project{
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 0;
+    border: 1px solid rgba(182, 182, 182, 0.393);
+    border-radius: 10%;
+}
+.project-img{
+    width: auto;
+    float: left;
+    margin: auto;
+    /* background-color: rgba(182, 182, 182, 0.141); */
+}
+.project-name{
+    width: 60%;
+    float: right;
+    background-color: white;
+    padding: 10px 60px 10px 10px;
+}
+.task-summary-our-team{
+    width: 70%;
+    float: left;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-bottom: 20px;
+}
+.task-summary{
+    width: 75%;
+    display: block;
+    padding: 30px;
+    padding-top: 20px;
+    border-right: 1px dashed rgba(76, 76, 76, 0.1);
+    justify-content: space-between;
+}
+.tasks{
+    width: 30%;
+    padding:50px 90px;
+    text-align: center;
+}
+.clip{
+    padding: 10px;
+    border: 1px solid white;
+}
+.clip2{
+    padding: 10px;
+    border: 1px solid rgba(76, 76, 76, 1);
+}
+.t-s-1{
+    color: white;
+    background-color: rgb(157, 66, 255);
+}
+.t-s-2{
+    color: white;
+    background-color: rgb(78, 78, 255);
+}
+.t-s-3{
+    color: rgba(76, 76, 76, 1);
+    background-color: rgba(198, 198, 198, 0.881);
+}
+.our-team{
+    width: 25%;
+    padding: 20px;
+    
+}
+.p-bar{
+    padding: 30px;
+    display: flex;
+    margin: auto;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px dashed rgba(76, 76, 76, 0.1);
+}
+.progress-bar1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: 
+      radial-gradient(closest-side, white 79%, transparent 80% 100%),
+      conic-gradient(rgb(105, 120, 255) 75%, rgba(231, 231, 231, 0.83) 0);    
+  }
+.all-tasks{
+    width: 70%;
+    float: left;
+    display: block;
+    padding: 30px;
+    /* justify-content: center; */
+    background-color: white;
+    margin-bottom: 20px;
+}
+.all-tasks-container{
+    display: flex;
+    border: 1px dashed rgba(76, 76, 76, 0.1);
+    margin-bottom: 10px;
+    margin-top: 5px;
+    /* padding: 10px; */
+}
+.all-tasks-heading{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.video-area{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 25%;
+    padding: 30px;
+    background-color: rgba(170, 170, 170, 0.31);
+}
+.video-area-name{
+    width: 50%;
+    /* float: right; */
+}
+.video{
+    width: 25%;
+    color: white;
+    /* padding-top: 5px; */
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    background-color: blueviolet;
+}
+.name-area{
+    width: 30%;
+    padding: 30px;
+}
+.progress-area{
+    width: 30%;
+    padding: 30px;
+}
+.button-area{
+    width: 15%;
+    padding: 30px;   
+    margin: auto;
+}
+.project-time{
+    width: 29%;
+    float: right;
+    background-color: white;
+    display: block;
+    padding: 30px;
+    margin-right: 10px;
+}
+.project-time-date{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.cal{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+}
+.cal div{
+    padding: 5px;
+    align-items: center;
+}
+.cal div span{
+    color: white;
+}
+.check-boxes{
+    width: 100%;
+    margin-top: 10px;
+    border: 1px dashed rgba(76, 76, 76, 0.1);
+}
+.checks{
+    width: 100%;
+    display: flex;
+    padding: 30px;
+    padding-bottom: 15px;
+    margin-bottom: 3px;
+    border-bottom: 1px dashed rgba(182, 182, 182, 0.114);
+}
+.one{
+    width: 15%;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    font-size: medium;
+} 
+.one input{
+    height: 30px;
+    width: 30px;
+    background-color: rgba(137, 43, 226, 0.362);
+}
+.two{
+    width: 85%;
+}
+.project-timeline{
+    width: 100%;
+    display: block;
+}
+/* Main-style-End */
