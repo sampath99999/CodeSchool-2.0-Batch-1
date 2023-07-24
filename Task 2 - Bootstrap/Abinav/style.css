@@ -5,7 +5,8 @@
 .navbar{
     margin: 0px !important;
     padding: 0px !important;
-    justify-content:  !important;
+    background-color: white !important;
+    
         
 }
 body{
@@ -252,4 +253,58 @@ body{
 }
 .table{
     margin-left: 500px !important;
+}
+#c1{
+    background-color: #9166F8 !important;
+    height: 180px;
+    
+}
+#c2{
+    background-color: #0EA5E9 !important;
+    height: 180px;
+    
+}
+#c1p{
+    color: white !important;
+    border:1px solid white;
+    border-radius: 50%;
+    margin-left: 55px;
+    margin-right: 55px;
+    text-align: center;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 20px;
+    font-size: 25px;
+}
+#c3{
+    background-color: #edeeee !important;
+    height: 180px;
+    
+}
+#c3p{
+    color: black !important;
+    border:1px solid black;
+    border-radius: 50%;
+    margin-left: 55px;
+    margin-right: 55px;
+    text-align: center;
+    margin-top: 20px;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 20px;
+    font-size: 25px;
+    
+}
+#tb{
+    width: 90% !important;
+}
+#bb1{
+    border: none !important;
+    border-radius: 50%;
+    border-width: 100px !important;
 }
