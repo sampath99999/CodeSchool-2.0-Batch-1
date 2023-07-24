@@ -25,7 +25,6 @@
     font-size: 9px;
     background-color: #9166F8;
     border: 4px solid #9166F8 !important;
-
 }
 .progress{
     height: 8px;
@@ -59,11 +58,6 @@
 .project-calendar{
     font-size: 13px;
 }
-/* **************************************NEED A LOOK calendar colors */
-/* .review-day{
-    background-color:  #8a7a20 !important;
-    margin: 2px;
-} */
 .days>*{
     color: #AEB3BA !important;
 }
@@ -77,9 +71,7 @@
 .time-value{
     font-size: 12px;
 }
-.hide{
-    visibility: hidden;
-}
+
 .video-button{
     background-color: #9166F8;
     color: white;
