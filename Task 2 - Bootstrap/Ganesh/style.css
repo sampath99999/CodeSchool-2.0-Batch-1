@@ -1,0 +1,92 @@
+.dropdown-toggle::after{
+    display: none;
+}
+.navbar-notification-alert{
+    font-size: 9px;
+}
+.body-menu-options>*{
+    border: 1px dashed #AEB3BA !important;
+}
+/* .left-main-container{
+    height: 100vh;
+} */
+.menu-title, .progress-title{
+    font-size: 12px;
+    margin-bottom: 0px !important;
+}
+.bi-house-door{
+    color: #9166F8;
+}
+.menu-contents{
+    font-size: small;
+
+}
+.menu-status{
+    font-size: 9px;
+    background-color: #9166F8;
+    border: 4px solid #9166F8 !important;
+}
+.progress{
+    height: 8px;
+    margin-top: 4px;
+}
+.progress-bar{
+    background-color: #9166F8;
+}
+.left-box{
+    font-size: 13px;
+}
+.card-body{
+    font-size: 12px;
+    padding-left: 30px !important;
+}
+.project-score{
+    background-color: #9166F8;
+}
+.ongoing-score{
+    background-color: #0EA5E9;
+}
+.score-title{
+    font-size: 14px !important;
+}
+.teams-number{
+    border-left: 1px dashed #AEB3BA !important;
+}
+.teams-progress{
+    border: 1px dashed;
+}
+.project-calendar{
+    font-size: 13px;
+}
+.days>*{
+    color: #AEB3BA !important;
+}
+.calendar-filter, .video-frame{
+    border: 1px dashed #AEB3BA !important;
+}
+.video-button-frame{
+    background-color: #EFF2F4;
+    font-size: 14px;
+}
+.time-value{
+    font-size: 12px;
+}
+
+.video-button{
+    background-color: #9166F8;
+    color: white;
+}
+.more-details{
+    background-color: #9166F810;
+    color: #9166F8;
+}
+.remaining-days{
+    font-size: 14px;
+    color: #AEB3BA !important;
+}
+.list-group-item{
+    border-bottom: 1px dashed #AEB3BA !important;
+}
+.foot-section div{
+    font-size: 14px !important;
+}
