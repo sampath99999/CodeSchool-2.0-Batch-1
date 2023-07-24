@@ -76,9 +76,7 @@ body{
     min-height:100vh;
     overflow-y: scroll;
 }
-.profile-section{
 
-}
 .profile-option:hover {
     background-color: #fff;
 
@@ -121,9 +119,7 @@ body{
    
 }
 
-.card{
-    
-}
+
 .task-card div p{
     color: white;
     
@@ -136,8 +132,10 @@ body{
     margin-left: 9px;
     margin-top: 10px;
 }
-.task-section-last-card{
-    border-left:1px dotted green;
+.task-section-last-card-large{
+    border-left: 1px  #6f42c1 dotted;
+
+ 
 }
 .images-section img{
     border-radius: 50%;
@@ -163,7 +161,7 @@ body{
 
 }
 .task-card{
-    width:167px;
+    width: 167px;
     border-radius: 6px;
     text-align: center;
     margin: 10px;
@@ -229,11 +227,13 @@ body{
     margin: 0;
 }
 
+
 .calendar  ul li {
-    width: calc(100%/7);
+    width: calc(90%/7);
     text-align: center;
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 1%;
     font-size: 12px;
 }
 .checkboxes{
@@ -271,12 +271,7 @@ label{
     background-color: green !important;
     color: white !important;
 }
-.time-line-section{
 
-  
-
-   
-}
 
 .gh{
 
@@ -349,7 +344,7 @@ input{
     font-size: 14px;
     margin-left: 10px;
 }
-/* circular progress */
+
 circle{
     position: relative;
     width: 150px;
@@ -377,7 +372,7 @@ circle{
 }
 
 
-/* profile */
+
 .profile-percent{
     position: relative;
      width: 150px;
@@ -443,6 +438,7 @@ circle{
  .video-start-para span{
     font-size: 12px;
  }
+
 
 
 
