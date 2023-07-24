@@ -1,0 +1,55 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.left-profile-image{
+width: 280px;
+height: 0px;
+display: flex;
+margin: 20px;
+ padding-left: 50px;
+}
+.left-profile-image img{
+    height: 150px;
+    width :150px;
+    border-radius:50%;
+    border-right:5px solid rgb(138, 50, 215); 
+    border-top: 5px solid rgb(138, 50, 215); 
+    border-bottom: 5px solid rgb(138, 50, 215);
+    border-left: 5px solid white;
+}
+/* img{
+    height: 45%;
+    width: 10%;
+} */
+/* Mobile responsiveness */
+/* @media (max-width: 767px) {
+    .row {
+      flex-wrap: wrap;
+
+    }
+    .d-flex {
+      flex: 0 0 100%;
+      align-items: center;
+    }
+    .col-md-3 {
+      border-left: none;
+      border-top: 1px dotted gray;
+    }
+    .our-team {
+      border-top: none;
+    }
+    .card {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .c.our-team {
+      display: flex;
+      justify-content: center;
+    }
+  }
+   */
+   /* .left-part{
+    overflow: scroll;
+   } */
