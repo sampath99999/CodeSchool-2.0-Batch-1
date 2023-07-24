@@ -1,0 +1,51 @@
+.total{
+    background-color: #F5f8fa;
+}
+.home{
+    color: blue;
+}
+.progress{
+    height:10px;
+}
+.pbar{
+    background-color:#9166f8;
+    
+}
+.violett{
+    background-color: #9166f8;
+}
+.icon{
+    background-color: #9166f8;
+    height:25px;
+    width:25px;
+    color:white;
+    border: none;
+}
+.vio{
+    background-color: #E9e0fe;
+    border-radius: 5px;
+}
+.check{
+    background-color: #9166f8;
+    color:white;
+}
+.button{
+    background-color: #f8f9fa;
+}
+.start{
+    margin: 0;
+}
+.first{
+    margin-left: 140px;
+    background-color: black;
+}
+.second{
+    background-color: #9166f8;
+}
+.fifth{
+    margin-left:210px ;
+}
+a{
+    text-decoration: none;
+    color:grey;
+}
