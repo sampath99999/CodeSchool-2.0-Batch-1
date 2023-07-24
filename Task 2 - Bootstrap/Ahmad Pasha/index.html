@@ -96,7 +96,7 @@
             id="navbarText"
           >
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item col-2 d-none d-lg-block">
+              <li class="nav-item col-2 me-4 d-none d-lg-block">
                 <a class="nav-item">
                   <img
                     src="http://qoduby.tempload.com/documentation/assets/media/logo/logo-dark.svg"
@@ -344,7 +344,7 @@
         <!-- cards section starts from here -->
         <div class="cards row gap-1 flex-lg-nowrap col-lg-12 m-auto">
           <div
-            class="card mb-3 col-lg-3 col-12 align-content-center flex-lg-shrink-1 m-0"
+            class="card mb-3 col-lg-3 col-12 align-content-center flex-lg-shrink-1"
           >
             <div class="row g-0 align-items-center">
               <div class="col-5">
@@ -498,8 +498,8 @@
                     </div>
                     <div class="com_percet col-lg-4">
                       <p style="color: #3f495e;"><span class="fw-medium">48%</span> complete</p>
-                      <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100">
-                        <div class="progress-bar bg-info" style="width: 48%"></div>
+                      <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
+                        <div class="progress-bar bg-info" style="width: 48%;"></div>
                       </div>
                     </div>
 
@@ -523,7 +523,7 @@
                     </div>
                     <div class="com_percet col-lg-4">
                       <p style="color: #3f495e;"><span class="fw-medium">22%</span> complete</p>
-                      <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
                         <div class="progress-bar" style="width: 22%;background-color: #9166F8;"></div>
                       </div>
 
@@ -549,7 +549,7 @@
                     </div>
                     <div class="com_percet col-lg-4">
                       <p style="color: #3f495e;"><span class="fw-medium">38%</span> complete</p>
-                      <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
                         <div class="progress-bar bg-success" style="width: 38%;"></div>
                       </div>
                     </div>
@@ -574,7 +574,7 @@
                     </div>
                     <div class="com_percet col-lg-4">
                       <p style="color: #3f495e;"><span class="fw-medium">63%</span> complete</p>
-                      <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="22" aria-valuemin="0" aria-valuemax="100" style="height: 10px;">
                         <div class="progress-bar bg-warning" style="width: 63%;"></div>
                       </div>
                     </div>
@@ -674,7 +674,7 @@
              <div class="h-50 p-3 pt-1 col-12" style="border: 1px dashed #dee2e6; margin-top: 16%;">
               
               <div class="d-flex align-items-center gap-3" style="border-bottom: 1px dashed #dee2e6;">
-                <i class="fa-solid fa-square-check fs-4" style="color: #9166F8;"></i>
+                <input class="form-check-input fs-4" type="checkbox" style="background-color: #9179fa;" checked>
                 
                 <div>
                   <p style="color:#434d61">Create new component in React
@@ -687,7 +687,7 @@
               
 
               <div class="d-flex align-items-center gap-3" style="border-bottom: 1px dashed #dee2e6;">
-                <i class="fa-solid fa-square-check text-success fs-4"></i>
+                <input class="form-check-input fs-4 bg-success border-0" type="checkbox" checked>
                 <div>
                   <p style="color:#434d61">Improve workflow in Figma
                     <br>
@@ -699,7 +699,8 @@
               
 
               <div class="d-flex align-items-center gap-3" style="border-bottom: 1px dashed #dee2e6;">
-                <i class="fa-solid fa-square fs-4" style="color:#dee2e6;"></i>
+      
+                <input class="form-check-input fs-4 border-0" type="checkbox" style="background-color: #989da5;">
                 <div>
                   <p style="color:#434d61">Create dark mode for iOS
                     <br>
@@ -712,7 +713,7 @@
 
 
               <div class="d-flex align-items-center gap-3" style="border-bottom: 1px dashed #dee2e6;">
-                <i class="fa-solid fa-square-check text-warning fs-4"></i>
+                <input class="form-check-input border-0 fs-4 bg-warning" type="checkbox" checked>
                 <div>
                   <p style="color:#434d61">Client review & feedback
                     <br>
@@ -724,7 +725,7 @@
             
 
               <div class="d-flex align-items-center gap-3" style="border-bottom: 1px dashed #dee2e6;">
-                <i class="fa-solid fa-square-check text-info fs-4"></i>
+                <input class="form-check-input border-0 fs-4 bg-info" type="checkbox"  checked>
                 <div>
                   <p style="color:#434d61">Create wireframe for app
                     <br>
@@ -736,7 +737,7 @@
               
 
               <div class="d-flex align-items-center gap-3" style="border-bottom: 1px dashed #dee2e6;">
-                <i class="fa-solid fa-square-check text-success fs-4" ></i>
+                <input class="form-check-input bg-success border-0 fs-4" type="checkbox" checked>
                 <div>
                   <p style="color:#434d61">Project design for Sketch
                     <br>
