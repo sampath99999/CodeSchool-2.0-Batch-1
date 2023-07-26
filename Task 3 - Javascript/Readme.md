@@ -63,6 +63,6 @@
     1. Age Restriction: Must be at least 18 years from the Date of Birth.
 
 👉 After clicking On Sign Up - Should do <b>POST</b> request to https://demo-api-wh0x.onrender.com/register, and show result below Sign Up Button <br><br>
-👉 Dropdown should be looking good, not like Old Tasks
+👉 Should have Dropdown Menu in Header as shown in picture 
 
 ![image](https://github.com/sampath99999/CodeSchool-2.0-Batch-1/assets/112122835/fc1c7a33-227b-41ae-849b-462ff3f19dda)
