@@ -9,11 +9,11 @@
 **On Right Side**:<br>
 
 1.  Add two more fields **Date of Birth**, **Date of Joining**, **Gender**, **Country**, **University**
-1. Gender Should be Radio Buttons with Male, Female, Other
-1. County: Get Country list from Random Open API's
-1. Upon Selecting Country get University List from Following API
-` http://universities.hipolabs.com/search?country=india `
-<br>Note: Change India with Respective Country
+1.  Gender Should be Radio Buttons with Male, Female, Other
+1.  County: Get Country list from Random Open API's
+1.  Upon Selecting Country get University List from Following API
+    <br> http://universities.hipolabs.com/search?country=india
+    <br>Note: Change India with Respective Country
 1.  Should have following validations
 
 -   **First Name & Last Name**<br>
