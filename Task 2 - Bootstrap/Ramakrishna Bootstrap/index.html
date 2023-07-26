@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Qoduby</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <style>
+      @media (max-width: 768px) {
+        .navbar .navbar-nav {
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+        }
+
+        .navbar-toggler {
+          order: 2;
+          margin-left: auto;
+        }
+
+        .navbar .navbar-collapse {
+          order: 1;
+        }
+      }
+    </style>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="collapse navbar-collapse">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="container navbar-brand text-primary" href="#">Qoduby</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdown1"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Dashboards
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                <li><a class="dropdown-item" href="#">Action 1</a></li>
+                <li><a class="dropdown-item" href="#">Action 2</a></li>
+                <li><a class="dropdown-item" href="#">Action 3</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Projects
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                <li><a class="dropdown-item" href="#">Action 1</a></li>
+                <li><a class="dropdown-item" href="#">Action 2</a></li>
+                <li><a class="dropdown-item" href="#">Action 3</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Apps
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                <li><a class="dropdown-item" href="#">Action 1</a></li>
+                <li><a class="dropdown-item" href="#">Action 2</a></li>
+                <li><a class="dropdown-item" href="#">Action 3</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Pages
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                <li><a class="dropdown-item" href="#">Action 1</a></li>
+                <li><a class="dropdown-item" href="#">Action 2</a></li>
+                <li><a class="dropdown-item" href="#">Action 3</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="dropdown2"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Help
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="dropdown2">
+                <li><a class="dropdown-item" href="#">Option 1</a></li>
+                <li><a class="dropdown-item" href="#">Option 2</a></li>
+                <li><a class="dropdown-item" href="#">Option 3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <ul class="navbar-nav ml-auto m-1">
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><i class="bi bi-search">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><i class="bi bi-chat">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><i class="bi bi-inbox">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</i></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><i class="bi bi-bell"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"
+              ><i class="bi bi-person"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a
+            >
+          </li>
+        </ul>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+      <div class="d-flex bg-light">
+        <div class="left-part mt-5">
+          <div class="image d-none d-sm-block m-2 p-0">
+            <div class="left-profile-image">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5521b031e4b06ebe90178744/1560360135937-3YXVZ3124L1YL2FOASSQ/headshots-linkedin-photographer.jpg"
+                alt=""
+                style="margin-left: 30px"
+              />
+            </div>
+            <br /><br /><br /><br /><br /><br />
+            <h4 style="margin-left: 120px">Barry Tone</h4>
+            <div style="margin-left: 125px">UI/UX Designer</div>
+            <div class="for-icons mt-5">
+              <div class="d-flex">
+                <div
+                  class="col"
+                  style="border: 0.5px dotted rgb(203, 198, 198)"
+                >
+                  <i
+                    class="bi bi-house-door"
+                    style="margin-left: 58px; font-size: 30px; color: blueviolet"
+                  ></i>
+                  <p style="margin-left: 36px; color: gray">Dashboard</p>
+                </div>
+                <div
+                  class="col"
+                  style="border: 0.5px dotted rgb(206, 202, 202)"
+                >
+                  <i
+                    class="bi bi-grid"
+                    style="margin-left: 63px; font-size: 30px; color: gray"
+                  ></i>
+                  <p style="margin-left: 53px; color: gray">Projects</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div
+                  class="col"
+                  style="border: 0.5px dotted rgb(208, 205, 205)"
+                >
+                  <i
+                    class="bi bi-trello"
+                    style="margin-left: 60px; font-size: 30px; color: gray"
+                  ></i>
+                  <p style="margin-left: 50px; color: gray">Kanban</p>
+                </div>
+                <div
+                  class="col"
+                  style="border: 0.5px dotted rgb(206, 200, 200)"
+                >
+                  <i
+                    class="bi bi-plus-square"
+                    style="margin-left: 65px; font-size: 30px; color: gray"
+                  ></i>
+                  <p style="margin-left: 40px; color: gray">Add Project</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div
+                  class="col"
+                  style="border: 0.5px dotted rgb(213, 212, 212)"
+                >
+                  <i
+                    class="bi bi-file"
+                    style="margin-left: 60px; font-size: 30px; color: gray"
+                  ></i>
+                  <p style="margin-left: 60px; color: gray">Files</p>
+                </div>
+                <div
+                  class="col"
+                  style="border: 0.5px dotted rgb(225, 221, 221)"
+                >
+                  <i
+                    class="bi bi-people"
+                    style="margin-left: 63px; font-size: 30px; color: gray"
+                  ></i>
+                  <p style="margin-left: 55px; color: gray">People</p>
+                </div>
+              </div>
+              <div class="d-flex">
+                <div
+                  class="col"
+                  style="border: 0.5px dotted rgb(216, 212, 212)"
+                >
+                  <i
+                    class="bi bi-calendar"
+                    style="margin-left: 60px; font-size: 30px; color: gray"
+                  ></i>
+                  <p style="margin-left: 45px; color: gray">Calender</p>
+                </div>
+                <div
+                  class="col"
+                  style="border: 0.5px dotted rgb(205, 198, 198)"
+                >
+                  <i
+                    class="bi bi-clipboard"
+                    style="margin-left: 63px; font-size: 30px; color: gray"
+                  ></i>
+                  <p style="margin-left: 52px; color: gray">Invoices</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="text d-flex justify-content-between">
+                    <p>Last Project</p>
+                    <p>60%</p>
+                  </div>
+                  <div class="progress" style="height: 1px">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-label="Example 1px high"
+                      style="width: 60%"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                  <div class="progress" style="height: 20px">
+                    <div
+                      class="progress-bar"
+                      role="progressbar"
+                      aria-label="Example 20px high"
+                      style="width: 60%"
+                      aria-valuenow="25"
+                      aria-valuemin="0"
+                      aria-valuemax="100"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="second-part-right-whole mt-5 bg-light">
+          <div class="right-top-1 mt-4">
+            <div class="container">
+              <div class="row g-4">
+                <div class="d-flex col-12 col-md-8 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="Violet.jpeg"
+                      class="img-thumbnail"
+                      style="height: 100%"
+                    />
+                  </div>
+                  <div class="card col-6">
+                    <br />
+                    <p style="font-size: 13px">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product Design
+                    </p>
+                    <h5 style="font-size: 20px">
+                      &nbsp;&nbsp;&nbsp;&nbsp; 5 Project
+                    </h5>
+                  </div>
+                </div>
+                <div class="d-flex col-12 col-md-8 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="blue.jpeg"
+                      class="img-thumbnail"
+                      style="height: 100%"
+                    />
+                  </div>
+                  <div class="card col-6">
+                    <br />
+                    <p style="font-size: 13px">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Visual Identity
+                    </p>
+                    <h5 style="font-size: 20px">
+                      &nbsp;&nbsp;&nbsp;&nbsp; 6 Project
+                    </h5>
+                  </div>
+                </div>
+                <div class="d-flex col-12 col-md-8 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="Violet.jpeg"
+                      class="img-thumbnail"
+                      style="height: 100%"
+                    />
+                  </div>
+                  <div class="card col-6">
+                    <br />
+                    <p style="font-size: 13px">
+                      &nbsp;&nbsp;&nbsp;&nbsp;Web Development
+                    </p>
+                    <h1 style="font-size: 20px">
+                      &nbsp;&nbsp;&nbsp;&nbsp; 3 Project
+                    </h1>
+                  </div>
+                </div>
+                <div class="d-flex col-12 col-md-8 col-lg-3">
+                  <div class="card">
+                    <img
+                      src="blue.jpeg"
+                      class="img-thumbnail"
+                      style="height: 100%"
+                    />
+                  </div>
+                  <div class="card col-6">
+                    <br />
+                    <p style="font-size: 13px">
+                      &nbsp;&nbsp;&nbsp;&nbsp; Illustration Works
+                    </p>
+                    <h5 style="font-size: 20px">
+                      &nbsp;&nbsp;&nbsp;&nbsp; 7 Project
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="right-top-1-below d-flex bg-white m-3 mt-4 flex-lg-row flex-column"
+          >
+            <div class="two-boxes-total col-lg-7 w-65">
+              <div class="cards-right-top">
+                <div class="container g-2 ">
+                  <div class="container mt-2" style="background-color: white">
+                    <div class="row gy-3 p-4 p-lg-0">
+                      <h>Task Summary</h>
+                      <div class="col-md-3" style="height: 14rem">
+                        <div
+                          class="card text-center"
+                          style="height: 12rem; background-color: blueviolet"
+                        >
+                          <i
+                            class="bi bi-activity "
+                            style="font-size: 50px; color: white"
+                          ></i>
+                          <p style="color: white">Projects</p>
+                          <h style="font-size: 50px; color: white">48</h>
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <div
+                          class="card text-center"
+                          style="
+                            height: 12rem;
+                            background-color: rgb(66, 172, 242);
+                          "
+                        >
+                          <i
+                            class="bi bi-pin-angle"
+                            style="font-size: 50px; color: white"
+                          ></i>
+                          <p style="color: white">Ongoing</p>
+                          <h
+                            style="
+                              font-size: 50px;
+
+                              color: white;
+                            "
+                            >16</h
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-3 text-center">
+                        <div class="card bg-light" style="height: 12rem">
+                          <i
+                            class="bi bi-graph-up-arrow mt-1"
+                            style="font-size: 50px; color: black"
+                          ></i>
+                          <p style="color: black">Completed</p>
+                          <h
+                            style="
+                              font-size: 50px;
+
+                              color: black;
+                            "
+                            >27</h
+                          >
+                        </div>
+                      </div>
+                      <div class="col-md-3">
+                        <h>Our team</h>
+                        <p style="color: gray">Team Members</p>
+                        <div class="card">
+                          <!-- <div class=" text-center" style="height: 8rem;">
+                            <i class="bi bi-arrow-clockwise mt-1"  style="
+                            font-size: 70px;
+                            
+                            color: rgb(10, 152, 184);
+                          "></i>
+                          </div> -->
+
+                          <div
+                            class="text-center d-flex justify-content-center align-items-center"
+                            style="height: 8rem; color: rgb(85, 182, 226)"
+                          >
+                            <div class="spinner-border" role="status">
+                              <span class="visually-hidden"></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container mt-3 row bg-light">
+                <h5>All Tasks</h5>
+                <div
+                  v
+                  class="row cols-1 cols-sm-1 col-lg-12 text-center p-3 p-lg-0"
+                >
+                  <div class="col mb-1">
+                    <div class="card w-auto">
+                      <div class="card-body d-flex flex-column flex-lg-row">
+                        <div class="bg-light p-3">
+                          <i
+                            class="bi bi-play-circle-fill"
+                            style="font-size: 30px; color: blueviolet"
+                          ></i>
+                          <p class="text-secondary">
+                            Start from<br /><i class="bi bi-clock"></i> 09:00am
+                          </p>
+                        </div>
+                        <div class="p-3 flex-fill">
+                          <p>IOS Development Project</p>
+                          <div class="d-flex">
+                            <i class="bi bi-chat text-secondary"></i>
+                            <span class="text-secondary">&nbsp;7 Comments</span>
+                          </div>
+                        </div>
+                        <div class="p-3 flex-fill" style="margin-right: 60px">
+                          <p>48%Complete</p>
+                          <div class="progress" style="height: 10px">
+                            <div
+                              class="progress-bar bg-info"
+                              role="progressbar"
+                              aria-label="Example 20px high"
+                              style="width: 48%"
+                              aria-valuenow="48"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="btn d-block mt-4"
+                          style="
+                            background-color: rgb(203, 161, 243);
+                            color: blueviolet;
+                            height: 3rem;
+                          "
+                        >
+                          Detail
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row cols-1 cols-sm-1 col-lg-12 text-center p-3 p-lg-0"
+                >
+                  <div class="col mb-1">
+                    <div class="card h-20 w-auto">
+                      <div class="card-body d-flex flex-column flex-lg-row">
+                        <div class="bg-light p-3">
+                          <i
+                            class="bi bi-play-circle-fill"
+                            style="font-size: 30px; color: blueviolet"
+                          ></i>
+                          <p class="text-secondary">
+                            Start from<br /><i class="bi bi-clock"></i> 11:00am
+                          </p>
+                        </div>
+                        <div class="p-3 flex-fill">
+                          <p>Web Design Project</p>
+                          <div class="d-flex">
+                            <i class="bi bi-chat text-secondary"></i>
+                            <span class="text-secondary">&nbsp;3 Comments</span>
+                          </div>
+                        </div>
+                        <div class="p-3 flex-fill" style="margin-right: 50px">
+                          <p>22% Complete</p>
+                          <div class="progress" style="height: 10px">
+                            <div
+                              class="progress-bar"
+                              role="progressbar"
+                              aria-label="Example 20px high"
+                              style="width: 22%; background-color: blueviolet"
+                              aria-valuenow="48"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="btn d-block mt-4"
+                          style="
+                            background-color: rgb(203, 161, 243);
+                            color: blueviolet;
+                            height: 3rem;
+                          "
+                        >
+                          Detail
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row cols-1 cols-sm-1 col-lg-12 text-center p-3 p-lg-0"
+                >
+                  <div class="col mb-1">
+                    <div class="card h-20 w-auto">
+                      <div class="card-body d-flex flex-column flex-lg-row">
+                        <div class="bg-light p-3">
+                          <i
+                            class="bi bi-play-circle-fill"
+                            style="font-size: 30px; color: blueviolet"
+                          ></i>
+                          <p class="text-secondary">
+                            Start from<br /><i class="bi bi-clock"></i> 16:00pm
+                          </p>
+                        </div>
+                        <div class="p-3 flex-fill">
+                          <p>SEO Research Project</p>
+                          <div class="d-flex">
+                            <i class="bi bi-chat text-secondary"></i>
+                            <span class="text-secondary">&nbsp;5 Comments</span>
+                          </div>
+                        </div>
+                        <div class="p-3 flex-fill" style="margin-right: 60px">
+                          <p>38% Complete</p>
+                          <div class="progress" style="height: 10px">
+                            <div
+                              class="progress-bar bg-success"
+                              role="progressbar"
+                              aria-label="Example 20px high"
+                              style="width: 38%"
+                              aria-valuenow="48"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="btn d-block mt-4"
+                          style="
+                            background-color: rgb(203, 161, 243);
+                            color: blueviolet;
+                            height: 3rem;
+                          "
+                        >
+                          Detail
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  class="row cols-1 cols-sm-1 col-lg-12 text-center p-3 p-lg-0"
+                >
+                  <div class="col mb-3">
+                    <div class="card h-0 w-auto">
+                      <div class="card-body d-flex flex-column flex-lg-row">
+                        <div class="bg-light p-3">
+                          <i
+                            class="bi bi-play-circle-fill"
+                            style="font-size: 30px; color: blueviolet"
+                          ></i>
+                          <p class="text-secondary">
+                            Start from<br /><i class="bi bi-clock"></i> 16:00pm
+                          </p>
+                        </div>
+                        <div class="p-3 flex-fill">
+                          <p>Prototype Project</p>
+                          <div class="d-flex">
+                            <i class="bi bi-chat text-secondary"></i>
+                            <span class="text-secondary">&nbsp;4 Comments</span>
+                          </div>
+                        </div>
+                        <div class="p-3 flex-fill" style="margin-right: 40px">
+                          <p>63% Completed</p>
+                          <div class="progress" style="height: 10px">
+                            <div
+                              class="progress-bar bg-warning"
+                              role="progressbar"
+                              aria-label="Example 20px high"
+                              style="width: 63%"
+                              aria-valuenow="48"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            ></div>
+                          </div>
+                        </div>
+                        <button
+                          type="button"
+                          class="btn d-block mt-4"
+                          style="
+                            background-color: rgb(203, 161, 243);
+                            color: blueviolet;
+                            height: 3rem;
+                          "
+                        >
+                          Detail
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="right-top-1-below-right mt-4 col-lg-3 bg-white mb-3 ms-0 mt-2"
+            >
+              <div class="container d-block bg-white">
+                <div class="row">
+                  <div class="col-12 col-md-6 offset-md-3">
+                    <h5>Project Time</h5>
+                    <p class="mb-3">
+                      July 2023 &nbsp;&nbsp;&nbsp;&nbsp; <&nbsp;>
+                    </p>
+                    <table
+                      class="table table-bordered table-responsive"
+                      style="border-color: white"
+                    >
+                      <thead>
+                        <tr
+                          class="text-center"
+                          style="color: rgb(170, 167, 167)"
+                        >
+                          <th>Sun</th>
+                          <th>Mon</th>
+                          <th>Tue</th>
+                          <th>Wed</th>
+                          <th>Thu</th>
+                          <th>Fri</th>
+                          <th>Sat</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="text-center">
+                          <td class="text-muted">-</td>
+                          <td class="text-muted">-</td>
+                          <td class="text-muted">-</td>
+                          <td class="text-muted">-</td>
+                          <td
+                            style="
+                              background-color: rgb(240, 232, 124);
+                              color: orange;
+                            "
+                          >
+                            1
+                          </td>
+                          <td
+                            style="
+                              background-color: rgb(240, 232, 124);
+                              color: orange;
+                            "
+                          >
+                            2
+                          </td>
+                          <td
+                            style="
+                              background-color: rgb(240, 232, 124);
+                              color: orange;
+                            "
+                          >
+                            3
+                          </td>
+                        </tr>
+                        <tr class="text-center">
+                          <td
+                            style="
+                              background-color: rgb(240, 232, 124);
+                              color: orange;
+                            "
+                          >
+                            4
+                          </td>
+                          <td>5</td>
+                          <td>6</td>
+                          <td>7</td>
+                          <td>8</td>
+                          <td>9</td>
+                          <td>10</td>
+                        </tr>
+                        <!-- Add more rows for each week in the month -->
+
+                        <tr class="text-center">
+                          <td>11</td>
+                          <td>12</td>
+                          <td>13</td>
+                          <td
+                            style="
+                              background-color: rgb(223, 161, 243);
+                              color: blueviolet;
+                            "
+                          >
+                            14
+                          </td>
+                          <td>15</td>
+                          <td>16</td>
+                          <td
+                            style="
+                              background-color: rgb(142, 239, 142);
+                              color: green;
+                            "
+                          >
+                            17
+                          </td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>18</td>
+                          <td
+                            style="
+                              background-color: rgb(144, 236, 225);
+                              color: blue;
+                            "
+                          >
+                            19
+                          </td>
+                          <td>20</td>
+                          <td>21</td>
+                          <td
+                            style="
+                              background-color: rgb(144, 236, 225);
+                              color: blue;
+                            "
+                          >
+                            22
+                          </td>
+                          <td>23</td>
+                          <td>24</td>
+                        </tr>
+                        <tr class="text-center">
+                          <td>25</td>
+                          <td>26</td>
+                          <td>27</td>
+                          <td>28</td>
+                          <td>29</td>
+                          <td>30</td>
+                          <td>31</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="down-calender">
+                <div class="container mt-5" style="margin-left: 30px">
+                  <div class="row">
+                    <div class="col-md-12 offset-md-2 d-block d-block">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          style="background-color: rgb(143, 23, 195)"
+                        />
+                        <h6 class="form-check-label">
+                          Create new component on React
+                        </h6>
+
+                        <span
+                          class="small"
+                          style="font-size: 12px; color: gray"
+                        >
+                          2 days remaining
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-md-12 offset-md-2">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          style="background-color: rgb(49, 173, 35)"
+                        />
+                        <h6 class="form-check-label">
+                          Improve workflow in Figma
+                        </h6>
+
+                        <span
+                          class="small"
+                          style="font-size: 12px; color: gray"
+                        >
+                          3 days remaining
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-md-12 offset-md-2">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          style="background-color: rgb(168, 164, 164)"
+                        />
+                        <h6 class="form-check-label">
+                          Create dark mode for IOS
+                        </h6>
+
+                        <span
+                          class="small"
+                          style="font-size: 12px; color: gray"
+                        >
+                          6 days remaining
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-md-12 offset-md-2">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          style="background-color: rgb(206, 187, 41)"
+                        />
+                        <h6 class="form-check-label">
+                          Client review & feedback
+                        </h6>
+
+                        <span
+                          class="small"
+                          style="font-size: 12px; color: gray"
+                        >
+                          4 days remaining
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-md-12 offset-md-2">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          style="background-color: rgb(86, 189, 212)"
+                        />
+                        <h6 class="form-check-label">
+                          Create wireframe for app
+                        </h6>
+
+                        <span
+                          class="small"
+                          style="font-size: 12px; color: gray"
+                        >
+                          2 days remaining
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row mt-4">
+                    <div class="col-md-12 offset-md-2">
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          style="background-color: rgb(71, 172, 71)"
+                        />
+                        <h6 class="form-check-label">
+                          Project design for Sketch
+                        </h6>
+
+                        <span
+                          class="small"
+                          style="font-size: 12px; color: gray"
+                        >
+                          2 days remaining
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="last-part m-3 bg-white" style="width: 96%">
+            <div class="container d-none d-sm-block">
+              <p>Project Timeline</p>
+              <div style="margin-left: 110px">
+                <div class="row" style="margin-left: 40px">
+                  <div
+                    class="first-down-bar d-flex col-10"
+                    style="
+                      border: 1px solid black;
+                      margin-left: -20px;
+                      background-color: black;
+                      border-radius: 40px;
+                    "
+                  >
+                    <i
+                      class="bi bi-person"
+                      style="margin-left: 0px; font-size: 35px; color: white"
+                    ></i>
+                    <p
+                      style="margin-left: 30px; margin-top: 12px; color: white"
+                    >
+                      Web Back-End
+                    </p>
+                    <span
+                      style="margin-left: 500px; margin-top: 11px; color: white"
+                      >DEVELOPMENT</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="row d-flex">
+                  <div class="mt-4 d-flex" style="margin-left: 40px">
+                    <div
+                      class="first-down-bar d-flex col-4"
+                      style="
+                        border: 1px solid rgb(163, 85, 240);
+                        margin-left: -20px;
+                        background-color: rgb(156, 24, 233);
+                        border-radius: 40px;
+                      "
+                    >
+                      <i
+                        class="bi bi-person"
+                        style="margin-left: 10px; font-size: 35px; color: white"
+                      ></i>
+                      <p
+                        style="
+                          margin-left: 10px;
+                          margin-top: 12px;
+                          color: white;
+                        "
+                      >
+                        Research
+                      </p>
+                      <span
+                        style="
+                          margin-left: 210px;
+                          margin-top: 11px;
+                          color: white;
+                        "
+                        >SEO</span
+                      >
+                    </div>
+
+                    <div
+                      class="first-down-bar d-flex col-5"
+                      style="
+                        border: 1px solid rgb(163, 85, 240);
+                        margin-left: 200px;
+                        background-color: rgb(156, 24, 233);
+                        border-radius: 40px;
+                      "
+                    >
+                      <i
+                        class="bi bi-person"
+                        style="margin-left: 10px; font-size: 35px; color: white"
+                      ></i>
+                      <p
+                        style="
+                          margin-left: 23px;
+                          margin-top: 12px;
+                          color: white;
+                        "
+                      >
+                        Dashboard Development
+                      </p>
+                      <span
+                        style="
+                          margin-left: 90px;
+                          margin-top: 11px;
+                          color: white;
+                        "
+                        >DEVELOPMENT</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-left: 0px">
+                <div class="row mt-4" style="margin-left: 40px">
+                  <div
+                    class="first-down-bar d-flex col-7"
+                    style="
+                      border: 1px solid black;
+                      margin-left: -20px;
+                      background-color: rgb(46, 139, 15);
+                      border-radius: 40px;
+                    "
+                  >
+                    <i
+                      class="bi bi-person"
+                      style="margin-left: 0px; font-size: 35px; color: white"
+                    ></i>
+                    <p
+                      style="margin-left: 30px; margin-top: 12px; color: white"
+                    >
+                      Logo & Branding Design
+                    </p>
+                    <span
+                      style="margin-left: 310px; margin-top: 11px; color: white"
+                      >DESIGN</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div class="row d-flex">
+                  <div class="mt-4 d-flex" style="margin-left: 40px">
+                    <div
+                      class="first-down-bar d-flex col-4"
+                      style="
+                        border: 1px solid rgb(163, 85, 240);
+                        margin-left: 100px;
+                        background-color: rgb(218, 173, 9);
+                        border-radius: 40px;
+                      "
+                    >
+                      <i
+                        class="bi bi-person"
+                        style="margin-left: 10px; font-size: 35px; color: white"
+                      ></i>
+                      <p
+                        style="
+                          margin-left: 40px;
+                          margin-top: 12px;
+                          color: white;
+                        "
+                      >
+                        IOS Front-End
+                      </p>
+                      <span
+                        style="
+                          margin-left: 120px;
+                          margin-top: 11px;
+                          color: white;
+                        "
+                        >MOBILE</span
+                      >
+                    </div>
+
+                    <div
+                      class="first-down-bar d-flex col-5"
+                      style="
+                        border: 1px solid rgb(163, 85, 240);
+                        margin-left: 82px;
+                        background-color: rgb(233, 24, 24);
+                        border-radius: 40px;
+                      "
+                    >
+                      <i
+                        class="bi bi-person"
+                        style="margin-left: 10px; font-size: 35px; color: white"
+                      ></i>
+                      <p
+                        style="
+                          margin-left: 40px;
+                          margin-top: 12px;
+                          color: white;
+                        "
+                      >
+                        Android Front-End
+                      </p>
+                      <span
+                        style="
+                          margin-left: 170px;
+                          margin-top: 11px;
+                          color: white;
+                        "
+                        >MOBILE</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="background-color: white; width:100%">
+            <div class="d-flex justify-content-between mt-0 col-12 w-55">
+              <div class="row col-12 text-center">
+                <p class="col-lg-8 col-12">
+                  <span style="color: gray"> 2023@</span> Qouduby
+                </p>
+
+                <p class="col-lg-4 col-12" style="color: grey">
+                  Support License Documentation
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+      integrity="sha384-uznQRka97qVpQcZCdU4o3pYfjk6J36M2x/IWu+YQ7zFvBvamW9DtmMQkGstz7Zd/"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-9z44p1sVPjCtTTFNn1EsOZdAfxiruud9tZHpNpxF7Qq83d1S3VxIv+VzQtx3ULx"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
