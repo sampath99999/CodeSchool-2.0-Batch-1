@@ -1,0 +1,444 @@
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.dropdown .dropdown-menu{
+    display: none;
+} 
+.logo-image{
+    width: 35px;
+}
+.navbar-brand span{
+    font-size: 18px;
+    font-family: arial;
+}
+
+.nav-link i{
+    font-size: 10px;
+
+}
+
+
+.nav-link{
+    font-size: 14px !important;
+    color: #666666;
+    font-weight: 530 !important;
+    
+}
+.icons i{
+    font-size: 10px;
+}
+.options-section button{
+    border: none;
+    background-color: transparent;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+h4{
+    font-size: 11px !important;
+}
+h2{
+    font-size: 19px !important;
+}
+.product-section{
+    background-color: red;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+.options-section button i{
+    font-size: 17px;
+    color: #b8b894;   
+}
+.profile-name h1{
+    font-size: 20px;
+
+}
+.profile-name p{
+    font-size: 12px;
+}
+.options-section button:hover{
+    background-color:#f2f5f7;
+    font-weight: bold;
+}
+
+.profile-section img {
+    width:135px;
+    height: 134px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+.profile-container{
+  
+    min-height:100vh;
+    overflow-y: scroll;
+}
+
+.profile-option:hover {
+    background-color: #fff;
+
+}
+.profile-option:hover i{
+    background-color: #fff;
+    color: #6f42c1;
+}
+.profile-option:hover p{
+   font-weight: 600;
+    color: #000000;
+}
+
+.nav-profile{
+    width: 30px;
+    height: 28px;
+}
+.img-flip-horizontal{
+    transform: scaleX(-1);    
+}
+.profile-option{
+   padding: 9px 0px;
+    border: 1px dotted #6f42c1;
+   text-align: center;
+}
+.weeks li{
+    text-transform: uppercase;
+}
+
+.option{
+    display: flex;
+  
+    flex-grow: 1;
+}
+.task-card i{
+    border-radius: 50%;
+    color: white;
+    border: 1px solid white;
+    padding: 9px 13px
+   
+}
+
+
+.task-card div p{
+    color: white;
+    
+}
+.task-summary-section{
+    margin: 28px;
+}
+.task-summary-section h1{
+    font-size: 16px;
+    margin-left: 9px;
+    margin-top: 10px;
+}
+.task-section-last-card-large{
+    border-left: 1px  #6f42c1 dotted;
+
+ 
+}
+.images-section img{
+    border-radius: 50%;
+    
+} 
+.images-section{
+    margin-bottom: 11px;
+}
+.task-section-last-card h1{
+    margin-left: 0;
+    margin-top: 0px;
+}
+
+
+
+.images-section span{
+    background-color: white;
+    border: 1px solid red;
+    padding: 12px;
+    border-radius: 50%;
+    position: relative;
+
+
+}
+.task-card{
+    width: 167px;
+    border-radius: 6px;
+    text-align: center;
+    margin: 10px;
+  
+}
+.task-section-last-card{
+    margin: 10px;
+    padding: 12px;
+}
+.all-tasks-section div h3{
+    font-size: 17px;
+}
+.all-tasks-section{
+    padding: 10px;
+    margin: 31px;
+}
+.video-card-first-item{
+    background-color: #f2f5f7;
+    align-items: center;
+
+}
+.progress-completion{
+    font-size: 14px;
+}
+.video-card-first-item button{
+    border-radius: 50%;
+    padding: 1px 7px 1px 7px !important;
+    margin-left: 7px;
+ 
+    
+}
+.video-card-first-item button i{
+    font-size: 22px;
+}
+.video-card-first-item button{
+    background-color: #6f42c1;
+}
+.video-section{
+    border: 1px dotted blue;
+    margin-bottom: 19px;
+}
+.video-card button{
+    background-color: #e9e0fe; 
+    color:#000066; 
+    font-weight: 600;
+    margin-right: 6px;
+
+}
+
+.project-card-container{
+    margin-left: 20px;
+    width:97% !important;
+}
+.project-time-section .project-time-first-card h3{
+    font-size: 15px;
+    margin-left: 10px;
+}
+.calendar  ul {
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+}
+
+
+.calendar  ul li {
+    width: calc(90%/7);
+    text-align: center;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 1%;
+    font-size: 12px;
+}
+.checkboxes{
+    width: 160px;
+    border: 3px solid red;
+}
+label{
+    margin-left: 10%;
+}
+.form-check input{
+    width: 20px;
+    height: 20px;
+}
+
+.video-card p{
+    font-size: 13px;
+    color: #000033;
+    font-weight: 500;
+}
+.video-card p span{
+ 
+    color: #000033;
+    font-weight: 400;
+}
+
+.form-check{
+    
+    margin-bottom: 0 !important;    
+}
+.form-check {
+    border-bottom: 1px dotted #6f42c1;
+}
+
+.btn:hover{
+    background-color: green !important;
+    color: white !important;
+}
+
+
+.gh{
+
+    height: 48px;
+  
+    margin-top: 40px !important;
+    
+}
+.tp{
+   
+    margin-left: 91px;
+    padding-top: 0.4px;
+  
+ 
+}
+
+.timeline-image{
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+ 
+    
+}
+.time-line-container{
+    height: 500px;
+    background-image: url("./timeline7.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.timeline-image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.time-line-card{
+    border-radius: 22px;
+    color: white;
+}
+.time-line-card p{
+    font-size: 13px;
+    padding: 6px;
+    font-weight: 600;
+  
+}
+.timeline-heading h3{
+    font-size: 17px;
+    margin-left: 4%;
+}
+.timeline-heading i{
+    margin-right: 5%;
+}
+.footer-section{
+    min-height: 70px;
+   
+}
+.footer-area{
+  
+    min-height: 48px;  
+}
+label p{
+    font-size: 13px;
+    
+}
+input{
+    top: -4px;
+    position: relative;
+}
+.current-month{
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+circle{
+    position: relative;
+    width: 150px;
+    height: 150px;   
+    fill: none;
+    stroke-width: 9;
+    stroke: #0ea5e9;
+    transform: translate(5px,5px);
+    stroke-dasharray: 120 70;
+    stroke-dashoffset:0 ;
+   
+ 
+}
+.percent{
+    padding-top: 14px;
+    padding-left: 34px;
+    border: 1px dotted blue;
+    height: 116px;
+    width: 170px;
+}
+
+.percent svg circle:nth-child(1){
+    stroke-dashoffset: 110;
+    stroke: #ebeef0;
+}
+
+
+
+.profile-percent{
+    position: relative;
+     width: 150px;
+     height: 150px; 
+ }
+ .profile-percent svg{
+    position: relative;
+     width: 150px;
+     height: 150px;   
+ }
+ .profile-percent svg circle{
+     position: relative;
+     width: 150px;
+     height: 150px;   
+     fill: none;
+     stroke-width: 5;
+     stroke: #6f42c1;
+     transform: translate(5px,5px);
+     stroke-dasharray: 240 100;
+     stroke-dashoffset:120 ;
+  
+ }
+ .profile-percent svg circle:nth-child(1){
+     stroke-dashoffset: 110;
+     stroke:none;
+ }
+ 
+ .profile-image{
+     position: absolute;
+     top:0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     color: #999;
+ }
+ .profile-image img{
+     height: 90%;
+     width: 90%;
+     border-radius: 50%;
+     border: 3px solid #fff;
+ }
+ .profile-percent{
+    margin: auto;
+ }
+ .percentage-button{
+    background: #6f42c1;
+    position: absolute;
+    border-radius: 50%;
+    color: white;
+    padding:1px 6px 1px 6px;
+    font-size: 10.5px;
+     left:-4px;
+    bottom: 45px;
+ }
+ .video-start-para{
+    font-size: 14px;
+    position: relative;
+    bottom: -7px;
+ }
+ .video-start-para span{
+    font-size: 12px;
+ }
+
+
+
+
