@@ -2,6 +2,9 @@
 
 ### ⏲️ Deadline - Saturday 5:00 PM
 
+![image](https://github.com/sampath99999/CodeSchool-2.0-Batch-1/assets/112122835/fc1c7a33-227b-41ae-849b-462ff3f19dda)
+
+
 👉 Prepare a Register Page with Following Functionalities:<br>
 
 **On Left Side**:<br> Image should be changed for every 30 Sec(Can find some Free API's gives images of building or nature at that resolution)<br><br>
@@ -64,5 +67,3 @@
 
 👉 After clicking On Sign Up - Should do <b>POST</b> request to https://demo-api-wh0x.onrender.com/register, and show result below Sign Up Button <br><br>
 👉 Should have Dropdown Menu in Header as shown in picture 
-
-![image](https://github.com/sampath99999/CodeSchool-2.0-Batch-1/assets/112122835/fc1c7a33-227b-41ae-849b-462ff3f19dda)
