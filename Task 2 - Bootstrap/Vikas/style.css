@@ -1,0 +1,56 @@
+*{
+margin: 0;
+padding: 0;
+}
+.leftpart{
+    border-right: #dee2e6;
+}
+.bodypart{
+    background-color:#F5F8FA;
+    height: 100%;
+   font-size: medium;
+    
+    
+}
+.image{
+    text-align: center;
+    padding: 30px;
+    
+}
+.contents{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    color: gray;
+    
+    
+}
+.left-elements{
+    padding: 10px;
+    border: groove lightgrey 0.5px;
+}
+.bar{
+    padding-top: 30px;
+}
+.card{
+   height: auto;
+    width: 150px;
+}
+.progress{
+    height: 10px;
+}
+th{
+    padding:7px;
+    font-weight: 400;
+    color: grey;
+}
+td{
+    text-align: center;
+
+}
+.tab{
+    border-radius: 5px;
+}
+.item{
+    color: grey;
+}
