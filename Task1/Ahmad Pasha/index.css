@@ -4,8 +4,6 @@
     border: 0;
 }
 
-/* header section styling */
-
 .logo{
     width: 70%;
     height: 70%;
@@ -53,6 +51,11 @@
 
 .login_time{
     width: 30%;
+   
+}
+
+.login_time p{
+    font-size: 68%;
 }
 
 
@@ -131,16 +134,6 @@
   }
 
 
-  .login_time{
-    color: #d0d0d0;
-    width: 30%;
-}
-
-
-
-/*  menu bar styling */
-
-
 .menu_container{
     display: flex;
     flex-direction: column;
@@ -183,7 +176,11 @@ ul::-webkit-scrollbar{
     background-color: #dedede;
 }
 
-/* employee section css */
+
+.login_time{
+    color: #d0d0d0;
+    width: 30%;
+}
 
 .body_frame{
     display: flex;
@@ -257,15 +254,22 @@ ul::-webkit-scrollbar{
     
 }
 
+
+
+
+
 .star{
     color: #ff031a;
 }
 
 
-/* table styling strats form here */
+
+
+
+
 
 #innerTr{
-    height: 30px;
+    height: 35px;
     padding-top: 50px;
 }
 
@@ -315,14 +319,16 @@ table{
  
 
 
-
+/* 
  ul li:hover{
     background-color:#233a4e;
-    
-}
-ul li:hover{
     border-left:4px solid #f4a9b1;
-}
+    
+} */
+ .menu_container li:hover{
+    border-left:4px solid #f4a9b1;
+     background-color:#233a4e;
+} 
 
 
 
@@ -360,13 +366,13 @@ ul li:hover{
 .auditor_sec{
     display: flex;
     width: 60%;
-    margin-left: 10%;
-    justify-content: space-between;
+    margin-left: 3%;
+    gap: 25%;
 
 }
 
 .auditor_sec select{
-    width: 60%;
+    width: 70%;
     border: 1px solid #a0a0a0;
     border-radius: 3px;
 }
