@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qoduby Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-body-secondary">
+  <!-- NAVBAR MENU -->
+  <nav class="navbar navbar-expand-lg sticky-top bg-white shadow">
+    <!-- LEFT CONTENTS OF NAVBAR DESKTOP -->
+    <div class="row container-fluid">
+      <div class="col-lg-1">
+        <a class="navbar-brand d-none d-sm-inline mx-3" href="#">
+          <img src="images/Qoduby-logo.png" width="30px" alt="Qoduby"> Qoduby
+        </a>
+      </div>
+      <div class="navbar-collapse col-lg-8 mx-2" id="nav">
+        <ul class="navbar-nav d-none d-lg-flex">
+          <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dashboards
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">All Tasks</a></li>
+                      <li><a class="dropdown-item" href="#">Task Summary</a></li>
+                      <li><a class="dropdown-item" href="#">Projects Timeline</a></li>
+                    </ul>
+          </li>
+          <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Projects
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">iOS Development</a></li>
+                      <li><a class="dropdown-item" href="#">SEO Research</a></li>
+                      <li><a class="dropdown-item" href="#">Web Design</a></li>
+                    </ul>
+          </li>
+          <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Apps
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">IFMIS Web App</a></li>
+                      <li><a class="dropdown-item" href="#">iOS Apps</a></li>
+                    </ul>
+          </li>
+          <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Pages
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Page 1</a></li>
+                      <li><a class="dropdown-item" href="#">Page 2</a></li>
+                    </ul>
+          </li>
+          <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Help
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Documentation</a></li>
+                      <li><a class="dropdown-item" href="#">Support</a></li>
+                    </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- RIGHT CONTENTS OF NAVBAR DESKTOP -->
+      <div class="row full-mobile-view container-fluid float-end col-12 d-none d-md-block col-lg-2">
+        <ul class="navbar-nav mobile-view-buttons">
+          <li class="nav-item d-inline-flex flex-column">
+            <a class="nav-link " href="#">
+              <button type="button" class="btn bg-body-secondary position-relative rounded-circle p-0" style="height: 32px; width: 32px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                </svg>
+              </button>
+            </a>
+          </li>
+          <li class="nav-item d-inline-flex">
+            <a class="nav-link " href="#">
+              <button type="button" class="btn bg-body-secondary position-relative rounded-circle p-0" style="height: 32px; width: 32px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left" viewBox="0 0 16 16">
+                  <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                </svg><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger navbar-notification-alert">3</span>
+              </button>
+            </a>                
+          </li>
+          <li class="nav-item d-inline-flex">
+            <a class="nav-link " href="#">
+              <button type="button" class="btn bg-body-secondary position-relative rounded-circle p-0" style="height: 32px; width: 32px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card-2-front-fill" viewBox="0 0 16 16">
+                  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
+                </svg>
+              </button>
+            </a>
+          </li>
+          <li class="nav-item d-inline-flex">
+            <a class="nav-link " href="#">
+              <button type="button" class="btn bg-body-secondary position-relative rounded-circle p-0" style="height: 32px; width: 32px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+                  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+                </svg><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary navbar-notification-alert">2</span>
+              </button>
+            </a>
+          </li>
+          <li class="nav-item dropdown d-inline-flex">
+            <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="images/barry-tone.png" alt="user" width="32" height="32" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small shadow" style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 34.4px, 0px);" data-popper-placement="bottom-end">
+                <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+         </li>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav d-lg-none">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dashboards
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">All Tasks</a></li>
+                <li><a class="dropdown-item" href="#">Task Summary</a></li>
+                <li><a class="dropdown-item" href="#">Projects Timeline</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Projects
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">iOS Development</a></li>
+                <li><a class="dropdown-item" href="#">SEO Research</a></li>
+                <li><a class="dropdown-item" href="#">Web Design</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Apps
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">IFMIS Web App</a></li>
+                <li><a class="dropdown-item" href="#">iOS Apps</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Pages
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Page 1</a></li>
+                <li><a class="dropdown-item" href="#">Page 2</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Help
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                </svg>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Documentation</a></li>
+                <li><a class="dropdown-item" href="#">Support</a></li>
+              </ul>
+            </li>
+          </ul>
+         </div>
+        </ul>
+      </div>
+      <!-- Navbar Contents MOBILE -->
+      <div class="container-fluid d-md-none col-12 row p-2">
+        <div class="container-fluid col-2">
+          <button type="button" class="btn bg-body-secondary position-relative rounded-circle p-0" style="height: 32px; width: 32px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="container-fluid col-2">
+          <button type="button" class="btn bg-body-secondary position-relative rounded-circle p-0" style="height: 32px; width: 32px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left" viewBox="0 0 16 16">
+              <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+            </svg><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger navbar-notification-alert">3</span>
+          </button>
+        </div>
+        <div class="container-fluid col-2">
+          <button type="button" class="btn bg-body-secondary position-relative rounded-circle p-0" style="height: 32px; width: 32px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card-2-front-fill" viewBox="0 0 16 16">
+              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
+            </svg>
+          </button>
+        </div>
+        <div class="container-fluid col-2">
+          <button type="button" class="btn bg-body-secondary position-relative rounded-circle p-0" style="height: 32px; width: 32px;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+              <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+            </svg><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-primary navbar-notification-alert">2</span>
+          </button>
+        </div>
+        <div class="container-fluid col-2">
+          <li class="nav-item dropdown d-inline-flex">
+            <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="images/barry-tone.png" alt="user" width="32" height="32" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small shadow" style="position: absolute; inset: 0px 0px auto auto; margin: 0px; transform: translate3d(0px, 34.4px, 0px);" data-popper-placement="bottom-end">
+                <li><a class="dropdown-item" href="#">Dashboard</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+            </ul>
+          </li>
+        </div>
+        <div class="container-fluid col-2">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav d-md-none">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dashboards
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">All Tasks</a></li>
+                  <li><a class="dropdown-item" href="#">Task Summary</a></li>
+                  <li><a class="dropdown-item" href="#">Projects Timeline</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Projects
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">iOS Development</a></li>
+                  <li><a class="dropdown-item" href="#">SEO Research</a></li>
+                  <li><a class="dropdown-item" href="#">Web Design</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Apps
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">IFMIS Web App</a></li>
+                  <li><a class="dropdown-item" href="#">iOS Apps</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Pages
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Page 1</a></li>
+                  <li><a class="dropdown-item" href="#">Page 2</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-secondary" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Help
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Documentation</a></li>
+                  <li><a class="dropdown-item" href="#">Support</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- BODY -->
+  <div class="main-body row mx-2 my-3">
+    <!-- LEFT CONTAINER -->
+    <div class="container-fluid left-main-container col-lg-2 overflow-y-scroll left-box d-none d-xl-block">
+      <div class="container-fluid text-center">
+        <div class="btn bg-body-secondary position-relative rounded-circle p-0 m-0 menu-status" >
+          <img src="images/barry-tone.png" alt="user-profile" width="140px" class="rounded-circle p-0">
+          <span class="position-absolute top-50 start-0 translate-middle badge rounded-circle menu-status">7</span>
+        </div>
+        <br>  
+        <h4 class="text-body-emphasis fs-5 m-0">Barry Tone</h4>
+        <p class="text-body-secondary fs-7">UI/UX Designer</p>
+      </div><br>
+      <div class="container-fluid text-center px-1 menu-contents">
+        <div class="row body-menu-options ">
+          <div class="container col-6 p-3 text-secondary active bg-white text-black" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+              <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+            </svg>
+            <p class="my-2 menu-title">Dashboard</p>
+          </div>
+          <div class="container col-6 p-3 text-secondary" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16">
+              <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+            </svg>
+            <p class="my-2 menu-title">Projects</p>
+          </div>
+          <div class="container col-6 p-3 text-secondary" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
+              <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z"/>
+              <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z"/>
+            </svg>
+            <p class="my-2 menu-title">Kanban</p>
+          </div>
+          <div class="container col-6 p-3 text-secondary" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+              <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+            </svg>
+            <p class="my-2 menu-title">Add Projects</p>
+          </div>
+          <div class="container col-6 p-3 text-secondary" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-folder2" viewBox="0 0 16 16">
+              <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z"/>
+            </svg>
+            <p class="my-2 menu-title">Files</p>
+          </div>
+          <div class="container col-6 p-3 text-secondary" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+              <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
+            </svg>
+            <p class="my-2 menu-title">Team</p>
+          </div>
+          <div class="container col-6 p-3 text-secondary" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-calendar4" viewBox="0 0 16 16">
+              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"/>
+            </svg>
+            <p class="my-2 menu-title">Calender</p>
+          </div>
+          <div class="container col-6 p-3 text-secondary" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+              <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+              <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+            </svg>
+            <p class="my-2 menu-title">Invoices</p>
+          </div>
+        </div> 
+      </div><br>
+      <div class="container-fluid p-0">
+        <span class="progress-title">Last Project</span>
+        <span class="text-secondary float-end progress-title">60%</span>
+        <div class="progress bg-light-subtle" role="progressbar" aria-label="Basic example" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" style="width: 60%"></div>
+        </div>
+      </div>
+    </div>
+    <!-- RIGHT CONTAINER -->
+    <div class="container-fluid right-main-container ps-4 col-12 col-lg-10"  >
+      <div class="d-flex flex-column flex-lg-row analytics">
+        <div class="card m-2 mb-4 px-0 col-12 col-md-3 border-0" style="max-width: 290px;">
+          <div class="row g-0">
+            <div class="col-5">
+              <img src="images/card-1.png" class="p-1 rounded-start" alt="...">
+            </div>
+            <div class="col-7">
+              <div class="card-body ps-3">
+                <p class="card-text text-secondary">Product Design</p>
+                <h5 class="card-title">5 Project</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card m-2 mb-4 px-0 col-12 col-md-3 border-0" style="max-width: 290px;">
+          <div class="row g-0">
+            <div class="col-5">
+              <img src="images/card-2.png" class="p-1 rounded-start" alt="...">
+            </div>
+            <div class="col-7">
+              <div class="card-body ps-3">
+                <p class="card-text text-secondary">Visual Identity</p>
+                <h5 class="card-title">6 Project</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card m-2 mb-4 px-0 col-12 col-md-3 border-0" style="max-width: 290px;">
+          <div class="row g-0">
+            <div class="col-5">
+              <img src="images/card-3.png" class="p-1 rounded-start" alt="...">
+            </div>
+            <div class="col-7">
+              <div class="card-body ps-3">
+                <p class="card-text text-secondary">Web Development</p>
+                <h5 class="card-title">3 Project</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card m-2 mb-4 px-0 col-12 col-md-3 border-0" style="max-width: 290px;">
+          <div class="row g-0">
+            <div class="col-5">
+              <img src="images/card-4.png" class="p-1 rounded-start" alt="...">
+            </div>
+            <div class="col-7">
+              <div class="card-body ps-3">
+                <p class="card-text text-secondary">Illustration Works</p>
+                <h5 class="card-title">7 Project</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row me-0">
+        <div class="col-12 col-md-8">
+          <div class="container-fluid task-summary bg-white col-12 mb-3 rounded">
+            <div class="row py-4">
+              <div class="container-fluid col-lg-8 mx-3">
+                <h6>Task Summary</h6>
+                <div class="row task-cards py-2">
+                  <div class="container-fluid text-center col-12 col-lg-3 project-score text-white py-4 px-4 rounded">
+                    <!-- projects icon -->
+                    <div class="border border-white rounded-circle m-auto mt-3 mb-2" style="width:48px; height:48px;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-activity  m-auto mt-2" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2Z"/>
+                      </svg>
+                    </div>
+                    <p class="score-title">Projects</p>
+                    <h1>48</h1>
+                  </div>
+                  <div class="container-fluid text-center col-lg-3 ongoing-score text-white py-4 px-4 rounded">
+                    <!-- ongoing icon -->
+                    <div class="border border-white rounded-circle m-auto mt-3 mb-2" style="width:48px; height:48px;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-paperclip  m-auto mt-2" viewBox="0 0 16 16">
+                        <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0V3z"/>
+                      </svg>
+                    </div>
+                    <p class="score-title">Ongoing</p>
+                    <h1>16</h1>
+                  </div>
+                  <div class="container-fluid text-center col-lg-3 text-dark py-4 px-4 rounded bg-secondary-subtle">
+                    <!-- completed icon -->
+                    <div class="border border-secondary-subtle rounded-circle m-auto mt-3 mb-2" style="width:48px; height:48px;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-check2-circle m-auto mt-2" viewBox="0 0 16 16">
+                        <path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0z"/>
+                        <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z"/>
+                      </svg>
+                    </div>
+                    <p class="score-title">Completed</p>
+                    <h1>27</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="container-fluid teams-number col-lg-3 ms-0 border-secondary-subtle">
+                <div class="container-fluid number-of-teams">
+                  <h6>Our Team</h6>
+                  <p>Team members</p>
+                  <img src="images/members.png" width="140" height="50" alt="members">
+                </div>
+                <div class="container-fluid teams-progress border-secondary-subtle mt-4 p-3 rounded text-center ">
+                  <div class="spinner-border text-primary" role="status" style="width: 80px; height: 80px;">
+                    <span class="visually-hidden">Loading...</span>
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </div>
+          <div class="container-fluid all-tasks bg-white col-12 mb-3 rounded p-4">
+            <h6 class="mb-4">
+              All Tasks
+              <span class="float-end">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                  <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                </svg>
+              </span>
+            </h6>
+            <div class="container-fluid row col-12 border text-center px-0 mx-auto my-2 rounded video-frame">
+              <div class="video-button-frame p-3 col-12 col-md-3">
+                <div class="row ps-3 d-inline-flex">
+                  <div class="video-button border rounded-circle ps-2 pt-2" style="width: 48px; height: 48px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                      <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                    </svg>
+                  </div>
+                  <div class="col text-start">
+                    <label for="#">Start from</label><br>
+                    <label class="time-value text-secondary" for="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                      </svg><span> 09:OO am</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="project-comments p-3 col-md-4 text-start">
+                <label for="#">iOS Development Project</label><br>
+                <label class="time-value text-secondary" for="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
+                  <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                 </svg> 7 comments
+                </label>
+              </div>
+              <div class="project-progress py-3 ps-2 col-md-3 text-start">
+                <label class="mb-1" for="#">48% complete</label>
+                <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                  <div class="progress-bar bg-primary" style="width: 48%"></div>
+                </div>
+              </div>
+              <div class="project-details p-3 col-md-2">
+                <button type="button" class="btn more-details">Details</button>
+              </div>
+            </div>
+            <div class="container-fluid row col-12 border text-center px-0 mx-auto my-2 rounded video-frame">
+              <div class="video-button-frame p-3 col-12 col-md-3">
+                <div class="row ps-3 d-inline-flex">
+                  <div class="video-button border rounded-circle ps-2 pt-2" style="width: 48px; height: 48px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                      <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                    </svg>
+                  </div>
+                  <div class="col text-start">
+                    <label for="#">Start from</label><br>
+                    <label class="time-value text-secondary" for="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                      </svg><span> 11:OO am</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="project-comments p-3 col-12 col-md-4 text-start">
+                <label for="#">Web Design Project</label><br>
+                <label class="time-value text-secondary" for="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
+                  <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                 </svg> 3 comments
+                </label>
+              </div>
+              <div class="project-progress py-3 ps-2 col-12 col-md-3 text-start">
+                <label class="mb-1" for="#">22% complete</label>
+                <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                  <div class="progress-bar" style="width: 22%"></div>
+                </div> 
+              </div>
+              <div class="project-details p-3 col-12 col-md-2 ">
+                <button type="button" class="btn more-details">Details</button>
+              </div>
+            </div>
+            <div class="container-fluid row col-12 border text-center px-0 mx-auto my-2 rounded video-frame">
+              <div class="video-button-frame p-3 col-12 col-md-3">
+                <div class="row ps-3 d-inline-flex">
+                  <div class="video-button border rounded-circle ps-2 pt-2" style="width: 48px; height: 48px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                      <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                    </svg>
+                  </div>
+                  <div class="col text-start">
+                    <label for="#">Start from</label><br>
+                    <label class="time-value text-secondary" for="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                      </svg><span> 16:OO pm</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="project-comments p-3 col-12 col-md-4 text-start">
+                <label for="#">SEO Research Project</label><br>
+                <label class="time-value text-secondary" for="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
+                  <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                 </svg> 5 comments
+                </label>
+              </div>
+              <div class="project-progress py-3 ps-2 col-12 col-md-3 text-start">
+                <label class="mb-1" for="#">38% complete</label>
+                <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                  <div class="progress-bar bg-success" style="width: 38%"></div>
+                </div>
+              </div>
+              <div class="project-details p-3 col-12 col-md-2">
+                <button type="button" class="btn more-details">Details</button>
+              </div>
+            </div>
+            <div class="container-fluid row col-12 border text-center px-0 mx-auto my-2 rounded video-frame">
+              <div class="video-button-frame p-3 col-12 col-md-3">
+                <div class="row ps-3 d-inline-flex">
+                  <div class="video-button border rounded-circle ps-2 pt-2" style="width: 48px; height: 48px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-play" viewBox="0 0 16 16">
+                      <path d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z"/>
+                    </svg>
+                  </div>
+                  <div class="col text-start">
+                    <label for="#">Start from</label><br>
+                    <label class="time-value text-secondary" for="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+                        <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                        <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                      </svg><span> 16:OO pm</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="project-comments p-3 col-12 col-md-4 text-start">
+                <label for="#">Prototype Project</label><br>
+                <label class="time-value text-secondary" for="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-chat" viewBox="0 0 16 16">
+                  <path d="M2.678 11.894a1 1 0 0 1 .287.801 10.97 10.97 0 0 1-.398 2c1.395-.323 2.247-.697 2.634-.893a1 1 0 0 1 .71-.074A8.06 8.06 0 0 0 8 14c3.996 0 7-2.807 7-6 0-3.192-3.004-6-7-6S1 4.808 1 8c0 1.468.617 2.83 1.678 3.894zm-.493 3.905a21.682 21.682 0 0 1-.713.129c-.2.032-.352-.176-.273-.362a9.68 9.68 0 0 0 .244-.637l.003-.01c.248-.72.45-1.548.524-2.319C.743 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.52.263-1.639.742-3.468 1.105z"/>
+                  </svg> 4 comments
+                </label>
+              </div>
+              <div class="project-progress py-3 ps-2 col-12 col-md-3 text-start">
+                <label class="mb-1" for="#">63% complete</label>
+                <div class="progress" role="progressbar" aria-label="Example 1px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height: 5px">
+                  <div class="progress-bar bg-warning" style="width: 63%"></div>
+                </div>
+              </div>
+              <div class="project-details p-3 col-12 col-md-2">
+                <button type="button" class="btn more-details">Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid project-time bg-white col-md-4 col-12 mb-3 rounded py-4 px-4">
+          <h6>Project Time</h6>
+          <p class="text-secondary d-inline">May 2023 
+            <div class="d-inline float-end">
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                </svg>
+              </span> 
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                </svg>  
+              </span>
+            </div>
+          </p>
+          <table class="table table-borderless text-center project-calendar">
+            <tbody>
+              <tr class="days">
+                <td scope="col">MON</td>
+                <td scope="col">TUE</td>
+                <td scope="col">WED</td>
+                <td scope="col">THU</td>
+                <td scope="col">FRI</td>
+                <td scope="col">SAT</td>
+                <td scope="col">SUN</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td><div class="review-day">4</div></td>
+                <td><div class="review-day">5</div></td>
+                <td><div class="review-day">6</div></td>
+              </tr>
+              <tr>
+                <td><div class="review-day">7</div></td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>15</td>
+                <td><div class="create-new-comp-day">16</div></td>
+                <td>17</td>
+                <td>18</td>
+                <td><div class="design-day">19</div></td>
+                <td>20</td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td><div class="wireframe-day">24</div></td>
+                <td><div class="wireframe-day">25</div></tdss=>
+                <td>26</td>
+                <td>27</td>
+              </tr>
+              <tr>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="calendar-filter border rounded p-3 mt-3">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="row d-flex align-items-centre">
+                  <div class="col-1">
+                    <input class="form-check-input me-1 mt-3 progress-bar" type="checkbox" value="" id="firstCheckbox">
+                  </div>
+                  <div class="col-10 ms-2">
+                    <label class="form-check-label" for="firstCheckbox">Create new component in React</label>
+                    <label class="remaining-days" for="firstCheckbox">2 days remaining</label>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row d-flex align-items-centre">
+                  <div class="col-1">
+                    <input class="form-check-input me-1 mt-3 bg-success" type="checkbox" value="" id="firstCheckbox">
+                  </div>
+                  <div class="col-10 ms-2">
+                    <label class="form-check-label" for="firstCheckbox">Improve workflow in Figma</label>
+                    <label class="remaining-days" for="firstCheckbox">3 days remaining</label>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row d-flex align-items-centre">
+                  <div class="col-1">
+                    <input class="form-check-input me-1 mt-3 bg-secondary" type="checkbox" value="" id="firstCheckbox">
+                  </div>
+                  <div class="col-10 ms-2">
+                    <label class="form-check-label" for="firstCheckbox">Create dark mode for iOS</label>
+                    <label class="remaining-days" for="firstCheckbox">6 days remaining</label>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row d-flex align-items-centre">
+                  <div class="col-1">
+                    <input class="form-check-input me-1 mt-3 bg-warning" type="checkbox" value="" id="firstCheckbox">
+                  </div>
+                  <div class="col-10 ms-2">
+                    <label class="form-check-label" for="firstCheckbox">Client review & feedback</label>
+                    <label class="remaining-days" for="firstCheckbox">4 days remaining</label>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row d-flex align-items-centre">
+                  <div class="col-1">
+                    <input class="form-check-input me-1 mt-3" type="checkbox" value="" id="firstCheckbox">
+                  </div>
+                  <div class="col-10 ms-2">
+                    <label class="form-check-label" for="firstCheckbox">Create wireframe for app</label>
+                    <label class="remaining-days" for="firstCheckbox">2 days remaining</label>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="row d-flex align-items-centre">
+                  <div class="col-1">
+                    <input class="form-check-input me-1 mt-3 bg-success" type="checkbox" value="" id="firstCheckbox">
+                  </div>
+                  <div class="col-10 ms-2">
+                    <label class="form-check-label" for="firstCheckbox">Project design for Sketch</label>
+                    <label class="remaining-days" for="firstCheckbox">2 days remaining</label>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid project-timeline bg-white mb-3 rounded py-3 d-none d-md-block">
+        <h6 class="mb-4">
+          Project Timeline
+          <span class="float-end">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+              <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+            </svg>
+          </span>
+        </h6>
+        <div class="col-12" style="margin-top: 20px; background-color: white;">
+          <div class="col d-flex">
+            <div class="col-2"></div>
+            <div class="col-6 d-flex justify-content-between rounded-pill" style="background-color: black; align-items: center;">
+              <div class="col d-flex">
+                <div><img  src="images/barry-tone.png" style="height:100%; width: 30px; padding: 2px;" class="rounded-circle"></div>
+                <div style="color: white; padding-left: 10px; align-items: center;"><P>Web Back-End</P></div>
+              </div>
+              <div style="color: white; padding: 4px;"><P>DEVELOPMENT</P></div>
+            </div>
+            <div class="col-4"></div>
+          </div>
+          <div class="col d-flex p-2">
+            <div class="col-4 d-flex rounded-pill" style="background-color: #9166F8;">
+              <div class="col d-flex">
+                <div><img  src="images/barry-tone.png" style="height:100%; width: 30px; padding: 2px;" class="rounded-circle"></div>
+                <div style="color: white; padding-left: 10px; align-items: center;"><P>Research</P></div>
+              </div>
+              <div style="color: white; padding: 4px;"><P>SEO</P></div>
+            </div>
+            <div class="col-2 d-flex">
+            </div>
+            <div class="col-6 d-flex rounded-pill" style="background-color: #0EA5E9;">
+              <div class="col d-flex">
+                <div><img  src="images/barry-tone.png" style="height:100%; width: 30px; padding: 2px;" class="rounded-circle"></div>
+                <div style="color: white; padding-left: 10px; align-items: center;"><P>Web Back-End</P></div>
+              </div>
+              <div style="color: white; padding: 4px;"><P>DEVELOPMENT</P></div>
+            </div>
+          </div>
+          <div class="col d-flex p-2">
+            <div class="col-8 d-flex rounded-pill" style="background-color: #11B981; ">
+              <div class="col d-flex">
+                <div><img  src="images/barry-tone.png" style="height:100%; width: 30px; padding: 2px;" class="rounded-circle"></div>
+                <div style="color: white; padding-left: 10px; align-items: center;"><P>Logo & Branding Design</P></div>
+              </div>
+              <div style="color: white; padding: 4px;"><P>DESIGN</P></div>
+            </div>
+            <div class="col-4">
+            </div> 
+          </div>
+          <div class="col d-flex p-2">
+            <div class="col-2">
+            </div>
+            <div class="col-4 d-flex rounded-pill" style="background-color: #FFBB2A;">
+              <div class="col d-flex">
+                <div><img  src="images/barry-tone.png" style="height:100%; width: 30px; padding: 2px;" class="rounded-circle"></div>
+                <div style="color: white; padding-left: 10px; align-items: center;"><P>iOS Front-End</P></div>
+              </div>
+              <div style="color: white; padding: 4px;"><P>MOBILE</P></div>
+            </div>
+            <div class="col-2">
+            </div>
+            <div class="col-4 d-flex rounded-pill" style="background-color: #E11D48;">
+              <div class="col d-flex">
+                <div><img  src="images/barry-tone.png" style="height:100%; width: 30px; padding: 2px;" class="rounded-circle"></div>
+                <div style="color: white; padding-left: 10px; align-items: center;"><P>Android Front-End</P></div>
+              </div>
+              <div style="color: white; padding: 4px;"><P>MOBILE</P></div>
+            </div>   
+          </div>
+       </div>
+      </div>
+      <div class="container-fluid more-about bg-white mb-3 rounded py-3 col-12 text-center">
+        <div class="foot-section d-flex align-content-center justify-content-between">
+          <div class="text-secondary col-3  pt-2">2023&copy; <span class="text-dark">Qoduby</span></div>
+          <div class="col-5 col-lg-5">
+            <ul class="nav float-end ">
+              <li class="nav-item ">
+                  <a class="nav-link text-secondary" href="#">Support</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-secondary" href="#">License</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-secondary">Documentation</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<!-- 
+**************************************** ICONS ******************************************************
+
+SEARCH:
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg>
+COMMENT:
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left" viewBox="0 0 16 16">
+  <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+</svg>
+CARD:
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-credit-card-2-front-fill" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1z"/>
+</svg>
+ALERT:
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
+  <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"/>
+</svg>
+
+
+HOME:
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+  <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146ZM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5Z"/>
+</svg>
+PROJECTS:
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid" viewBox="0 0 16 16">
+  <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+</svg>
+CALENDER:
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar4" viewBox="0 0 16 16">
+  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM2 2a1 1 0 0 0-1 1v1h14V3a1 1 0 0 0-1-1H2zm13 3H1v9a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5z"/>
+</svg>
+TEAMS: 
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people" viewBox="0 0 16 16">
+  <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8Zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022ZM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816ZM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0Zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z"/>
+</svg>
+ADD PROJECTS:
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-square" viewBox="0 0 16 16">
+  <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+</svg>
+KANBAN:
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-kanban" viewBox="0 0 16 16">
+  <path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h11zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2h-11z"/>
+  <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V3z"/>
+</svg>
+INVOICES:
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+</svg>
+FILE:
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-folder2" viewBox="0 0 16 16">
+  <path d="M1 3.5A1.5 1.5 0 0 1 2.5 2h2.764c.958 0 1.76.56 2.311 1.184C7.985 3.648 8.48 4 9 4h4.5A1.5 1.5 0 0 1 15 5.5v7a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 12.5v-9zM2.5 3a.5.5 0 0 0-.5.5V6h12v-.5a.5.5 0 0 0-.5-.5H9c-.964 0-1.71-.629-2.174-1.154C6.374 3.334 5.82 3 5.264 3H2.5zM14 7H2v5.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5V7z"/>
+</svg>
+
+
+ -->
