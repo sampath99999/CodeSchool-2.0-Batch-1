@@ -27,7 +27,7 @@ function loadImage() {
   setInterval(loadImage, 500);
   // first name validation
 
-  function validateFirstName() {
+function validateFirstName() {
     const firstNameInput = document.getElementById("firstName");
     const firstNameError = document.getElementById("firstNameError");
     const firstName = firstNameInput.value.trim();
@@ -276,8 +276,8 @@ function signUp() {
         option.value = country.callingCodes[0];
         option.text = `${country.name} (+${country.callingCodes[0]})`;
         selectBox.appendChild(option);
-      });
-    }
+      })
+}
 //phone num validation
 
   // JavaScript
@@ -320,5 +320,43 @@ function validatePhoneNumber(phoneNumber) {
         
         option.text = `${country.name}`;
         selectBox.appendChild(option);
-      });
-    }
+});
+}
+// countries and universities
+const xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "https://gist.githubusercontent.com/Goles/3196253/raw/9ca4e7e62ea5ad935bb3580dc0a07d9df033b451/CountryCodes.json");
+    xhttp.onload = async function() {
+     let countryNamesAndCodes = await JSON.parse(this.response);
+     for(i of countryNamesAndCodes){
+        let countryNames = document.getElementById("countryNames");
+        let listEle = document.createElement('option')
+        listEle.textContent=i.name;
+        countryNames.appendChild(listEle);
+    }
+    }
+xhttp.send();
+function countryOnchange(){
+
+  let countryNames = document.getElementById('countryNames');
+  let UniversityNames = document.getElementById('University');
+  console.log(countryNames.value);
+  let xc = countryNames.value;
+
+
+  const unihttp = new XMLHttpRequest();
+  unihttp.open("GET", `http://universities.hipolabs.com/search?country=${xc}`);
+  unihttp.onload = async function() {
+   let universityNames = await JSON.parse(this.response);
+   console.log(universityNames);
+   for(let j of  universityNames){
+      
+      let countryNameOption = document.createElement('option');
+      countryNameOption.textContent= j.name;
+      UniversityNames.appendChild(countryNameOption);
+  }
+  }
+  unihttp.send();
+
+
+
+}
