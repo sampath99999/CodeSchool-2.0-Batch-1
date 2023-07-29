@@ -1,5 +1,5 @@
 *{
-  font-family: open sans-serif;
+  font-family: "open sans-serif"!important;
 }
 header{
     background-image: url(https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg);
@@ -10,6 +10,7 @@ header{
  margin: 10px;
  height: 50px;
 }
+
 .header-wrapper{
     display: flex;
 
