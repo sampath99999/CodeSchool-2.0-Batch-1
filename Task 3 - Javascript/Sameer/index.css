@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.body{
+    background-color: #f4f4f4;
+}
+.container{
+    background-color: #FAFAFA;
+}
+i {
+    background-color:#E6F6EE;
+    border-radius: 50%;
+    
+    padding:5px;
+    color: #48BB79;
+  }
+  .navbar-brand{
+    color:#1FB166;
+    
+  }
