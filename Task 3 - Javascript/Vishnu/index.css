@@ -1,0 +1,150 @@
+*{
+    font-family: "arial";
+}
+
+.options-selection button{
+    border: none;
+    margin-left: 13px;
+    border-radius: 50%;
+}
+
+.jabel-options-selection button{
+    border: none;
+    
+    border-radius: 50%;
+    
+}
+.jabel-options-selection{
+    flex-grow: 1;
+   justify-content: space-evenly;
+}
+
+.nav-item:hover .dropdown-menu{
+    display: block;
+}
+.nav-link i{
+    font-size: 10px;
+
+}
+
+.nav-link{
+    font-size: 14px !important;
+    color: #666666;
+    font-weight: 540 !important;
+    
+}
+
+.form-content{
+
+  border: 1px solid grey;
+ 
+}
+
+.images-carousel{
+    border-radius: 24px;
+ }
+
+ h4{
+    font-size: 15px;
+    font-weight:lighter !important;
+ }
+
+
+*{
+    box-sizing: border-box;
+}
+.form-heading{
+    font-family: "arial";
+}
+label{
+    margin-bottom: 1%;
+    font-size: 15px;
+    font-weight:lighter !important;
+}
+p{
+    margin-bottom: 0px !important;
+    font-size: 13px;
+    color: red;
+    display: none;
+}
+input::placeholder{
+    font-size: 13px !important;
+    color: black !important;
+    font-weight: 500;
+   
+}
+.form-dropdown{
+  
+    border:1px solid grey !important;
+    background-color:  #f7f9fd !important;
+   
+   
+}
+
+
+.form-dropdown:focus{
+    border-color: #00a651 !important;
+    box-shadow: 0 0 2px #00a651 !important;
+    background-color: #e6f7fe !important;
+   
+
+}
+option{
+    background-color: white !important;
+}
+
+.form-dropdown{   
+    font-weight: 500;
+}
+
+.form-control{
+    border:1px solid grey !important;
+    background-color:  #f7f9fd !important; 
+}
+
+.form-control:focus{
+    border-color: #00a651 !important;
+    box-shadow: 0 0 2px #00a651 !important;
+    background-color: #e6f7fe !important;
+  
+}
+
+/* input[type="radio"]:focus{
+    background-color: blue !important;
+} */
+
+/* input[type="checkbox"]:focus{
+    background-color: black !important;
+} */
+
+
+
+
+
+@media screen and (min-width:1024px) {
+    .country-details{
+        width: 25%;
+    }
+    .university-details{
+        width: 75%;
+    }
+    .phone-details{
+        width: 25%;
+    }
+    .date_of_birth{
+        width: 100%;
+    }
+    .date_of_join{
+        width: 100%;
+    }
+    .email{
+        width: 100%;
+    }
+    .form-group{
+        width: 100%;
+    }
+    
+    
+}
+
+
