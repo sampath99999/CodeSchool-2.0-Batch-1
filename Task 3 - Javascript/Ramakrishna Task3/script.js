@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (xhr.readyState === XMLHttpRequest.DONE) {
         if (xhr.status === 200) {
           realdata = JSON.parse(xhr.responseText);
-          updateCollegeSelect(""); // Clear college options when the country changes
+          updateCollegeSelect("");
         } else {
           console.log("Error fetching data");
         }
@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateCollegeSelect(inputText) {
-    collegeSelect.innerHTML = '<option value="">Select a college</option>';
+    collegeSelect.innerHTML = '<option value="">Select a University</option>';
     let filteredColleges = realdata.filter((college) => {
       let collegeName = college.name.toLowerCase();
       return collegeName.includes(inputText);
