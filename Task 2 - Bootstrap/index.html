@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  
+   
+    <title>Document</title>
+</head>
+<body>
+    <div class="bg-container">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light menu right-menu ml-2 mr-2">
+            <a class="navbar-brand d-none d-md-block" href="#">
+                <img class="logo" src="https://st2.depositphotos.com/3867453/5647/v/600/depositphotos_56471821-stock-illustration-letter-q-logo-icon-design.jpg" />
+                <span>Qoduby</span>
+            </a>
+            <button class="navbar-toggler order-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <ul class="navbar-nav ml-auto list-unstyled d-flex flex-row justify-content-eveny flex-grow-1 d-md-none order-1 ul-small">
+                <li class="follow-us-icon-container1 d-flex justify-content-center align-items-center border border-0 nav-icons"><a class="nav-link" href="#"><i class="fa fa-search mr-3" aria-hidden="true"></i></a></li>
+                <li class="follow-us-icon-container1 d-flex justify-content-center align-items-center border border-0 nav-icons"><a class="nav-link" href="#"><i class="bi bi-chat-left"></i></a></li>
+                <li class="follow-us-icon-container1 d-flex justify-content-center align-items-center border border-0 nav-icons"><a class="nav-link" href="#"><i class="bi bi-car-front"></i></a></li>
+                <li class="follow-us-icon-container1 d-flex justify-content-center align-items-center border border-0 nav-icons"><a class="nav-link" href="#"><i class="bi bi-bell"></i></a></li>
+                <li class="follow-us-icon-container1 d-flex justify-content-center align-items-center border border-0 nav-icons"><a class="nav-link" href="#"><i class="bi bi-person-circle"></i></a></li>
+           
+            </ul>
+           
+            <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto list-unstyled mt-2 mt-lg-0 d-none d-md-flex">
+                <li class="nav-item dropdown">
+                  <a class="dropdown-toggle text-secondary text-decoration-none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+                    Dashboards
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="dropdown-toggle text-secondary text-decoration-none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+                    Projects
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="dropdown-toggle text-secondary text-decoration-none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+                    Apps
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="dropdown-toggle text-secondary text-decoration-none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+                    Pages
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="dropdown-toggle text-secondary text-decoration-none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown">
+                    Help
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                
+                </ul>
+                <ul class="navbar-nav ml-auto d-flex flex-row d-none d-md-flex">
+                    
+                    <li class="follow-us-icon-container1 d-flex justify-content-center align-items-center border border-0 nav-icons"><a class="nav-link" href="#"><i class="fa fa-search mr-3" aria-hidden="true"></i></a></li>
+                    <li class="follow-us-icon-container1 d-flex justify-content-center align-items-center border border-0 nav-icons"><a class="nav-link" href="#"><i class="bi bi-chat-left"></i></a></li>
+                    <li class="follow-us-icon-container1 d-flex justify-content-center align-items-center border border-0 nav-icons"><a class="nav-link" href="#"><i class="bi bi-car-front"></i></a></li>
+                    <li class="follow-us-icon-container1 d-flex justify-content-center align-items-center border border-0 nav-icons"><a class="nav-link" href="#"><i class="bi bi-bell"></i></a></li>
+                    <li class="follow-us-icon-container1 d-flex justify-content-center align-items-center border border-0 nav-icons"><a class="nav-link" href="#"><i class="bi bi-person-circle"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid m-2">
+            <div class="row col-md-12 m-auto">
+                <div class="d-none d-md-block col-md-2 mt-3">
+                    <div class="leftside-container text-center">
+                        <div class="profile-container ">
+                            <img src="https://res.cloudinary.com/dn0woegat/image/upload/v1689838416/3_q3mxv9.png" class="h-50 w-50" alt="user-image" />
+                            <div class="left-name-conatiner mt-2">
+                                <h5>Barry Tone</h5>
+                                <p>UI/UX Designer</p>
+                            </div>
+                        </div>
+                        <div class="card-container mt-4">
+                            <div class="two-cards d-flex">
+                                <div class="left-card bg-white p-2 w-50">
+                                    <i class="bi bi-house-door"></i>
+                                    <p class="text-muted left-names">Dashboard</p> 
+                                </div>                        
+                                <div class="bg-transparent p-2 left-card w-50">
+                                    <i class="bi bi-grid"></i>
+                                    <p class="text-muted left-names">Projects</p> 
+                                </div>    
+                            </div>                    
+                            <div class="two-cards d-flex">
+                                <div class="left-card bg-transparent p-2 w-50">
+                                    <i class="bi bi-kanban"></i>
+                                    <p class="text-muted left-names">Kanban</p> 
+                                </div>                        
+                                <div class="bg-transparent p-2 left-card w-50">
+                                    <i class="bi bi-file-plus"></i>
+                                    <p class="text-muted left-names">Add Projects</p> 
+                                </div>    
+                            </div>                    
+                            <div class="two-cards d-flex">
+                                <div class="left-card bg-transparent p-2 w-50">
+                                    <i class="bi bi-folder2"></i>
+                                    <p class="text-muted left-names">Files</p> 
+                                </div>                        
+                                <div class="bg-transparent p-2 left-card w-50">
+                                    <i class="bi bi-microsoft-teams"></i>
+                                    <p class="text-muted left-names">Team</p> 
+                                </div>    
+                            </div>                    
+                            <div class="two-cards d-flex">
+                                <div class="left-card bg-transparent p-2 w-50">
+                                    <i class="bi bi-microsoft-teams"></i>
+                                    <p class="text-muted left-names">Calender</p> 
+                                </div>                        
+                                <div class="bg-transparent p-2 left-card w-50">
+                                    <i class="bi bi-clipboard"></i>
+                                    <p class="text-muted left-names">Invoices</p> 
+                                </div>    
+                            </div>                                        
+                        </div>
+                        <div class="last-project-contaner mt-4">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p>Last Project</p>
+                                <p class="text-muted">60%</p>
+                            </div>
+                              <div class="progress" style="height: 10px;">
+                                <div class="progress-bar" role="progressbar" style="width: 60%; background-color: #B24BF3;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                              </div>
+                              
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-10 mt-3">
+                    <div class="container-fluid m-0 p-0">
+                        <div class="row mr-0">
+                            <div class="col-12 m-2 m-md-0 col-md-3">
+                                <div class="card d-flex flex-row border-0" >
+                                    <img class="card-img-top w-50" src="https://res.cloudinary.com/dn0woegat/image/upload/v1689848706/1_jqymye.png" alt="Card image cap">
+                                    <div class="card-body">
+                                      <p class="card-text card-para text-muted font-weight-bold">Product Design</p>
+                                      <h6 class="card-text">5 Project</h6>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12 m-2 m-md-0 col-md-3">
+                                <div class="card d-flex flex-row border-0" >
+                                    <img class="card-img-top w-50" src="https://res.cloudinary.com/dn0woegat/image/upload/v1689848201/5_kat4yl.png" alt="Card image cap">
+                                    <div class="card-body">
+                                      <p class="card-text card-para text-muted font-weight-bold">Visual Identity</p>
+                                      <h6 class="card-text">6 Project</h6>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12 m-2 m-md-0 col-md-3">
+                                <div class="card d-flex flex-row border-0" >
+                                    <img class="card-img-top w-50" src="https://res.cloudinary.com/dn0woegat/image/upload/v1689848706/1_jqymye.png" alt="Card image cap">
+                                    <div class="card-body">
+                                      <p class="card-text card-para text-muted font-weight-bold">Wev Development</p>
+                                      <h6 class="card-text">3 Project</h6>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12 m-2 m-md-0 col-md-3">
+                                <div class="card d-flex flex-row border-0" >
+                                    <img class="card-img-top w-50" src="https://res.cloudinary.com/dn0woegat/image/upload/v1689848201/5_kat4yl.png" alt="Card image cap">
+                                    <div class="card-body">
+                                      <p class="card-text card-para text-muted font-weight-bold">Illustration Works</p>
+                                      <h6 class="card-text">7 Project</h6>
+                                    </div>
+                                  </div>
+                            </div>
+                            
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-12 col-md-8">
+                                
+                                <div class="task-summary-container bg-white shadow-lg d-flex flex-column flex-md-row p-3">
+                                        <div class="col-12 col-md-9">
+                                            <div class="left-task">
+                                                <h6>Task Summary</h6>
+                                                <div class="three-cards d-flex flex-column flex-md-row justify-content-around align-items-center p-2 m-2">
+                                                    <div class="card-1 text-white p-4 d-flex flex-column justify-content-center align-items-center  m-2 m-md-0">
+                                                        <div class="mb-2 follow-us-icon-container d-flex justify-content-center align-items-center border border-white">
+                                                            <i class="bi bi-activity text-white"></i>
+                                                        </div>
+                                                        <p>Projects</p>
+                                                        <h2>48</h2>
+                                                    </div>
+                                                    <div class="card-1 card-2 text-white p-4 d-flex flex-column justify-content-center align-items-center  m-2 m-md-0">
+                                                        <div class="mb-2 follow-us-icon-container d-flex justify-content-center align-items-center border border-white">
+                                                            <i class="fa fa-paperclip text-white"></i>
+                                                        </div>
+                                                        <p>Ongoing</p>
+                                                        <h2>16</h2>
+                                                    </div>
+                                                    <div class="card-1 card-3  p-4 d-flex flex-column justify-content-center align-items-center m-2 m-md-0">
+                                                        <div class="mb-2 follow-us-icon-container d-flex justify-content-center align-items-center border border-muted">
+                                                            <i class="bi bi-check-circle text-muted"></i>
+                                                        </div>
+                                                        <p class="text-muted">Completed</p>
+                                                        <h2 class="text-dark">27</h2>
+                                                    </div>
+                                                    <div class="d-none d-md-flex" style="height: 200px;">
+                                                        <div class="vr-line"></div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-12 col-md-3 text-strat">
+                                            <h6>Our Team</h6>
+                                            <p class="text-muted">Team Members</p>
+                                            <img src="https://res.cloudinary.com/dn0woegat/image/upload/v1689854228/2_utz7fg.png" alt="team-members"/>
+                                            <div class="spin p-2 text-center">
+                                                <img src="https://res.cloudinary.com/dn0woegat/image/upload/v1689937898/1_gs6dzs.png" alt="spin"/>
+                                                
+                                            </div>
+
+                                        </div>
+                                    
+                                </div>
+
+                              
+                                <div class="all-tasks-container bg-white shadow-lg p-3 mt-3">
+                                    <div class="d-flex justify-content-between">
+                                            <h6>All Tasks</h6>
+                                            <i class="bi bi-three-dots"></i>
+                                        </div>
+                                        <div class="tasks-container p-2">
+                                            <div class="task-1 d-flex flex-column flex-md-row col-12 m-2">
+                                                <div class="col-12 col-md-3 p-0 m-0 m">
+                                                    <div class="start-container justify-content-center d-flex align-items-center p-2">
+                                                        <div class="mr-2 mb-2 follow-us-icon-container1 d-flex justify-content-center align-items-center border border-0 play-icon">
+                                                            <i class="bi bi-caret-right text-white"></i>
+                                                    
+                                                        </div>
+                                                        <div class="starting-text ">
+                                                            <p class="subtask">Start from</p>
+                                                            <p class="text-muted subtask"><i class="bi bi-clock"></i> 09:00 am</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-3">
+                                                    <div class="d-flex flex-column justify-content-start align-items-center text-start p-1 mt-2">
+                                                        <p class="subtask1">iOS Development Project</p>
+                                                        
+                                                        <p class="text-muted subtask"><i class="bi bi-chat"></i> 7 comments</p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-4 p-2 p-md-0 mt-2">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <p><span class="fs-6">48%</span> complete</p>
+                                                    
+                                                    </div>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 48%; background-color: #00bfff;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-2 m-2 m-md-0 d-flex justify-content-center align-items-center">
+                                                    <button class="detail-btn">Detail</button>
+                                                </div>
+                                            </div>
+                                            <div class="task-1 d-flex flex-column flex-md-row  col-12 m-2">
+                                                <div class="col-12 col-md-3  p-0 m-0">
+                                                    <div class="start-container d-flex justify-content-center align-items-center p-2">
+                                                        <div class="mr-2 mb-2 follow-us-icon-container1 d-flex justify-content-center align-items-center border border-0 play-icon">
+                                                            <i class="bi bi-caret-right text-white"></i>
+                                                        </div>
+                                                        <div class="starting-text">
+                                                            <p class="subtask">Start from</p>
+                                                            <p class="text-muted subtask"><i class="bi bi-clock"></i> 11:00 am</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-3">
+                                                    <div class="d-flex flex-column justify-content-start align-items-center p-1 mt-2">
+                                                        <p class="subtask1">Web Design Project</p>
+                                                        
+                                                        <p class="text-muted subtask"><i class="bi bi-chat"></i> 3 comments</p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-4 p-2 p-md-0 mt-2">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <p><span class="fs-6">22%</span> complete</p>
+                                                    
+                                                    </div>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 22%; background-color: #B24BF3;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-2 m-2 m-md-0 d-flex justify-content-center align-items-center">
+                                                    <button class="detail-btn">Detail</button>
+                                                </div>
+                                            </div>
+                                            <div class="task-1 d-flex flex-column flex-md-row  col-12 m-2">
+                                                <div class="col-12 col-md-3  p-0 m-0">
+                                                    <div class="start-container d-flex justify-content-center align-items-center p-2">
+                                                        <div class="mr-2 mb-2 follow-us-icon-container1 d-flex justify-content-center align-items-center border border-0 play-icon">
+                                                            <i class="bi bi-caret-right text-white"></i>
+                                                        </div>
+                                                        <div class="starting-text">
+                                                            <p class="subtask">Start from</p>
+                                                            <p class="text-muted subtask"><i class="bi bi-clock"></i> 16:00 am</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-3">
+                                                    <div class="d-flex flex-column justify-content-start align-items-center p-1 mt-2">
+                                                        <p class="subtask1">SEO Research Project</p>
+                                                        
+                                                        <p class="text-muted subtask"><i class="bi bi-chat"></i> 5 comments</p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-4 p-2 p-md-0 mt-2">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <p><span class="fs-6">38%</span> complete</p>
+                                                    
+                                                    </div>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 38%; background-color: #1fc317e5;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-2 m-2 m-md-0 d-flex justify-content-center align-items-center">
+                                                    <button class="detail-btn">Detail</button>
+                                                </div>
+                                            </div>
+                                            <div class="task-1 d-flex flex-column flex-md-row  col-12 m-2">
+                                                <div class="col-12 col-md-3  p-0 m-0">
+                                                    <div class="start-container d-flex justify-content-center align-items-center p-2">
+                                                        <div class="mr-2 mb-2 follow-us-icon-container1 d-flex justify-content-center align-items-center border border-0 play-icon">
+                                                            <i class="bi bi-caret-right text-white"></i>
+                                                        </div>
+                                                        <div class="starting-text">
+                                                            <p class="subtask">Start from</p>
+                                                            <p class="text-muted subtask"><i class="bi bi-clock"></i> 16:00 am</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-3">
+                                                    <div class="d-flex flex-column justify-content-start align-items-center p-1 mt-2">
+                                                        <p class="subtask1">Prototype Project</p>
+                                                        
+                                                        <p class="text-muted subtask"><i class="bi bi-chat"></i> 4 comments</p>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-4 p-2 p-md-0 mt-2">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <p><span class="fs-6">63%</span> complete</p>
+                                                    
+                                                    </div>
+                                                    <div class="progress" style="height: 8px;">
+                                                        <div class="progress-bar" role="progressbar" style="width: 63%; background-color: #ffbf00e5;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 col-md-2 m-2 m-md-0 d-flex justify-content-center align-items-center">
+                                                    <button class="detail-btn">Detail</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                
+                            </div>
+                            <div class="col-12 col-md-4 mt-3 mt-md-0">
+                                <div class="project-time-container p-3 bg-white shadow-lg ">
+                                    <div>
+                                        <h6>Project Time</h6>
+                                        <div class="d-flex flex-row justify-content-between align-items-center">
+                                            <p class="text-muted">May 2023</p>
+                                            <div class="mt-1">
+                                                <i class="bi bi-caret-left"></i>
+                                                <i class="bi bi-caret-right"></i>
+                                            </div>
+                                        </div>
+                                        <div class="calendar-wrapper p-0 m-0 col-12 d-flex justify-content-center align-items-center">
+                                            <ol class="calendar">
+                                              
+                                              
+                                              <li class="day-name">Mon</li>
+                                              <li class="day-name">Tue</li>
+                                              <li class="day-name">Wed</li>
+                                              <li class="day-name">Thu</li>
+                                              <li class="day-name">Fri</li>
+                                              <li class="day-name">Sat</li>
+                                              <li class="day-name">Sun</li>
+                                              
+                                              <li class="first-day">1</li>
+                                              
+                                              <li>2</li>
+                                              <li>3</li>
+                                              <li style="background-color: #f2c37d; color:#f99705; border-radius: 5px;">4</li>
+                                              <li style="background-color: #f2c37d; color:#f99705; border-radius: 5px;">5</li>
+                                              <li style="background-color: #f2c37d; color:#f99705; border-radius: 5px;">6</li>
+                                              <li style="background-color: #f2c37d; color:#f99705; border-radius: 5px;">7</li>
+                                              <li>8</li>
+                                              <li>9</li>
+                                              <li>10</li>
+                                              <li>11</li>
+                                              <li>12</li>
+                                              <li>13</li>
+                                              <li>14</li>
+                                              <li>15</li>
+                                              <li style=" background-color: #d3a6ee; color:#B24BF3;; border-radius: 5px;">16</li>
+                                              <li>17</li>
+                                              <li>18</li>
+                                              <li style="background-color: #7df2aa; color:#05f96f; border-radius: 5px;">19</li>
+                                              <li>20</li>
+                                              <li>21</li>
+                                              <li>22</li>
+                                              <li>23</li>
+                                              <li style="background-color: #77c9e1; color:#00bfff; border-radius: 5px;">24</li>
+                                              <li style="background-color: #77c9e1; color:#00bfff; border-radius: 5px;">25</li>
+                                              <li>26</li>
+                                              <li>27</li>
+                                              <li>28</li>
+                                              <li>29</li>
+                                              <li>30</li>
+                                              <li>31</li>
+                                            </ol>
+                                          </div>
+                                      
+                                    </div>
+                                    <div class="right-bottom-container m-3 mt-1 p-3">
+                                        <div class="todo-1 d-flex justify-content-start align-items-center">
+                                            
+                                            <i class="bi bi-check-square-fill" style="color: #B24BF3;"></i>
+                                            <div class="todo-text">
+                                                <h6>Create new component in React</h6>
+                                                <p class="text-muted">2 days remaining</p>
+                                            </div>
+                            
+                                        </div>
+                                        <hr style="border-style: dashed; padding: 5px; margin:0px; ">
+                                        <div class="todo-1 d-flex align-items-center">
+                                            
+                                            <i class="bi bi-check-square-fill" style="color: #3CB371;"></i>
+                                            <div class="todo-text">
+                                                <h6>Improve workingflow in Figma</h6>
+                                                <p class="text-muted">3 days remaining</p>
+                                            </div>
+                            
+                                        </div>
+                                        <hr style="border-style: dashed; padding: 5px; margin:0px;">
+                                        <div class="todo-1 d-flex align-items-center">
+                                            
+                                            <i class="bi bi-check-square-fill" style="color: #d9d9d9;"></i>
+                                            <div class="todo-text">
+                                                <h6>Create dark mode for iOS</h6>
+                                                <p class="text-muted">6 days remaining</p>
+                                            </div>
+                            
+                                        </div>
+                                        <hr style="border-style: dashed; padding: 5px; margin:0px;">
+                                        <div class="todo-1 d-flex align-items-center">
+                                            
+                                            <i class="bi bi-check-square-fill" style="color: #FFA500;"></i>
+                                            <div class="todo-text">
+                                                <h6>Client review & feedvack</h6>
+                                                <p class="text-muted">4 days remaining</p>
+                                            </div>
+                            
+                                        </div>
+                                        <hr style="border-style: dashed; padding: 5px; margin:0px;">
+                                        <!-- <div class="todo-1 d-flex align-items-center">
+                                            
+                                            <i class="bi bi-check-square-fill" style="color: #00bfff;"></i>
+                                            <div class="todo-text">
+                                                <h6>Create wireframe for app</h6>
+                                                <p class="text-muted">2 days remaining</p>
+                                            </div>
+                            
+                                        </div> -->
+                                        <!-- <hr style="border-style: dashed; padding: 5px; margin:0px;"> -->
+                                        <!-- <div class="todo-1 d-flex align-items-center">
+                                            
+                                            <i class="bi bi-check-square-fill" style="color: #3CB371;"></i>
+                                            <div class="todo-text">
+                                                <h6>Project design for sketch</h6>
+                                                <p class="text-muted">2 days remaining</p>
+                                            </div>
+                            
+                                        </div>
+                                        <hr style="border-style: dashed; padding: 5px; margin:0px;"> -->
+                                    </div>
+                                    
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row d-none d-md-block">
+                            <div class="col-12">
+                                <div class="project-timeline-container bg-white shadow-lg p-3 mt-3">
+                                    <div class="d-flex justify-content-between">
+                                        <h6>Project Timeline</h6>
+                                        <i class="bi bi-three-dots"></i>
+                                    </div>
+                                    <div class="gantt">
+
+                                        <span class="d-1"></span>
+                                        <span class="d-2"></span>
+                                        <span class="d-3"></span>
+                                        <span class="d-4"></span>
+                                        <span class="d-5"></span>
+                                        <span class="d-6"></span>
+                                        <span class="d-7"></span>
+                                        <span class="d-8"></span>
+                  
+                                        <div class="bg-dark t-1 d-flex justify-content-between" style="grid-column: 3 / span 8;">
+
+                                            <i class="bi bi-person-circle text-style"> &nbsp;&nbsp;Web back-End</i> DEVELOPMENT                                       
+                                        </div>
+                                        
+                                        <div class="t-2 d-flex justify-content-between" style="grid-column: 1 / span 4;"><i class="bi bi-person-circle text-style"> &nbsp;&nbsp;Research</i> SEO</div>
+                                        
+                                        <div class="t-3 d-flex justify-content-between" style="grid-column: 7 / span 11;"><i class="bi bi-person-circle text-style"> &nbsp;&nbsp;Dashboard Development</i> DEVELOPMENT</div>
+                                        
+                                        <div class="t-4 d-flex justify-content-between" style="grid-column: 1 / span 8;"><i class="bi bi-person-circle text-style"> &nbsp;&nbsp;Lodo & Branding Design</i> DESIGN</div>
+                                        <div class="t-5 d-flex justify-content-between" style="grid-column: 3 / span 4;"><i class="bi bi-person-circle text-style"> &nbsp;&nbsp;iOS Front-End</i> MOBILE</div>
+                                        <div class="t-6 d-flex justify-content-between" style="grid-column: 9 / span 10;"><i class="bi bi-person-circle text-style"> &nbsp;&nbsp;ANdroid Front-End</i> MOBILE</div>
+                                       
+                                    
+                                        
+                                      </div>
+                                      <div class="d-flex flex-row justify-content-strat gap-5">
+                                      <h3 class="h-sun text-muted timeline-heading">Sun 9</h3>
+                                        <h3 class="h-mon text-muted timeline-heading1">Mon 10</h3>
+                                        <h3 class="h-tue text-muted timeline-heading1">Tue 11</h3>
+                                        <h3 class="h-wed text-muted timeline-heading1">Wed 12</h3>
+                                        <h3 class="h-thu text-muted timeline-heading1">Thu 13</h3>
+                                        <h3 class="h-fri text-muted timeline-heading1">Fri 14</h3>
+                                        <h3 class="h-sat text-muted timeline-heading1">Sat 15</h3> 
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-12">
+                                <div class="project-timeline-container bg-white shadow-lg p-3 mt-3">
+                                    <div class="d-flex flex-column flex-md-row justify-content-md-between align-items-center">
+                                        <h6 class="text-muted">2023@ <span class="subtask1 text-dark"> Qoduby</span></h6>
+                                        <div class="text-muted d-flex justify-content-around align-items-center gap-2">
+                                            <p>Support</p>
+                                            <p>Licence</p>
+                                            <p>Documentation</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
