@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fadlun | Register</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body class="bg-body-secondary m-2" onload="bannerAnimation()" >
+    <div class="container-fluid main-center-body bg-body-tertiary p-0 col-12 col-10 col-lg-11">
+        <nav class="navbar navbar-expand-lg bg-white">
+            <div class="container-fluid col-10">
+              <a class="navbar-brand text-success fs-1 col-3 col-md-4" href="#">Jabel.</a>        
+              <div class="collapse navbar-collapse col-3" id="navbarNavDropdown">
+                <ul class="navbar-nav text-center">
+                  <li class="nav-item">
+                    <a class="nav-link text-dark"  href="#">Home</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Find a carer
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      For carers
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-6 col-md-4">
+                <ul class="navbar-nav float-start float-md-end  flex-row" >
+                    <li class="nav-item px-2 px-md-0">
+                        <a class="nav-link " href="#">
+                        <button type="button" class="btn bg-success-subtle text-success position-relative rounded-circle p-0" style="height: 32px; width: 32px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+                                <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+                            </svg><span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger navbar-notification-alert">99</span>
+                        </button>
+                        </a>
+                    </li>
+                    <li class="nav-item px-2 px-md-0">
+                        <a class="nav-link" href="#">
+                        <button type="button" class="btn bg-success-subtle text-success position-relative rounded-circle p-0" style="height: 32px; width: 32px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                            </svg>
+                        </button>
+                        </a>                
+                    </li>
+                    <li class="nav-item px-2 px-md-0">
+                        <a class="nav-link" href="#">
+                        <button type="button" class="btn bg-success-subtle text-success position-relative rounded-circle p-0" style="height: 32px; width: 32px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-3x3-gap-fill" viewBox="0 0 16 16">
+                                <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"/>
+                            </svg>
+                        </button>
+                        </a>                
+                    </li>
+                </ul>
+              </div>
+              <button class="navbar-toggler col-2 " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+        </nav>
+        <div class="container-fluid form-main-container col-10 bg-white my-2 rounded border border-opacity-100"> 
+          <div class="row">
+            <div class="container-fluid form-banner d-none d-md-block col-md-6">
+              <img id="banner" src="images/banner.png" class="rounded" width="100%" height="100%" alt="animaitonImages">
+            </div>
+            <div class="container-fluid user-register-form col-12 col-md-6">
+              <form class="row g-3" onsubmit="checkValidation()" id="form">
+                <h3 class="my-4">Please Register to Fadlun</h3>
+                <!-- First Name -->
+                <div class="col-12 col-sm-6">
+                  <label for="firstNameInput" class="form-label">First Name*</label>
+                  <input  
+                    min="2"
+                    max="50"
+                    type="text"
+                    class="form-control"
+                    id="firstNameInput"
+                    placeholder="First Name"
+                    required
+                  />
+                </div>
+                <!-- Last Name -->
+                <div class="col-12 col-sm-6">
+                  <label for="lastNameInput" class="form-label">Last Name*</label>
+                  <input
+                    min="2"
+                    max="50"
+                    type="text"
+                    class="form-control"
+                    id="lastNameInput"
+                    placeholder="Last Name"
+                    onchange="userNameValidation()"
+                    required
+                  />
+                </div>
+                <!-- Email Address -->
+                <div class="col-12">
+                  <label for="emailInput" class="form-label">Email*</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="emailInput"
+                    placeholder="name@example.com"
+                    onchange="userNameValidation()"
+                    required
+                  />
+                </div>
+                <!-- Phone NO. -->
+                <div class="col-12">
+                  <label for="phoneInput" class="form-label">Phone Number*</label>
+                  <div class="row d-flex m-0">
+                    <div class="col-3 p-0">
+                      <select id="phoneCodeInput" class="form-select " required>
+                        <option value="SELECT">SELECT</option>
+                      </select>
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" id="phoneInput" min="10" max="10" onchange="phoneNumberValidation()" required/>
+                    </div>    
+                  </div>
+                </div>
+                <!-- DOB -->
+                <div class="col-12 col-sm-6">
+                  <label for="dateOfBirthInput" class="form-label">Date of Birth</label>
+                  <input type="date" class="form-control" id="dateOfBirthInput" max="2005-07-30" required/>
+                </div>
+                <!-- DOJ -->
+                <div class="col-12 col-sm-6">
+                  <label for="dateOfJoinInput" class="form-label">Date of Joining</label>
+                  <input type="date" class="form-control" id="dateOfJoinInput" onchange="datesValidation()" required />
+                </div>
+                <!-- Gender -->
+                <div class="col-12 col-sm-6">
+                  <fieldset class="col">
+                    <legend class="col-form-label pt-0">Gender</legend>
+                    <div class="row ps-3">
+                      <div class="form-check col-3">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="genderValue"
+                          id="maleGenderInput"
+                          value="Male"
+                          required
+                        />
+                        <label class="form-check-label" for="gridRadios1"> Male </label>
+                      </div>
+                      <div class="form-check col-4">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="genderValue"
+                          id="femaleGenderInput"
+                          value="Female"
+                          required
+                        />
+                        <label class="form-check-label" for="femaleGenderInput">
+                          Female
+                        </label>
+                      </div>
+                      <div class="form-check col-3">
+                        <input
+                          class="form-check-input"
+                          type="radio"
+                          name="genderValue"
+                          id="femaleGenderInput"
+                          value="Female"
+                          required
+                        />
+                        <label class="form-check-label" for="femaleGenderInput">
+                          Other
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>
+                <!-- Country -->
+                <div class="col-12 col-sm-6">
+                  <label for="inputCountry" class="form-label">Country</label>
+                  <select id="inputCountry" class="form-select" required onchange="listUniversitiesAPI(document.getElementById('inputCountry').value)">
+                    <option>SELECT</option>
+                  </select>
+                </div>
+                <!-- University -->
+                <div class="col-12">
+                  <label for="inputUniversity" class="form-label">University</label>
+                  <select id="inputUniversity" class="form-select" required>
+                    <option>SELECT</option>
+                  </select>
+                </div>
+                <!-- Password -->
+                <div class="col-12 col-sm-6">
+                  <label for="passwordInput" class="form-label">Password*</label>
+                  <input type="text" class="form-control" id="passwordInput" required/>
+                </div>
+                <!-- Confirm Password -->
+                <div class="col-12 col-sm-6">
+                  <label for="confirmPasswordInput" class="form-label">Confirmed Password*</label>
+                  <input type="text" class="form-control" id="confirmPasswordInput" onchange="passwordValidation()" required/>
+                </div>
+                <!-- user agreement -->
+                <div class="col-12">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input text-success"
+                      type="checkbox"
+                      id="gridCheck"
+                    />
+                    <label class="form-check-label" for="gridCheck">
+                      I agree with Jabel's User Agreement and Privacy Policy.
+                    </label>
+                  </div>
+                </div>
+                <!-- sign-up  and submit -->
+                <div class="col-12">
+                  <button type="submit"  class="btn btn-success col-12 p-2">
+                    Sign up
+                  </button>
+                </div>
+                <!-- Log-in navigation -->
+                <div class="col-12">
+                  <p class="text-center">
+                    Already have an Faldun's account?
+                    <a class="text-success text-decoration-none">Log In</a>
+                  </p>
+                </div>
+              </form>   
+              <div id="success-navigation"></div>       
+            </div>
+          </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
