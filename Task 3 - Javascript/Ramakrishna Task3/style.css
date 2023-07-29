@@ -1,0 +1,14 @@
+.suggestion-dropdown li a {
+    text-decoration: none; /* Remove the underline */
+    color: #333;
+    cursor: pointer;
+    display: block;
+}
+.suggestion-dropdown li a:hover {
+    background-color: #d1f3c6;
+}
+.suggestion-dropdown ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
