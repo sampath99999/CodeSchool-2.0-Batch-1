@@ -26,62 +26,6 @@ fetchAndDisplayPhoto();
 setInterval(() => {
   fetchAndDisplayPhoto();
 }, 25000);
-
-// document.addEventListener("DOMContentLoaded", () => {
-//   const countryInput = document.getElementById("countryInput");
-//   const suggestionList = document.getElementById("suggestionList");
-//   const countries = [];
-//   const xhr = new XMLHttpRequest();
-
-//   xhr.open("GET", "https://restcountries.com/v3.1/all", true);
-//   xhr.onreadystatechange = function () {
-//     if (xhr.readyState === XMLHttpRequest.DONE) {
-//       if (xhr.status === 200) {
-//         const data = JSON.parse(xhr.responseText);
-//         countries.push(...data.map((country) => country.name.common));
-//       } else {
-//         console.log("Error fetching data");
-//       }
-//     }
-//   };
-//   xhr.send();
-
-//   countryInput.addEventListener("input", () => {
-//     const inputValue = countryInput.value.toLowerCase();
-//     const suggestions = countries.filter((country) =>
-//       country.toLowerCase().startsWith(inputValue)
-//     );
-//     displaySuggestions(suggestions);
-//   });
-
-//   function displaySuggestions(suggestions) {
-//     if (countryInput.value.trim() === "") {
-//       suggestionList.innerHTML = "";
-//     } else {
-//       const html = suggestions
-//         .map((suggestion) => `<li><a href="#">${suggestion}</a></li>`)
-//         .join("");
-//       suggestionList.innerHTML = html;
-//     }
-//   }
-
-//   suggestionList.addEventListener("click", (e) => {
-//     if (e.target.tagName === "A") {
-//       countryInput.value = e.target.textContent;
-//       suggestionList.innerHTML = "";
-//     }
-//   });
-
-//   document.addEventListener("click", (e) => {
-//     if (
-//       !countryInput.contains(e.target) &&
-//       !suggestionList.contains(e.target)
-//     ) {
-//       suggestionList.innerHTML = "";
-//     }
-//   });
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
   const countrySelect = document.getElementById("countrySelect");
   const xhr = new XMLHttpRequest();
@@ -98,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
   xhr.send();
-
   function populateSelect(countriesData) {
     const countries = countriesData.map((country) => country.name.common);
     countries.forEach((country) => {
@@ -109,34 +52,89 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   let collegeInput = document.querySelector("#collegeInput");
+//   let collegename = document.querySelector("#collegename");
+//   function filterColleges(inputText) {
+//     let filteredColleges = realdata.filter((college) => {
+//       let collegeName = college.name.toLowerCase();
+//       return collegeName.includes(inputText);
+//     });
+
+//     let result = filteredColleges
+//       .map((college) => `<li><a href="#">${college.name}</a></li>`)
+//       .join("");
+//     collegename.innerHTML = result;
+//   }
+//   let realdata = [];
+
+//   let countryInput = document.getElementById("countrySelect");
+//   countryInput.addEventListener('change', function () {
+//      fetchColleges();
+// });
+//   function fetchColleges() {
+
+//     let xhr = new XMLHttpRequest();
+//     xhr.open(
+//       "GET",
+//       `http://universities.hipolabs.com/search?country=${countryInput.value}`,
+//       true
+//     );
+//     xhr.onreadystatechange = function () {
+//       if (xhr.readyState === XMLHttpRequest.DONE) {
+//         if (xhr.status === 200) {
+//           realdata = JSON.parse(xhr.responseText);
+//         } else {
+//           console.log("Error fetching data");
+//         }
+//       }
+//     };
+//     xhr.send();
+//   }
+//   collegeInput.addEventListener("input", () => {
+//     let inputText = collegeInput.value.trim().toLowerCase();
+//     if (inputText === "") {
+//       collegename.innerHTML = "";
+//       return;
+//     }
+//     collegename.style.display = "block";
+//     filterColleges(inputText);
+//   });
+//   document.addEventListener("click", (event) => {
+//     if (event.target !== collegeInput) {
+//       collegename.style.display = "none";
+//     }
+//   });
+//   collegename.addEventListener("click", (event) => {
+//     if (event.target.tagName === "A") {
+//       collegeInput.value = event.target.innerText;
+//       collegename.style.display = "none";
+//     }
+//   });
+// });
+
 document.addEventListener("DOMContentLoaded", () => {
   let collegeInput = document.querySelector("#collegeInput");
-  let collegename = document.querySelector("#collegename");
-  function filterColleges(inputText) {
-    let filteredColleges = realdata.filter((college) => {
-      let collegeName = college.name.toLowerCase();
-      return collegeName.includes(inputText);
-    });
-
-    let result = filteredColleges
-      .map((college) => `<li><a href="#">${college.name}</a></li>`)
-      .join("");
-    collegename.innerHTML = result;
-  }
+  let collegeSelect = document.querySelector("#collegeSelect");
   let realdata = [];
-  fetchColleges();
+
+  let countryInput = document.getElementById("countrySelect");
+  countryInput.addEventListener("change", function () {
+    fetchColleges();
+  });
+
   function fetchColleges() {
-    let countryInput = document.getElementById("countryInput");
     let xhr = new XMLHttpRequest();
     xhr.open(
       "GET",
-      `http://universities.hipolabs.com/search?country=france`,
+      `http://universities.hipolabs.com/search?country=${countryInput.value}`,
       true
     );
     xhr.onreadystatechange = function () {
       if (xhr.readyState === XMLHttpRequest.DONE) {
         if (xhr.status === 200) {
           realdata = JSON.parse(xhr.responseText);
+          updateCollegeSelect(""); // Clear college options when the country changes
         } else {
           console.log("Error fetching data");
         }
@@ -144,25 +142,39 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     xhr.send();
   }
+
+  function updateCollegeSelect(inputText) {
+    collegeSelect.innerHTML = '<option value="">Select a college</option>';
+    let filteredColleges = realdata.filter((college) => {
+      let collegeName = college.name.toLowerCase();
+      return collegeName.includes(inputText);
+    });
+
+    filteredColleges.forEach((college) => {
+      const option = document.createElement("option");
+      option.text = college.name;
+      collegeSelect.add(option);
+    });
+  }
+
   collegeInput.addEventListener("input", () => {
     let inputText = collegeInput.value.trim().toLowerCase();
     if (inputText === "") {
-      collegename.innerHTML = "";
+      updateCollegeSelect("");
       return;
     }
-    collegename.style.display = "block";
-    filterColleges(inputText);
+    updateCollegeSelect(inputText);
   });
+
   document.addEventListener("click", (event) => {
     if (event.target !== collegeInput) {
-      collegename.style.display = "none";
+      collegeSelect.style.display = "none";
     }
   });
-  collegename.addEventListener("click", (event) => {
-    if (event.target.tagName === "A") {
-      collegeInput.value = event.target.innerText;
-      collegename.style.display = "none";
-    }
+
+  collegeSelect.addEventListener("change", () => {
+    collegeInput.value = collegeSelect.value;
+    collegeSelect.style.display = "none";
   });
 });
 
