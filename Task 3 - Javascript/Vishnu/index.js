@@ -38,17 +38,6 @@ formSubmit.addEventListener("submit",function(event){
     const formcountries=validateCountries();
     const pwd=validatePassword();
     const confirmpwd=validateConfirmPassword();
-    console.log("submitted");
-    console.log(fname);
-    console.log(lname);
-    console.log(ename);
-    console.log(pnum);
-    console.log(pcode);
-    console.log(dob);
-    console.log(doj);
-    console.log(formcountries);
-    console.log(pwd);
-    console.log(confirmpwd);
     const agreementStatus=agreement.checked;
     if(fname===true && lname===true && ename===true && pnum===true && pcode===true && dob===true && doj===true && formcountries===true && pwd===true && 
         agreementStatus===true){
@@ -112,7 +101,7 @@ function createUniversities(universityData){
     }
     universities.innerHTML+=university_option;
     universities.innerHTML+=`<option>Select</option>`;
-    console.log(universities);
+ 
 }
 
 const uni_xhr = new XMLHttpRequest();
@@ -126,7 +115,7 @@ countries.addEventListener("change",function(){
     uni_xhr.onreadystatechange=function(){
         if (this.readyState === this.DONE){
             const formattedResponse=JSON.parse(this.responseText)
-            console.log(formattedResponse)
+
             for(let item=0;item<formattedResponse.length;item++){
                 const university=formattedResponse[item]["name"];
                 universities_data.push(university);
@@ -393,9 +382,6 @@ dateOfJoin.addEventListener("blur",validateDateOfJoin);
 function validateDateOfJoin(){
     const dateOfJoinValue = new Date(dateOfJoin.value);
     const dateOfBirthValue = new Date(dateOfBirth.value);
-    console.log(dateOfJoinValue);
-    console.log(dateOfBirthValue);
-    console.log(dateOfJoinValue>dateOfBirthValue);
     const currentDate=new Date();
     const days=currentDate-dateOfBirthValue;
     const formattedDate=new Date(days);
@@ -431,7 +417,7 @@ codes.addEventListener("blur",validateCode)
 
 function validateCode(){
     const codeValue=codes.value;
-    console.log(codeValue);
+
     if(codeValue==="SELECT"){
         phoneError.textContent="*Code cannot be null";
         phoneError.style.display="block";
@@ -471,9 +457,9 @@ function validateCountries(){
 universities.addEventListener("blur",validateUniversities);
 
 function validateUniversities(){
-    console.log('entered');
+   
     const universityValue=universities.value;
-    console.log(universities.value)
+
     if(universityValue==="SELECT"){
         universityError.textContent="*University cannot be empty"
         universityError.style.display="block";
@@ -511,19 +497,14 @@ function getRandomImage(images) {
     return images[randomIndex];
 }
 
-// let repetitions = 0;
-// const numberOfRepetitions = 1;
+
 
   
 function displayRandomImage() {
     const randomObject = getRandomImage(images);
-    console.log(randomObject); 
+ 
     imageElement.src=randomObject.imageUrl;
-    // repetitions++;
-    // if (repetitions === numberOfRepetitions) {
-    //     clearInterval(intervalId);
-    //     console.log("Interval stopped after", numberOfRepetitions, "repetitions.");
-    // }
+   
 }
 
 const intervalId = setInterval(displayRandomImage, 30000);
