@@ -370,55 +370,63 @@ function validateFormData(formdata) {
     document.getElementById("firstnameerror").textContent = "Maximum length is 8";
     return false;
   }
+  console.log("2");
   
   
   if (formdata.firstName.length<2){
     document.getElementById("firstnameerror").textContent = "minimum length is 2";
     return false
   }
+  console.log("2");
   if (!isCapitalized(formdata.firstName)) {
     document.getElementById("firstnameerror").textContent = "First name should start capiltal";
     return false
 
   }
-
+  console.log("3");
   if (!alphabeticPattern.test(formdata.firstName)) {
     document.getElementById("firstnameerror").textContent = "only alphabets are allowed";
     return false
 
   
   }
+  console.log("4");
 
   if (!alphabeticPattern.test(formdata.firstName)) {
     document.getElementById("firstnameerror").textContent = "only alphabets are allowed";
     return false
 
   }
+  console.log("5");
   console.log(formdata.firstName.length>2 && formdata.firstName.length<8 && (!alphabeticPattern.test(formdata.firstName)) )
   if (formdata.firstName.length>2 && formdata.firstName.length<8 ) {
     document.getElementById("firstnameerror").textContent = "";
   }
-  
+  console.log("5");
   
   if (formdata.lastName.length>8) {
 
     document.getElementById("lastnameerror").textContent = "Maximum length is 8";
     return false;
   }
+  console.log("5");
   
   if (formdata.lastName.length<2){
     document.getElementById("lastnameerror").textContent = "minimum length is 2";
     return false;
   }
-  if (formdata.lastName.length>2 && formdata.lastName.length<8 ){
-    document.getElementById("lastnameerror").textContent = "";
-    return false;
-  }
+  console.log("5");
+  // if (formdata.lastName.length>2 && formdata.lastName.length<8 ){
+  //   document.getElementById("lastnameerror").textContent = "";
+  //   return false;
+  // }
+  console.log("5");
   if (!isCapitalized(formdata.lastName)) {
     document.getElementById("lastnameerror").textContent = "last name should start with capiltal";
     return false;
 
   }
+  console.log("5");
   
   if (!alphabeticPattern.test(formdata.lastName)) {
     document.getElementById("lastnameerror").textContent = "only alphabets are allowed";
@@ -426,6 +434,7 @@ function validateFormData(formdata) {
 
   
   }
+  console.log("5");
   console.log("NEW");
   console.log("anna");
   console.log(formdata.lastName.length>2 && formdata.lastName.length<8);
@@ -434,22 +443,26 @@ function validateFormData(formdata) {
     document.getElementById("lastnameerror").textContent = "";
   
   } 
+  console.log("5");
   
   if (formdata.Emailid.length<1) {
     document.getElementById("Emailerror").textContent="Enter Email";
     return false
   }
+  console.log("5");
   if (!emailPattern.test(formdata.Emailid)) {
     document.getElementById("Emailerror").textContent="Enter valid Email";
     return false;
 
     
   }
+  console.log("5");
   
   if(countrycodeele.value==="select"){
     document.getElementById("countrycodeerror").textContent="select code";
     return false
   }
+  console.log("5");
   if(universityele.value==="select"){
     document.getElementById("universityerror").textContent="select code";
     return false
@@ -457,19 +470,22 @@ function validateFormData(formdata) {
   else{
     formdata.university=universityele.value;
   }
+  console.log("5");
   if(countryelement.value==="select"){
     document.getElementById("countryerror").textContent="select country";
     return false
   }
+  console.log("5");
   if(formdata.Emailid.length<1){
     document.getElementById("Emailerror").textContent=" ";
     return false;
 
 
   }
+  console.log("5");
   console.log("step1")
   validateDoj();
-
+  console.log("5");
   const cleanedPhoneNumber = formdata.phoneNumber.replace(/\D/g, '');
   if (cleanedPhoneNumber.length === 10 && /^\d+$/.test(cleanedPhoneNumber)) {
     document.getElementById("phoneerror").textContent="";
