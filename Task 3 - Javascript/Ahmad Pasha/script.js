@@ -1,5 +1,6 @@
 // program to display a text using setInterval method
 
+let successMsg = document.getElementById('successMsg');
 
 function mainImage() {
     const xhttp = new XMLHttpRequest();
@@ -103,20 +104,20 @@ function firstAndLastName(){
     (firstName.value!==""){
         if(firstChar(firstName.value[0])===false){
             fnameErrorMsg.textContent="*First character should be Capital/Title case";
-            var fnameRes = false;
+             fnameRes = false;
         }
         else if(firstName.value.length<2){
             fnameErrorMsg.textContent="*First Name should be minimum of 2 characters";
-            var fnameRes = false;
+            fnameRes = false;
         }
         else if(firstName.value.length>50){
             fnameErrorMsg.textContent="*First Name should be maximum of 50 characters";
-            var fnameRes = false;
+             fnameRes = false;
         }
      
         else{
             fnameErrorMsg.textContent="";
-            var fnameRes = false;
+             fnameRes = true;
         }
   
     }
@@ -126,20 +127,20 @@ function firstAndLastName(){
     if(lastName.value!==""){
         if(firstChar(lastName.value[0])===false){
             lnameErrorMsg.textContent="*First character should be Capital/Title case";
-            var lnameRes = false;
+             lnameRes = false;
         }
         else if(lastName.value.length<2){
             lnameErrorMsg.textContent="*Last Name should be minimum of 2 characters";
-            var lnameRes = false;
+            lnameRes = false;
         }
         else if(lastName.value.length>50){
             lnameErrorMsg.textContent="*Last Name should be maximum of 50 characters";
-            var lnameRes = false;
+           lnameRes = false;
         }
      
         else{
             lnameErrorMsg.textContent="";
-            var lnameRes = true;
+             lnameRes = true;
         }
     }
 
@@ -369,15 +370,20 @@ function validateFormData(){
     validateJoiningDate();
     passwordValidation();
     confirmPasswordValidation();
+    // console.log(`from fname ${fnameRes}`)
+    // console.log(`from lname ${lnameRes}`);
+    // console.log(`from ema ${emailRes}`);
+    // console.log(`from pass ${passRes}`);
+    // console.log(`from confirm ${confirmRes}`);
+    // console.log(`from doj ${dojRes}`);
+
+    if(fnameRes && lnameRes && emailRes && passRes && confirmRes && dojRes){
+      submitForm();
+      
+      successMsg.textContent = "SuccessFully Submitted";
     
-    if(fnameRes && lnameRes && dojRes && emailRes && dojRes && passRes && confirmRes){
-       let success= document.createElement('p');
-        success.textContent = "SuccessFully Submited";
-        document.body.appendChild(success);
     }
-    else{
-        console.log('error')
-    }
+
 
      
     
