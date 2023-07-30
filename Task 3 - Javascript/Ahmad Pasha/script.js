@@ -81,9 +81,13 @@ let doj = document.getElementById('doj');
 let dojErrorMsg = document.getElementById('dojErrorMsg');
 
 
-
-
-
+  
+var fnameRes;
+var lnameRes;
+var emailRes;
+var passRes ;
+var confirmRes;
+var dojRes;
 
 
 let myForm = document.getElementById('myForm');
@@ -99,16 +103,20 @@ function firstAndLastName(){
     (firstName.value!==""){
         if(firstChar(firstName.value[0])===false){
             fnameErrorMsg.textContent="*First character should be Capital/Title case";
+            var fnameRes = false;
         }
         else if(firstName.value.length<2){
             fnameErrorMsg.textContent="*First Name should be minimum of 2 characters";
+            var fnameRes = false;
         }
         else if(firstName.value.length>50){
             fnameErrorMsg.textContent="*First Name should be maximum of 50 characters";
+            var fnameRes = false;
         }
      
         else{
             fnameErrorMsg.textContent="";
+            var fnameRes = false;
         }
   
     }
@@ -118,16 +126,20 @@ function firstAndLastName(){
     if(lastName.value!==""){
         if(firstChar(lastName.value[0])===false){
             lnameErrorMsg.textContent="*First character should be Capital/Title case";
+            var lnameRes = false;
         }
         else if(lastName.value.length<2){
             lnameErrorMsg.textContent="*Last Name should be minimum of 2 characters";
+            var lnameRes = false;
         }
         else if(lastName.value.length>50){
             lnameErrorMsg.textContent="*Last Name should be maximum of 50 characters";
+            var lnameRes = false;
         }
      
         else{
             lnameErrorMsg.textContent="";
+            var lnameRes = true;
         }
     }
 
@@ -140,23 +152,29 @@ function emailValidation(){
 
       if(email.value===""){
           emailErrorMsg.textContent="*Email should not be Empty!";
+          emailRes = false;
       }
       else{
           if(email.value.match(validRegex)){
               emailErrorMsg.textContent="";
+              emailRes = true;
           }
           else if(email.value.match(/(\..*){2,}/)){
-              emailErrorMsg.textContent="*No Consecutive Dots!"
+              emailErrorMsg.textContent="*No Consecutive Dots!";
+               emailRes = false;
           }
           else if(email.value.split('@').length>2){
-              emailErrorMsg.textContent="*Single '@' Symbol!"
+              emailErrorMsg.textContent="*Single '@' Symbol!";
+               emailRes = false;
           }
           else if(email.value.split(' ').length>1){
-              emailErrorMsg.textContent="*No spaces Allowed!"
+              emailErrorMsg.textContent="*No spaces Allowed!";
+               emailRes = false;
           }
           else{
             
-              emailErrorMsg.textContent="*Invalid Email address!"
+              emailErrorMsg.textContent="*Invalid Email address!";
+               emailRes = false;
             
           }
       }
@@ -164,35 +182,6 @@ function emailValidation(){
 }
 
 function passwordValidation(){
-
-    // console.log('from pass')
-    // var paswd=  /(?=^.{5,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
-    //   var cmnpwds =["password" ,"123456","abcdef"];
-    //   if(password.value ===""){
-    //       passwordErrMsg.textContent="Password Should not be Empty!";
-    //   }
-    //   else{
-    //        console.log(password.value)
-    //       if(password.value.match(paswd)){
-    //           passwordErrMsg.textContent='';
-    //       }
-    //       else if (cmnpwds.includes(password.value)){
-    //           passwordErrMsg.textContent="easily guessable passwords";
-    //       }
-        
-    //       else if(password.value.length < 6){
-    //           passwordErrMsg.textContent="Password should be At least 5 characters"
-    //       }
-    //       else if(password.value.length > 25){
-    //           passwordErrMsg.textContent="Maximum Length of characters is 25"
-    //       }
-       
-    //       else{
-    //           passwordErrMsg.textContent="Invalid Password";
-    //       }
-    //   }
-
-
 
         const passwordInput = document.getElementById("password");
         const passwordErrMsg = document.getElementById("passwordErrMsg");
@@ -213,20 +202,31 @@ function passwordValidation(){
       
         if (password.length < minLength || password.length > maxLength) {
           errorMessage = "Password must be between 5 and 25 characters long.";
+           passRes = false;
         } else if (!uppercaseRegex.test(password)) {
           errorMessage = "Password must contain at least one uppercase letter.";
+          passRes = false;
         } else if (!lowercaseRegex.test(password)) {
           errorMessage = "Password must contain at least one lowercase letter.";
+           passRes = false;
         } else if (!numberRegex.test(password)) {
           errorMessage = "Password must contain at least one number.";
+           passRes = false;
         } else if (!specialCharRegex.test(password)) {
           errorMessage = "Password must contain at least one special character.";
+          passRes = false;
         } else if (!commonWordsRegex.test(password)) {
           errorMessage = "Password must not be a common or easily guessable password.";
+           passRes = false;
         } else if (!repeatingCharRegex.test(password)) {
           errorMessage = "Password must not contain repeating characters.";
+           passRes = false;
         } else if (!spaceRegex.test(password)) {
           errorMessage = "Password must not contain spaces.";
+          passRes = false;
+        }
+        else{
+             passRes = true;
         }
       
         passwordErrMsg.textContent = errorMessage;
@@ -242,143 +242,142 @@ function confirmPasswordValidation(){
 
     if(confirmPassword.value===""){
         confirmPasswordErrMsg.textContent="Confirm Password Should not be Empty!";
+        confirmRes = false;
     }
     else if(password.value!==confirmPassword.value){
         confirmPasswordErrMsg.textContent="Password not Matched";
+         confirmRes = false;
     }
   else{
         confirmPasswordErrMsg.textContent="";
+        confirmRes = true;
     }
 
 }
 
 
-function validDateOfBirth(){
-    const dateString = document.getElementsById("dob").value;
-    console.log(dateString);
-    const regex = /(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$/;
+
+function validateJoiningDate() {
+    const dobInput = document.getElementById("dob");
+    const joiningDateInput = document.getElementById("doj");
+    const joiningDateError = document.getElementById("dojErrorMsg");
+  
+    const dob = new Date(dobInput.value);
+    const joiningDate = new Date(joiningDateInput.value);
+  
+    if (joiningDate <= dob) {
+      joiningDateError.textContent = "Joining date must be after the Date of Birth.";
+       dojRes = false;
+    } else {
+      const minAge = new Date(dob);
+      minAge.setFullYear(minAge.getFullYear() + 18);
+  
+      if (joiningDate < minAge) {
+        joiningDateError.textContent = "Minimum age requirement is 18 years.";
+        dojRes = false;
+      } else {
+        joiningDateError.textContent = "";
+         dojRes = true;
+      }
+    }
+  }
 
 
-        if (regex.test(dateString)) {
-            var parts = dateString.split("-");
-            var dtDOB = new Date(parts[1] + "-" + parts[0] + "-" + parts[2]);
-            var dtCurrent = new Date();
 
-            let years = dtCurrent.getFullYear() - dtDOB.getFullYear();
+  function validatePhone(){
+
+    let phone = document.getElementById('phone');
+    const number = /^[0-9]+$/.test(phone.value);
+    const alpha = /^[A-Za-z]+$/;
+    var isValid = alpha.test(phone.value);
+    const specialChars = /[`!@#$%^&*]/;
+    var isSpecial = specialChars.test(phone.value);
+    // console.log(isValid);
+    if(phone.value===""){
+        phoneErrorMsg.textContent="Phone Number Should not be Empty";
+        var phoneRes = false;
+    }
+    else{
+        if(number){
+            phoneErrorMsg.textContent="";
+            var phoneRes = true;
+        }
+        else if(isSpecial)
+        {
+            phoneErrorMsg.textContent="Phone Number Should not contain Special Characters";
+            var phoneRes = false;
+        }
+      
+        else if(phone.value[0]==="+")
+        {
+            phoneErrorMsg.textContent="Phone number without country code (e.g., +1).";
+            var phoneRes = false;
+        }
+        else if(!isValid)
+        {
+            phoneErrorMsg.textContent="Phone Number Should not contain letters";
+            var phoneRes = false;
+        }
+     
+    }
+  }
+
+
+
+
+
+
+
+  function submitForm() {
+    var user = {};
+
+    user.firstName = document.getElementById('firstName').value;
+  
+    user.lastName = document.getElementById('lastName').value;
+
+    user.email = document.getElementById('email').value;
+
+    user.password =document.getElementById('password').value;
+
+    user.doj = document.getElementById('doj').value;
+    user.dob = document.getElementById('dob').value;
+  
     
-            if (years < 18) {
-                dobErrorMsg.textContent = "*Must be 18 years or older.";
-            }
+    console.log(user);
 
-          
-            else{
-            dobErrorMsg.textContent = "";
-            }
-         
-        } 
-}
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", " https://demo-api-wh0x.onrender.com/register");
+    xhr.onreadystatechange = function () {
+      if (this.readyState == 4) {
+        var resultObj = JSON.parse(this.responseText);
+        console.log(resultObj);
+      }
+    };
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.send(JSON.stringify(user));
+  }
+
+
 
 function validateFormData(){
-//     // firstname-validation
+
   
      
     firstAndLastName();
     emailValidation();
+    validatePhone();
+    validateJoiningDate();
     passwordValidation();
     confirmPasswordValidation();
-    validDateOfBirth();
-
     
-
-
-
-     
-  //Doj:
-
-      var dateStringDoj = document.getElementsById("doj").value;
-
-          if (regex.test(dateStringDoj)) {
-            
-              var parts = dateStringDoj.split("-");
-              var dtDOJ = new Date(parts[1] + "-" + parts[0] + "-" + parts[2]);
-    
-              let diff = dtDOJ.getFullYear() - dtDOB.getFullYear();
-              console.log(diff);
-              if(diff<0){
-                  dojErrorMsg.textContent ="Should be after the Date of Birth.";
-              }
-            
-              else if(diff < 18){
-                  dojErrorMsg.textContent = "*Must be at least 18 years from the Date of Birth.";
-              }
-          }
-          else{
-              dojErrorMsg.textContent="";
-          }
-
-      //phone number
-    
-      const number = /^[0-9]+$/.test(phone.value);
-      const alpha = /^[A-Za-z]+$/;
-      var isValid = alpha.test(phone.value);
-      const specialChars = /[`!@#$%^&*]/;
-      var isSpecial = specialChars.test(phone.value);
-      // console.log(isValid);
-      if(phone.value===""){
-          phoneErrorMsg.textContent="Phone Number Should not be Empty";
-      }
-      else{
-          if(number){
-              phoneErrorMsg.textContent=""
-          }
-          else if(isSpecial)
-          {
-              phoneErrorMsg.textContent="Phone Number Should not contain Special Characters";
-          }
-        
-          else if(phone.value[0]==="+")
-          {
-              phoneErrorMsg.textContent="Phone number without country code (e.g., +1).";
-          }
-          else if(!isValid)
-          {
-              phoneErrorMsg.textContent="Phone Number Should not contain letters";
-          }
-       
-      }
-
-
-      function submitForm() {
-        var user = {};
-
-        user.firstName = document.getElementById('firstName').value;
-      
-        user.lastName = document.getElementById('lastName').value;
-   
-        user.email = document.getElementById('email').value;
-    
-        user.password =document.getElementById('password').value;
-   
-        user.doj = document.getElementById('doj').value;
-        user.dob = document.getElementById('dob').value;
-      
-        
-        console.log(user);
-
-        var xhr = new XMLHttpRequest();
-        xhr.open("POST", " https://demo-api-wh0x.onrender.com/register");
-        xhr.onreadystatechange = function () {
-          if (this.readyState == 4) {
-            var resultObj = JSON.parse(this.responseText);
-            console.log(resultObj);
-          }
-        };
-        xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-        xhr.send(JSON.stringify(user));
-      }
-
-  
-    
+    if(fnameRes && lnameRes && dojRes && emailRes && dojRes && passRes && confirmRes){
+       let success= document.createElement('p');
+        success.textContent = "SuccessFully Submited";
+        document.body.appendChild(success);
+    }
+    else{
+        console.log('error')
+    }
 
      
     
@@ -391,5 +390,4 @@ myForm.addEventListener('submit', (event) => {
 
 
 
-  
   
