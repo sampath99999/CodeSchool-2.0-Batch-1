@@ -57,7 +57,7 @@
     font-family: "arial";
 }
 label{
-    margin-bottom: 1%;
+  
     font-size: 15px;
     font-weight:lighter !important;
 }
@@ -109,13 +109,7 @@ option{
   
 }
 
-/* input[type="radio"]:focus{
-    background-color: blue !important;
-} */
 
-/* input[type="checkbox"]:focus{
-    background-color: black !important;
-} */
 
 
 

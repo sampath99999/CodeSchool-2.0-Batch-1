@@ -24,6 +24,9 @@ const formSubmit=document.getElementById("form-submit");
 const universityError=document.getElementById("universityError");
 const agreement=document.getElementById("agreement");
 const formError=document.getElementById("status");
+const radioButtonMale = document.getElementById("inlineCheckbox1");
+const radioButtonFemale = document.getElementById("inlineCheckbox2");
+const radioButtonOther = document.getElementById("inlineCheckbox3");
 
 
 formSubmit.addEventListener("submit",function(event){
@@ -40,18 +43,13 @@ formSubmit.addEventListener("submit",function(event){
     const confirmpwd=validateConfirmPassword();
     const agreementStatus=agreement.checked;
     if(fname===true && lname===true && ename===true && pnum===true && pcode===true && dob===true && doj===true && formcountries===true && pwd===true && 
-        agreementStatus===true){
-        let xhrform = new XMLHttpRequest();
-        xhrform.onload=function(){
-            const data = JSON.parse(xhrform.responseText);
-            formError.textContent="Register successfull";   
-        }
-        xhr.open("POST", " https://demo-api-wh0x.onrender.com/register", true); // Replace this with your API endpoint URL
-        xhr.setRequestHeader("Content-type", "application/json");
-        xhr.send(JSON.stringify({name:"Rahul"}));      
+        agreementStatus===true && (radioButtonMale.checked || radioButtonFemale.checked || radioButtonOther.checked)){  
+        formError.textContent="Registration successful";   
+        formError.style.color="green";
+        formError.style.display="block";
     }
     else{
-        formError.textContent="*please fill the required details";
+        formError.textContent="*Please fill the required details";
         formError.style.display="block";
     }
     
@@ -100,7 +98,7 @@ function createUniversities(universityData){
         university_option+=`<option value="${universityData[item]}">"${universityData[item]}"</option>`
     }
     universities.innerHTML+=university_option;
-    universities.innerHTML+=`<option>Select</option>`;
+    universities.innerHTML+=`<option>SELECT</option>`;
  
 }
 
@@ -131,7 +129,7 @@ firstName.addEventListener("blur",validateFirstName);
 function validateFirstName(event){
         let firstNameValue=firstName.value;
         if (firstNameValue.length < 2 || firstNameValue.length > 50) {
-            firstNameError.textContent="*Minimum length is required.";
+            firstNameError.textContent="*Minimum length between 2 and 50 characters.";
             firstNameError.style.display="block";
             return false;
         }
@@ -160,7 +158,7 @@ lastName.addEventListener("blur",validateLastName);
 function validateLastName(event){
     let lastNameValue=lastName.value;
     if (lastNameValue.length < 2 || lastNameValue.length > 50) {
-        lastNameError.textContent="*Minimum length is required.";
+        lastNameError.textContent="*Minimum length between 2 and 50 characters.";
         lastNameError.style.display="block";
         return false;
     }
@@ -349,9 +347,7 @@ dateOfBirth.addEventListener("blur",validateDateOfBirth);
 function validateDateOfBirth(){
     const dateOfBirthValue = new Date(dateOfBirth.value);
     const currentDate=new Date();
-    const days=currentDate-dateOfBirthValue;
-    const formattedDate=new Date(days)
-    const age = Math.abs(formattedDate.getFullYear() - 1970);
+    const age=currentDate.getFullYear()-dateOfBirthValue.getFullYear();
     if (isNaN(dateOfBirthValue)) {
         dateOfBirthError.textContent="*Date cannot be empty";
         dateOfBirthError.style.display="block";
@@ -509,10 +505,10 @@ function displayRandomImage() {
 
 const intervalId = setInterval(displayRandomImage, 30000);
 
-window.addEventListener("DOMContentLoaded", function () {
-    const radioButton = document.getElementById("inlineCheckbox1");
-    radioButton.checked = true;
-});
+
+
+
+
 
 
 
