@@ -19,11 +19,10 @@
   
     <nav class="navbar navbar-expand-lg bg-white col-12 m-auto mt-0 pb-3 pt-3" style="border-top-left-radius: 30px; border-top-right-radius: 30px;">
       <div
-        class="container-fluid justify-content-center gap-2 align-items-center"
+        class="container-fluid justify-content-center gap-2 col-10 m-auto align-items-center"
       >
            <img
-                  src="thwwnt43.png"
-                  style="width: 12%"
+                  src="thwwnt43.png" class="me-sm-5" style="width: 12%;"
                 />
         <div class="d-flex justify-content-start align-items-center">
           <div class="d-flex align-items-center d-lg-none gap-2">
@@ -183,14 +182,14 @@
                 <div class="row">
                   <label class="form-label fw-medium" for="form3Example1">Phone Number*</label>
                   <div class="form-outline col-12 col-lg-4">
-                    <select class="form-select" aria-label="Default select example" id="countryCode">
+                    <select class="form-select mb-lg-0 mb-sm-2" aria-label="Default select example" id="countryCode">
                       <option selected>SELECT</option>
                       </select>
                     
                   </div>
                 
                   <div class="form-outline col-12 col-lg-8">
-                    <input type="number" id="phone" placeholder="Enter Phone Number" class="form-control" required/>
+                    <input type="text" id="phoneInput" placeholder="Enter Phone Number" class="form-control" />
                     <p id="phoneErrorMsg" class="text-danger"></p>
                   </div>
               </div>
@@ -218,17 +217,17 @@
                       <div class="row">
                         <div class="col-4">
                           <input type="radio" id="form3Example2" name="gender" />
-                          <label class="form-label" for="form3Example2">Male</label>
+                          <label class="form-label" for="form3Example2" style="font-size: 85%;">Male</label>
                         
                         </div>
                         <div class="col-4">
                           <input type="radio" id="form3Example2" name="gender" />
-                          <label class="form-label" for="form3Example2">Female</label>
+                          <label class="form-label" for="form3Example2"  style="font-size: 80%;">Female</label>
                           
                         </div>
                         <div class="col-4">
                           <input type="radio" id="form3Example2" name="gender" />
-                          <label class="form-label" for="form3Example2">others</label>
+                          <label class="form-label" for="form3Example2"  style="font-size: 85%;">others</label>
                     
                         </div>
 
@@ -259,14 +258,14 @@
           
                     <div class="form-outline mb-4">
                       <label class="form-label fw-medium" for="form3Example1">Password*</label>
-                      <input type="text" id="password" placeholder="Enter Password" class="form-control" required />
+                      <input type="password" id="password" placeholder="Enter Password" class="form-control" required />
                         <p id="passwordErrMsg" class="text-danger"></p>
                   </div>
 
 
                     <div class="form-outline mb-4">
                       <label class="form-label fw-medium" for="form3Example1">Confirmed Password*</label>
-                      <input type="text" id="confirmPassword" placeholder="Enter Password" class="form-control"/>
+                      <input type="password" id="confirmPassword" placeholder="Enter Password" class="form-control"/>
                       <p id="confirmPasswordErrMsg" class="text-danger"></p>
                
                      </div>
@@ -280,13 +279,16 @@
                    I agree with Jabel's User Agreement and Privacy Policy.
                   </label>
                 </div>
-                <p id="successMsg" class="col-8 m-auto fw-bold text-success mb-3"></p>
+                
+
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-success btn-block mb-4 col-12">
                   Sign up
                 </button>
 
-                <p class="col-10 m-auto">Already have an Fadiun's account? <span class="text-success">Login</span></p>
+                <p id="successMsg" class="col-10 m-auto mb-3 text-success fw-bold"></p>
+
+                <p class="col-11 m-auto fw-medium">Already have an Fadiun's account? <span class="text-success">Login</span></p>
 
       
               </form>

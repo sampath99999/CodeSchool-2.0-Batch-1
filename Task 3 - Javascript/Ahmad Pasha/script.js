@@ -76,7 +76,7 @@ let password =document.getElementById('password');
 let passwordErrMsg = document.getElementById('passwordErrMsg');
 let confirmPassword = document.getElementById('confirmPassword');
 let confirmPasswordErrMsg = document.getElementById('confirmPasswordErrMsg');
-let phone = document.getElementById('phone');
+
 let phoneErrorMsg = document.getElementById('phoneErrorMsg')
 let doj = document.getElementById('doj');
 let dojErrorMsg = document.getElementById('dojErrorMsg');
@@ -89,6 +89,7 @@ var emailRes;
 var passRes ;
 var confirmRes;
 var dojRes;
+var phoneRes;
 
 
 let myForm = document.getElementById('myForm');
@@ -287,7 +288,8 @@ function validateJoiningDate() {
 
   function validatePhone(){
 
-    let phone = document.getElementById('phone');
+    let phone = document.getElementById('phoneInput');
+    console.log(phone.value);
     const number = /^[0-9]+$/.test(phone.value);
     const alpha = /^[A-Za-z]+$/;
     var isValid = alpha.test(phone.value);
@@ -296,33 +298,38 @@ function validateJoiningDate() {
     // console.log(isValid);
     if(phone.value===""){
         phoneErrorMsg.textContent="Phone Number Should not be Empty";
-        var phoneRes = false;
+        phoneRes = false;
     }
     else{
-        if(number){
+        if(phone.value.length !==10){
+          phoneErrorMsg.textContent= "Phone Number Should be exactly 10 digits"
+        }
+        else if(number){
             phoneErrorMsg.textContent="";
-            var phoneRes = true;
+             phoneRes = true;
         }
         else if(isSpecial)
         {
             phoneErrorMsg.textContent="Phone Number Should not contain Special Characters";
-            var phoneRes = false;
+             phoneRes = false;
         }
       
         else if(phone.value[0]==="+")
         {
             phoneErrorMsg.textContent="Phone number without country code (e.g., +1).";
-            var phoneRes = false;
+             phoneRes = false;
         }
         else if(!isValid)
         {
             phoneErrorMsg.textContent="Phone Number Should not contain letters";
-            var phoneRes = false;
+           phoneRes = false;
         }
      
     }
   }
 
+
+  
 
 
 
@@ -333,11 +340,12 @@ function validateJoiningDate() {
     var user = {};
 
     user.firstName = document.getElementById('firstName').value;
-  
+   
     user.lastName = document.getElementById('lastName').value;
 
     user.email = document.getElementById('email').value;
-
+    user.countryName = document.getElementById('countryNames').value;
+    user.University = document.getElementById('University').value;
     user.password =document.getElementById('password').value;
 
     user.doj = document.getElementById('doj').value;
@@ -368,20 +376,20 @@ function validateFormData(){
     emailValidation();
     validatePhone();
     validateJoiningDate();
+    validatePhone();
     passwordValidation();
     confirmPasswordValidation();
-    // console.log(`from fname ${fnameRes}`)
-    // console.log(`from lname ${lnameRes}`);
-    // console.log(`from ema ${emailRes}`);
-    // console.log(`from pass ${passRes}`);
-    // console.log(`from confirm ${confirmRes}`);
-    // console.log(`from doj ${dojRes}`);
 
-    if(fnameRes && lnameRes && emailRes && passRes && confirmRes && dojRes){
+
+    if(fnameRes && lnameRes && emailRes && passRes && confirmRes && dojRes && phoneRes){
       submitForm();
       
       successMsg.textContent = "SuccessFully Submitted";
-    
+  
+    }
+    else{
+      successMsg.textContent = "";
+      
     }
 
 
