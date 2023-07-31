@@ -1,0 +1,19 @@
+.container-fluid{
+    background-color: #F4F4F4;
+    height: 100%;
+  
+}
+.container{
+    background-color: #FAFAFA;
+   
+}
+input,select{
+    background-color: #f7f9fd;
+}
+#firstName:focus(){
+    background-color: blue;
+}
+button{
+    background-color: #E6F7EE;
+    color:#00A651;
+}
