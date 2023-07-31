@@ -91,11 +91,11 @@
               <img id="banner" src="images/banner.png" class="rounded" width="100%" height="100%" alt="animaitonImages">
             </div>
             <div class="container-fluid user-register-form col-12 col-md-6">
-              <form class="row g-3" onsubmit="checkValidation()" id="form">
+              <form class="row g-3" id="form">
                 <h3 class="my-4">Please Register to Fadlun</h3>
                 <!-- First Name -->
                 <div class="col-12 col-sm-6">
-                  <label for="firstNameInput" class="form-label">First Name*</label>
+                  <label for="firstNameInput" class="form-label">First Name<span style="color: red;">*</span></label>
                   <input  
                     min="2"
                     max="50"
@@ -103,12 +103,18 @@
                     class="form-control"
                     id="firstNameInput"
                     placeholder="First Name"
+                    onkeyup="userFirstNameValidation()"
                     required
                   />
+                  <div class="valid-feedback">
+                    Looks Good!👍
+                  </div>
+                  <div class="invalid-feedback" id="firstName-feedback">
+                  </div>
                 </div>
                 <!-- Last Name -->
                 <div class="col-12 col-sm-6">
-                  <label for="lastNameInput" class="form-label">Last Name*</label>
+                  <label for="lastNameInput" class="form-label">Last Name<span style="color: red;">*</span></label>
                   <input
                     min="2"
                     max="50"
@@ -116,50 +122,66 @@
                     class="form-control"
                     id="lastNameInput"
                     placeholder="Last Name"
-                    onchange="userNameValidation()"
+                    onkeyup="userLastNameValidation()"
                     required
                   />
+                  <div class="valid-feedback">
+                    Looks Good!👍
+                  </div>
+                  <div class="invalid-feedback" id="lastName-feedback">
+                  </div>
                 </div>
                 <!-- Email Address -->
                 <div class="col-12">
-                  <label for="emailInput" class="form-label">Email*</label>
+                  <label for="emailInput" class="form-label">Email<span style="color: red;">*</span></label>
                   <input
                     type="email"
                     class="form-control"
                     id="emailInput"
                     placeholder="name@example.com"
-                    onchange="userNameValidation()"
+                    onkeyup="userEmailValidation()"
                     required
                   />
+                  <div class="valid-feedback">
+                    Looks Good!👍
+                  </div>
+                  <div class="invalid-feedback" id="email-feedback">
+                  </div>
                 </div>
                 <!-- Phone NO. -->
                 <div class="col-12">
-                  <label for="phoneInput" class="form-label">Phone Number*</label>
+                  <label for="phoneInput" class="form-label">Phone Number<span style="color: red;">*</span></label>
                   <div class="row d-flex m-0">
                     <div class="col-3 p-0">
-                      <select id="phoneCodeInput" class="form-select " required>
-                        <option value="SELECT">SELECT</option>
+                      <select id="phoneCodeInput" class="form-select" onclick="phoneCodeValidation()" required >
+                        <option value="SELECT" disabled selected>--SELECT--</option>
                       </select>
+                      <div class="invalid-feedback" id="phoneCode-feedback">
+                      </div>
                     </div>
                     <div class="col">
-                      <input type="text" class="form-control" id="phoneInput" min="10" max="10" onchange="phoneNumberValidation()" required/>
+                      <input type="text" class="form-control" id="phoneInput" min="10" max="10" onkeyup="phoneNumberValidation()" required/>
+                      <div class="invalid-feedback" id="phoneNo-feedback">
+                      </div>
                     </div>    
                   </div>
                 </div>
                 <!-- DOB -->
                 <div class="col-12 col-sm-6">
-                  <label for="dateOfBirthInput" class="form-label">Date of Birth</label>
+                  <label for="dateOfBirthInput" class="form-label">Date of Birth<span style="color: red;">*</span></label>
                   <input type="date" class="form-control" id="dateOfBirthInput" max="2005-07-30" required/>
                 </div>
                 <!-- DOJ -->
                 <div class="col-12 col-sm-6">
-                  <label for="dateOfJoinInput" class="form-label">Date of Joining</label>
+                  <label for="dateOfJoinInput" class="form-label">Date of Joining<span style="color: red;">*</span></label>
                   <input type="date" class="form-control" id="dateOfJoinInput" onchange="datesValidation()" required />
+                  <div class="invalid-feedback" id="doj-feedback">
+                  </div>
                 </div>
                 <!-- Gender -->
                 <div class="col-12 col-sm-6">
                   <fieldset class="col">
-                    <legend class="col-form-label pt-0">Gender</legend>
+                    <legend class="col-form-label pt-0">Gender<span style="color: red;">*</span></legend>
                     <div class="row ps-3">
                       <div class="form-check col-3">
                         <input
@@ -203,27 +225,31 @@
                 </div>
                 <!-- Country -->
                 <div class="col-12 col-sm-6">
-                  <label for="inputCountry" class="form-label">Country</label>
+                  <label for="inputCountry" class="form-label">Country<span style="color: red;">*</span></label>
                   <select id="inputCountry" class="form-select" required onchange="listUniversitiesAPI(document.getElementById('inputCountry').value)">
-                    <option>SELECT</option>
+                    <option value="SELECT" disabled selected>---SELECT---</option>
                   </select>
                 </div>
                 <!-- University -->
                 <div class="col-12">
-                  <label for="inputUniversity" class="form-label">University</label>
+                  <label for="inputUniversity" class="form-label">University<span style="color: red;">*</span></label>
                   <select id="inputUniversity" class="form-select" required>
                     <option>SELECT</option>
                   </select>
                 </div>
                 <!-- Password -->
                 <div class="col-12 col-sm-6">
-                  <label for="passwordInput" class="form-label">Password*</label>
-                  <input type="text" class="form-control" id="passwordInput" required/>
+                  <label for="passwordInput" class="form-label">Password<span style="color: red;">*</span></label>
+                  <input type="text" class="form-control" id="passwordInput" onkeyup="passwordValidation()" required/>
+                  <div class="invalid-feedback" id="pwd-feedback">
+                  </div>
                 </div>
                 <!-- Confirm Password -->
                 <div class="col-12 col-sm-6">
-                  <label for="confirmPasswordInput" class="form-label">Confirmed Password*</label>
-                  <input type="text" class="form-control" id="confirmPasswordInput" onchange="passwordValidation()" required/>
+                  <label for="confirmPasswordInput" class="form-label">Confirmed Password<span style="color: red;">*</span></label>
+                  <input type="text" class="form-control" id="confirmPasswordInput" onkeyup="confirmPassword(document.getElementById('passwordInput').value)" required/>
+                  <div class="invalid-feedback" id="confirmPwd-feedback">
+                  </div>
                 </div>
                 <!-- user agreement -->
                 <div class="col-12">
@@ -232,6 +258,7 @@
                       class="form-check-input text-success"
                       type="checkbox"
                       id="gridCheck"
+                      required
                     />
                     <label class="form-check-label" for="gridCheck">
                       I agree with Jabel's User Agreement and Privacy Policy.
@@ -240,9 +267,11 @@
                 </div>
                 <!-- sign-up  and submit -->
                 <div class="col-12">
-                  <button type="submit"  class="btn btn-success col-12 p-2">
+                  <button type="submit" onclick="return checkValidation()" class="btn btn-success col-12 p-2">
                     Sign up
                   </button>
+                  <div class="invalid-feedback" id="submit-feedback">
+                  </div>
                 </div>
                 <!-- Log-in navigation -->
                 <div class="col-12">

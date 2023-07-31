@@ -91,104 +91,180 @@ function isTitleCase(str) {
     return true;
 }
 
-// Validation function for user First and Last Name
-function userNameValidation(){
-    let  firstName = document.getElementById("firstNameInput").value;
-    let lastName = document.getElementById("lastNameInput").value;
-    if((firstName.length >= 2 && firstName.length <= 50) && (lastName.length >= 2 && lastName.length <= 50)){
-        // console.log(firstName.length >= 2 && firstName.length <= 50);
+// Validation function for user First Name
+function userFirstNameValidation(){
+    let firstNameElement = document.getElementById("firstNameInput");
+    let feedback = document.getElementById("firstName-feedback");
+    if((firstNameElement.value.length >= 2 && firstNameElement.value.length <= 50)){
         let alphaRegExp = /^[A-Za-z]+$/;
-        if(firstName.match(alphaRegExp) && lastName.match(alphaRegExp)){
-            if(isTitleCase(firstName) && isTitleCase(lastName)){
+        if(firstNameElement.value.match(alphaRegExp)){
+            if(isTitleCase(firstNameElement.value)){
+                firstNameElement.classList.remove("is-invalid");
+                firstNameElement.classList.add("is-valid");
                 return true;
             }
             else{
-                alert("Name should be Title Case");
+                firstNameElement.classList.remove("is-valid");
+                firstNameElement.classList.add("is-invalid");
+                feedback.innerHTML = "Name should be TitleCase i.e, (John) not john";
                 return false;
             }
         }
         else{
-            alert("Numbers and special symbols are not allowed");
+            firstNameElement.classList.remove("is-valid");
+            firstNameElement.classList.add("is-invalid");
+            feedback.innerHTML = "0-9 and special-characters i.e,(!@#$%^&*) are not allowed."
             return false;
         }
     }
     else{
-        alert("Name should be minimum 2 and maximum 50 characters");
+        firstNameElement.classList.remove("is-valid");
+        firstNameElement.classList.add("is-invalid");
+        feedback.innerHTML = "Name should be min 2 and max 50 character length."
         return false;
     }
 
+}
+
+// Validation function for user Last Name
+function userLastNameValidation(){
+    let lastNameElement = document.getElementById("lastNameInput");
+    let feedback = document.getElementById("lastName-feedback");
+    if((lastNameElement.value.length >= 2 && lastNameElement.value.length <= 50)){
+        let alphaRegExp = /^[A-Za-z]+$/;
+        if(lastNameElement.value.match(alphaRegExp)){
+            if(isTitleCase(lastNameElement.value)){
+                lastNameElement.classList.remove("is-invalid");
+                lastNameElement.classList.add("is-valid");
+                return true;
+            }
+            else{
+                lastNameElement.classList.remove("is-valid");
+                lastNameElement.classList.add("is-invalid");
+                feedback.innerHTML = "Name should be TitleCase i.e, (Alice) not alice";
+                return false;
+            }
+        }
+        else{
+            lastNameElement.classList.remove("is-valid");
+            lastNameElement.classList.add("is-invalid");
+            feedback.innerHTML = "0-9 and special-characters i.e,(!@#$%^&*) are not allowed."
+            return false;
+        }
+    }
+    else{
+        lastNameElement.classList.remove("is-valid");
+        lastNameElement.classList.add("is-invalid");
+        feedback.innerHTML = "Name should be min 2 and max 50 character length."
+        return false;
+    }
 }
 
 // Validation function for EMAIL
 function userEmailValidation(){
     // Minimum Length: Not empty.
     // Maximum Length: Reasonable limit.
-    var emailID = document.getElementById("emailInput").value;
-    if(emailID.length!==0 && emailID.length<=30){
+    var emailIDElement = document.getElementById("emailInput");
+    let feedback = document.getElementById("email-feedback");
+    if(emailIDElement.value.length!==0 && emailIDElement.value.length<=50){
         // No Consecutive Dots: Avoid ".." in the local part.
         consecutiveDotsRegExp = /\.\./;
-        if(!emailID.match(consecutiveDotsRegExp)){
+        if(!emailIDElement.value.match(consecutiveDotsRegExp)){
             // Domain Name: Valid domain after "@" symbol.
             const domainPattern = /^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-            const parts = emailID.split("@");
+            const parts = emailIDElement.value.split("@");
             const domain = parts[1];
             if(domainPattern.test(domain)){
                 // Valid Characters: Limit to alphanumeric, period, underscore, and hyphen.
                 const pattern = /^[A-Za-z0-9.@_-]+$/;
-                if(pattern.test(emailID)){
+                if(pattern.test(emailIDElement.value)){
+                    emailIDElement.classList.remove("is-invalid");
+                    emailIDElement.classList.add("is-valid");
                     return true;
                 }
                 else{
-                    alert("Only valid characters A-Za-z0-9.-_ and no space");
+                    emailIDElement.classList.remove("is-valid");
+                    emailIDElement.classList.add("is-invalid");
+                    feedback.innerHTML = "Only valid characters i.e, A-Za-z0-9.-_ and no space"
                     return false;
                 }
             }
             else{
-                alert("Domain is invalid");
+                emailIDElement.classList.remove("is-valid");
+                emailIDElement.classList.add("is-invalid");
+                feedback.innerHTML = "Domain is invalid!"
                 return false;
             }
             
         }
         else{
-            alert("Should not have two consecutive dots");
+            emailIDElement.classList.remove("is-valid");
+            emailIDElement.classList.add("is-invalid");
+            feedback.innerHTML = "No two consecutive dots i.e, .."
             return false;
         }
     }
     else{
-        alert("Should be a valid length");
+        emailIDElement.classList.remove("is-valid");
+        emailIDElement.classList.add("is-invalid");
+        feedback.innerHTML = "Email should be a valid length"
         return false;
     }
 
+}
+
+// Validation function for Phone Code
+function phoneCodeValidation(){
+    let codeElement = document.getElementById("phoneCodeInput");
+    let feedback = document.getElementById("phoneCode-feedback");
+    if(codeElement.value !== "SELECT"){
+        codeElement.classList.remove("is-invalid");
+        codeElement.classList.add("is-valid");
+        return true;
+    }
+    else{
+        codeElement.classList.remove("is-valid");
+        codeElement.classList.add("is-invalid");
+        feedback.innerHTML = "Select your Country Code!";
+        return false;
+    }
 }
 
 // Validation function for Phone Number
 function phoneNumberValidation(){
-    var numberValidate = document.getElementById("phoneInput").value;
-    if(numberValidate.length == 10){
-        let numericRegExp = /^[0-9]+$/;
-        if (numberValidate.match(numericRegExp)){
-            return true;
-        }
-        else{   
-            alert("Number should not conatin any symbols or character other than numbers");
-            document.getElementById("phoneInput").setAttribute("class", "errorMessages");
-            return false;
-        }
+    phoneCodeValidation();
+    let numberValidateElement = document.getElementById("phoneInput");
+    let feedback = document.getElementById("phoneNo-feedback");
+    if(numberValidateElement.value.length == 10){
+            let numericRegExp = /^[0-9]+$/;
+            if (numberValidateElement.value.match(numericRegExp)){
+                numberValidateElement.classList.remove("is-invalid");
+                numberValidateElement.classList.add("is-valid");
+                return true;
+            }
+            else{   
+                numberValidateElement.classList.remove("is-valid");
+                numberValidateElement.classList.add("is-invalid");
+                feedback.innerHTML = "Number should not conatin any symbols or character other than numbers";
+                return false;
+            }
     }
     else{
-        alert("Phone should be 10-digit number");
-        document.getElementById("phoneInput").setAttribute("class", "errorMessages");
-        return false;
+            numberValidateElement.classList.remove("is-valid");
+            numberValidateElement.classList.add("is-invalid");
+            feedback.innerHTML = "Phone should be 10-digit number";
+            return false;
     }
+    
 }
 
 // Validation for DOBirth and DOJoining
 function datesValidation(){
-    const birthCalender = document.getElementById("dateOfBirthInput").value;
-    const birthDate = new Date(birthCalender);
+    const birthCalender = document.getElementById("dateOfBirthInput");
+    const birthDate = new Date(birthCalender.value);
     const birthYear = birthDate.getFullYear();
-    const joiningCalender = document.getElementById("dateOfJoinInput").value;
-    const joiningDate = new Date(joiningCalender);
+    const joiningCalender = document.getElementById("dateOfJoinInput");
+    const joiningDate = new Date(joiningCalender.value);
     const joiningYear = joiningDate.getFullYear();
     let age = joiningYear - birthYear;
     let joiningMonth = joiningDate.getMonth()+1;
@@ -198,9 +274,17 @@ function datesValidation(){
         age--;
     }
     if(age>=18){
+        birthCalender.classList.remove("is-invalid");
+        joiningCalender.classList.remove("is-invalid");
+        birthCalender.classList.add("is-valid");
+        joiningCalender.classList.add("is-valid");
         return true;
     }else{
-        alert("You must be 18 Years or Old by Date of Joining");
+        birthCalender.classList.remove("is-valid");
+        joiningCalender.classList.remove("is-valid");
+        birthCalender.classList.add("is-invalid");
+        joiningCalender.classList.add("is-invalid");
+        document.getElementById("doj-feedback").innerHTML = "You must be 18 Years or Old by Date of Joining"
         return false;
     }
 }
@@ -209,8 +293,9 @@ function datesValidation(){
 function passwordValidation(){
     // Minimum Length: At least 5 characters.
     // Maximum Length: No more than 25 characters.
-    const userPassword = document.getElementById("passwordInput").value;
-    if(userPassword.length >= 5 && userPassword.length <=25){
+    const userPassword = document.getElementById("passwordInput");
+    let feedback = document.getElementById("pwd-feedback");
+    if(userPassword.value.length >= 5 && userPassword.value.length <=25){
         // Uppercase Letters: Require at least one uppercase letter.
         // Lowercase Letters: Require at least one lowercase letter.
         // Numbers: Require at least one number (digit).
@@ -219,35 +304,51 @@ function passwordValidation(){
         // No Sequential Characters: Disallow sequential characters or numbers like "abcdef" or "123456".
         // No Spaces: Password should not contain spaces.
         let strongPasswordRegExp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,}$/;
-        if(strongPasswordRegExp.test(userPassword)){
+        if(strongPasswordRegExp.test(userPassword.value)){
             // No Repeating Characters: Disallow repeating characters consecutively, such as "aa" or "11".
             let noConsecutivesRegExp = /^(?!.*(.)\1)(?!.*(\d)\2).+$/;
-            if(noConsecutivesRegExp.test(userPassword)){
-                console.log("GOOD");
-                const confirmPassword = document.getElementById("confirmPasswordInput").value;
-                if(userPassword === confirmPassword){
-                    return true;
-                }
-                else{
-                    alert("Password does not match");
-                    return false;
-                }
+            if(noConsecutivesRegExp.test(userPassword.value)){
+                userPassword.classList.remove("is-invalid");
+                userPassword.classList.add("is-valid");   
+                return true;  
             }
             else{
-                alert("Password should not contain consecutive characters '00' 'aa'");
+                userPassword.classList.remove("is-valid");
+                userPassword.classList.add("is-invalid");
+                feedback.innerHTML = "Password should not contain consecutive characters '00' 'aa'";
                 return false;
             }
         }
         else{
-            alert("Password should contain one A-Z, one a-z, one 0-9 and one special character (e.g., !, @, #, $, %, etc.) and no spaces");
+            userPassword.classList.remove("is-valid");
+            userPassword.classList.add("is-invalid");
+            feedback.innerHTML = "Password should contain one A-Z, one a-z, one 0-9 and one special character (e.g., !, @, #, $, %, etc.) and no spaces";
             return false;
         }
     }
     else{
-        alert("Password length should be min 5 and max 25");
+        userPassword.classList.remove("is-valid");
+        userPassword.classList.add("is-invalid");
+        feedback.innerHTML = "Password length should be min 5 and max 25";
         return false;
     }
 
+}
+
+// Function to confirm Password
+function confirmPassword(userPassword){
+    const confirmPassword = document.getElementById("confirmPasswordInput");
+    if(userPassword === confirmPassword.value){
+        confirmPassword.classList.remove("is-invalid");
+        confirmPassword.classList.add("is-valid");
+        return true;
+    }
+    else{
+        confirmPassword.classList.remove("is-valid");
+        confirmPassword.classList.add("is-invalid");
+        document.getElementById("confirmPwd-feedback").innerHTML = "Password does not match"
+        return false;
+    }
 }
 
 // On Validation Submit Form
@@ -262,38 +363,51 @@ function submitForm() {
     user.doj = document.getElementById("dateOfJoinInput").value;
     user.gender = document.getElementsByName("genderValue").value;
     user.selectedCountry = document.getElementById("inputCountry").value;
-    user.selectedUniversity = document.getElementById("inputUniversityt").value;
+    user.selectedUniversity = document.getElementById("inputUniversity").value;
     user.password = document.getElementById("passwordInput").value;
-    console.log(user);   
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "https://reqres.in/api/users");
     xhr.onreadystatechange = function () {
         if (this.readyState == 4) {
             var resultObj = JSON.parse(this.responseText);
             document.getElementById("form").style.display = "none";
-            document.getElementById("success-navigation").innerHTML =
-            resultObj.name +
-            " is successfully created at" +
-            resultObj.createdAt;
+            document.getElementById("success-navigation").innerHTML = `
+            <div class="bg-body-tertiary p-5 rounded mt-3">
+                <h1>Welcome, ${resultObj.firstName} ${resultObj.lastName}</h1>
+                <p class="lead">We will send the updates on ${resultObj.email}</p>
+                <a class="btn btn-lg btn-primary" href="#" role="button" onclick="location.reload()">Go Home »</a>
+            </div>
+            `
+            return true;
+        }
+        else{
+            document.getElementById("success-navigation").innerHTML = `
+            <div class="bg-body-tertiary p-5 rounded mt-3">
+                <h1>Sorry! There was an Error</h1>
+                <p class="lead">Please try again later.</p>
+                <a class="btn btn-lg btn-primary" href="#" role="button" onclick="location.reload()">Go Home »</a>
+            </div>
+            `
         }
     }
     xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhr.send(JSON.stringify(user));
-  }
+}
 
+// Validation Function on submit
 function checkValidation(){
-   let validName =  userNameValidation();
+   event.preventDefault();
+   let validFirstName = userFirstNameValidation();
+   let validLastName = userLastNameValidation();
    let validEmail = userEmailValidation();
    let validNumber = phoneNumberValidation();
    let validDate = datesValidation();
    let validPassword = passwordValidation();
-   if(validName && validEmail && validNumber && validDate && validPassword ){
+   let confirmPwd = confirmPassword(document.getElementById('passwordInput').value);
+   if(validFirstName && validLastName && validEmail && validNumber && validDate && validPassword && confirmPwd){
         submitForm();
    }else{
+        document.getElementById("submit-feedback").innerHTML = "Fill all manditory Fields(<span style='color: red;'>*</span>)"
         return false;
    }
-
 }
-
-
-  
