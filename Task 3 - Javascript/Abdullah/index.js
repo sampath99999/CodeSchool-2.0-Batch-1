@@ -23,90 +23,368 @@
 
 
 
+//------------------------------------------------------------------------------------------
+
+// function validateForm() {
+//   const firstNameInput = document.getElementById('fname');
+//   const lastNameInput = document.getElementById('lname');
+//   const emailInput = document.getElementById('email')
 
 
-function validateForm() {
-  const firstNameInput = document.getElementById('fname');
-  const lastNameInput = document.getElementById('lname');
-  const emailInput = document.getElementById('email')
+//   const fname = firstNameInput.value.trim();
+//   const lname = lastNameInput.value.trim();
+//   const email = emailInput.value.trim();
 
 
-  const fname = firstNameInput.value.trim();
-  const lname = lastNameInput.value.trim();
-  const email = emailInput.value.trim();
+//   document.getElementById("fname-error").innerHTML = "";
+
+//   //   document.getElementById("lname-error").innerHTML = " ";
+
+//   // Regular expression pattern to match only letters, spaces, hyphens, and apostrophes
+//   const nameRegex = /^[a-zA-Z'-\s]+$/;
+//   const titleCaseRegex = /^[A-Z][a-z]*$/;
 
 
-  document.getElementById("fname-error").innerHTML = "";
+//   if (!nameRegex.test(fname)) {
+//     alert("Please enter a valid first name.");
+//     document.getElementById("fname-error").innerHTML = "*Alphabet only"
+//     firstNameInput.focus();
+//     return false;
+    
+//   }
 
-  //   document.getElementById("lname-error").innerHTML = " ";
+//   if (!titleCaseRegex.test(fname)) {
+//    alert("Please enter a valid first name.");
+//     document.getElementById("fname-error").innerHTML = "*Title case only"
+//     firstNameInput.focus();
+//     return false;
+    
+//   }
 
-  // Regular expression pattern to match only letters, spaces, hyphens, and apostrophes
-  const nameRegex = /^[a-zA-Z'-\s]+$/;
+
+//   if (fname.length<2 || fname.length>50 ) {
+//     // alert("Please enter a valid first name.");
+//     document.getElementById("fname-error").innerHTML = "*min 2 and and max 50 characters"
+//     firstNameInput.focus();
+//     return false;
+    
+//   }
+
+//   if (!nameRegex.test(lname)) {
+//    // alert("Please enter a valid last name.");
+//     document.getElementById("lname-error").innerHTML = "*Alphabet only"
+//     lastNameInput.focus();
+//     return false;
+    
+//   }
+
+//   if (!titleCaseRegex.test(lname)) {
+//     // alert("Please enter a valid first name.");
+//     document.getElementById("lname-error").innerHTML = "*Title case only"
+//     lastNameInput.focus();
+//     return false;
+    
+//   }
+  
+  
+//   if (lname.length<2 || lname.length>50) {
+//     // alert("Please enter a valid last name.");
+//     document.getElementById("lname-error").innerHTML = "please enter the last name."
+//     lastNameInput.focus();
+//     return false;
+//   }
+  
+//   if (email.length<15 || email.length>50 ) {
+//     // alert("Please enter a valid first name.");
+//     document.getElementById("emailerror").innerHTML = "*min 2 and and max 50 characters"
+//     emailInput.focus();
+//     return false;
+    
+//   }
+
+
+//   return true;
+// }
+
+//-----------------------------------------------------------------
+
+
+// ====================       MAIN VALIDATION     =============================================
+
+const form = document.getElementById("myform");
+const firstNameInput = document.getElementById("fname");
+const lastNameInput = document.getElementById("lname");
+const emailInput = document.getElementById("email");
+const mobileNumberInput = document.getElementById("phone");
+const passwordInput = document.getElementById("pwd");
+const confirmPasswordInput = document.getElementById("cpwd");
+const genderInputs = document.querySelectorAll('input[name="Gender"]');
+const dobInput = document.getElementById("dob");
+const dojInput = document.getElementById("doj");
+const countryInput = document.getElementById("country");
+const universityInput = document.getElementById("university");
+const agreementCheckbox = document.getElementById("agreement");
+
+
+
+const firstNameError = document.getElementById("fname-error");
+const lastNameError = document.getElementById("lname-error");
+const emailError = document.getElementById("emailerror");
+const mobileNumberError = document.getElementById("phoneerror");
+const passwordError = document.getElementById("pwd-error");
+const confirmPasswordError = document.getElementById("cpwd-error");
+const genderError = document.getElementById("genderError");
+const dobError = document.getElementById("dobError");
+const dojError = document.getElementById("dojError");
+const countryError = document.getElementById("countryError");
+const universityError = document.getElementById("universityError");
+const agreementError = document.getElementById("agreementError");
+
+
+
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  if(!validateName2(firstNameInput.value.trim())) {
+    firstNameError.innerText = "*name should have min 2 .";
+  } 
+  else if (!validateName(firstNameInput.value.trim())) {
+    firstNameError.innerText = "*Please enter a valid name.";
+
+  }
+  else {
+    firstNameError.innerText = "";
+  }
+
+  
+
+  
+
+  // if (!validateName(lastNameInput.value.trim())) {
+  //   lastNameError.innerText = "Last Name is required.";
+  // } else {
+  //   lastNameError.innerText = "";
+  // }
+
+  if (!validateEmail(emailInput.value.trim())) {
+    emailError.innerText = "*Please enter a valid email address.";
+  } 
+  else {
+    emailError.innerText = "";
+  }
+
+  if (!validateMobileNumber(mobileNumberInput.value.trim())) {
+    mobileNumberError.innerText = "*Please enter a valid mobile number.";
+  } else {
+    mobileNumberError.innerText = "";
+  }
+
+  if (!validatepassword5(passwordInput.value.trim())) {
+    passwordError.innerText = "*Password must be at least 5 characters long.";
+  }
+
+  else if(!validatePassword(passwordInput.value.trim())){
+    passwordError.innerText = "*Password must have atleast one charecter one speacial case and number.";
+
+  }
+   else {
+    passwordError.innerText = "";
+  }
+
+  if (!confirmPassword(confirmPasswordInput.value.trim(), passwordInput.value.trim())) {
+    confirmPasswordError.innerText = "*Passwords do not match.";
+  } else {
+    confirmPasswordError.innerText = "";
+  }
+
+  if (!validateGender()) {
+    genderError.innerText = "*Please select a gender.";
+  } else {
+    genderError.innerText = "";
+  }
+
+  if (!validateDate(dobInput.value.trim())) {
+    dobError.innerText = "*Please enter a valid date of birth.";
+  }
+  
+  else {
+    dobError.innerText = "";
+  }
+
+  if (!validateDate(dojInput.value.trim())) {
+    dojError.innerText = "Please enter a valid date of joining.";
+  } else {
+    dojError.innerText = "";
+  }
+
+  if (!validateDateOfBirth(dobInput.value.trim())) {
+    dobError.innerText = "Date of birth should be greater than 18 years ago.";
+  } else {
+    dobError.innerText = "";
+  }
+
+
+  if (!validateDateOfJoining(dojInput.value.trim(), dobInput.value.trim())) {
+    dojError.innerText = "Date of joining should be after the date of birth.";
+  } else {
+    dojError.innerText = "";
+  }
+
+  if (!validateAgeRestriction(dobInput.value.trim())) {
+    dobError.innerText = "Age must be at least 18 years from the date of birth.";
+  } else {
+    dobError.innerText = "";
+  }
+
+
+  if (!validateAgreement(agreementCheckbox.checked)) {
+    agreementError.innerText = "*Please agree to the terms and conditions.";
+  } else {
+    agreementError.innerText = "";
+  }
+
+
+  if (!validateCountry(countryInput.value.trim())) {
+    countryError.innerText = "*Please select a country.";
+  } else {
+    countryError.innerText = "";
+  }
+
+  if (!validateUniversity(universityInput.value.trim())) {
+    universityError.innerText = "*University name is required.";
+  } else {
+    universityError.innerText = "";
+  }
+
+
+
+  if (
+    validateName(firstNameInput.value.trim()) &&
+    validateName(lastNameInput.value.trim()) &&
+    validateEmail(emailInput.value.trim()) &&
+    validateMobileNumber(mobileNumberInput.value.trim()) &&
+    validatePassword(passwordInput.value.trim()) &&
+    confirmPassword(confirmPasswordInput.value.trim(), passwordInput.value.trim()) && validateDate(dobInput.value.trim()) &&
+    validateDate(dojInput.value.trim()) &&
+    validateGender() &&
+    validateCountry(countryInput.value.trim()) &&
+    validateUniversity(universityInput.value.trim()) &&
+    validateAgreement(agreementCheckbox.checked)
+  ) {
+    // Form is valid, you can submit the form here or perform any other action
+    alert("Form submitted successfully!");
+    // form.submit(); // Uncomment this line to submit the form to the server
+  }
+});
+
+
+function validateName(name) {
   const titleCaseRegex = /^[A-Z][a-z]*$/;
+  const name2= name.length>2
 
-
-  if (!nameRegex.test(fname)) {
-    alert("Please enter a valid first name.");
-    document.getElementById("fname-error").innerHTML = "*Alphabet only"
-    firstNameInput.focus();
-    return false;
-    
-  }
-
-  if (!titleCaseRegex.test(fname)) {
-   alert("Please enter a valid first name.");
-    document.getElementById("fname-error").innerHTML = "*Title case only"
-    firstNameInput.focus();
-    return false;
-    
-  }
-
-
-  if (fname.length<2 || fname.length>50 ) {
-    // alert("Please enter a valid first name.");
-    document.getElementById("fname-error").innerHTML = "*min 2 and and max 50 characters"
-    firstNameInput.focus();
-    return false;
-    
-  }
-
-  if (!nameRegex.test(lname)) {
-   // alert("Please enter a valid last name.");
-    document.getElementById("lname-error").innerHTML = "*Alphabet only"
-    lastNameInput.focus();
-    return false;
-    
-  }
-
-  if (!titleCaseRegex.test(lname)) {
-    // alert("Please enter a valid first name.");
-    document.getElementById("lname-error").innerHTML = "*Title case only"
-    lastNameInput.focus();
-    return false;
-    
-  }
+   return titleCaseRegex.test(name);
   
-  
-  if (lname.length<2 || lname.length>50) {
-    // alert("Please enter a valid last name.");
-    document.getElementById("lname-error").innerHTML = "please enter the last name."
-    lastNameInput.focus();
-    return false;
-  }
-  
-  if (email.length<15 || email.length>50 ) {
-    // alert("Please enter a valid first name.");
-    document.getElementById("emailerror").innerHTML = "*min 2 and and max 50 characters"
-    emailInput.focus();
-    return false;
-    
-  }
+}
 
+function validateName2(name) {
+  const name2= name.length>2
+  return name2 ;
+  
+}
 
-  return true;
+// const name2= name.length>2
+
+function validateEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+function validateMobileNumber(mobileNumber) {
+  const mobileNumberRegex = /^\d{10}$/;
+  return mobileNumberRegex.test(mobileNumber);
+}
+
+function validatepassword5(password){
+  const pass1 =password.length>5;
+  return pass1;
+}
+
+function validatePassword(password) {
+ var pass =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{1,20}$/ ;
+  return pass.test(password);
 }
 
 
+
+
+
+function confirmPassword(confirmPassword, password) {
+  return confirmPassword === password;
+}
+
+function validateGender() {
+  return [...genderInputs].some(input => input.checked);
+}
+
+function validateDate(date) {
+  return !isNaN(Date.parse(date));
+}
+
+
+
+function validateDateOfBirth(dob) {
+  const dobDate = new Date(dob);
+  const currentDate = new Date();
+  const minAge = 18;
+
+  // Calculate the date 18 years ago from the current date
+  const minDate = new Date(currentDate.getFullYear() - minAge, currentDate.getMonth(), currentDate.getDate());
+
+  return dobDate < minDate;
+}
+
+
+function validateDateOfJoining(doj, dob) {
+  const dojDate = new Date(doj);
+  const dobDate = new Date(dob);
+
+  return dojDate > dobDate;
+}
+
+function validateAgeRestriction(dob) {
+  const dobDate = new Date(dob);
+  const currentDate = new Date();
+  const minAge = 18;
+
+  // Calculate the date 18 years ago from the current date
+  const minDate = new Date(currentDate.getFullYear() - minAge, currentDate.getMonth(), currentDate.getDate());
+
+  return dobDate <= minDate;
+}
+
+
+
+
+function validateAgreement(agreementChecked) {
+  return agreementChecked;
+}
+
+function validateCountry(country) {
+  return country.length > 0;
+}
+
+function validateUniversity(university) {
+  return university.length > 0;
+}
+
+
+
+
+
+
+
+//=====================================================================
 
 console.log("abdullah");
 console.log("abdullah");
