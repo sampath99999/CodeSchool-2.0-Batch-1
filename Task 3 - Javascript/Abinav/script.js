@@ -141,7 +141,7 @@ function submitForm(a) {
     if (this.readyState == 4) {
       var resultObj = JSON.parse(this.responseText);
       document.getElementById("candidate-details").innerHTML =
-      document.getElementById("candidate-para").innerHTML="Firstname :"+resultObj.firstName+ ": lastname:"+resultObj.lastName+"Email:"+resultObj.Emailid+": countrycode"+resultObj.countrycode+":phone np"+resultObj.phoneNumber+"country"+resultObj.country+"university"+resultObj.university+"dob"+resultObj.DOB+"doj"+resultObj.doj;
+      document.getElementById("candidate-para").innerHTML="Firstname :"+resultObj.firstName+ ": lastname:"+resultObj.lastName+".  Email:"+resultObj.Emailid+": countrycode"+resultObj.countrycode+":phone np"+resultObj.phoneNumber+"country"+resultObj.country+"university"+resultObj.university+"__Dob"+resultObj.DOB+"__Doj"+resultObj.DOJ;
   
     }
   };
@@ -260,9 +260,14 @@ function validatePassword() {
 function validateconfirmpassword(){
   const confirmpassword=document.getElementById("confirmpassword");
   if(password.value!==confirmpasswordele.value){
-    document.getElementById("candidate-details").innerHTML="password should match";
+    document.getElementById("confirmpassworderror").innerHTML="password should match";
     return false;
   }
+  else{
+    document.getElementById("confirmpassworderror").innerHTML=" ";
+
+  }
+  
 }
 
 
@@ -282,6 +287,7 @@ let formdata={
   countrycode:"",
   Gender:"",
   phoneNumber:"",
+  country:"",
   DOB:"",
   DOJ:"",
   password:"",
@@ -353,24 +359,17 @@ console.log(formdata);
 var abi=formdata.firstName
 function validateFormData(formdata) {
   let {firstName,lastName,Emailid,phoneNumber} = formdata;
-  console.log(formdata.firstName);
-  console.log(formdata.Emailid);
-  console.log(formdata.phoneNumber);
+
   
-  console.log(formdata.firstName.length>8)
-  if(!validateDob()){
-    return false;
-  }
- 
-  validatePassword();
-  validateconfirmpassword();
+
+
 
   if (formdata.firstName.length>8) {
 
     document.getElementById("firstnameerror").textContent = "Maximum length is 8";
     return false;
   }
-  console.log("2");
+  
   
   
   if (formdata.firstName.length<2){
@@ -381,6 +380,10 @@ function validateFormData(formdata) {
   if (!isCapitalized(formdata.firstName)) {
     document.getElementById("firstnameerror").textContent = "First name should start capiltal";
     return false
+
+  }
+  else{
+    document.getElementById("firstnameerror").textContent = " ";
 
   }
   console.log("3");
@@ -434,58 +437,42 @@ function validateFormData(formdata) {
 
   
   }
-  console.log("5");
-  console.log("NEW");
-  console.log("anna");
+
+  
+  
   console.log(formdata.lastName.length>2 && formdata.lastName.length<8);
 
   if (formdata.lastName.length>2 && formdata.lastName.length<8){
     document.getElementById("lastnameerror").textContent = "";
   
   } 
-  console.log("5");
+  
   
   if (formdata.Emailid.length<1) {
     document.getElementById("Emailerror").textContent="Enter Email";
     return false
   }
-  console.log("5");
+  else{
+    document.getElementById("Emailerror").textContent=" ";
+
+  }
+  
   if (!emailPattern.test(formdata.Emailid)) {
     document.getElementById("Emailerror").textContent="Enter valid Email";
     return false;
 
     
   }
-  console.log("5");
+
   
   if(countrycodeele.value==="select"){
     document.getElementById("countrycodeerror").textContent="select code";
     return false
   }
-  console.log("5");
-  if(universityele.value==="select"){
-    document.getElementById("universityerror").textContent="select code";
-    return false
-  }
   else{
-    formdata.university=universityele.value;
-  }
-  console.log("5");
-  if(countryelement.value==="select"){
-    document.getElementById("countryerror").textContent="select country";
-    return false
-  }
-  console.log("5");
-  if(formdata.Emailid.length<1){
-    document.getElementById("Emailerror").textContent=" ";
-    return false;
-
+    document.getElementById("countrycodeerror").textContent=" ";
 
   }
-  console.log("5");
-  console.log("step1")
-  validateDoj();
-  console.log("5");
   const cleanedPhoneNumber = formdata.phoneNumber.replace(/\D/g, '');
   if (cleanedPhoneNumber.length === 10 && /^\d+$/.test(cleanedPhoneNumber)) {
     document.getElementById("phoneerror").textContent="";
@@ -493,6 +480,57 @@ function validateFormData(formdata) {
     document.getElementById("phoneerror").textContent="Enter valid phone number";
     return false;
   }
+  validateDob();
+  validateDoj();
+  if(!validateDob()){
+    return false;
+  }
+  if(!validateDoj()){
+    return false;
+  }
+ 
+  if(universityele.value==="select"){
+    document.getElementById("universityerror").textContent="select code";
+    return false
+  }
+  else{
+    formdata.university=universityele.value;
+  }
+  
+  if(countryelement.value==="select"){
+    document.getElementById("countryerror").textContent="select country";
+    return false
+  }
+  else{
+    formdata.country=countryelement.value;
+  }
+  
+  if(formdata.Emailid.length<1){
+    document.getElementById("Emailerror").textContent=" ";
+    return false;
+
+
+  }
+  if(gendermaleele.checked===true){
+    formdata.Gender="male";
+  }
+  else if(genderfemaleele.checked===true){
+    formdata.Gender="Female";
+
+  }
+  else{
+    formdata.Gender="other"
+  }
+  validatePassword();
+  validateconfirmpassword();
+
+  validateDoj();
+  if(!validateDob()){
+    return false;
+  }
+  
+ 
+  
   console.log(formdata)
 
   const boxcheck=document.getElementById("boxcheck");
@@ -528,6 +566,10 @@ myformele.addEventListener("submit", function(event){
     submitForm(formdata);
     
  } 
+ else
+ {
+  document.getElementById("candidate-para").innerHTML="";
+ }
   
 
 
