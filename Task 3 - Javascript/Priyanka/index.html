@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" /> 
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+ 
+  <div class="container-fluid shadow-lg p-8 justify-content-around" style=" background-color: #f4f4f4; width: 80%;">
+     <!-- Navbar -->
+  <nav class="container navbar navbar-expand-lg bg-light navbar-light justify-content-between" style="background-color: white;">
+    <a class="navbar-brand" href="#"><img src="./images/img-1.png" id="img1" alt=""></a>
+    
+
+    <div class="flex-fill"> <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center gap-3">
+          
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+
+        <li class="nav-item dropdown" >
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Find a career
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Web Development</a></li>
+            <li><a class="dropdown-item" href="#">Software Development</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Software Testing</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            For career
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Human Resource</a></li>
+            <li><a class="dropdown-item" href="#">Operations</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Analyst</a></li>
+          </ul>
+        </li>
+      </ul></div>
+  
+  <div class="d-flex gap-3">
+      <form class="d-flex icon" id="bell-notification"  current-count="99" role="message" style="cursor: pointer;" ><i class="fa-solid fa-bell"></i> &nbsp;</form>
+      <form class="d-flex icon  " role="message" style="cursor: pointer;"><i class="fa-solid fa-circle-user"></i> &nbsp;</form>
+      <form class="d-flex icon" role="message" style="cursor: pointer;"><i class="fa-solid fa-grip"></i> &nbsp; </form> &nbsp; &nbsp;
+    </div>
+  </nav>
+
+
+   <!-- Main Content -->
+   <div class="container">
+    <div class="row shadow-sm p-2" style="background-color: white; border-radius: 1%;">
+      <div class="col-md-6 container" id="image-container"></div>
+      <div class="col-md-6 p-2">
+
+        <!-- Registration Form -->
+
+        <form id="registerForm" class="p-4">
+    
+            <h2>Please Register to Fadlun</h2><br>
+
+         <!-- Name Field -->
+
+         <div class="row" >
+          <div class="mb-2"  style="width: 50%;">
+            <label for="firstName" class="form-label">First Name*</label>
+            <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter First Name" required>
+            <span id="firstNameError" class="text-danger font-weight-bold"></span>
+          </div>
+          <div class="mb-2"  style="width: 50%;">
+            <label for="lastName" class="form-label">Last Name*</label>
+            <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last Name">
+            <span id="lastNameError" class="text-danger font-weight-bold"></span>
+          </div>
+        </div>
+
+    
+          <!-- Email Field -->
+
+          <div class="mb-3">
+            <label for="email" class="form-label">Email*</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>
+            <span id="emailError" class="text-danger font-weight-bold"></span>
+          </div>
+
+          <!-- Phone Number Field -->
+
+          <div class="mb-3">
+            <div class="row" >
+                <div class="mb-3">
+                 <label for="phone" class="form-label" >Phone Number*</label>
+                </div>
+                <div class="mb-3">
+                    <div class="input-group gap-3">
+                        <select class="form-select" class="form-control" id="countryCode" name="countryCode" style="width: 10%;"> 
+                          <option value="" disabled selected>SELECT </option>
+                        </select>
+                        
+                        <input type="text" class="form-control" id="callingcode" name="phone" placeholder="Enter Phone Number" required style="width: 70%;">
+                      </div> 
+                </div>
+              </div>            
+          </div>
+          <span id="phoneError" class="text-danger font-weight-bold"></span>
+
+
+          <!-- Date of Birth Field -->
+
+         <div class="row">
+          <div class="mb-3" style="width: 50%;">
+            <label for="dob" class="form-label">Date of Birth*</label>
+            <input type="date" class="form-control" id="dob" name="dob" required>
+            <span id="dobError" class="text-danger font-weight-bold"></span>
+          </div>
+          
+
+          <!-- Date of Joining Field -->
+
+          <div class="mb-3" style="width: 50%;">
+            <label for="doj" class="form-label">Date of Joining*</label>
+            <input type="date" class="form-control" id="doj" name="doj" required>
+            <span id="dojError" class="text-danger font-weight-bold"></span>
+          </div>
+        </div>
+
+          <!-- Gender Field -->
+
+          <div class="mb-3">
+            <label class="form-label">Gender*</label>
+            <div class="d-flex justify-content-around" id="gender">
+            <div class="form-check ">
+              <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+              <label class="form-check-label" for="other">Other</label>
+            </div>
+          </div>
+        </div>
+
+          <!-- Country and University Fields -->
+
+          <div class="mb-3">
+            <label for="countrySelect" class="form-label">Country*</label>
+            <select class="form-select" id="countrySelect" name="country" required>
+              <option value="" disabled selected>Select a country</option> 
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label for="universitySelect" class="form-label">University*</label>
+            <select class="form-select" id="universitySelect" name="universitySelect" required>
+              <option value="" disabled selected>Select a university </option>
+            </select>
+
+          </div>
+
+
+            <!-- Password Field -->
+
+            <div class="row" >
+              <div class="mb-2"  style="width: 50%;">
+                <label for="password" class="form-label">Password*</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>
+                <span id="passwordError" class="text-danger font-weight-bold"></span>
+              </div>
+              <div class="mb-2"  style="width: 50%;">
+                <label for="confirmed-password" class="form-label">Confirmed password*</label>
+                <input type="confirmed-password" class="form-control" id="confirmed-password" name="confirmed-password" placeholder="Confirm Password" required>
+                <span id="confirmedPasswordError" class="text-danger font-weight-bold"></span>
+              </div>
+            </div>
+              <br>
+
+             <!-- terms n conditions -->
+
+          <div class="terms-and-conditions">
+            <input type="checkbox" id="termsCheckbox" name="termsCheckbox">
+            <label for="termsCheckbox">I agree with Jabels User Agreement and Privacy Policy.</label>
+          </div>
+          <br>
+          <!-- Sign Up Button -->
+
+          <button type="submit" class="btn btn-primary" onclick="submitForm()" >Sign Up</button>
+          <p id="demo"></p>
+         
+          
+          <!-- Login -->
+          <div class="log-in mt-3 p-2 d-flex">Already have a fadlun's account ? <button class="login-btn">Log In</button></div>
+        </form>
+      </div>
+    </div>
+  </div> 
+</div>
+
+<script src="./script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>
