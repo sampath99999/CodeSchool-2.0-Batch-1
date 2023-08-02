@@ -1,0 +1,100 @@
+.outer-bg-container {
+    background-color: #eff2f6;
+    box-sizing: border-box;
+    width: 100%;
+   
+    padding: 50px 30px;
+}
+.follow-us-icon-container1 {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+  }
+  .nav-icons{
+    background-color: #e9f2ec;
+  }
+  .menu ul li{
+    padding: 6px 15px;
+}
+.logo{
+    height: 45px;
+    width: 70px;
+}
+.icon-bg-container{
+        background-color: #faf7e8;
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+       
+       
+}
+.right-menu ul li{
+    padding: 6px 10px;
+}
+.ul-small li {
+    margin-right: 10px;
+}
+.nav-round{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/*body*/
+.bg-container{
+    background-color: #f5f5f5;
+ 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    
+}
+
+.inner-container{
+    background-color: white;
+    margin: 20px 40px;
+
+}
+
+/*form*/
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background:  #f1f3f5;
+    border-radius: 5px;
+  }
+
+  input[type=radio] {
+
+    background:  #f1f3f5;
+  
+  }
+  
+  input[type=text]:focus, input[type=password]:focus ,input[type=radio]:focus, input[type=date]:focus {
+    background-color: #e9f2ec;
+    border: 1px solid #04AA6D;
+    border-radius: 5px;
+  }
+  .error-message {
+    color: #dc3545;
+    font-family: "Roboto";
+    font-size: 14px;
+  }
+  .span{
+    margin-right: 15px;
+  }
+  @media screen and (max-width: 576px) {
+  #myForm select { 
+    width:200px; }
+}
+@media screen and (min-width: 576px) {
+  #myForm select { 
+    max-width:300px; }
+}
+
+
+
+ 

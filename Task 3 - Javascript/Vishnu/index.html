@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    
+</head>
+<body>
+    <div class="main-container col-12">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary col-12">
+        <div class="container-fluid">
+          <a class="navbar-brand fst-italic fs-2" style="margin-left: 0%; font-weight: 600; color: #00a651;" href="#">Jabel</a>
+          <div class="d-flex d-lg-none jabel-options-selection text-center">
+            <button type="button" class="position-relative ">
+              <i class="bi bi-bell-fill text-success"></i>
+              <span style="font-size:9px; top:-2px !important;" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                99
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
+            <button type="button" class="position-relative ">
+              <i class="bi bi-person-circle text-success"></i>
+            </button>
+            <button type="button" class="position-relative ">
+              <i class="bi bi-list-ul text-success"></i>
+            </button>
+          </div>
+          <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Find a carer <i class="bi bi-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu p-0" style="margin: 0px !important; padding: 0px !important;">
+                    <li><a class="dropdown-item" href="#">Carer</a></li>
+                    <li><a class="dropdown-item" href="#">Carer</a></li>
+                    <li><a class="dropdown-item" href="#">Carer</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    For carers <i class="bi bi-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Carer</a></li>
+                    <li><a class="dropdown-item" href="#">Carer</a></li>
+                    <li><a class="dropdown-item" href="#">Carer</a></li>
+                </ul>
+              </li>  
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex  d-none d-lg-block col-2 options-selection text-center">
+          <button type="button" class="position-relative ">
+            <i class="bi bi-bell-fill text-success" style="color: #00a651;"></i>
+            <span style="font-size:9px; top:-2px !important;" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+              99
+              <span class="visually-hidden">unread messages</span>
+            </span>
+          </button>
+          <button type="button" class="position-relative ">
+            <i class="bi bi-person-circle" style="color: #00a651;"></i>
+          </button>
+          <button type="button" class="position-relative ">
+            <i class="bi bi-list-ul text-success" style="color: #00a651;"></i>
+          </button>
+        </div>
+      </nav>
+
+      <div class="body-content col-12 p-lg-4">
+        <div class="form-content col-12 d-flex flex-column flex-lg-row  p-lg-4 rounded-2">
+          <div class="images-carousel d-none  col-lg-6 d-lg-block">
+            <img class="rounded" src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg" id="left-image" style="height: 100%; width: 100%;" />
+          </div>
+          <form class="form-feild-sections col-lg-6 p-3 col-12" id="form-submit">
+            <h4 class="form-heading fs-5">Please Register to Fadlun</h4>
+            <div class="d-flex flex-column flex-lg-row mb-2 ">
+              <div class="form-group mb-2 ">
+                <label for="firstNameInput" >First Name*</label>
+                <input type="text" class="form-control" id="firstNameInput" placeholder="First Name">
+                <p id="firstNameError">*Error message</p>
+              </div>
+              <div class="form-group ms-0 ms-lg-3">
+                <label for="lastNameInput">Last Name*</label>
+                <input type="text" class="form-control " id="lastNameInput" placeholder="Last Name">
+                <p id="lastNameError">*Error message</p>
+              </div>
+            </div>
+            <div class="form-group mb-2 email">
+              <label for="emailInput">Email*</label>
+              <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="name@example.com">
+              <p id="emailError">*Error message</p>
+            </div>
+            <div class="d-flex flex-column flex-lg-row mb-2">
+              <div class="form-group">
+                <label for="phoneInput">Phone Number *</label>
+                <div>
+                  <div class="d-flex ">
+                    <div class="mb-2 phone-details">
+                      <select class="form-select form-dropdown" aria-label="Default select example" id="country-code">
+                        <option selected>SELECT</option> 
+                      </select>
+                    </div> 
+                    <input type="text" class="form-control ms-2" style="height: fit-content;" id="phoneInput" placeholder="Enter 10 digits">  
+                  </div>
+                  <p id="phoneError">*Error message</p>
+                </div>
+              </div>
+            </div>
+            <div class="form-group mb-2 date_of_birth">
+              <label for="dateOfBirth">Date of Birth</label>
+              <input type="date" class="form-control" id="dateOfBirth" aria-describedby="emailHelp">
+              <p id="dateOfBirthError">*Error message</p>
+            </div>
+            <div class="form-group mb-3 date_of_birth">
+              <label for="dateOfJoin">Date of Joining</label>
+              <input type="date" class="form-control" id="dateOfJoin" aria-describedby="emailHelp" >
+              <p id="dateOfJoinError">*Error message</p>
+            </div>
+            <div class="mb-2">
+              <h4 for="dateOfJoin" id="gender">Gender</h4>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input"   type="radio" id="inlineCheckbox1" value="option1" name="gender"  >
+                <label class="form-check-label" active for="inlineCheckbox1">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineCheckbox2" value="option2" name="gender">
+                <label class="form-check-label" for="inlineCheckbox2">Female</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" id="inlineCheckbox3" value="option2" name="gender">
+                <label class="form-check-label" for="inlineCheckbox3">Other</label>
+              </div> 
+            </div>
+            <div class="d-flex flex-column flex-lg-row align-items-lg-center mb-2 ">
+              <div class="mb-2 mb-lg-auto country-details">
+                <label>Country</label>
+                <select class="form-select form-dropdown" aria-label="Default select example" id="country-name">
+                  <option selected >SELECT</option>
+                </select>
+                <p id="countryError">*Error message</p>
+              </div> 
+              <div class=" ms-lg-2 university-details">
+                <label>University</label>
+                <select class="form-select form-dropdown" aria-label="Default select example" id="university-name">
+                  <option selected >SELECT</option>
+                </select>
+                <p id="universityError">*Error message</p>
+              </div> 
+            </div>
+            <div class="d-flex  flex-column flex-lg-row mb-2">
+              <div class="form-group mb-2 mb-lg-auto">
+                <label for="passwordInput">Password*</label>
+                <input type="password" class="form-control" id="passwordInput" >
+                <p id="passwordError">*Error message</p>
+              </div>
+              <div class="form-group ms-0 ms-lg-3">
+                <label for="confirmInput">Confirmed Password*</label>
+                <input type="password" class="form-control" id="confirmInput" >
+                <p id="confirmError">*Error message</p>
+              </div>
+            </div>
+           
+            <div class="form-check mb-2">
+              <input type="checkbox" class="form-check-input"  id="agreement">
+              <label class="form-check-label" for="agreement">I agree with jabel user agreement and privacy policy</label>
+            </div>
+            <button type="submit" class="btn w-100 text-white" style="background-color: #00a651;">Sign Up</button>
+            <p id="status"></p>
+            <p class="text-center" style="display:block; color: initial;">Already have an Fadlun's account?
+              <span style="color: #66ff33; font-weight: 600;">Log in</span>
+            </p>
+          </form>
+        </div>
+      </div>
+
+    </div> 
+  </body>
+<script src="./index.js"></script>
+</html>
