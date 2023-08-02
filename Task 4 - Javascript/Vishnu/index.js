@@ -2,22 +2,23 @@ let productsContainer=document.getElementById("productsContainer");
 
 const views=[firstViewConstructor,secondViewContructor,thirdViewConstructor]
 function firstViewConstructor(image,title="",price=""){
-    return  `<div class="col-5 col-lg-2 card-image mb-4 mb-lg-0" >
-                <div class="h-75 position-relative" style="background-color: #e6f7ff; padding: 10px; position-relative">
+    return  `<div class="col-5 col-lg-2 card-image mb-4 mb-lg-0 position-relative" >
+                <div class="h-75 position-relative" style="background-color: #e6f7ff; padding: 10px;">
                     <div class="d-flex justify-content-between">
                         <div>
                         <p class="bg-danger text-center text-white" style="border-radius: 8px;">Hot</p>
                         </div>
-                        <div class="me-2">
-                        <i class="bi bi-heart"></i>
+                        <div class="me-2 d-none d-lg-block">
+                            <i class="bi bi-heart"></i>
                         </div>
+                        <button class="me-2 d-lg-none border-0 bg-white" style="height:2%">
+                            <i class="bi bi-heart"></i>
+                        </button>
                     </div>
                     <div class="text-center">
                         <img src=${image}  />
                     </div>
-                    <div class="rounded-circle d-lg-none border border-2 ps-1 pe-1 pt-0 fw-bold border-danger position-absolute" style="font-size:15px;bottom:0;right:0;top:4;">+</div>
                 </div>
-              
                 <div class="h-25 d-flex flex-column justify-content-between">
                     <div>
                         <p style="font-size: 13px;">${title}</p>    
@@ -31,27 +32,30 @@ function firstViewConstructor(image,title="",price=""){
                         </div> 
                     </div>
                 </div>
+                <button class="rounded-circle d-lg-none border border-2 ps-2 pe-2 pt-0 fw-bold border-danger card-button">+</button>
             </div>`
 }
 let firstView=firstViewConstructor("");
 
 
 function secondViewContructor(image,title="",price=""){
-    return  `<div class="col-5 col-lg-2 card-image mb-4 mb-lg-0 " >
-                <div class="h-75 position-relative" style="background-color: #e6f7ff; padding: 10px;">
+    return  `<div class="col-5 col-lg-2 card-image mb-4 mb-lg-0 position-relative" >
+                <div class="h-75" style="background-color: #e6f7ff; padding: 10px;">
                     <div class="d-flex justify-content-between">
                         <div>
                         <p class="bg-success text-center text-white" style="border-radius: 8px;">-13%off</p>
                         <p class="bg-warning text-center text-white" style="border-radius: 8px;">Limited</p>
                         </div>
-                        <div class="me-2">
-                        <i class="bi bi-heart"></i>
+                        <div class="me-2 d-none d-lg-block">
+                            <i class="bi bi-heart"></i>
                         </div>
+                        <button class="me-2 d-lg-none border-0 bg-white" style="height:2%">
+                            <i class="bi bi-heart"></i>
+                        </button>
                     </div>
                     <div class="text-center">
                         <img src=${image}  />
-                    </div>
-                    <div class="rounded-circle d-lg-none border border-2 ps-1 pe-1 pt-0 fw-bold border-danger position-absolute" style="font-size:15px;bottom:0;right:0;top:4;">+</div>
+                    </div>   
                 </div>
                 <div class=" h-25 d-flex flex-column justify-content-between" >
                     <div>
@@ -66,23 +70,26 @@ function secondViewContructor(image,title="",price=""){
                         </div>
                    </div>
                 </div>
+                <button class="rounded-circle d-lg-none border border-2 ps-2 pe-2 pt-0 fw-bold border-danger card-button">+</button>
             </div>`;
     }
 let secondView=secondViewContructor("");
 
 
 function thirdViewConstructor(image,title="",price=""){
-    return  `<div class="col-5 col-lg-2 card-image mb-4 mb-lg-0" >
-                <div class="h-75 position-relative" style="background-color: #e6f7ff; padding: 10px;">
+    return  `<div class="col-5 col-lg-2 card-image mb-4 mb-lg-0 position-relative" >
+                <div class="h-75 " style="background-color: #e6f7ff; padding: 10px;">
                     <div class="d-flex justify-content-end">
-                        <div class="me-2">
+                        <div class="me-2 d-none d-lg-block">
                             <i class="bi bi-heart"></i>
                         </div>
+                        <button class="me-2 d-lg-none border-0 bg-white" style="height:2%">
+                            <i class="bi bi-heart"></i>
+                        </button>
                     </div>
                     <div class="text-center">
                         <img src=${image}  />
-                    </div>
-                    <div class="rounded-circle d-lg-none border border-2 ps-1 pe-1 pt-0 fw-bold border-danger position-absolute" style="font-size:15px;bottom:0;right:0;top:4;">+</div>
+                    </div>   
                 </div>
                 <div class="h-25 d-flex flex-column justify-content-between">
                     <div>
@@ -97,6 +104,7 @@ function thirdViewConstructor(image,title="",price=""){
                         </div>
                     </div>
                 </div>
+                <button class="rounded-circle d-lg-none border border-2 ps-2 pe-2 pt-0 fw-bold border-danger card-button">+</button>
             </div>`;
 }
 let thirdView=thirdViewConstructor("");

@@ -80,4 +80,10 @@
 .nav-item:hover{
     text-decoration: underline;
 }
-
+.card-button{
+    position: absolute;
+    bottom: 21%;
+    right: 0;
+    background-color: white;
+    font-size: 23px;
+}
