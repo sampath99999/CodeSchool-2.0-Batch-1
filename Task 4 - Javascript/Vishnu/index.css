@@ -1,0 +1,83 @@
+.login-section h4{
+    font-size: 13px;
+    color: #1b1a18;
+}
+.cart-section h4{
+    font-size: 13px;
+    color: #1b1a18;
+  
+
+}
+*{
+    box-sizing: border-box;
+}
+
+.cart-section i{
+    font-size: 18px; 
+    color: #1b1a18;
+
+}
+.nav-link{
+    font-size: 13px;
+    font-weight: 500;
+  
+}
+.btn-group button{
+    border: none !important;
+    background-color: transparent !important;
+    color: #1b1a18 !important;
+    font-size: 13px;
+    font-weight: 500;
+
+
+}
+.banner{
+    height: 100px;
+    border-bottom:2px solid red;
+    background-image: url("./banner-image.jpg");    
+    background-size: cover;
+}
+
+
+.nav-link i{
+    font-size: 9px;
+}
+.options-section button{
+    border: none;
+    background-color: transparent;
+    margin-left: 5%;
+}
+.options-section{
+    padding-left: 19px;
+}
+.card-image{
+    margin: 9px 7px;
+
+    flex-grow: 1;
+  
+}
+.card-image img {
+    width: 130px;
+
+   
+}
+.card-image p{
+    font-size: 10px;
+    padding: 1px;
+    margin: 2px;
+    font-weight: 500;
+    border: none;
+}
+.back-arrow{
+   
+    font-size: 34px;
+
+}
+
+.nav-item:hover .dropdown-menu{
+    display: block;
+}
+.nav-item:hover{
+    text-decoration: underline;
+}
+

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./index.css" >
+    
+</head>
+<body>
+   <div class="main-container p-lg-5 pt-lg-4">
+     <div class="header-section d-none d-lg-block">
+        <div class="d-flex justify-content-around border-0 border-bottom " >
+            <div class="cart-section d-flex align-items-baseline ms-3" >
+                <i class="bi bi-cart-plus"></i>
+                <h4 class="ms-2">Add anything here or just remove it...</h4>
+            </div>
+            <div class="login-section d-flex align-items-center ">
+                <h4 class="me-3">English</h4>
+                <h4 class="me-3">US Dollar</h4>
+                <h4 class="me-3"><span><i class="bi bi-person-circle me-2"></i></span>Login / Register</h4>
+            </div>
+        </div>
+     </div>
+     <nav class="navbar navbar-expand-lg bg-body-tertiary col-12 justify-content-lg-center d-flex align-items-center">
+        <div class="d-lg-flex  align-items-center col-lg-6 ">
+          <i class="bi bi-arrow-left back-arrow d-lg-none"></i>
+          <button class="navbar-toggler shadow-none position-relative" style="top:-4px;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" style="font-size: 15px; "></span>
+          </button>
+          <a class="navbar-brand d-lg-block d-none"  href="#">
+            <img src="./logo.jpg" />
+          </a>
+          
+          <div class="collapse navbar-collapse ms-4" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        HOME <i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu p-0" style="margin: 0px !important; padding: 0px !important;">
+                        <li><a class="dropdown-item" href="#">FIRST</a></li>
+                        <li><a class="dropdown-item" href="#">SECOND</a></li>
+                        <li><a class="dropdown-item" href="#">THIRD</a></li>
+                    </ul>
+               </li>
+               <li class="nav-item dropdown">
+                <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    SHOP<i class="bi bi-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu p-0" style="margin: 0px !important; padding: 0px !important;">
+                    <li><a class="dropdown-item" href="#">CLOTHES</a></li>
+                    <li><a class="dropdown-item" href="#">ELECTRONICS</a></li>
+                    <li><a class="dropdown-item" href="#">BRACLETS</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    ELEMENTS <i class="bi bi-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu p-0" style="margin: 0px !important; padding: 0px !important;">
+                    <li><a class="dropdown-item" href="#">LARGE</a></li>
+                    <li><a class="dropdown-item" href="#">SMALL</a></li>
+                    <li><a class="dropdown-item" href="#">MEDIUM</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    PAGES<i class="bi bi-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">ONE</a></li>
+                    <li><a class="dropdown-item" href="#">TWO</a></li>
+                    <li><a class="dropdown-item" href="#">THREE</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    VENDORS<i class="bi bi-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">EXTERNAL</a></li>
+                    <li><a class="dropdown-item" href="#">INTERNAL</a></li>
+                    <li><a class="dropdown-item" href="#">PUBLIC</a></li>
+                </ul>
+              </li>  
+            </ul>
+          </div>
+        </div>
+        <div class="align-self-start mt-2">
+          <a class="navbar-brand  d-lg-none"  href="#">
+            <img style="width:90px;" src="./logo.jpg" />
+          </a>
+        </div>
+        <div class="options-section d-flex  d-lg-none align-self-start">
+          <button type="button" class="fs-1">
+            <i class="bi bi-handbag"></i>
+          </button>
+          <button type="button" class="fs-1">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+        <div class="d-flex  d-none d-lg-block col-2 options-section">
+          <button type="button">
+            <i class="bi bi-list-ul"></i>
+          </button>
+          <button type="button">
+            <i class="bi bi-handbag"></i>
+          </button>
+          <button type="button" >
+            <i class="bi bi-heart"></i>
+          </button>
+          <button type="button" >
+            <i class="bi bi-arrow-clockwise"></i>
+          </button>
+          <button type="button" >
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+     </nav>
+     <nav class="d-lg-none navbar navbar-expand-lg bg-body-tertiary col-12 justify-content-lg-center d-flex align-items-center" style="background-color:#F5F5F5;">
+      <div class="d-flex justify-content-between w-100">
+        <div>
+          <button class="navbar-toggler shadow-none position-relative text-dark" style="top:-4px; border:none;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-funnel" style="font-size: 25px;"></i>Filters
+          </button> 
+          <div class="collapse navbar-collapse ms-4" id="navbarSupportedContent2">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Color<i class="bi bi-chevron-down"></i>
+                    </a>
+                    <ul class="dropdown-menu p-0" style="margin: 0px !important; padding: 0px !important;">
+                      <li><a class="dropdown-item" href="#">Yellow</a></li>
+                      <li><a class="dropdown-item" href="#">Green</a></li>
+                      <li><a class="dropdown-item" href="#">Dark</a></li>
+                    </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Size<i class="bi bi-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu p-0" style="margin: 0px !important; padding: 0px !important;">
+                  <li><a class="dropdown-item" href="#">Small</a></li>
+                  <li><a class="dropdown-item" href="#">Medium</a></li>
+                  <li><a class="dropdown-item" href="#">Large</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Brands <i class="bi bi-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu p-0" style="margin: 0px !important; padding: 0px !important;">
+                  <li><a class="dropdown-item" href="#">Allen Solly</a></li>
+                  <li><a class="dropdown-item" href="#">Rare Rabbit</a></li>
+                  <li><a class="dropdown-item" href="#">Basics</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Price <i class="bi bi-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Higher</a></li>
+                  <li><a class="dropdown-item" href="#">Lower</a></li>
+                  <li><a class="dropdown-item" href="#">Medium</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Status <i class="bi bi-chevron-down"></i>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">In stock</a></li>
+                  <li><a class="dropdown-item" href="#">Upcoming</a></li>
+                  <li><a class="dropdown-item" href="#">Out of stock</a></li>
+                </ul>
+              </li>  
+            </ul>
+          </div>
+        </div>
+        <div>
+          <button class="navbar-toggler shadow-none position-relative text-dark" style="top:-4px; border:none;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+            Sort by <i class="bi bi-sort-alpha-up" style="font-size: 25px;"></i>
+          </button>   
+        </div>
+      </div>
+     </nav>
+     <div class="banner d-none d-lg-block">
+     </div>
+     <div class="d-flex align-items-center col-12 d-none d-lg-block d-lg-flex">
+        <div class="d-flex align-items-center col-7 pe-5 justify-content-end" style="margin-left: 7px;">
+          <div class="mt-2">
+            <h4 style="font-size: 13px;">Filter by :&nbsp;</h4>
+          </div>
+          <div class="mt-2 d-flex ms-2">
+            <i class="bi bi-tags" style="font-size: 13px;"></i>&nbsp;
+            <h4 style="font-size: 13px;">Categories &nbsp;</h4>
+          </div>
+          <div class="btn-group ">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Color
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Yellow</a></li>
+              <li><a class="dropdown-item" href="#">Green</a></li>
+              <li><a class="dropdown-item" href="#">Dark</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Size
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Small</a></li>
+              <li><a class="dropdown-item" href="#">Medium</a></li>
+              <li><a class="dropdown-item" href="#">Large</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Brands
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Allen Solly</a></li>
+              <li><a class="dropdown-item" href="#">Rare Rabbit</a></li>
+              <li><a class="dropdown-item" href="#">Basics</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Price
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Higher</a></li>
+              <li><a class="dropdown-item" href="#">Lower</a></li>
+              <li><a class="dropdown-item" href="#">Medium</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Status
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">In stock</a></li>
+              <li><a class="dropdown-item" href="#">Upcoming</a></li>
+              <li><a class="dropdown-item" href="#">Out of stock</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="mt-2 text-secondary" style="font-size: 13px;">20 results</h4>
+          </div>
+        </div>
+        <div class="d-flex col-5" >
+          <div class="btn-group">
+            <button class="btn btn-secondary dropdown-toggle" style="color:#6C757D !important;" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sort by <span class="text-dark">Latest</span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Oldest</a></li>
+              <li><a class="dropdown-item" href="#">Latest</a></li>
+            </ul>
+          </div>
+          <div class="mt-1 ms-5" style="padding-left: 47px;">
+            <i class="bi bi-layout-text-sidebar ms-2 me-2"></i>
+            <i class="bi bi-layout-text-sidebar-reverse ms-2 me-2"></i>
+            <i class="bi bi-layout-text-window ms-2 me-2"></i>
+            <i class="bi bi-layout-text-window ms-2 me-2"></i>
+          </div>
+        </div>
+     </div>
+     <div class="d-flex col-12" >
+        <div class="col-lg-2 d-lg-flex flex-lg-column justify-content-end align-items-center d-none d-lg-block">
+          <button class="rounded-circle border ps-2 pe-2 pb-2 pt-2 text-center text-success bg-success position-relative" style=" font-size: 13px;">
+            $59
+          </button> 
+          <button class="rounded-circle border ps-2 pe-2 pt-1 pb-1 text-center bg-success position-relative" >  
+            <i class="bi bi-fire"></i>
+          </button>
+          <button class="rounded-circle border ps-2 pe-2 pt-2 pb-2 bg-success text-white text-center position-relative" style="font-size: 13px;left:0;">
+            $59
+          </button>
+        </div>
+        <div  class="col-12 col-lg-8 d-flex flex-wrap " id="productsContainer">'  
+        </div>
+        <div class="col-lg-2 d-lg-flex flex-column justify-content-end align-items-center d-none d-lg-block" >
+          <button class="rounded-circle border ps-2 pe-2 pt-1 pb-1 text-center bg-transparent" >
+            ^
+          </button>
+          <button class="rounded-circle border ps-2 pe-2 pt-1 pb-1 text-center bg-transparent" >  
+            <i class="bi bi-clock"></i>
+          </button>
+          <button class="rounded-circle border ps-2 pe-2 pt-2 pb-2 text-center text-white" style=" font-size: 13px; background-color: pink;">
+            RTL
+          </button> 
+          <button class="rounded-circle border ps-0 pe-0 pt-2 pb-2 bg-dark text-white text-center" style="font-size: 13px;">
+            DEMO
+          </button>
+        </div>   
+     </div>  
+   </div>
+</body>
+<script src="./index.js" ></script>
+</html>
