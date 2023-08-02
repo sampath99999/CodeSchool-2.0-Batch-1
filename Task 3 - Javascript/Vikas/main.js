@@ -21,10 +21,8 @@ function loadImage() {
     xhr.open('GET', url, true);
     xhr.send();
   }
-  
-  
-  loadImage();
-  setInterval(loadImage, 500);
+loadImage();
+setInterval(loadImage, 500);
   // first name validation
 
 function validateFirstName() {

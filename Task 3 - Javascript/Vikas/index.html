@@ -29,36 +29,15 @@
   </head>
 
   <body>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Bootstrap Navbar</title>
-        <!-- Add Bootstrap CSS link here -->
-      </head>
-
-      <body>
-        <!--Header part-->
-
-        <nav class="navbar navbar-expand-lg navbar-light bg-white mt-2">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white mt-2">
           <div class="container">
             <!-- Logo -->
             <a class="navbar-brand" href="#">
-              <img
-                src="images/Screenshot (85).png"
-                alt="Logo"
-                width="auto"
-                height="28px"
-              />
+              <img src="images/Screenshot (85).png" alt="Logo" width="auto" height="28px"/>
             </a>
 
             <!-- Middle Content with Dropdown Menus -->
-
-            <div
-              class="collapse navbar-collapse justify-content-center"
-              id="navbarNav"
-            >
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                   <a class="nav-link" href="#">Home</a>
@@ -137,15 +116,13 @@
               />
             </div>
             <div class="col">
-              <form class="input-feild p-2 pt-3">
+              <form class="input-feild p-3 pt-3">
                 <h5>Please Register to Fadlun</h5>
 
                 <!--name part-->
                 <div class="row name d-flex justify-content-between pt-3">
                   <div class="col-12 col-md-6">
-                    <label for="firstName"
-                      >First Name<span style="color: red">*</span></label
-                    ><br />
+                    <label for="firstName">First Name<span style="color: red">*</span></label><br />
                     <input
                       style="width: 100%"
                       type="text"
@@ -207,9 +184,11 @@
                         id="phoneNumber"
                         required
                         style="width: auto"
-                      /><br>
-                      <div id="error-message" style="color: red; display: none;">Invalid phone number. Please enter a 10-digit number without spaces, dashes, or special characters.</div>
-
+                      /><br />
+                      <div id="error-message" style="color: red; display: none">
+                        Invalid phone number. Please enter a 10-digit number
+                        without spaces, dashes, or special characters.
+                      </div>
                     </div>
                     <div class="col-1"></div>
                   </div>
@@ -244,7 +223,7 @@
                 <!--Gender-->
                 <div class="row mt-3">
                   <label>Gender</label>
-                  <div class="d-flex firstname justify-content-between">
+                  <div class="d-flex  justify-content-between">
                     <div><input type="radio" /><span> Male</span></div>
                     <div><input type="radio" /><span> Female</span></div>
                     <div><input type="radio" /><span> Other</span></div>
@@ -259,9 +238,7 @@
                       class="firstname"
                       name="phonecodes"
                       id="country-names"
-                    >
-                    
-                    </select>
+                    ></select>
                   </div>
                   <div class="col-12 col-md-6">
                     <label>University</label><br />
@@ -336,10 +313,7 @@
             </div>
           </div>
         </div>
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script src="main.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
       </body>
     </html>
-  </body>
-</html>
