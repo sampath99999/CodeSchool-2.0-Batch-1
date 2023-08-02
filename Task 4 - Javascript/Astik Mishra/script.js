@@ -20,5 +20,6 @@ fetch('https://fakestoreapi.com/products')
         </div>`
         })
         document.getElementById("card").innerHTML=storeData;
+        
     }
     );
