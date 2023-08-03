@@ -1,31 +1,135 @@
-
-function LoadProducts(id){
-    fetch(`http://fakestoreapi.com/products/${id}`)
-    .then(response=>response.json())
-    .then(data=>{
-        document.getElementById("pic").src= data.image;
-    })
+//For left Image
+function reloadImage() {
+  var imageUrl = "https://source.unsplash.com/collection/928423/1920x1080"; // Replace this with the URL that returns the image.
+  var imgElement = document.getElementById("imageElement");
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", imageUrl, true);
+  xhr.responseType = "blob";
+  xhr.onload = function () {
+      if (xhr.status === 200) {
+          var imageUrlObject = URL.createObjectURL(xhr.response);
+          imgElement.src = imageUrlObject;
+      }
+  };
+  xhr.onerror = function () {
+      console.error("Failed to load the image.");
+  };
+  xhr.send();
+  setTimeout(reloadImage, 3000);
 }
-var ProductId = 1;
-function SlideShow(){
-    ProductId++;
-    LoadProducts(ProductId);
-}
-var show;
+reloadImage();
 
-    show = setInterval(SlideShow, 3000);
+//For country code
+const countrySelect = document.getElementById('country');
 
-function divload(){
-    LoadProducts(1);
+
+function allCountries() {
+  const xhr = new XMLHttpRequest();
+  const url = 'https://restcountries.com/v3.1/all'; 
+
+  xhr.open('GET', url, true);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        const countries = JSON.parse(xhr.responseText);
+        countries.forEach(x => {
+          const option = document.createElement('option');
+          option.text = x.name.common;
+          option.value = x.name.common; 
+          countrySelect.appendChild(option);
+        });
+      } else {
+        console.error('Error loading countries:', xhr.status, xhr.statusText);
+      }
+    }
+  };
+
+  xhr.send();
 }
+
+
+allCountries();
+
+const countrycodeSelect = document.getElementById('countrycode');
+
+function allCountriescode() {
+  const xhr = new XMLHttpRequest();
+  const url = 'https://restcountries.com/v3.1/all'; 
+
+  xhr.open('GET', url, true);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        const countriescode = JSON.parse(xhr.responseText);
+        countriescode.forEach(a => {
+          const option = document.createElement('option');
+          option.text = a.idd.root+a.idd.suffixes;
+          option.value = a.idd.root+a.idd.suffixes; 
+          countrycodeSelect.appendChild(option);
+        });
+      } else {
+        console.error('Error loading countries:', xhr.status, xhr.statusText);
+      }
+    }
+  };
+
+  xhr.send();
+}
+
+
+allCountriescode();
+
+let countrysel=document.getElementById("country");
+countrysel.addEventListener("change", function(event) {
+  n=countrysel.value;
+  function university(n) {
+    const universities=document.getElementById("university");
+    universities.innerHTML="";
+
+    const xhr = new XMLHttpRequest();
+    var urll = 'http://universities.hipolabs.com/search?country='+n; 
+
+
+
+    xhr.open('GET', urll, true);
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+          const universitynames = JSON.parse(xhr.responseText);
+          universitynames.forEach(a => {
+            const option = document.createElement('option');
+            option.text = a.name;
+            option.value = a.name; 
+            universities.appendChild(option);
+          });
+        } else {
+          console.error('Error loading countries:', xhr.status, xhr.statusText);
+        }
+      }
+    };
+
+    xhr.send();
+
+  }
+
+
+  university(countrySelect.value);
+
+});
+
+
 
 function validateForm() {
     const firstNameInput = document.getElementById("firstname");
     const lastNameInput = document.getElementById("lastname");
     const emailInput = document.getElementById("email");
+    const countrycodeSelect = document.getElementById('countrycode');
     const dobInput = document.getElementById("dob").value;
     const dojInput = document.getElementById("doj").value;
-    const selectBox = document.getElementById("countries");
+    
     const passwordInput = document.getElementById("password");
     const cpasswordInput = document.getElementById("cpassword");
 
