@@ -1,0 +1,25 @@
+/* Main Container body */
+.main-center-body{
+    border-radius: 30px;
+}
+/* Navbar */
+nav{
+    margin-bottom: 30px;
+}
+.navbar-expand-lg{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.navbar-brand{
+    font-family: 'Lobster', cursive;
+}
+.navbar-notification-alert{
+    font-size: 10px;
+}
+/*Form Interaction Body */
+.form-main-container{
+    padding: 12px;
+}
+.user-register-form{
+    font-size: 14px;
+}

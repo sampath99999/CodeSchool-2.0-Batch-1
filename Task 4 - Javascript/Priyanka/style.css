@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+.icon {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  border: none;
+  margin: 1px;
+  cursor: pointer;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: xx-large;
+  cursor: pointer;
+}
+
+.background-image1 {
+  background-image: url("https://cdn.pixabay.com/photo/2015/05/31/13/09/vintage-791683_640.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid red;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.centered-text {
+  padding: 20px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.heart-container {
+  position: relative;
+  text-align: right;
+  cursor: pointer;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 24px;
+  color: #ccc;
+  transition: color 0.3s;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.heart-icon:hover {
+  color: red;
+}
+
+.image-wrapper:hover .heart-icon {
+  color: red;
+}
+
+.image-wrapper {
+  height: 300px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.image-wrapper img {
+  height: 100%;
+  width: auto;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+img {
+  width: 400px !important;
+  height: 250px !important;
+  object-fit: cover !important;
+  cursor: pointer;
+}
+
+.random-button {
+  background-color: green;
+  color: white;
+  padding: 5px 8px;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  border: none;
+  border-radius: 5%;
+  margin-left: 3%;
+  cursor: pointer;
+}
+
+.random-label {
+  background-color: orange;
+  color: white;
+  padding: 5px 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border: none;
+  border-radius: 5%;
+  margin-left: 3%;
+  cursor: pointer;
+}
