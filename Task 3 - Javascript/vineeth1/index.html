@@ -30,7 +30,7 @@
             <a class="navbar-brand col-2" href="#"
               ><h2 style="color: green">Jabel</h2></a
             >
-            <div class="collapse navbar-collapse" id="navbarText">
+            <div class="collapse navbar-collapse " id="navbarText" style="margin-left: 150px;">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#"
@@ -87,9 +87,9 @@
                   class="col-3 d-flex align-items-center justify-content-center gap-3"
                   style="color: green"
                   >
-                  <div><i class="bi bi-bell-fill"></i></div>
-                  <div><i class="bi bi-person-circle"></i></div>
-                  <div><i class="bi bi-list"></i></div>
+                  <div><i class="p-1 rounded-circle bi bi-bell-fill" style="background-color: #f1f1f1"></i></div>
+                  <div><i class="p-1 rounded-circle bi bi-person-circle" style="background-color: #f1f1f1"></i></div>
+                  <div><i class="p-1 rounded-circle bi bi-list" style="background-color: #f1f1f1"></i></div>
                 </div>
               </div>
             </span>
@@ -108,34 +108,31 @@
         </nav>
       </div>
       <div class="col-10 m-auto">
-        <div class="p-2" style="background-color: white">
-          <div class="row rounded-bottom-4">
-            <div class="images-carousel col-lg-5 d-none d-lg-block">
+        <div class="border" style="background-color: white">
+          <div class="d-flex p-2  border justify-content-center rounded-bottom-4" style="background-color:#f1f1f1 ;">
+            <div class="col-lg-5 p-2 d-none d-lg-block" id="image-container" style="background-color: white;" >
               <img
-                class="rounded"
-                src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Wallpapers-pexels-photo.jpg"
-                id="left-image"
-                style="height: 100%; width: 100%"
+              src="" class="" style="width: 100%;height: 10%;"
               />
             </div>
-            <div class="col-lg-5 col-sm-10">
-                <form id="registerForm" class="p-4">
+            <div class="col-lg-5 p-2  col-sm-10" style="background-color: white;">
+                <form id="signupForm" onclick="submitForm()" class="p-4">
                  <h2>Please Register to Fadlun</h2><br>
-                 <div class="row" >
-                  <div class="mb-2"  style="width: 50%;">
+                 <div class="row   " >
+                  <div class="mb-2 col-lg-6 col-12">
                     <label for="firstName" class="form-label">First Name*</label>
-                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter First Name" required>
+                    <input type="text" class="form-control" id="firstName" name="firstName" oninput="validateFirstName()" placeholder="Enter First Name" >
                     <span id="firstNameError" class="text-danger font-weight-bold"></span>
                   </div>
-                  <div class="mb-2"  style="width: 50%;">
+                  <div class="mb-2 col-lg-6 col-12">
                     <label for="lastName" class="form-label">Last Name*</label>
-                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter last Name">
+                    <input type="text" class="form-control" id="lastName" name="lastName" oninput="validateLastName()" placeholder="Enter last Name" >
                     <span id="lastNameError" class="text-danger font-weight-bold"></span>
                   </div>
                 </div>
                   <div class="mb-3">
                     <label for="email" class="form-label">Email*</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Email" required>
+                    <input type="email" class="form-control" id="email" name="email" oninput="isValidEmail()" placeholder="Enter Email" >
                     <span id="emailError" class="text-danger font-weight-bold"></span>
                   </div>
                   <div class="mb-3">
@@ -145,24 +142,24 @@
                         </div>
                         <div class="mb-3">
                             <div class="input-group gap-3">
-                                <select class="form-select" class="form-control" id="countryCode" name="countryCode" style="width: 10%;"> 
-                                  <option value="" disabled selected>SELECT </option>
-                                </select>
-                                <input type="text" class="form-control" id="callingcode" name="phone" placeholder="Enter Phone Number" required style="width: 70%;">
-                              </div> 
+                              <select id="phoneCodeInput" class="form-select w-25" onclick="phoneCodeAPI()" >
+                                <option value="SELECT" disabled selected>SELECT</option>
+                              </select>
+                              <input type="text" class="form-control" id="callingcode" name="phone" placeholder="Enter Phone Number" style="width: 70%;">
+                            </div> 
                         </div>
                       </div>            
                   </div>
                   <span id="phoneError" class="text-danger font-weight-bold"></span>
                  <div class="row">
-                  <div class="mb-3" style="width: 50%;">
+                  <div class="mb-3 col-lg-6 col-12" >
                     <label for="dob" class="form-label">Date of Birth*</label>
-                    <input type="date" class="form-control" id="dob" name="dob" required>
+                    <input type="date" class="form-control" id="dob" name="dob" >
                     <span id="dobError" class="text-danger font-weight-bold"></span>
                   </div>
-                  <div class="mb-3" style="width: 50%;">
+                  <div class="mb-3 col-lg-6 col-12" >
                     <label for="doj" class="form-label">Date of Joining*</label>
-                    <input type="date" class="form-control" id="doj" name="doj" required>
+                    <input type="date" class="form-control" id="doj" name="doj" >
                     <span id="dojError" class="text-danger font-weight-bold"></span>
                   </div>
                 </div>
@@ -170,7 +167,7 @@
                     <label class="form-label">Gender*</label>
                     <div class="d-flex justify-content-around" id="gender">
                     <div class="form-check ">
-                      <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                      <input class="form-check-input" type="radio" name="gender" id="male" value="male" >
                       <label class="form-check-label" for="male">Male</label>
                     </div>
                     <div class="form-check">
@@ -184,27 +181,26 @@
                   </div>
                 </div>
                   <div class="mb-3">
-                    <label for="countrySelect" class="form-label">Country*</label>
-                    <select class="form-select" id="countrySelect" name="country" required>
-                      <option value="" disabled selected>Select a country</option> 
+                    <label for="inputCountry" class="form-label">Country*</span></label>
+                    <select id="inputCountry" class="form-select" required onclick="listCountries()"  onchange="listUniversitiesAPI(document.getElementById('inputCountry').value)">
+                      <option value="SELECT" disabled selected>SELECT</option>
                     </select>
                   </div>
-        
                   <div class="mb-3">
-                    <label for="universitySelect" class="form-label">University*</label>
-                    <select class="form-select" id="universitySelect" name="universitySelect" required>
-                      <option value="" disabled selected>Select a university </option>
+                    <label for="inputUniversity" class="form-label">University*</span></label>
+                    <select id="inputUniversity" class="form-select" required>
+                      <option>SELECT</option>
                     </select>
                   </div>
                     <div class="row" >
-                      <div class="mb-2"  style="width: 50%;">
+                      <div class="mb-2  col-lg-6 col-12" >
                         <label for="password" class="form-label">Password*</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" required>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password" >
                         <span id="passwordError" class="text-danger font-weight-bold"></span>
                       </div>
-                      <div class="mb-2"  style="width: 50%;">
+                      <div class="mb-2  col-lg-6 col-12" >
                         <label for="confirmed-password" class="form-label">Confirmed password*</label>
-                        <input type="confirmed-password" class="form-control" id="confirmed-password" name="confirmed-password" placeholder="Confirm Password" required>
+                        <input type="confirmed-password" class="form-control" id="confirmed-password" name="confirmed-password" placeholder="Confirm Password" >
                         <span id="confirmedPasswordError" class="text-danger font-weight-bold"></span>
                       </div>
                     </div>
@@ -214,37 +210,16 @@
                     <label for="termsCheckbox">I agree with Jabels User Agreement and Privacy Policy.</label>
                   </div>
                   <br>    
-                  <button type="submit" class="btn btn-primary" onclick="submitForm()" >Sign Up</button>
+                  <button type="submit" class="btn btn-primary"   >Sign Up</button>
                   <p id="demo"></p>
                   <div class="log-in mt-3 p-2 d-flex">Already have a fadlun's account ? <button class="login-btn">Log In</button></div>
+                  <div id="result"></div>
                 </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script>
-      function loadImage() {
-        var xhr = new XMLHttpRequest();
-        var url = "https://source.unsplash.com/collection/928423/1920x1080";
-
-        xhr.onreadystatechange = function () {
-          if (xhr.readyState === XMLHttpRequest.DONE) {
-            if (xhr.status === 200) {
-              var response = JSON.parse(xhr.responseText);
-              var imageUrl = response.loadImage;
-
-              var imageElement = document.getElementById("image");
-              imageElement.src = imageUrl;
-            } else {
-              console.error("Error fetching image:", xhr.status);
-            }
-          }
-        };
-
-        xhr.open("GET", url, true);
-        xhr.send();
-      }
-    </script>
+    <script src="./javascript.js"></script>
   </body>
 </html>
