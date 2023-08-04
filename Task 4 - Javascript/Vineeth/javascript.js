@@ -11,8 +11,9 @@ function displayProducts() {
         productHTML +=`
         <div class="mt-4"> 
           <div class="card" style="width: 14rem; height:20rem;">
-            <img src="${product.image}" class="card-img-center" alt="..." style="width:50%;height:40%;">
-            <div class="card-body">
+            <div class="text-end pe-2"><i class="bi bi-heart"></i></div>
+            <img src="${product.image}" class="m-auto mt-4 mb-4 card-img-center" alt="..." style="width:50%;height:40%;background-color:#f1f1f1;">
+            <div class="card-body text-align-bottom" style="background-color:#f1f1f1">
               <h6 class="card-title">${product.title}</h6>
               <div class='d-flex gap-5'>
                   <p>RS ${product.price}</p>
