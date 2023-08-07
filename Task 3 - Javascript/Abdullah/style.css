@@ -1,0 +1,85 @@
+
+.icons{
+}
+.formerror{
+    color: red;
+}
+#fname{
+    height: 40px; 
+    margin-top: 5px;
+    border-radius: 5px;
+    border:1px;
+}
+#lname{
+    height: 40px; 
+    margin-top: 5px;
+    border-radius: 5px;
+    border:1px;
+}
+
+#email{
+    height: 40px; 
+    margin-top: 5px;
+    border-radius: 5px;
+    border:1px;
+}
+#phone{
+    height: 40px; 
+    margin-top: 5px;
+    border-radius: 5px;
+    border:1px;
+}
+#phonecode{
+    height: 40px; 
+    margin-top: 5px;
+    border-radius: 5px;
+    border:1px;
+}
+#pwd{
+    height: 40px; 
+    margin-top: 5px;
+    border-radius: 5px;
+    border:1px;
+}
+#cpwd{
+    height: 40px; 
+    margin-top: 5px;
+    border-radius: 5px;
+    border:1px;
+}
+#dob{
+    height: 40px; 
+    margin-top: 5px;
+    border-radius: 5px;
+    border:1px;
+}
+#doj{
+    height: 40px; 
+    margin-top: 5px;
+    border-radius: 5px;
+    border:1px;
+}
+#country{
+    height: 40px; 
+    margin-top: 5px;
+    border-radius: 5px;
+    border:1px;
+}
+#university{
+    height: 40px; 
+    margin-top: 5px;
+    border-radius: 5px;
+    border:1px;
+}
+#button{
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 5px;
+    border: none;
+
+}
+.checkbox:checked:before{
+    background-color:green;
+    }
+    
+
