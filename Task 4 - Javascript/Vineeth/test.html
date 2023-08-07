@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Card with XHR Request</title>
+  <!-- Add Bootstrap CSS (you need to link to the Bootstrap CSS file) -->
+  <link rel="stylesheet" href="path/to/bootstrap.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="row" id="productCardRow"></div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const productCardRow = document.getElementById("productCardRow");
+
+      // Function to create a Bootstrap card
+      function createProductCard(product) {
+        const card = document.createElement("div");
+        card.className = "col-md-4 mb-4";
+
+        const cardContent = `
+          <div class="card">
+            <img src="${product.image}" class="card-img-top" alt="Product Image">
+            <div class="card-body">
+              <h5 class="card-title">${product.title}</h5>
+              <p class="card-text">${product.price}$</p>
+            </div>
+          </div>
+        `;
+
+        card.innerHTML = cardContent;
+        productCardRow.appendChild(card);
+      }
+
+      // Fetch data from the API using XHR
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", "https://fakestoreapi.com/products", true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            const products = JSON.parse(xhr.responseText);
+            products.forEach((product) => createProductCard(product));
+          } else {
+            console.error("Failed to fetch data from the API.");
+          }
+        }
+      };
+      xhr.send();
+    });
+  </script>
+</body>
+</html>

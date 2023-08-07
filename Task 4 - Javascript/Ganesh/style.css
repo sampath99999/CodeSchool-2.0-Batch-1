@@ -1,0 +1,11 @@
+@media screen and (max-width:820px) {
+    .mobile-nav-options{
+        width: 22px;
+        height: 22px;
+        padding: 0px 1px !important;
+    }
+    .filters{
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
