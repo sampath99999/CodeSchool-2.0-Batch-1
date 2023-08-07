@@ -1,6 +1,5 @@
 let productSection = document.getElementById('productSection');
 
-
 var allProducts;
 
 const xhttp = new XMLHttpRequest();
