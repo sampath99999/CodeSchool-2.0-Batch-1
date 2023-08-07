@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.heart-icon {
+  position: absolute;
+  top: -11px;
+  right: -5px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.product {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(20, 20, 20, 0.1);
+}
+
+.product:hover {
+  box-shadow: 0 4px 8px rgba(17, 17, 17, 0.15); 
+}
+
+.product img {
+  width: 95%;
+  max-height: 200px;
+  object-fit:cover;
+  background-color: white;
+  border-radius : 5px;
+}
+
+.product-details {
+  background-color: white;
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+.product-title {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333; 
+  margin-left: 8px;
+}
+
+.product-price {
+  font-size: 14px;
+  color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 767px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 320px;
+    margin: 0;
+  }
+
+  .product img {
+    max-height: 150px;
+  }
+
+  .product-title {
+    font-size: 14px;
+  }
+
+  .product-price {
+    font-size: 12px;
+  }
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }  
+}
+
+
+.navbar-brand {
+  font-size: 30px;
+  font-family: "Fjalla One";
+}
+
+.navbar-toggler {
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.navbar-nav .nav-link {
+  color: black;
+  font-family: "Fjalla One";
+}
+
+.navbar-nav .nav-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.nav-link.btn {
+  padding: 5px;
+}
