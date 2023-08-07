@@ -6,7 +6,7 @@ https://newsapi.org/
 
 1. Create a Account, get API key and by using this URL you can get News Articles<br>
 https://newsapi.org/v2/everything?q=apple&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=<api-key>
-
+2. Under header show first 3 Posts
 3. Menu Should be dropdown and Should open When Hovered
 4. First FASHION, LIFESTYLE, FOOD, ENVIRONMENT Should have three random posts except first 100 per each.
 5. Same for the FEATURED POSTS
