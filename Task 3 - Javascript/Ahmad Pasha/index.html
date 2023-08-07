@@ -22,9 +22,12 @@
         class="container-fluid justify-content-center gap-2 col-10 m-auto align-items-center"
       >
            <img
-                  src="thwwnt43.png" class="me-sm-5" style="width: 12%;"
+                  src="thwwnt43.png" class="me-sm-4 d-none d-lg-block" style="width: 10%;"
                 />
         <div class="d-flex justify-content-start align-items-center">
+          <img
+          src="thwwnt43.png" class="me-2 d-lg-none" style="width: 20%;"
+        />
           <div class="d-flex align-items-center d-lg-none gap-2">
             <button type="button" class="btn position-relative me-2 rounded-circle" style="background-color:#e1f5eb;">
               <i class="fa-solid fa-bell bg-white" style="color:#00a045; border-radius: 10px"></i>
@@ -157,15 +160,15 @@
                 <!-- 2 column grid layout with text inputs for the first and last names -->
                 <div class="row">
                     <div class="form-outline col-12 col-lg-6">
-                      <label class="form-label fw-medium" for="form3Example1"  >First name*</label>
-                      <input type="text" id="firstName" placeholder="Enter First Name" class="form-control" required/>
+                      <label class="form-label fw-medium" for="form3Example1"  >First Name*</label>
+                      <input type="text" id="firstName" placeholder="Enter First Name" class="form-control" />
                       <p id="fnameErrorMsg" class="text-danger"></p>
                     </div>
                  
                   
                     <div class="form-outline col-12 col-lg-6">
-                      <label class="form-label fw-medium" for="form3Example2" >Last name*</label>
-                      <input type="text" id="lastName" placeholder="Enter Last Name" class="form-control" required/>
+                      <label class="form-label fw-medium" for="form3Example2" >Last Name*</label>
+                      <input type="text" id="lastName" placeholder="Enter Last Name" class="form-control"/>
                       <p id="lnameErrorMsg" class="text-danger"></p>
                      
                     </div>
@@ -173,7 +176,7 @@
 <!-- Email input  -->
                 <div class="form-outline mb-4">
                   <label class="form-label fw-medium" for="form3Example3" >Email*</label>
-                  <input type="text" id='email' placeholder="Enter Mail" class="form-control" required/>
+                  <input type="text" id='email' placeholder="Enter Mail" class="form-control" />
                   <p id="emailErrorMsg" class="text-danger"></p>
                 </div>
 
@@ -196,7 +199,7 @@
      
                     <div class="form-outline">
                       <label class="form-label fw-medium" for="form3Example2">Date of Birth</label>
-                      <input type="date" id="dob" placeholder="DOB" class="form-control" required/>
+                      <input type="date" id="dateOfBirth" placeholder="DOB" class="form-control" />
                       <p id="dobErrorMsg" class="text-danger"></p>
                     </div>
                
@@ -204,7 +207,7 @@
                
                     <div class="form-outline">
                       <label class="form-label fw-medium" for="form3Example2">Date of Joinig</label>
-                      <input type="date" id="doj" placeholder="DOJ" class="form-control" required/>
+                      <input type="date" id="doj" placeholder="DOJ" class="form-control" />
                       <p id="dojErrorMsg" class="text-danger"></p>
                     </div>
 
@@ -227,7 +230,7 @@
                         </div>
                         <div class="col-4">
                           <input type="radio" id="form3Example2" name="gender" />
-                          <label class="form-label" for="form3Example2"  style="font-size: 85%;">others</label>
+                          <label class="form-label" for="form3Example2"  style="font-size: 85%;">Others</label>
                     
                         </div>
 
@@ -258,7 +261,7 @@
           
                     <div class="form-outline mb-4">
                       <label class="form-label fw-medium" for="form3Example1">Password*</label>
-                      <input type="password" id="password" placeholder="Enter Password" class="form-control" required />
+                      <input type="password" id="password" placeholder="Enter Password" class="form-control" />
                         <p id="passwordErrMsg" class="text-danger"></p>
                   </div>
 
@@ -274,12 +277,13 @@
            
                 <!-- Checkbox -->
                  <div class="form-check d-flex justify-content-center mb-4 col-12">
-                  <input class="form-check-input me-2" type="checkbox" id="form2Example33" required/>
+                  <input class="form-check-input me-2" type="checkbox" id="checkBox" />
                   <label class="form-check-label" for="form2Example33">
                    I agree with Jabel's User Agreement and Privacy Policy.
                   </label>
+                 
                 </div>
-                
+                <p class="text-danger col-12"  id="checkBoxErrMsg"></p>
 
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-success btn-block mb-4 col-12">

@@ -89,7 +89,9 @@ var emailRes;
 var passRes ;
 var confirmRes;
 var dojRes;
+var dobRes;
 var phoneRes;
+var checkBoxRes;
 
 
 let myForm = document.getElementById('myForm');
@@ -122,6 +124,11 @@ function firstAndLastName(){
         }
   
     }
+    else{
+      fnameErrorMsg.textContent="*First Name should not be empty.";
+      fnameRes = false;
+
+    }
 
 
     //lastname validation
@@ -143,6 +150,10 @@ function firstAndLastName(){
             lnameErrorMsg.textContent="";
              lnameRes = true;
         }
+    }
+    else{
+      lnameErrorMsg.textContent="*Last Name should not be empty";
+      lnameRes = false;
     }
 
 }
@@ -258,16 +269,46 @@ function confirmPasswordValidation(){
 }
 
 
+function dateOfBirthValidate(){
+   let dateOfBirth = document.getElementById('dateOfBirth').value;
+   let dobErrorMsg = document.getElementById('dobErrorMsg');
+   let currentDate = new Date();
+   let dob = new Date(dateOfBirth);
+   const age = currentDate.getFullYear()-dob.getFullYear();
+   if(dateOfBirth===""){
+      dobErrorMsg.textContent='*DOB should not be empty.';
+      dobRes= false;
+   }
+   else if(dob>=currentDate){
+    dobErrorMsg.textContent='Date Of Birth Must be in past';
+    dobRes= false;
+   }
+   else if (age<18){
+    dobErrorMsg.textContent='Must be at least 18 years old.';
+    dobRes=false;
+   }
+   else{
+    dobErrorMsg.textContent="";
+    dobRes= true;
+   }
+  
+}
+
+
 
 function validateJoiningDate() {
-    const dobInput = document.getElementById("dob");
+    const dobInput = document.getElementById("dateOfBirth");
     const joiningDateInput = document.getElementById("doj");
     const joiningDateError = document.getElementById("dojErrorMsg");
   
     const dob = new Date(dobInput.value);
     const joiningDate = new Date(joiningDateInput.value);
-  
-    if (joiningDate <= dob) {
+
+    if(joiningDateInput.value===""){
+      joiningDateError.textContent="DOJ should not be empty."
+
+    }
+    else if (joiningDate <= dob) {
       joiningDateError.textContent = "Joining date must be after the Date of Birth.";
        dojRes = false;
     } else {
@@ -331,7 +372,23 @@ function validateJoiningDate() {
 
   
 
+function validateCheckBox(){
+  let checkBox = document.getElementById('checkBox');
+    let checkBoxErrMsg = document.getElementById('checkBoxErrMsg');
 
+    if (checkBox.checked) {
+      checkBoxErrMsg.textContent="";
+      checkBoxRes=true;
+    }
+    else{
+      checkBoxErrMsg.textContent="*You need to check and confirm all the details";
+      checkBoxRes=false;
+    }
+
+
+ 
+
+}
 
 
 
@@ -349,7 +406,7 @@ function validateJoiningDate() {
     user.password =document.getElementById('password').value;
 
     user.doj = document.getElementById('doj').value;
-    user.dob = document.getElementById('dob').value;
+    user.dob = document.getElementById('dateOfBirth').value;
   
     
     console.log(user);
@@ -368,6 +425,7 @@ function validateJoiningDate() {
 
 
 
+
 function validateFormData(){
 
   
@@ -375,13 +433,15 @@ function validateFormData(){
     firstAndLastName();
     emailValidation();
     validatePhone();
+    dateOfBirthValidate();
     validateJoiningDate();
     validatePhone();
     passwordValidation();
     confirmPasswordValidation();
-
-
-    if(fnameRes && lnameRes && emailRes && passRes && confirmRes && dojRes && phoneRes){
+    validateCheckBox;
+    validateCheckBox();
+    
+    if(fnameRes && lnameRes && emailRes && passRes && confirmRes && dobRes && dojRes && phoneRes && checkBoxRes){
       submitForm();
       
       successMsg.textContent = "SuccessFully Submitted";
@@ -391,9 +451,6 @@ function validateFormData(){
       successMsg.textContent = "";
       
     }
-
-
-     
     
 }
 
