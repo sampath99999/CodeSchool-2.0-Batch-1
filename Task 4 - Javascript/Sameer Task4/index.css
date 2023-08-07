@@ -1,0 +1,50 @@
+/* Add your CSS styles here */
+body {
+    font-family:sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header-top{
+    margin-bottom: -30px;
+  }
+  .navbar-nav{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 250px;
+    margin: 10px;
+
+  }
+  
+  .product-card  img {
+    height: 200px;
+    width: 150px;
+    margin: 10px 30px;
+  }
+  .content{
+    bottom: 0;
+    left: 0;
+  }
+  .product_title{
+    font-size: 22px;
+    
+  }
+  .product_img{
+    background-color: aqua;
+  }
+  .heart{
+    text-align: right;
+  }
+  
