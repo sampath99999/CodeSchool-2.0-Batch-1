@@ -11,7 +11,7 @@ xhttp.onload = async function() {
      let productItems=""
      for (let i of allProducts){
         console.log(i)
-        let item= `<div class='col-lg-3 card col-6 text-start shadow-md bg-white p-1' style='width:23rem;'>
+        let item= `<div class='col-lg-3 card col-6 text-start shadow-md bg-white p-1' style='width:20rem;'>
         <div class='text-end me-4 mt-4'><i class="fa-regular fa-heart p-2 p-lg-0 border-1 btn shadow-lg mb-1" style='font-size:130%;' onclick='favIcon()'></i></div>
         
         <div class='text-center mb-0' style="height: 350px; width: 90%; bg-white">
