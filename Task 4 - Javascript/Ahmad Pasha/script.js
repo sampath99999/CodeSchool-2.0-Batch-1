@@ -3,7 +3,6 @@ let productSection = document.getElementById('productSection');
 
 var allProducts;
 
-
 const xhttp = new XMLHttpRequest();
 xhttp.onload = async function() {
      allProducts = await JSON.parse(this.responseText);
