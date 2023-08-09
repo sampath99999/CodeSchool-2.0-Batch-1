@@ -1,0 +1,30 @@
+.post {
+    border: 1px solid #ccc;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+    box-sizing: border-box;
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+}
+.post h4{
+  display: block;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+.post p{
+  display: block;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  background-color: palevioletred;
+}
+.post img {
+    max-width: 100%;
+    height: auto;
+}
