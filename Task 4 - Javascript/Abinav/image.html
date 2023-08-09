@@ -1,14 +1,26 @@
-let mainbodyele=document.getElementById("mainbodyitem");
-function showImage(clickedDiv) {
-  const imageElement = clickedDiv.getAttribute('id');
-  window.location.href = `image.html?src=${encodeURIComponent(imageElement)}`;
-  
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicked Image</title>
+</head>
+<body>
+    <div id="mainbodyitem">
+
+    </div>
+        
+    
+
+    <script>
+        // Get the image source from the URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const newid = urlParams.get('src');
+        console.log(newid);
+        let mainbodyele=document.getElementById("mainbodyitem");
 
 function createproduct(a){
   let product=document.createElement("div");
-  product.setAttribute("id",a.id);
-  product.setAttribute("onclick","showImage(this)")
   product.classList.add("product-image","col-lg-3","col-6","col-lg-3","pe-sm-5","h-auto");
   let imagediv=document.createElement("div");
   imagediv.classList.add("product");
@@ -49,26 +61,32 @@ function createproduct(a){
 
 
 
-function fetchProducts() {
+function fetchProducts(a) {
   var xmlhttp = new XMLHttpRequest();
 
   xmlhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
+        console.log(newid);
+        console.log('https://fakestoreapi.com/products/'+a)
       var products = JSON.parse(this.responseText);
-      console.log(products)
-      for(a of products){
-        createproduct(a);
+      
+    
+        createproduct(products);
 
-      }
+    
    
     }
   };
 
-  xmlhttp.open('GET', 'https://fakestoreapi.com/products/', true);
+  xmlhttp.open('GET', 'https://fakestoreapi.com/products/'+newid, true);
   xmlhttp.send();
 
 }
-fetchProducts();
+fetchProducts(newid);
 
 
 
+
+    </script>
+</body>
+</html>

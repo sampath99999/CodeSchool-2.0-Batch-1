@@ -1,5 +1,5 @@
 function reloadImage() {
-  var imageUrl = "https://source.unsplash.com/collection/928423/1920x1080"; // Replace this with the URL that returns the image.
+  var imageUrl = "https://source.unsplash.com/collection/928423/1920x1080"; 
   var imgElement = document.getElementById("imageElement");
 
   var xhr = new XMLHttpRequest();
@@ -156,7 +156,7 @@ function validateDob(){
   const formattedDate=new Date(days)
   const age = Math.abs(formattedDate.getFullYear() - 1970);
   if (isNaN(dobvalue)) {
-      dobError.textContent="Date cannot be empty*";
+      dobError.textContent="Date cannot be empty";
       return false;
   }
   else if(dobvalue>currentDate){
@@ -164,7 +164,7 @@ function validateDob(){
       return false;
   }
   else if(age<18){
-      dobError.textContent="*Age must be 18 years or older*";
+      dobError.textContent="Age must be 18 years or older";
       return false;
   }
   else{
@@ -359,24 +359,27 @@ console.log(formdata);
 var abi=formdata.firstName
 function validateFormData(formdata) {
   let {firstName,lastName,Emailid,phoneNumber} = formdata;
-
-  
+ 
+   if (formdata.firstName.length<2){
+    document.getElementById("firstnameerror").textContent = "Minimum length is 2 characters";
+    return false
+  }
 
 
 
   if (formdata.firstName.length>8) {
 
-    document.getElementById("firstnameerror").textContent = "Maximum length is 8";
+    document.getElementById("firstnameerror").textContent = "Maximum length is 8 chracters only";
     return false;
   }
   
   
   
   if (formdata.firstName.length<2){
-    document.getElementById("firstnameerror").textContent = "minimum length is 2";
+    document.getElementById("firstnameerror").textContent = "Minimum length is 2 characters";
     return false
   }
-  console.log("2");
+  
   if (!isCapitalized(formdata.firstName)) {
     document.getElementById("firstnameerror").textContent = "First name should start capiltal";
     return false
@@ -386,50 +389,49 @@ function validateFormData(formdata) {
     document.getElementById("firstnameerror").textContent = " ";
 
   }
-  console.log("3");
+  
   if (!alphabeticPattern.test(formdata.firstName)) {
     document.getElementById("firstnameerror").textContent = "only alphabets are allowed";
     return false
 
   
   }
-  console.log("4");
-
+  
   if (!alphabeticPattern.test(formdata.firstName)) {
     document.getElementById("firstnameerror").textContent = "only alphabets are allowed";
     return false
 
   }
-  console.log("5");
+  
   console.log(formdata.firstName.length>2 && formdata.firstName.length<8 && (!alphabeticPattern.test(formdata.firstName)) )
   if (formdata.firstName.length>2 && formdata.firstName.length<8 ) {
     document.getElementById("firstnameerror").textContent = "";
   }
-  console.log("5");
+  
   
   if (formdata.lastName.length>8) {
 
-    document.getElementById("lastnameerror").textContent = "Maximum length is 8";
+    document.getElementById("lastnameerror").textContent = "Maximum length is 8 only";
     return false;
   }
-  console.log("5");
+  
   
   if (formdata.lastName.length<2){
-    document.getElementById("lastnameerror").textContent = "minimum length is 2";
+    document.getElementById("lastnameerror").textContent = "Minimum length is 2 characters";
     return false;
   }
-  console.log("5");
+  
   // if (formdata.lastName.length>2 && formdata.lastName.length<8 ){
   //   document.getElementById("lastnameerror").textContent = "";
   //   return false;
   // }
-  console.log("5");
+  
   if (!isCapitalized(formdata.lastName)) {
     document.getElementById("lastnameerror").textContent = "last name should start with capiltal";
     return false;
 
   }
-  console.log("5");
+  
   
   if (!alphabeticPattern.test(formdata.lastName)) {
     document.getElementById("lastnameerror").textContent = "only alphabets are allowed";
@@ -449,7 +451,7 @@ function validateFormData(formdata) {
   
   
   if (formdata.Emailid.length<1) {
-    document.getElementById("Emailerror").textContent="Enter Email";
+    document.getElementById("Emailerror").textContent="*Required field";
     return false
   }
   else{
