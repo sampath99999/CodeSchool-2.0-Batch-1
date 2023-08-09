@@ -1,0 +1,39 @@
+.header{
+    background-color: #DA463A;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    font-size: 12px;
+  }
+.header3{
+    background-color: #FCFCFC;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: black; /* Link text color */
+  }
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #DA463A; /* Change link color on hover */
+  }
+.navbar-dark .navbar-nav:hover{
+    background-color:#FCFCFC;
+   
+}
+
+  /* Adjust dropdown menu style */
+  .dropdown-menu {
+    background-color: #f8f9fa;
+  }
+
+  .dropdown-item:hover {
+    background-color: #e9ecef;
+  }
+.card-img-top{
+    height: 317.77px;
+    border-radius:0;
+}
+.sectors{
+  background-color: #F0F0F0;
+}
+.bottom{
+  background-color: #373941;
+}
