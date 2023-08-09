@@ -158,7 +158,7 @@ $(document).ready(() => {
 
   async function fetchRandomImage(category) {
     try {
-      const apiUrl = `https://newsapi.org/v2/everything?q=${category}&apiKey=${apiKey}&pageSize=10`;
+      const apiUrl = `https://newsapi.org/v2/everything?q=${category}&apiKey=${apiKey}&pageSize=100`;
       const response = await fetch(apiUrl);
       if (!response.ok) throw new Error("Network response looks bad");
       const data = await response.json();
