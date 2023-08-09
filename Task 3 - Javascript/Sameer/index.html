@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jabel</title>
+    <!--Css Links-->
+    <link rel="stylesheet" href="./index.css">
+     <!--Bootstrap Links-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <!--Bootstrap icons-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body">
+    <div class="container rounded-3 bg-light mt-5">
+      <!--
+    <div class="header text-center">
+        <div class="row bg-white rounded-3 pt-3">
+          <div class="col">
+            <H3><Span class="navbar-brand text-success"><b>Jabel.</b></Span></H3>
+          </div>
+          <div class="col">
+            <ul class="d-flex gap-2 list-unstyled">
+            <li class="p-2">Home</li>
+            <li> <div class="dropdown show">
+              <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Find a Carrers
+              </a>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+          </li>
+          <li> <div class="dropdown show">
+            <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              For Carrers
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </div>
+        </li>
+        </ul>          
+          </div>
+          <div class="col float-right">
+            <i class="fa fa-bell"></i>
+            <i class="fa fa-user-circle-o"></i>
+            <i class="fa fa-navicon"></i>
+          </div>
+        </div>
+      </div>
+    -->
+    <nav class="navbar navbar-expand-sm bg-white rounded-3">
+      <div class="container-fluid">
+      <div class="col-4">
+        <a class="navbar-brand" href="#" style="color: green;font-size: 30px;">Jabel<span style="color:green;">.</span></a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="color: black;">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                Find a carer
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: black;">
+                For carer
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div >
+          <i class="fa fa-bell"></i>
+            <i class="fa fa-user-circle-o"></i>
+            <i class="fa fa-navicon"></i>
+        </div>
+      </div>
+    </nav>
+      <div class="div bg-secondary bg-white m-5 rounded-3">
+        <div class="row col-sm-12 align-items-center">
+          <div class="col-sm-12 col-lg-6 d-none d-lg-block" style="background-color: white;height: 900px;" id="third-main">
+            <img id="imageElement" src="" alt="Reloading Image" style="width: 100%;height: 90%;border-radius: 5%;" class="mt-3 ms-1 me-4">
+    
+          </div>
+            <div class="col p-3">
+                <h4>Please Register to Fadlun</h4>
+                <form onsubmit="return validateForm()" name="myform" id="myform">
+                  <div class="d-sm-flex gap-5 d-lg-flex ">
+                    <div class="col-lg-5 col-sm-10">
+                    <lavel>First Name*</lavel>
+                    <input class="form-control" type="text" name="fname" id="firstname">
+                    <span style="color: red;" id="firstnameerr"></span>
+                    </div>
+                    <div class="col-lg-5 col-sm-10">
+                    <lavel>Last Name*</lavel>
+                    <input class="form-control" type="text" name="lname" id="lastname">
+                    <span style="color: red;" id="lastnameerr"></span>
+                    </div>
+                </div><br>
+                  <div class="col-lg-11">
+                    <lavel>Email*</lavel><br>
+                    <input class="form-control" type="email"name="email" id="email"><br>
+                    <span style="color: red;" id="emailerr"></span><br>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-12 col-lg-3">
+                        <label for="">Country code</label>
+                        <select id="countrycode" name="countrycode" class="form-control">
+                          <option value="select" selected>-select-</option>
+                        </select>
+                        <p id="countrycodeerror" class="errorclass"></p>
+                      </div>
+                      <div class="col-sm-12 col-lg-8">
+                        <label for="">Phone Number</label>
+                        <input type="text" class="form-control" id="phone">
+                        <p id="phoneerror" class="errorclass"></p>
+                      </div>
+                    </div>
+                    <lavel>Gender*</lavel>
+                    <div class="d-flex gap-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios1" value="male" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                          Male
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value=female">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Female
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gender" id="exampleRadios2" value="others">
+                        <label class="form-check-label" for="exampleRadios2">
+                          Others
+                        </label>
+                      </div>
+                      </div><br>
+                      <div class="d-flex gap-1 col-lg-12 col-sm-12">
+                      <div class="">
+                    <lavel>Data of Birth*</lavel>
+                    <input class="col-lg-5 col-sm-10" type="date" id="dob">
+                    </div>
+                    <div class="">
+                    <label>Date of Joining*</label>
+                    <span style="color: red;" id="doberr"></span>
+                    <input class="col-lg-5 col-sm-10" type="date"id="doj">
+                    <span style="color: red;" id="dojerr"></span>
+                    </div>
+                    </div><br>
+                    <div class="row gap-5">
+                      <div class="col-sm-12 col-lg-5">
+                        <label for="status">Country</label>
+                        <select id="country" name="country" class="form-control">
+                          <option value="select" selected>-select-</option>
+                        </select>
+                        <p id="countryerror" class="errorclass"></p>
+
+                      </div>
+                      <div class="col-sm-12 col-lg-5">
+                        <label for="status">University</label>
+                        <select id="university" name="university" class="form-control">
+                          <option value="select" selected>-select-</option>
+                        </select>
+                        <p id="universityerror" class="errorclass"></p>
+                      </div>
+                    </div>
+                  <div class="d-sm-flex gap-5 d-lg-flex">
+                    <div class="col-lg-5 col-sm-10">
+                    <lavel>Password*</lavel>
+                    <input class="form-control" type="text" name="password" id="password">
+                    <span id="pswmessage"></span>
+                    </div>
+                  <div class="col-lg-5 col-sm-10">
+                    <lavel>Confirmed Password*</lavel>
+                    <input class="form-control" type="text" id="cpassword">
+                    <span id="cpswmessage"></span>
+                  </div>
+                </div><br>
+                    <input type="checkbox"><span>I agree with Jabel's User Aggrment and Privacy Policy. </span><br>
+                    <div class="div mt-4 rounded-3">
+                    <input  type="submit" value="Sign up" class="btn btn-success btn-lg btn-sm btn-block col-11" onclick="myFunction()">
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
+
