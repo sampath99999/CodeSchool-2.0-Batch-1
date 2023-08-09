@@ -1,0 +1,44 @@
+.abc{
+    text-decoration: underline;
+}
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+img{
+  background-color:#F7F7F7;
+}
+
+        /* Add padding to the product image */
+        .product-img {
+            padding: 50px; /* Adjust the value as needed */
+        }
+        .heart-icon {
+          position: absolute;
+          top: 10px; /* Adjust the top value to position the heart icon vertically */
+          right: 10px; /* Adjust the right value to position the heart icon horizontally */
+         
+      }
+      .card{
+        background-color: white;
+      }
+     .nav-icons{
+      margin-left: 220px;
+     }
+     .nav2{
+      background-color: #F5F5F5;
+     }
+    button{
+      background-color: white;
+    }
+    .navbar-toggler{
+      margin-left: -80px;
+    }
+    .plus{
+      position: absolute;
+      top: 285px;
+      right: 10px;
+   
+    }
+    .image{
+      width:300px;
+      height:300px;
+    }

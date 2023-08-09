@@ -91,7 +91,11 @@ var confirmRes;
 var dojRes;
 var dobRes;
 var phoneRes;
+<<<<<<< HEAD
 var checkBoxRes;
+=======
+var dobRes;
+>>>>>>> e9e95f34275792d9de747a04b0191efef105e9f5
 
 
 let myForm = document.getElementById('myForm');
@@ -103,7 +107,12 @@ function firstAndLastName(){
         return /^[A-Z]/.test(str);
     }
 
-    if
+
+    if(firstName.value===""){
+        fnameErrorMsg.textContent="*First Name should not be empty.";
+        fnameRes = false;
+    }
+    else if
     (firstName.value!==""){
         if(firstChar(firstName.value[0])===false){
             fnameErrorMsg.textContent="*First character should be Capital/Title case";
@@ -132,7 +141,11 @@ function firstAndLastName(){
 
 
     //lastname validation
-    if(lastName.value!==""){
+    if(lastName.value===""){
+        lnameErrorMsg.textContent="*Last Name should not be empty.";
+        lnameRes = false;
+    }
+    else if(lastName.value!==""){
         if(firstChar(lastName.value[0])===false){
             lnameErrorMsg.textContent="*First character should be Capital/Title case";
              lnameRes = false;
@@ -212,37 +225,41 @@ function passwordValidation(){
         const spaceRegex = /^\S*$/;
       
         let errorMessage = "";
-      
-        if (password.length < minLength || password.length > maxLength) {
-          errorMessage = "Password must be between 5 and 25 characters long.";
+        if (passwordInput.value === ""){
+            console.log(passwordInput.value);
+            passwordErrMsg.textContent ='Password should not be empty';
+            passRes = false;
+        }
+        else if (password.length < minLength || password.length > maxLength) {
+            passwordErrMsg.textContent = "Password must be between 5 and 25 characters long.";
            passRes = false;
         } else if (!uppercaseRegex.test(password)) {
-          errorMessage = "Password must contain at least one uppercase letter.";
+            passwordErrMsg.textContent = "Password must contain at least one uppercase letter.";
           passRes = false;
         } else if (!lowercaseRegex.test(password)) {
-          errorMessage = "Password must contain at least one lowercase letter.";
+            passwordErrMsg.textContent = "Password must contain at least one lowercase letter.";
            passRes = false;
         } else if (!numberRegex.test(password)) {
-          errorMessage = "Password must contain at least one number.";
+            passwordErrMsg.textContent = "Password must contain at least one number.";
            passRes = false;
         } else if (!specialCharRegex.test(password)) {
-          errorMessage = "Password must contain at least one special character.";
+            passwordErrMsg.textContent = "Password must contain at least one special character.";
           passRes = false;
         } else if (!commonWordsRegex.test(password)) {
-          errorMessage = "Password must not be a common or easily guessable password.";
+            passwordErrMsg.textContent = "Password must not be a common or easily guessable password.";
            passRes = false;
         } else if (!repeatingCharRegex.test(password)) {
-          errorMessage = "Password must not contain repeating characters.";
+            passwordErrMsg.textContent = "Password must not contain repeating characters.";
            passRes = false;
         } else if (!spaceRegex.test(password)) {
-          errorMessage = "Password must not contain spaces.";
+            passwordErrMsg.textContent = "Password must not contain spaces.";
           passRes = false;
         }
         else{
              passRes = true;
         }
       
-        passwordErrMsg.textContent = errorMessage;
+        // passwordErrMsg.textContent = errorMessage;
       
 
 
@@ -268,7 +285,11 @@ function confirmPasswordValidation(){
 
 }
 
+function validateDob(){
+    const dobInput = document.getElementById("dob");
+     const dobErrorMsg= document.getElementById('dobErrorMsg');
 
+<<<<<<< HEAD
 function dateOfBirthValidate(){
    let dateOfBirth = document.getElementById('dateOfBirth').value;
    let dobErrorMsg = document.getElementById('dobErrorMsg');
@@ -295,6 +316,34 @@ function dateOfBirthValidate(){
 }
 
 
+=======
+    const dateOfBirthValue = new Date(dobInput.value);
+    const currentDate=new Date();
+    const age=currentDate.getFullYear()-dateOfBirthValue.getFullYear();
+    if (isNaN(dateOfBirthValue)) {
+        dobErrorMsg.textContent="*Date cannot be empty";
+        dobRes= false;
+    }
+    else if(dateOfBirthValue>currentDate){
+        dobErrorMsg.textContent="*Date should be in past";
+        dobRes=false;
+        
+    }
+    else if(age<18){
+        dobErrorMsg.textContent="*Age must be 18 years or older";
+        dobRes= false;
+        
+    }
+    else{
+        dobErrorMsg.textContent="";
+        dobRes=true;
+
+    }
+
+
+
+}
+>>>>>>> e9e95f34275792d9de747a04b0191efef105e9f5
 
 function validateJoiningDate() {
     const dobInput = document.getElementById("dateOfBirth");
@@ -303,9 +352,15 @@ function validateJoiningDate() {
   
     const dob = new Date(dobInput.value);
     const joiningDate = new Date(joiningDateInput.value);
+<<<<<<< HEAD
 
     if(joiningDateInput.value===""){
       joiningDateError.textContent="DOJ should not be empty."
+=======
+    if (joiningDateInput.value===""){
+        joiningDateError.textContent = "Joining date should not be empty";
+        dojRes = false
+>>>>>>> e9e95f34275792d9de747a04b0191efef105e9f5
 
     }
     else if (joiningDate <= dob) {
@@ -435,13 +490,20 @@ function validateFormData(){
     validatePhone();
     dateOfBirthValidate();
     validateJoiningDate();
+    validateDob();
     validatePhone();
     passwordValidation();
     confirmPasswordValidation();
+<<<<<<< HEAD
     validateCheckBox;
     validateCheckBox();
     
     if(fnameRes && lnameRes && emailRes && passRes && confirmRes && dobRes && dojRes && phoneRes && checkBoxRes){
+=======
+
+
+    if(fnameRes && lnameRes && emailRes && passRes && confirmRes && dobRes && dojRes && phoneRes){
+>>>>>>> e9e95f34275792d9de747a04b0191efef105e9f5
       submitForm();
       
       successMsg.textContent = "SuccessFully Submitted";
@@ -459,6 +521,3 @@ myForm.addEventListener('submit', (event) => {
   validateFormData();
 });
 
-
-
-  

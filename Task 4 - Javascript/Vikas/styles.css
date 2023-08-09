@@ -1,0 +1,22 @@
+svg{
+    padding: 0;
+}
+.icon{
+    text-decoration: none;
+}
+.header3{
+    background-color: #F3F3F3;
+    border-bottom: solid red 2px;
+}
+.cloth{
+    transform: rotate(40deg);
+    overflow: hidden;
+    position: relative;
+}
+a{
+    color: black;
+}
+.card-img-top{
+    height: 200px;
+    width: 200px;
+}
