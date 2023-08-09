@@ -106,6 +106,7 @@
   padding: 10px;
   border-radius: 5px;
   border: none;
+  text-align: center; 
   align-items: center;
   justify-content: center;
 }
@@ -132,4 +133,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: transparent;
+}
+#technologyDiv{
+  opacity: 0.8;
+}
+
+#foodDiv{
+  opacity: 0.8;
+}
+
+#environmentDiv{
+  opacity: 0.8;
 }

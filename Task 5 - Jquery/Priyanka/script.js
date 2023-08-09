@@ -11,7 +11,7 @@ $(document).ready(() => {
 
   async function fetchRandomImage(category) {
     try {
-      const apiUrl = `https://newsapi.org/v2/everything?q=${category}&apiKey=${apiKey}&pageSize=10`;
+      const apiUrl = `https://newsapi.org/v2/everything?q=${category}&apiKey=${apiKey}&pageSize=100`;
       const response = await fetch(apiUrl);
       if (!response.ok) throw new Error("Network response looks bad");
       const data = await response.json();
@@ -173,33 +173,40 @@ $(document).ready(() => {
       return null;
     }
   }
+});
 
-  async function displayRandomImageInCarousel(carouselElement, category) {
-    try {
-      const imageUrl = await fetchRandomImage(category);
-      if (imageUrl) {
-        const imgElement = $("<img>")
-          .attr({
-            src: imageUrl,
-            alt: `${category} News Image`,
-          })
-          .addClass("d-block w-100");
-        const carouselItem = $("<div>")
-          .addClass("carousel-item")
-          .append(imgElement);
-        if (category === "technology") {
-          carouselItem.addClass("active");
-        }
-        carouselElement.find(".carousel-inner").append(carouselItem);
-      }
-    } catch (error) {
-      console.error(`Error displaying ${category} image:`, error);
-    }
-  }
 
-  const carouselImages = $("#carouselImages");
+$(document).ready(function() {
+  $(".overlay-content").append('<p style="font-weight: 400; font-size: xx-large; text-align: center;">The features of the best<br>Ergonomic Keyboard</p>');
+  $(".overlay-content1").append('<p style="font-weight: 400; font-size: xx-large; text-align: center;">Making a Commitment to<br>Environmental Sustainability</p>');
+  $(".overlay-content2").append('<p style="font-weight: 400; font-size: xx-large; text-align: center;">Stunning Health Benefits of Eating Chocolates</p>');
+});
 
-  categories.forEach((category) => {
-    displayRandomImageInCarousel(carouselImages, category);
+
+$(document).ready(function() {
+ 
+  const apiKey = "328a3fda59fc4c6c9d7ac97e5addabc2";
+  const apiUrl = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`;
+
+  $.get(apiUrl, function(data) {
+    const articles = data.articles;
+    const imageUrls = articles.map(article => article.urlToImage).filter(url => url !== null);
+    var carouselInner = $(".carousel-inner");
+    imageUrls.forEach(function(imageUrl, index) {
+      var activeClass = index === 0 ? "active" : "";
+      var carouselItem = `
+        <div class="carousel-item ${activeClass}">
+          <img src="${imageUrl}" class="d-block w-100" alt="Image ${index + 1}">
+        </div>`;
+      carouselInner.append(carouselItem);
+    });
+
+    $("#carouselImages").carousel();
+  });
+
+  $(".img-div").hover(function() {
+    $(this).find("img").css("opacity", 0.7);
+  }, function() {
+    $(this).find("img").css("opacity", 1);
   });
 });
