@@ -52,4 +52,8 @@
 .latest-card img {
     margin-right: 10px;
 }
+
+.nav-link:hover{
+  background-color: white;
   
+}
