@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
 .nav-item:hover .dropdown-menu {
     display: block;
   }
@@ -54,6 +59,37 @@
 }
 
 .nav-link:hover{
-  background-color: white;
-  
+  background-color: white; 
 }
+
+.fashion-card{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+}
+.fashion-card img{
+  width: 150px;
+  height: 150px;
+}
+
+.lifestyle-card{
+  
+  display: flex;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+}
+
+.feathers-card{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+}
+.feathers-card h6{
+  font-size: 12px;
+ }
+ h6{
+    font:bold;
+ }

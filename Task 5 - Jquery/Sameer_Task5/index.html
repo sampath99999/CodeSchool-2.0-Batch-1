@@ -12,12 +12,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!--Css links-->
     <link rel="stylesheet" href="./style.css">
+    <!--Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <div>
     <div class="header bg-danger d-none d-sm-block">
         <div class="container d-flex"style="color:white">
             <div class="col-6 m-1">
-                <ul class="d-flex gap-3" style="list-style: none;" >
+                <ul class="d-flex gap-3" style="list-style: none;">
                     <li>Layout</li>
                     <li>Topology</li>
                     <li>Contact</li>
@@ -26,7 +28,7 @@
                 </ul>
             </div>
             <div class="col-6 m-1">
-            <ul class="gap-5">
+            <ul class="f-flex gap-3">
                 <i class="bi bi-facebook"></i>
                 <i class="bi bi-twitter"></i>
                 <i class="bi bi-google"></i>
@@ -45,7 +47,7 @@
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="col-9">
+        <div class="col-9 mt-1">
             <ul class="d-flex gap-3" style="list-style: none;">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -124,7 +126,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-3">
+          <div class="col-3 mt-1">
             <i class="bi bi-search"></i>
         </div>
     </div>
@@ -133,18 +135,18 @@
     </div>
     
     <div class="bodycontent mt-2 ">
-      <div class="container d-flex gap-2">
-      <div class="col-4"id="fashionNews" style="border-top:2px solid pink;">
+      <div class="container d-lg-flex gap-2 d-sm-block">
+      <div class="col-lg-4 col-sm-12"id="fashionNews" style="border-top:2px solid pink;">
         <h6 class="text-center" style="background-color: white;">FASHION</h6>
-        <div class=""style="background-color:white" id="foodNews"></div>
+        <div class=""id="fashionNews"></div>
       </div>
-      <div class="col-4"id="Lifestyle" style="border-top:2px solid yellow;">
+      <div class="col-lg-4 col-sm-12"id="Lifestyle" style="border-top:2px solid yellow;">
         <h6 class="text-center" style="background-color: white;">LIFESTYLE</h6>
-        <div class=""style="background-color:white" id="foodNews"></div>
+        <div class=""style="background-color:white" id="lifestyleNews"></div>
       </div>
       
       
-      <div class="col-4">
+      <div class="col-lg-2 col-sm-12">
         <div class="col">
           <h6 class="text-center" style="background-color: white;">CATEGORIES</h6>
           <div class="card-body" style="background-color: #F9F9F9;">
@@ -158,49 +160,53 @@
             </ul>
           </div>
         </div>
+        <div class="feathers post">
+          <h6 class="text-center" style="background-color: white;">FEATHERS POSTS</h6>
+          <div class=""style="background-color:#F0F0F0" id="feathersNews"></div>
+        </div>
       </div>
     
     </div>
-    <div class="container d-flex gap-2">
-      <div class="col-4"  style="border-top:2px solid greenyellow;">
+    <div class="container d-lg-flex gap-2 mt-3 d-sm-block">
+      <div class="col-lg-4 col-sm-12"  style="border-top:2px solid greenyellow;">
         <h6 class="text-center" style="background-color: white;">FOOD</h6>
        <div class=""style="background-color:white" id="foodNews"></div>
       </div>
-      <div class="col-4"  style="border-top:2px solid purple;">
+      <div class="col-lg-4 col-sm-12"  style="border-top:2px solid purple;">
         <h6 class="text-center" style="background-color: white;">ENVIRONMENT</h6>
-       <div class=""style="background-color:white" id="foodNews"></div>
+       <div class=""style="background-color:white" id="enviromentNews"></div>
       </div>
     </div>
      
-     
-      <div class="container col-6">
+      <div class="container mt-3">
+      <div class="latest col-lg-8 col-sm-12">
         <h6 class="text-center" style="background-color: white;border-top:2px solid red;">LATEST ARTICLES</h6>
        <div class=""style="background-color:white" id="latestNews"></div>
+        <input type="button" value="Load More" class="btn btn-danger">
       </div>
     </div>
+    </div>
   
-  <!--
-  <div id="latestNews">Latest News</div>
-  -->
+  
 </div>
   
 
     <div class="footer">
         <div class="div" style="background-color: #373941;color:white;">
-            <div class="container d-flex gap-2">
-                <div class="news-article col-4">
+            <div class="container d-lg-flex gap-2 d-sm-block">
+                <div class="news-article col-lg-4 col-sm-12">
                     <div class="heading bg-black text-white">
-                        <h6>MOST POPULAR</h6>
+                        <h6 class="">MOST POPULAR</h6>
                     </div>
-                    <div class="content" id="mostPopular"></div>
+                    <div class="content" id="mostPopular" style="background-color: #2C2E34;"></div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-sm-12">
                     <div class="heading bg-black text-white">
                         <h6>TALKED ABOUT</h6>
                     </div>
-                    <div class="content" id="talkedAbout"></div>
+                    <div class="content" id="talkedAbout" style="background-color: #2C2E34;"></div>
                 </div>
-                <div class="col-4">
+                <div class="col-lg-4 col-sm-12">
                     <div class="top">
                         <div class="heading bg-black text-white">
                             <h6>VIDEO OF THE DAY</h6>
@@ -234,8 +240,8 @@
                 <div class="col-6">
                     <p>Copyright &nbsp; 2023</p>
                 </div>
-                <div class="col-6">
-                    <ul class="d-flex gap-3" style="list-style: none; color: red;">
+                <div class="col-lg-6 col-sm-12">
+                    <ul class="d-lg-flex gap-3 d-sm-flex" style="list-style: none; color: red;">
                         <li>Typography</li>
                         <li>Layout</li>
                         <li>Shortcodes</li>

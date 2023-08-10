@@ -1,5 +1,6 @@
-const apiKey='60cde577a9ff44998508975a02e23a5c';
-
+//const apiKey='60cde577a9ff44998508975a02e23a5c';
+//const apiKey='89baa29a97b24d6aab6480ee4ce171c2';
+const apiKey='09a8b3ec72154cbcbceaa7104ff6e68f';
 
 const apiUrl = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
 
@@ -20,13 +21,14 @@ const apiUrl = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}
                         card.style.width = '700px';
                         card.style.height = '400px'; 
                     }
-        
 
                     const title = document.createElement('h5');
                     title.textContent = article.title;
                     card.appendChild(title);
                     title.className = 'news-title';
                     newsContainer.appendChild(card);
+
+                    
                 });
             })
             .catch(error => console.error('Error fetching data:', error));
@@ -62,9 +64,6 @@ fetchNews(`https://newsapi.org/v2/everything?q=apple&from=2023-08-06&to=2023-08-
     .then(articles => displayPosts(talkedAboutContainer, articles.slice(0, 4)));
 
 //latest news
-const apiUrl1 =`https://newsapi.org/v2/everything&apiKey${apiKey}`;
-        //const apiUrl1 = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
-
         const latestNews = document.getElementById('latestNews');
 
         fetch(apiUrl)
@@ -83,7 +82,7 @@ const apiUrl1 =`https://newsapi.org/v2/everything&apiKey${apiKey}`;
                         image.style.height = '100px'; 
                        
                     }
-                    const title = document.createElement('p');
+                    const title = document.createElement('h6');
                     title.textContent = article.title;
                     card.appendChild(title);
 
@@ -93,36 +92,170 @@ const apiUrl1 =`https://newsapi.org/v2/everything&apiKey${apiKey}`;
                 });
             })
             .catch(error => console.error('Error fetching data:', error));
-/*
-const apiUrl2 =`https://newsapi.org/v2/everything?q=tesla&from=2023-07-10&sortBy=publishedAt&apiKey=60cde577a9ff44998508975a02e23a5c`;
-        //const apiUrl1 = `https://newsapi.org/v2/top-headlines?country=in&apiKey=${apiKey}`;
 
-        const fashionNews = document.getElementById('fashionNews');
+        //Fetch Fashion
+            
+            
+            async function fetchNews() {
+                try {
+                    const response = await fetch(apiUrl);
+                    const data = await response.json();
+                    return data.articles;
+                } catch (error) {
+                    console.error('Error fetching news:', error);
+                    return [];
+                }
+            }
+            
+            function createNewsCard(article) {
+                const newsCard = document.createElement('div');
+                newsCard.className = 'fashion-card';
+            
+                const image = document.createElement('img');
+                image.src = article.urlToImage || 'placeholder-image.jpg';
+                image.alt = article.title;
+                newsCard.appendChild(image);
+            
+                const title = document.createElement('h6');
+                title.textContent = article.title;
+                newsCard.appendChild(title);
+            
+            
+                return newsCard;
+            }
+            
+            async function displayNews() {
+                const fashionNews = document.getElementById('fashionNews');
+                const articles = await fetchNews();
+            
+                articles.slice(0, 3).forEach(article => {
+                    const newsCard = createNewsCard(article);
+                    fashionNews.appendChild(newsCard);
+                });
+            }
+            
+            displayNews();
+        
+//Lifestyle fetch
 
-        fetch(apiUrl2)
+        const lifestyleNews = document.getElementById('lifestyleNews');
+
+        fetch(apiUrl)
             .then(response => response.json())
             .then(data => {
-                const articles = data.articles.slice(0, 10);
+                const articles = data.articles.slice(5,8);
                 articles.forEach(article => {
                     const card = document.createElement('div');
-                    card.className = 'fashion-card';
+                    card.className = 'lifestyle-card';
 
                     if (article.urlToImage) {
                         const image = document.createElement('img');
                         image.src = article.urlToImage;
                         card.appendChild(image);
                         image.style.width = '150px';
-                        image.style.height = '100px'; 
+                        image.style.height = '150px'; 
                        
                     }
-                    const title = document.createElement('p');
+                    const title = document.createElement('h6');
                     title.textContent = article.title;
                     card.appendChild(title);
 
                     
 
-                    latestNews.appendChild(card);
+                    lifestyleNews.appendChild(card);
                 });
             })
             .catch(error => console.error('Error fetching data:', error));
-           */
+
+
+//Food fetch
+
+const foodNews = document.getElementById('foodNews');
+
+fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+        const articles = data.articles.slice(12,15);
+        articles.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'lifestyle-card';
+
+            if (article.urlToImage) {
+                const image = document.createElement('img');
+                image.src = article.urlToImage;
+                card.appendChild(image);
+                image.style.width = '150px';
+                image.style.height = '150px'; 
+               
+            }
+            const title = document.createElement('h6');
+            title.textContent = article.title;
+            card.appendChild(title);
+
+            
+
+            foodNews.appendChild(card);
+        });
+    })
+    .catch(error => console.error('Error fetching data:', error));
+
+//Enviroment fetch
+
+const enviromentNews = document.getElementById('enviromentNews');
+
+fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+        const articles = data.articles.slice(10,13);
+        articles.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'lifestyle-card';
+
+            if (article.urlToImage) {
+                const image = document.createElement('img');
+                image.src = article.urlToImage;
+                card.appendChild(image);
+                image.style.width = '150px';
+                image.style.height = '150px'; 
+               
+            }
+            const title = document.createElement('h6');
+            title.textContent = article.title;
+            card.appendChild(title);
+
+            
+
+            enviromentNews.appendChild(card);
+        });
+    })
+    .catch(error => console.error('Error fetching data:', error));
+//Feathers Posts
+
+const feathersNews = document.getElementById('feathersNews');
+
+fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+        const articles = data.articles.slice(12,15);
+        articles.forEach(article => {
+            const card = document.createElement('div');
+            card.className = 'feathers-card';
+
+            if (article.urlToImage) {
+                const image = document.createElement('img');
+                image.src = article.urlToImage;
+                card.appendChild(image);
+                image.style.width = '100px';
+                image.style.height = '100px'; 
+               
+            }
+            const title = document.createElement('h6');
+            title.textContent = article.title;
+            card.appendChild(title);
+
+            
+
+            feathersNews.appendChild(card);
+        });
+    })
+    .catch(error => console.error('Error fetching data:', error));
