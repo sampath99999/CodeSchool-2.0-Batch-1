@@ -1,0 +1,110 @@
+.main-heading{
+    font-size: 23px; 
+}
+.input-boxes{
+    border-radius:0 !important;
+}
+.submit-button{
+    border-radius:0 !important;
+    width: 100%;
+}
+.input-box-container{
+    margin:5px 5px;
+}
+.subscription{
+    font-size: 16px;
+}
+*{
+    box-sizing: border-box;
+}
+
+.dollar-value{
+    font-weight: 500;
+    font-size: 42px;
+}
+.month{
+    font-size: 18px;
+}
+.tax-description{
+    font-size: 14px;
+}
+.lock-icon{
+    font-size: 28px;
+}
+.icon-container{
+   color: #8c8c8c !important;
+   font-weight: bold;
+}
+
+.secure-server{
+    margin-left: 4px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.currency-month{
+    align-self: end;
+    margin-bottom: 18px;
+}
+.currency-number{
+    font-size: 27px;
+    font-weight: 600;
+}
+.plan-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+    border: 1px solid #8c8c8c;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.modal-content{
+    width: 706px !important;
+    height: 577px;
+    align-self: stretch;
+}
+.plan-section{
+    height: 480px;
+    flex-grow: 1;
+}
+.currency-lite-container{
+    padding: 18px 15px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.lite-heading{
+    font-size: 25px;
+    font-weight: 400;
+}
+.lite-para{
+    font-size: 13px;
+}
+.trail-period{
+    font-size: 13px;
+}
+.main-container{
+    height: 100vh;
+}
+input{
+    box-shadow: none !important;
+    background-color: #f7f7f7 !important;
+}
+.icon{
+    color: blue;
+    margin-right: 5px;
+}
+input::placeholder{
+    font-size: 15px;
+}
+input:focus{
+    border-color: black !important;
+}
+#random-quote{
+    text-align: center;
+    font-weight: 500;
+}
+.error-message{
+    color: red;
+}
