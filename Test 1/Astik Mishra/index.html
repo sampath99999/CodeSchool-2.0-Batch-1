@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-8 m-auto">
-                <form action="" name="myForm" onsubmit="return formValidation()">
+                <form action="" name="myForm" onsubmit="event.preventDefault(); formValidation()">
                     <h1>Create your free account</h1>
                     <div id="fullName">
                     <label for="fullName">Full Name</label> 
@@ -29,21 +29,21 @@
                     <p class="formErr"></p>
                 </div>
                 <div id="email">
-                    <label for="Email">Email address</label>
+                    <label for="email">Email address</label>
                     <br>
-                    <input class="w-100 form-control shadow" type="text" name="Email" placeholder="Example@gmail.com" required/>
+                    <input class="w-100 form-control shadow" type="email" name="email" placeholder="Example@gmail.com" required/>
                     <p class="formErr"></p>
                 </div>
                 <div id="password">
-                    <label for="Password">Password</label>
+                    <label for="password">Password</label>
                     <br>
-                    <input class="w-100 form-control shadow" type="text" name="Password"  placeholder="Enter Password" required/>
+                    <input class="w-100 form-control shadow" type="text" name="password"  placeholder="Enter Password" required/>
                     <p class="formErr"></p>
                 </div>
                 <div id="phone">
-                    <label for="Phone">Phone Number</label>
+                    <label for="phone">Phone Number</label>
                     <br>
-                    <input class="w-100 form-control shadow" type="text" name="Phone"  placeholder="Your Phone Number" required/>
+                    <input class="w-100 form-control shadow" type="number" name="phone"  placeholder="Your Phone Number" required/>
                     <p class="formErr"></p>
                 </div>
                     <input type="submit" class="w-100 shadow border-0 bg-primary text-white" value="Submit">

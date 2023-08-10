@@ -76,43 +76,48 @@ function formValidation(){
     else if(nameRegEx.match(name) == false){
         setErr("fullName","Invalid Name!");
         returnVal = false;
-    };
+    }
 
-    var email = document.forms['myForm']['Email'][0].value;
+    var email = document.forms['myForm']['email'].value;
     var emailRegEx = "/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/";
-    if(email.length = 0){
-        setErr("email","Email can not be empty!");
+    if(email.length < 6){
+        setErr("email","Enter atleast 6 words!");
         returnVal = false;
-    }else if(email.length > 25){
+    }
+    else if(email.length > 25){
         setErr("email","Email too large!");
         returnVal = false;
-    }else if(emailRegEx.match(email) == false){
+    }
+    else if(emailRegEx.match(email) == false){
         setErr("email","Invalid Email!");
         returnVal = false;
-    };
+    }
 
-    var password = document.forms['myForm']['Password'][0].value;
+    var password = document.forms['myForm']['password'].value;
     var passRegEx = /(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})/;
     if(password.length < 2){
         setErr("password","Please enter atleast 2 words!");
         returnVal = false;
-    }else if(password.length > 24){
+    }
+    else if(password.length > 24){
         setErr("password","Password length too long!");
         returnVal = false;
-    }else if(passRegEx.match(password) == false){
+    }
+    else if(passRegEx.match(password) == false){
         setErr("password","Invalid Password");
         returnVal = false;
-    };
+    }
 
-    var phone = document.forms['myForm']['Phone'][0].value;
+    var phone = document.forms['myForm']['phone'].value;
     var phoneRegEx = /^[0-9]{10}$/;
     if(phone.length !== 10){
         setErr("phone","Please enter 10 digit number only.");
         returnVal = false;
-    }else if(phoneRegEx.match(phone) == false){
+    }
+    else if(phoneRegEx.match(phone) == false){
         setErr("phone","Invalid Phone Number!");
         returnVal = false;
-    };
+    }
 
     return returnVal;
 }
