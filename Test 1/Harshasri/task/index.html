@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="col-12 m-auto">
+        <div class="col-md-9 col-12 d-flex m-auto">
+            <div class="col-12 col-md-5">
+                <div class="left-container p-4">
+                    <div class="logo d-flex align-items-center">
+                        <img style="height:20px ; width: 20px;" src="https://res.cloudinary.com/dn0woegat/image/upload/v1691647816/Free_2BLetter_2BC_2BLogo_2BDesign_vgylmg.png" alt="logo"/>
+                        <h5 class="text-white ps-2 mt-1">Catelog</h5>
+                    </div>
+                    <div class="order-summary text-white mt-5">
+                        <h4>Order summary</h4>
+                        <div class="col-12 d-flex flex-wrap gap-3" id="demo">
+                            
+                        </div>
+                        <div class="col-12 total_bill">
+                            <div class="col-10 m-auto" id="total"></div>
+                            
+                        </div>
+                        
+                    </div>
+
+                </div>
+                
+            </div>
+            <div class="col-12 col-md-7">
+                <div class="right-container p-4 ">
+                    <h4 class="text-dark mb-4">Complete your order</h4>
+                    <form id="myForm" class="myForm">
+                        <div class="personal-details-container mt-1">
+                            <h5 class="person-heading mb-2">Personal Details</h5>
+                            <div class="col-12 d-flex gap-2">
+                                <div class="col-6 d-flex flex-column">
+                                    <label for="firstname"><b>First Name</b></label>
+                                    <input id="firstName"
+                                        type="text"
+                                        placeholder="Enter Your First Name"
+                                        name="firstname"
+                                        class="form-control"
+                                        
+                                    />
+                                    <p id="fnameErrorMsg" class="error-message">*First Name should not be Empty!</p>
+                                </div>
+                                <div class="col-6 d-flex flex-column">
+                                    <label for="lastname"><b>Last Name</b></label>
+                                    <input id="lastName"
+                                    type="text"
+                                    placeholder="Enter Your Last Name"
+                                    name="lastname"
+                                    />
+                                    <p id="lnameErrorMsg" class="error-message">*Last Name should not be Empty!</p>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex gap-2">
+                                <div class="col-6 d-flex flex-column">
+                                    <label for="email"><b>Email</b></label>
+                                    <input id="email"
+
+                                        type="text"
+                                        placeholder="Enter Your Email"
+                                        name="email"
+                                        
+                                    />
+                                    <p id="emailErrorMsg" class="error-message">*Email should not be Empty!</p>
+                                </div>
+                                <div class="col-6 d-flex flex-column">
+                                    <label for="phone"><b>Phone Number*</b></label>
+                                    <input type="text" id="phone" name="phone" placeholder="Enter Your Phone Number" >
+                                    <p id="phoneErrorMsg" class="error-message"></p>
+                                </div>
+                            </div>
+
+                        </div>
+                        
+                        <div class="personal-details-container mt-1">
+                            
+                            <h5 class="person-heading mb-2">Payment Details</h5>
+                            <ul class="m-0 p-0 d-flex gap-2">
+                                <li><button class="border-0"><img src="https://res.cloudinary.com/dn0woegat/image/upload/v1691650333/1_p1v2wb.png"/></button></li>
+                                <li><button class="border-0"><img src="https://res.cloudinary.com/dn0woegat/image/upload/v1691650545/2_i1wxqy.png"/></button></li>
+                                <li><button class="border-0"><img src="https://res.cloudinary.com/dn0woegat/image/upload/v1691650609/3_zsuppn.png"/></button></li>
+                                <li><button class="border-0"><img src="https://res.cloudinary.com/dn0woegat/image/upload/v1691650641/4_j2juhe.png"/></button></li>
+                                <li><button class="border-0"><img src="https://res.cloudinary.com/dn0woegat/image/upload/v1691650667/5_aybpek.png"/></button></li>
+                               
+                            </ul>
+                            <div class="col-12 d-flex gap-2">
+                                <div class="col-6 d-flex flex-column">
+                                    <label for="cardholder"><b>Card holder name</b></label>
+                                    <input id="cardholder"
+                                        type="text"
+                                        placeholder="Enter Your First Name"
+                                        name="cardholder"
+                                        
+                                    />
+                                    <p id="cardHolderNameErrorMsg" class="error-message"></p>
+                                </div>
+                                <div class="col-6 d-flex flex-column">
+                                    <label for="cardNumber"><b>card Number</b></label>
+                                    <input id="cardNumber"
+                                    type="text"
+                                    placeholder="Enter Your card Number"
+                                    name="cardnumber"
+                                    />
+                                    <p id="cardNumberErrorMsg" class="error-message"></p>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex gap-2">
+                                <div class="col-6 d-flex flex-column">
+                                    <label for="cvv"><b>CVV</b></label>
+                                    <input id="cvv"
+
+                                        type="text"
+                                        placeholder="Example: 4567"
+                                        name="cvv"
+                                        
+                                    />
+                                    <p id="cvvErrorMsg" class="error-message"></p>
+                                </div>
+                                <div class="col-6 d-flex flex-column">
+                                   
+                                    <label for="ExpirationDate"><b>Expiration Date</b></label>
+                                    <input type="text"
+                                    placeholder="MM/YY"
+                                    id="dob">
+                                    <p id="expireErrorMsg" class="error-message"></p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="personal-details-container mt-1">
+                            <h5 class="person-heading mb-2">Shopping Details</h5>
+                            <div class="col-12 d-flex gap-2">
+                                <div class="col-12 d-flex flex-column">
+                                    <label for="address"><b>Address line 1</b></label>
+                                    <input id="address"
+                                        type="text"
+                                        placeholder="Your Complete Address..."
+                                        name="address"
+                                        
+                                    />
+                                    <p id="addressErrorMsg" class="error-message"></p>
+                                </div>
+                                
+                            </div>
+                            <div class="col-12 d-flex gap-2">
+                                <div class="col-6 d-flex flex-column">
+                                    <label for="city"><b>City</b></label>
+                                    <input id="city"
+                                        type="text"
+                                        placeholder="Your City..."
+                                        name="cityname"
+                                        
+                                    />
+                                    <p id="cityErrorMsg" class="error-message"></p>
+                                </div>
+                                <div class="col-6 d-flex flex-column">
+                                    <label for="State"><b>State</b></label>
+                                    <input id="state"
+                                    type="text"
+                                    placeholder="Your State..."
+                                    name="statename"
+                                    />
+                                    <p id="stateErrorMsg" class="error-message"></p>
+                                </div>
+                            </div>
+                            <div class="col-12 d-flex gap-2">
+                                <div class="col-6 d-flex flex-column">
+                                    <label for="city"><b>Landmark</b></label>
+                                    <input id="city"
+                                        type="text"
+                                        placeholder="Any Landmark (Famous place or Mall)"
+                                        name="landmark"
+                                        
+                                    />
+                                    <p id="landmarkErrorMsg" class="error-message"></p>
+                                </div>
+                                <div class="col-6 d-flex flex-column">
+                                    <label for="postal"><b>Postal code</b></label>
+                                    <input id="postal"
+                                    type="text"
+                                    placeholder="ZIP Code(231512)"
+                                    name="statename"
+                                    />
+                                    <p id="postalErrorMsg" class="error-message"></p>
+                                </div>
+                            </div>
+                        
+
+                        </div>
+                        <div class="col-12 d-flex gap-2">
+                            <div class="col-6">
+                                <button type="cancel" class="w-100 cancel">Cancel</button>
+                            </div>
+                            <div class="col-6">
+                                <button id="submitbtn" type="submit" class="w-100 submit">Complete Purchase</button>
+                            </div>
+                        </div>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
