@@ -1,0 +1,23 @@
+.contact-container{
+    background-color: #EDFC16;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.navbar-brand{
+    color: #eeff00;
+    font-family: 'Vina Sans', cursive;
+    letter-spacing: 1px;
+}
+#background-image-container{
+    background-image: url("https://picsum.photos/200/300?grayscale&blur=5");
+    background-repeat: no-repeat;
+    background-size: 430px 800px;
+}
+.fs-1{
+    font-size: 3.2rem !important;
+    color: white;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <!-- NAV-BAR -->
+    <nav class="navbar" style="background-color: skyblue;">
+      <div class="container-fluid">
+        <form class="d-flex w-50" role="search" >
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon1">
+            <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
+          </div>         
+        </form>
+        <button type="button" class="btn"><i class="fa-solid fa-cart-shopping"></i>&nbsp;SELL</button>
+      </div> 
+    </nav>
+
+    <!-- SECTION-1 -->
+    <div class=" container-fluid main-container bg-light">
+      <div class="row">
+      <div class=" col-md-9 d-flex justify-content-between p-2">
+        <div class="col-md-4"> 
+          <div class="form-check">
+            <input class="form-check-input w-20 mt-1 text-center" type="checkbox " value="" id="flexCheckDefault">
+            Category
+             <!-- <p><i class="fa-solid fa-bag-shopping"></i>&nbsp; Product</p> -->
+          </div>
+          </div>
+        <div class="col-md-4 d-flex"><h4 style="color: skyblue;">2.</h4> &nbsp; <p class="mt-1">Product Description</p></div>
+        <div class="col-md-4 d-flex"><h5 class="price-container">3</h5> &nbsp;<p class="mt-1">Pricing and Images</p></div>
+      </div>
+      <div class="col-md-3 d-flex justify-content-end">
+        <div>
+          <i class="fa-solid fa-caret-down"></i>&nbsp;
+          Preview
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="container">
+      <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Product Title</label>
+          <input type="text" class="form-control" id="product-title" value="">
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Type</label>
+          <input type="text" class="form-control type" value="" id="type">
+        </div>
+
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Side</label>
+          <input type="text" class="form-control type" value="" id="side">
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Product subtitle</label>
+          <input type="text" class="form-control" id="product-subtitle" value="">
+        </div>
+
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label" >Year</label>
+            <div class="input-icons">
+              <i class="fa fa-calendar icon"></i>
+              <input class="input-field" type="text" placeholder="Select date" id="selectedDateField" readonly/>
+            </div>
+            <div id="dateDropdownDiv">
+              <select
+                  id="yearDropdownField"
+                  onchange="onChangeYearAndMonth(this)"
+                ></select>
+              <select
+                  id="monthDropdownField"
+                  onchange="onChangeYearAndMonth(this)"
+                ></select>      
+            </div>
+          
+        </div>
+
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">State</label>
+          <input type="text" class="form-control" id="product-title" value="">
+        </div>
+        <div class="col-md-3">
+
+          
+        </div>
+    
+  
+      </form>
+      <div class="col-12">
+        <div class="row">
+          <label for="validationCustom01" class="form-label">Product Description</label>
+          <input type="text" class="form-control" id="product-Description" value="">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container col-12 mt-5">
+      <div class="row">
+    <div style="color: skyblue; font-weight: 500;">TIPS</div>
+    <div class="d-flex justify-content-between">
+    <p>Hello User please do keep checking us for latest offers and cashbacks if you want..! </p>
+    <div class="">
+
+    
+    <button type="button" class="btn1">Previous Page</button>
+    <button type="button" class="btn2">Next Page</button>
+    </div>
+  </div>
+      </div>
+    </div>
+
+    <div class=" container text-center">
+    <button type="submit" class="btn3 mt-5" id="submitBtn">Sign Up </button>
+    <p id="demo"></p>
+  </div>
+    <div id="image-container">
+      <img id="product-image" src="" alt="Product Image">
+    </div>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
