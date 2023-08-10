@@ -1,0 +1,14 @@
+.fixed_btns{
+    right: 0;
+    position: fixed;
+    top:65vh;
+
+
+}
+
+
+.favIcon{
+    background-color: red;
+    color: red;
+    fill: red;
+}

@@ -1,0 +1,65 @@
+
+
+.nav_btn_borders{
+   border-left: 2px solid #efefef!important;
+   
+}
+.nav_main_border{
+   border-top: 2px solid #efefef!important;
+   border-bottom: 2px solid #efefef!important;
+}
+
+
+@media all and (min-width: 992px) {
+	.navbar-nav .nav-item .dropdown-menu{display:block;   visibility: hidden;margin-top:0;}
+	.navbar-nav .nav-item:hover .nav-link{color: red; background-color: white;}
+	.navbar-nav .nav-item:hover .dropdown-menu{visibility:visible;top:100%;}
+   .navbar-nav .nav-item .dropdown-menu .dropdown-item:hover{color: red; background-color: white;}
+}
+
+.latest_name{
+   font-size: 20px;
+   font-family: roboto;
+}
+.latest_title{
+   font-size: 18px;
+   font-family: roboto;
+   opacity: 95%;
+}
+.latest_date{
+   font-size: 15px;
+   font-family: roboto;
+}
+
+
+.maincard_name{
+   font-size: 18px;
+   font-family: roboto;
+}
+.maincard_title{
+   font-size: 15px;
+   font-family: roboto;
+}
+.maincard_date{
+   font-size: 12px;
+   font-family: roboto;
+}
+
+.subcard_name{
+   font-size: 17px;
+   font-family: roboto;
+}
+.subcard_title{
+   font-size: 16px;
+   font-family: roboto;
+}
+
+
+.footer_card_title{
+   font-size: 15px;
+}
+
+
+.footer-main{
+   margin-left: -25px;
+}
