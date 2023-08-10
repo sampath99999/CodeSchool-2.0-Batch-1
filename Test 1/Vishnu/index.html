@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="./style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main-container bg-dark col-12 d-flex flex-column justify-content-center align-items-center">
+        <div class="col-7 bg-white" style="padding: 20px;">
+            <div class="text-center col-12">
+                <h1 class="main-heading">Add Payment Information</h1>
+            </div>
+            <div class="d-flex justify-content-center col-12">
+                <div class="p-3 col-7">
+                    <form id="form">
+                        <div class="input-group input-group-lg input-boxes input-box-container">
+                            <input type="text" id="name" placeholder="Name on Card" class="form-control input-boxes" aria-label="Large" aria-describedby="inputGroup-sizing-sm">   
+                        </div>
+                        <div>
+                            <p id="full-name-error" class="error-message"></p>
+                        </div>
+                        <div class="input-group input-group-lg input-boxes input-box-container">
+                            <input type="number" id="card-number" placeholder="Card Number" class="form-control input-boxes" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                        </div>
+                        <div>
+                            <p id="card-error" class="error-message"></p>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between gap-5">
+                            <div>
+                                <div class="input-group input-group-lg input-boxes input-box-container">
+                                    <input type="number" id="cvc" placeholder="CVC" class="form-control input-boxes" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                                </div>
+                                <div>
+                                    <p id="cvc-error" class="error-message"></p>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="text-end">The 3 or 4 digits found near your signature strip</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between gap-3">
+                            <div>
+                                <div class="input-group input-group-lg input-boxes input-box-container">
+                                    <input type="month" pattern="[0-9]{2}-[0-9]{2}" id="dateText" placeholder="Date" class="form-control input-boxes" aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+                                    
+                                </div>
+                                <div>
+                                    <p id="card-date-error" class="error-message"></p>
+                                </div>
+                        </div>
+                        <div>
+                                <div class="input-group input-group-lg input-boxes input-box-container">
+                                    <input type="number" id="zip-code" placeholder="Zip Code" class="form-control input-boxes" aria-label="Large" aria-describedby="inputGroup-sizing-sm">    
+                                </div> 
+                                <div>
+                                    <p id="zip-code-error" class="error-message"></p>
+                                </div>
+                            </div> 
+                        </div>
+                        <div>
+                            <button class="btn btn-success submit-button">Submit</button>
+                        </div>
+                        <p id="registration-error" class="error-message"> </p>
+                    </form>
+                </div>
+                <div class="modal-container col-5 p-3" style="background-color: #F8F8F8;">
+                    <div>
+                        <h6 class="subscription">Subscription</h6>
+                    </div>
+                    <div class="text-center" style="background-color: #ffffff;">
+                        <span id="dollars" class="dollar-value">$ 7.99</span><br>
+                        <h6 class="month">Month</h6>
+                        <p class="tax-description">Tax included where applicable</p>
+                        <button class="btn btn-success" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Click me</button>
+                    </div>
+                    <div>
+                        <p id="random-quote">radom quote</p>
+                    </div>
+                    <div  class="text-center icon-container">
+                        <i class="fa-solid fa-lock lock-icon"></i>
+                        <span class="secure-server">Secure Server</span>
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class=" d-flex gap-3 ">
+                        <div style="border-radius: 5px;" class="plan-section" >
+                            <div style="background-color: #0383ff; color: white;" class="text-center currency-lite-container">
+                                <h6 class="lite-heading">Lite Plan</h6>
+                                <p class="lite-para">Individuals and small teams</p>
+                            </div>
+                            <div class="bg-white plan-container">
+                                <div class="text-center">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div><i class="fa-solid fa-check icon"></i></div>
+                                        <div><p class="m-auto">Clean and easy to use app</p></div>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div><i class="fa-solid fa-check icon"></i></div>
+                                        <div><p class="m-auto">Simple widget generator</p></div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="d-flex justify-content-center">
+                                        <i class="bi bi-currency-dollar currency-dollor"></i>
+                                        <p class="currency-number" id="first-plan-number">9</p>
+                                        <span class="currency-month">/month</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary btn-light" id="first-plan">SELECT</button>
+                                    <P class="trail-period">14 day money back guarantee</P>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="border-radius: 5px !important;" class="plan-section">
+                            <div style="background-color: #0383ff; color: white;" class="text-center currency-lite-container">
+                                <h6 class="lite-heading">Pro Plan</h6>
+                                <p class="lite-para">Growing bussiness</p>
+                            </div>
+                            <div class="bg-white plan-container">
+                                <div class="text-center">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div><i class="fa-solid fa-check icon"></i></div>
+                                        <div><p class="m-auto">Clean and easy to use app</p></div>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div><i class="fa-solid fa-check icon"></i></div>
+                                        <div><p class="m-auto">Simple widget generator</p></div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="d-flex justify-content-center">
+                                        <i class="bi bi-currency-dollar currency-dollor"></i>
+                                        <p class="currency-number" id="second-plan-number">19</p>
+                                        <span class="currency-month">/month</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary btn-light" id="second-plan">SELECT</button>
+                                    <P class="trail-period">14 day money back guarantee</P>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="border-radius: 5px;" class="plan-section">
+                            <div style="background-color: #0383ff; color: white;" class="text-center currency-lite-container">
+                                <h6 class="lite-heading">Enterprise Plan</h6>
+                                <p class="lite-para">Advanced companies</p>
+                            </div>
+                            <div class="bg-white plan-container">
+                                <div class="text-center">
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div><i class="fa-solid fa-check icon"></i></div>
+                                        <div><p class="m-auto">Clean and easy to use app</p></div>
+                                    </div>
+                                    <div class="d-flex justify-content-center align-items-center">
+                                        <div><i class="fa-solid fa-check icon"></i></div>
+                                        <div><p class="m-auto">Simple widget generator</p></div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="d-flex justify-content-center">
+                                        <i class="bi bi-currency-dollar currency-dollor"></i>
+                                        <p class="currency-number" id="third-plan-number">29</p>
+                                        <span class="currency-month">/month</span>
+                                    </div>
+                                    <button class="btn btn-outline-primary btn-light" id="third-plan">SELECT</button>
+                                    <P class="trail-period">14 day money back guarantee</P>
+                                </div>
+                            </div>
+                        </div>   
+                    </div>   
+                </div>    
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js">
+</script><script src="./main.js"></script>
+</html>
