@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  const apiUrl = "https://newsapi.org/v2/everything?q=apple&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=580d35bdefbd497496a8b8467b1363d9";
+  const apiUrl = "https://newsapi.org/v2/everything?q=apple&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=a29acfeb9fba41ebaad7969428b08c73";
 
   function fetchAndDisplayNews() {
     $.getJSON(apiUrl, function(data) {
@@ -46,7 +46,7 @@ $(document).ready(function() {
   fetchAndDisplayNews();
 });
 $(document).ready(function() {
-  const apiUrl = "https://newsapi.org/v2/everything?q=apple&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=580d35bdefbd497496a8b8467b1363d9";
+  const apiUrl = "https://newsapi.org/v2/everything?q=apple&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=a29acfeb9fba41ebaad7969428b08c73";
 
   function fetchAndDisplayNews() {
     $.getJSON(apiUrl, function(data) {
@@ -118,7 +118,7 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
   $.ajax({
-    url: "https://newsapi.org/v2/everything?q=fashion&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=580d35bdefbd497496a8b8467b1363d9",
+    url: "https://newsapi.org/v2/everything?q=fashion&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=a29acfeb9fba41ebaad7969428b08c73",
     method: "GET",
     dataType: "json",
     success: function(data) {
@@ -138,7 +138,7 @@ $(document).ready(function() {
 });
     $(document).ready(function() {
       $.ajax({
-        url: "https://newsapi.org/v2/everything?q=fashion&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=580d35bdefbd497496a8b8467b1363d9",
+        url: "https://newsapi.org/v2/everything?q=fashion&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=a29acfeb9fba41ebaad7969428b08c73",
         method: "GET",
         dataType: "json",
         success: function(data) {
@@ -164,7 +164,7 @@ $(document).ready(function() {
    
     $(document).ready(function() {
       $.ajax({
-        url: "https://newsapi.org/v2/everything?q=lifestyle&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=580d35bdefbd497496a8b8467b1363d9",
+        url: "https://newsapi.org/v2/everything?q=lifestyle&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=a29acfeb9fba41ebaad7969428b08c73",
         method: "GET",
         dataType: "json",
         success: function(data) {
@@ -184,7 +184,7 @@ $(document).ready(function() {
     });
     $(document).ready(function() {
       $.ajax({
-        url: "https://newsapi.org/v2/everything?q=fashion&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=580d35bdefbd497496a8b8467b1363d9",
+        url: "https://newsapi.org/v2/everything?q=fashion&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=a29acfeb9fba41ebaad7969428b08c73",
         method: "GET",
         dataType: "json",
         success: function(data) {
@@ -207,7 +207,7 @@ $(document).ready(function() {
     });
     $(document).ready(function() {
       $.ajax({
-        url: "https://newsapi.org/v2/everything?q=fashion&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=580d35bdefbd497496a8b8467b1363d9",
+        url: "https://newsapi.org/v2/everything?q=fashion&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=a29acfeb9fba41ebaad7969428b08c73",
         method: "GET",
         dataType: "json",
         success: function(data) {
@@ -232,7 +232,7 @@ $(document).ready(function() {
 
     $(document).ready(function() {
       $.ajax({
-        url: "https://newsapi.org/v2/everything?q=food&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=580d35bdefbd497496a8b8467b1363d9",
+        url: "https://newsapi.org/v2/everything?q=food&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=a29acfeb9fba41ebaad7969428b08c73",
         method: "GET",
         dataType: "json",
         success: function(data) {
@@ -252,7 +252,7 @@ $(document).ready(function() {
     });
     $(document).ready(function() {
       $.ajax({
-        url: "https://newsapi.org/v2/everything?q=food&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=580d35bdefbd497496a8b8467b1363d9",
+        url: "https://newsapi.org/v2/everything?q=food&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=a29acfeb9fba41ebaad7969428b08c73",
         method: "GET",
         dataType: "json",
         success: function(data) {
@@ -260,7 +260,7 @@ $(document).ready(function() {
           const randomArticle = articles[Math.floor(Math.random() * articles.length)];
     
           $("#food2").attr("src", randomArticle.urlToImage);
-          $(".card-img-top").attr("alt", randomArticle.title);
+          $(".card-img-top").attr("alt", "image");
     
           $("#food_3").text(truncateString(randomArticle.title, 25));
         
@@ -275,7 +275,7 @@ $(document).ready(function() {
     });
     $(document).ready(function() {
       $.ajax({
-        url: "https://newsapi.org/v2/everything?q=food&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=580d35bdefbd497496a8b8467b1363d9",
+        url: "https://newsapi.org/v2/everything?q=food&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=a29acfeb9fba41ebaad7969428b08c73",
         method: "GET",
         dataType: "json",
         success: function(data) {
@@ -299,7 +299,7 @@ $(document).ready(function() {
     });
     $(document).ready(function() {
       $.ajax({
-        url: "https://newsapi.org/v2/everything?q=environment&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=580d35bdefbd497496a8b8467b1363d9",
+        url: "https://newsapi.org/v2/everything?q=environment&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=a29acfeb9fba41ebaad7969428b08c73",
         method: "GET",
         dataType: "json",
         success: function(data) {
@@ -307,7 +307,7 @@ $(document).ready(function() {
           const randomArticle = articles[Math.floor(Math.random() * articles.length)];
     
           $("#envir1").attr("src", randomArticle.urlToImage);
-          $(".card-img-top").attr("alt", randomArticle.title);
+          $(".card-img-top").attr("alt", "image");
           $("#envir3").attr("src",randomArticle.urlToImage)
           $("#envir_1").text(randomArticle.title);
           $("#envir_2").text(truncateString(randomArticle.description));
@@ -319,7 +319,7 @@ $(document).ready(function() {
     });
     $(document).ready(function() {
       $.ajax({
-        url: "https://newsapi.org/v2/everything?q=environment&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=580d35bdefbd497496a8b8467b1363d9",
+        url: "https://newsapi.org/v2/everything?q=environment&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=a29acfeb9fba41ebaad7969428b08c73",
         method: "GET",
         dataType: "json",
         success: function(data) {
@@ -327,9 +327,14 @@ $(document).ready(function() {
           const randomArticle = articles[Math.floor(Math.random() * articles.length)];
     
           $("#envir2").attr("src", randomArticle.urlToImage);
-          $(".card-img-top").attr("alt", randomArticle.title);
+          $(".card-img-top").attr("alt", "image");
     
           $("#envir_3").text(truncateString(randomArticle.title, 25));
+          $("#envir_10").text(truncateString(randomArticle.title, 15));
+          $("#envir_11").text(truncateString(randomArticle.title, 15));
+          $("#envir_12").text(truncateString(randomArticle.title, 15));
+          $("#envir_13").text(truncateString(randomArticle.title, 15));
+          $("#envir_14").text(truncateString(randomArticle.title, 15));
          
         },
         error: function() {
@@ -342,7 +347,7 @@ $(document).ready(function() {
     });
     $(document).ready(function() {
       $.ajax({
-        url: "https://newsapi.org/v2/everything?q=environment&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=580d35bdefbd497496a8b8467b1363d9",
+        url: "https://newsapi.org/v2/everything?q=environment&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=a29acfeb9fba41ebaad7969428b08c73",
         method: "GET",
         dataType: "json",
         success: function(data) {
@@ -355,7 +360,8 @@ $(document).ready(function() {
           $("#envir_4").text(truncateString(randomArticle.title, 25));
           $("#envir_5").text(truncateString(randomArticle.title, 25));
           $("#envir_7").text(truncateString(randomArticle.title, 25));
-         
+          $("#envir_15").text(truncateString(randomArticle.title, 15));
+          $("#envir_16").text(truncateString(randomArticle.title, 15));
          
         },
         error: function() {
@@ -368,7 +374,7 @@ $(document).ready(function() {
     });
     $(document).ready(function() {
       const latestNewsContainer = $('#latest-news-list');
-      const apiKey = '580d35bdefbd497496a8b8467b1363d9';
+      const apiKey = 'a29acfeb9fba41ebaad7969428b08c73';
       const apiUrl = `https://newsapi.org/v2/everything?q=apple&from=2023-08-06&to=2023-08-06&sortBy=popularity&apiKey=${apiKey}`;
   
       
