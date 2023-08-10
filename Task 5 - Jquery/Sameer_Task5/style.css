@@ -36,3 +36,20 @@
   justify-content: center;
   align-items: center; 
 }
+.latest-card{
+  display: grid;
+  
+   }
+  .latest-card p{
+    font-size: 10px;
+    padding-left: 20px;
+  }
+  .latest-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.latest-card img {
+    margin-right: 10px;
+}
+  
