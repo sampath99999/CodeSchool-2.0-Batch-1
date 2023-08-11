@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    </head>
+
+<body>
+
+    <div class="main_container" style="background-color: #f2f6fb;">
+
+        <div class="nav_section col-12">
+            <nav class="navbar" style="background-color: #26acd8;">
+                <div class="container-fluid d-flex justify-content-between">
+
+                    <form class="d-flex col-5 bg-white" role="search">
+                        <div class="col-12 d-flex justify-content-between align-items-center">
+                            <input class="border-0 col-8 bg-transparent ps-2 p-2" style="outline: none; width: 100%;"
+                                type="search" placeholder="Try: Mercedes from 10000C to 15999C in Pristina"
+                                aria-label="Search">
+                            <button class="border-0 bg-white pe-2 p-2"><i
+                                    class="fa-solid fa-magnifying-glass col-2 bg-white me-2"></i></button>
+                        </div>
+                    </form>
+                    <button class="p-2 fw-medium border-0 rounded-2 col-1"
+                        style="background-color: #f7e3a2; color: #3f526b;"><i
+                            class="bi bi-bag-heart"></i>&nbsp;Sell</button>
+                </div>
+            </nav>
+        </div>
+        <div class="main_section container-fluid col-12 m-auto mt-5 ps-4 pe-4" style="background-color: #f2f6fb;">
+                <div class="row" style="border-bottom: 3px solid #d8f2e2;">
+                    <div class="d-none d-lg-block col-lg-3 bg-white d-lg-flex gap-5 align-items-center justify-content-center pt-4">
+                        <input class="form-check-input bg-success border-0 mt-0 pt-0 fs-4" type="checkbox" value="" id="flexCheckChecked"
+                            checked>
+                        
+                            <p>Category <br> <i class="fa-solid fa-mask" style="opacity: 30%;"></i>Equipment</p>
+                          
+                        
+                    </div>
+                    <div class="col-6 d-lg-none bg-white d-flex gap-5 align-items-center justify-content-center">
+                        <input class="form-check-input bg-success border-0 fs-4" type="checkbox" value="" id="flexCheckChecked"
+                            checked>
+                        
+                            <p>Category <br> <i class="fa-solid fa-mask" style="opacity: 30%;"></i>Equipment</p>
+                          
+                        
+                    </div>
+
+                    <div class="product_box d-none d-lg-block col-lg-3 d-lg-flex justify-content-center gap-5 align-items-center align-content-between" style="background-color: #eef4fa;">
+                        <p class="text-info fs-4">2.</p>
+                        <p>Product description <br>We'll need some names.</p>
+                            
+                        
+                    </div>
+                    <div class="col-3 d-lg-none bg-white align-items-center">
+                        <p>Product description</p>
+                            
+                    </div>
+                    <div class="price_image_box d-none d-lg-block col-lg-6 bg-white d-lg-flex  justify-content-between align-items-center">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <p class="btn">3</p>
+                            <p>Pricing and images</p>
+                        </div>
+                        <div>
+                            <p><i class="bi bi-eye btn"></i>Preview</p>
+                        </div>
+                            
+                       
+                    </div>
+                    <div class="col-3 d-lg-none bg-white d-flex gap-5 align-items-center justify-content-center">
+                        <p>Pricing</p>
+                    </div>
+                </div>
+
+                <div class="row bg-white">
+                    <div class="col-10 m-auto">
+                        <div class="row mb-3 mt-3">
+                            <div class="col-lg-4 col-12">
+                                <p class="mb-0 pb-0">Product title</p>
+                                <form class="d-flex col-12 bg-white mt-0 pb-0" role="search">
+                                    <div class="col-12 d-flex justify-content-between align-items-center p-2 border-1" style="border: 2px solid #e5ebf0; border-radius: 5px;">
+                                        <input class="border-0 bg-transparent" style="outline: none; width: 100%;"
+                                            type="search" placeholder="Enter Product Title"
+                                         id="productTitel">
+                                            <input class="form-check-input bg-secondary fs-6 border-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                    </div>
+                                    
+                                </form>
+                                <p id="productTitelErrMsg" class="Err"></p>
+                            </div>
+                            <div class="col-lg-4 col-12">
+                                <p class="mb-0 pb-0">Type</p>
+                                <form class="d-flex col-12 bg-white mt-0 pb-0" role="search">
+                                    <div class="col-12 d-flex justify-content-between align-items-center p-2" style="border: 2px solid #e5ebf0; border-radius: 5px;">
+                                        <input class="border-0 bg-transparent" style="outline: none; width: 100%;"
+                                            type="text" placeholder="Enter Type"
+                                            aria-label="Search" id="type">
+                                            <input class="form-check-input bg-success fs-6 border-0" type="checkbox" value="" id="flexCheckChecked" checked>
+                                    </div>
+                                    
+                                </form>
+                                <p id="typeErrMsg" class="Err"></p>
+                            </div>
+                            <div class="col-lg-4 col-12">
+                                <p class="mb-0 pb-0">Side</p>
+                                <form class="d-flex col-12 bg-white mt-0 pb-0" role="search">
+                                    <div class="col-12 d-flex justify-content-between align-items-center p-2" style="border: 2px solid #e5ebf0; border-radius: 5px;">
+                                        <input class="border-0 bg-transparent" style="outline: none; width: 100%;"
+                                            type="text" placeholder="Side of the suspension part"
+                                            aria-label="Search" id="side">
+                                    </div>
+                                   
+                                </form>
+                                <p id="sideErrMsg" class="Err"></p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-lg-4 col-12">
+                                <p class="mb-0 pb-0">Product sub title</p>
+                                <form class="d-flex col-12 bg-white mt-0 pb-0" role="search">
+                                    <div class="col-12 d-flex justify-content-between align-items-center p-2" style="border: 2px solid #e5ebf0; border-radius: 5px;">
+                                        <input class="border-0 bg-transparent" style="outline: none; width: 100%;"
+                                            type="text" placeholder="A small description of state of the product"
+                                            aria-label="Search" id="productSub">
+                                        
+                                    </div>
+                                  
+                                </form>
+                                <p id="productSubErrMsg" class="Err"></p>
+                            </div>
+                            <div class="col-lg-4 col-12">
+                                <p class="mb-0 pb-0">Year</p>
+                                <form class="d-flex col-12 bg-white mt-0 pb-0" role="search">
+                                    <div class="col-12 d-flex justify-content-between align-items-center p-2" style="border: 2px solid #e5ebf0; border-radius: 5px;">
+                                        <input class="border-0 bg-transparent" style="outline: none; width: 100%;"
+                                            type="text" placeholder="Year the product is made"
+                                            aria-label="Search" id="year">
+                                        
+                                    </div>
+                                  
+                                </form>
+                                <p id="yearErrMsg" class="Err"></p>
+                            </div>
+                            <div class="col-lg-4 col-12">
+                                <p class="mb-0 pb-0">State</p>
+                                <form class="d-flex col-12 bg-white mt-0 pb-0" role="search">
+                                    <div class="col-12 d-flex justify-content-between align-items-center p-2" style="border: 2px solid #e5ebf0; border-radius: 5px;">
+                                        <input class="border-0 bg-transparent" style="outline: none; width: 100%;"
+                                            type="text" placeholder="is it new or used?"
+                                            aria-label="Search" id="state">
+              
+                                    </div>
+                                    
+                                </form>
+                                <p id="stateErrMsg" class="Err"></p>
+                            </div>
+                        </div>
+                        <div class="row me-1 ms-0 mb-3">
+                            <p class="col-12 ps-0">Product description</p>
+                            <textarea class="form-control pe-0 col-12 p-2 pt-4" rows="8" placeholder="A small description of state of the product.some HTML formating is okay." id="floatingTextarea"></textarea>
+                            <p id="floatingTextareaErrMsg" class="Err"></p>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+
+                <div class="row bg-white mt-1 shadow-lg mb-5">
+                    <div class="col-11 m-auto row align-items-center">
+                        <div class="col-lg-9 col-12 align-items-center">
+                            <p><span class="text-info">Tips</span><br>
+                           Choose a more detailed name of your product, but keep it short. Your buyers know what they want.</p>
+                        </div>
+                        <div class="col-lg-3 col-12 row gap-2 pb-2 pb-lg-0">
+                            <button class="btn col-5" style="background-color: #eaeef4;">Previous step</button>
+                            <button class="bg-info text-white btn col-5" onclick="submitFun()">Next step</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row image_section">
+                    
+                </div>
+           
+                
+            
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+</body>
+
+</html>
