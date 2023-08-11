@@ -1,0 +1,122 @@
+.main-container{
+    background-color: #DEE1E6;
+    min-height: 100vh;
+    padding: 47px 0px;
+}
+.user-image{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.user-image-section{
+    width: 127px;
+    height: 127px;
+}
+
+.menu-item{
+    padding: 10px;
+}
+.menu-item:hover{
+    background-color: #f4f5f9;
+}
+.menu-item:hover i{
+    color: #932ff1;
+}
+.details-section{
+    background-color: #f4f5f9;
+}
+hr{
+    width: 50%;
+}
+.notification-button{
+    border: none !important;
+    background-color: transparent !important;
+    margin-right: 9px !important;
+}
+.add-employee-button{
+    background-color: #6415ea;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 21px;
+    border: none;
+}
+.form-item-heading{
+    font-size: 15px;
+}
+.error-message{
+    color: red;
+}
+.vertical-line{
+    border: 1px solid #ccccb3;
+    margin-right: 9px;
+    
+}
+input{
+    background-color: white !important;
+    box-shadow: none !important;
+    color: #00ffff !important;
+    font-weight: 500 !important;
+    
+}
+input:focus{
+    border-color: #c7dbe2
+}
+.form-buttons{
+    border-radius: 8px !important;
+    padding: 0px 0px !important;
+}
+
+.form-buttons{
+    border-radius: 22px !important;
+    padding: 12px 42px !important;
+    color: white !important;
+}
+.form-middle-button{
+    padding: 15px 16px !important;
+    font-size: 12px !important;
+    background-color: #6413ee;
+    color: white !important;
+    border-radius: 26px !important
+    ;
+}
+.menu-item h6{
+    padding-top: 3px;
+}
+
+input::placeholder{
+    font-size: 14px;
+   
+}
+
+.percentage-button{
+    bottom: -3px;
+    background-color:#88ff4d;
+    position: absolute;
+    border-radius: 50%;
+    color: white;
+    padding: 4px 8px 3px 8px;
+    font-size: 10.5px;
+    left: 103px;
+    bottom: 0px;
+    height: 15px;
+    z-index: 1;
+ }
+
+@media screen and (max-width:1024px){
+    .form-container{
+        width: 100% !important;
+        padding: 12px !important;
+    }
+    .form-section{
+        width: 100% !important;
+    }
+    .main-container{
+        padding:0 !important
+    }
+    .profile-section{
+        height: 100%;
+    }
+    .offcanvas-body{
+        height: 98% !important;
+    }
+}
