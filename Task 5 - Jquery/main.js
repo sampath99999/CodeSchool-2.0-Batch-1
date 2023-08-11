@@ -40,8 +40,8 @@ function showNews(products) {
 // fashion 
 function showFashion(products) {
   let productTag = "";
-  for (let i = 0; i <3; i++) {
-    productTag += `<div class="col-4 p-2 mt-3 text-center">
+  for (let i = 0; i <2; i++) {
+    productTag += `<div class="col-6 p-2 mt-3 text-center">
     <div class="card w-350">
     <h3>Fashion</h3>
     <img src="${products.articles[i].urlToImage}" class="card-img-top" alt="Iphone">
@@ -117,14 +117,14 @@ document.addEventListener("DOMContentLoaded", food);
 function showArticles(products) {
   let productTag = "";
   for (let i = 0; i <7; i++) {
-    productTag += `<div class="col-6 p-2 mt-3 text-center">
+    productTag += `<div class="col-12 d-flex p-2 mt-3 text-center">
     <div class="card d-flex w-350">
-    <div><img src="${products.articles[i].urlToImage}" class="card-img-top" alt="Iphone"></div>
-    <div class="card-body">
-    <h5 class="mt-2">${products.articles[i].title}</h5>
+    <img src="${products.articles[i].urlToImage}" class="card2-img-top" alt="Iphone"></div>
+    <div class="card2-body border-black">
+    <h5 class="mt-5 p-3">${products.articles[i].title}</h5>
     <p>1 week ago .1 comment</p>
     </div>
-</div>
+
     
    
                       </div>`;
@@ -150,3 +150,88 @@ function articles() {
 // Use DOMContentLoaded event and event listener to load products when the page is ready
 document.addEventListener("DOMContentLoaded", articles);
 
+//footer section
+function latestNews(products) {
+  let productTag = "";
+  for (let i = 0; i <3; i++) {
+    productTag += `<div class="col-4 p-1 mt-3 text-center">
+  <div class="card text-white bg-dark mb-0" style="max-width: 18rem;">
+  <div class="card-header">MOST POPULAR</div>
+  <div class="card1-body  bg-custom">
+  <div class="d-flex"><div><img src="${products.articles[i].urlToImage}" class="card1-img-top p-2" alt="Iphone"></div>
+  <div><h5 class=" p-2 mt-2 small">${products.articles[i].title}</h5></div></div>
+  <div class="d-flex"><div><img src="${products.articles[i+1].urlToImage}" class="card1-img-top p-2" alt="Iphone"></div>
+  <div><h5 class=" p-2 mt-2 small">${products.articles[i+1].title}</h5></div></div>
+  <div class="d-flex"><div><img src="${products.articles[i+2].urlToImage}" class="card1-img-top p-2" alt="Iphone"></div>
+  <div><h5 class=" p-2 mt-2 small">${products.articles[i+2].title}</h5></div></div>
+  <div class="d-flex"><div><img src="${products.articles[i+3].urlToImage}" class="card1-img-top p-2" alt="Iphone"></div>
+  <div><h5 class=" p-2 mt-2 small">${products.articles[i+3].title}</h5></div></div>
+  
+  </div>
+</div>
+    
+    
+   
+                      </div>`;
+  }
+
+  document.getElementById("footdiv").innerHTML = productTag;
+}
+
+function latestUpdates() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function () {
+    if (xhttp.status === 200) {
+      let products = JSON.parse(xhttp.responseText);
+      latestNews(products);
+    } else {
+      console.error("Failed to fetch products:", xhttp.status);
+    }
+  };
+  xhttp.open("GET", "https://newsapi.org/v2/everything?q=food&from=2023-08-08&to=2023-08-08&sortBy=popularity&apiKey=4300d83a09ed457d8dfaee3c53f7bcca");
+  xhttp.send();
+}
+
+// Use DOMContentLoaded event and event listener to load products when the page is ready
+document.addEventListener("DOMContentLoaded", latestUpdates);
+
+//features section
+function features(products) {
+  let productTag = "";
+  for (let i = 0; i <1; i++) {
+    productTag += `<div class="row">
+  
+  <div class="d-flex"><div><img src="${products.articles[i].urlToImage}" class="card1-img-top p-2" alt="Iphone"></div>
+  <div><h5 class=" p-2 mt-2 small">${products.articles[i].title}</h5></div></div>
+  <div class="d-flex"><div><img src="${products.articles[i+1].urlToImage}" class="card1-img-top p-2" alt="Iphone"></div>
+  <div><h5 class=" p-2 mt-2 small">${products.articles[i+1].title}</h5></div></div>
+  <div class="d-flex"><div><img src="${products.articles[i+2].urlToImage}" class="card1-img-top p-2" alt="Iphone"></div>
+  <div><h5 class=" p-2 mt-2 small">${products.articles[i+2].title}</h5></div></div>
+ 
+  
+  
+    
+    
+   
+                      </div>`;
+  }
+
+  document.getElementById("featurediv").innerHTML = productTag;
+}
+
+function latestFeatures() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function () {
+    if (xhttp.status === 200) {
+      let products = JSON.parse(xhttp.responseText);
+      features(products);
+    } else {
+      console.error("Failed to fetch products:", xhttp.status);
+    }
+  };
+  xhttp.open("GET", "https://newsapi.org/v2/everything?q=food&from=2023-08-08&to=2023-08-08&sortBy=popularity&apiKey=4300d83a09ed457d8dfaee3c53f7bcca");
+  xhttp.send();
+}
+
+// Use DOMContentLoaded event and event listener to load products when the page is ready
+document.addEventListener("DOMContentLoaded", latestFeatures);

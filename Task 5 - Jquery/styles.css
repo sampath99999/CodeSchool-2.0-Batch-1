@@ -37,3 +37,26 @@
 .bottom{
   background-color: #373941;
 }
+.footer{
+  background-color: #24252A;
+}
+li{
+  padding: 4px;
+  list-style-type: none;
+}
+.card1-body{
+  background-color: #2C2E34;
+}
+.card1-img-top{
+  width: 100px;
+  height: 100%;
+}
+.card2-body{
+  border: solid groove lightgray 1px;
+  align-content: center;
+}
+.card2-img-top{
+  width: 300px;
+  height: 100%;
+
+}
