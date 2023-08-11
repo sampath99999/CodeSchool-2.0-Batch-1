@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+
+<body style="background-color: #0070FF;">
+    <div class="container">
+        <div class="row col-lg-10 m-auto mt-5 pt-5 ">
+            <div class="container">
+                <div class="row bg-white">
+                    <div class="col-6 d-none d-lg-block imageContainer ps-0" id="mainImage">
+
+                    </div>
+                    <div class="col-sm-12 col-lg-6 formContainer">
+                        <p></p>
+                        <img src="./logo.png" alt="" width="auto" height="60px"><span style="font-weight: 700;font-size: 20px;">Lottery Display</span>
+                        <div class="container">
+
+                            <br>
+
+
+                            <u class="mainHeading">For Fresh Registration Fill the Details Below:</u>
+                            <br>
+                            <br>
+
+                            <form id="myform" onsubmit="return false">
+                                <div class="row d-flex flex-lg-row">
+                                    <div class="col-sm-6">
+                                        <label for="emailInput" class="form-label">Email<span
+                                                style="color: red;">*</span></label>
+                                        <input type="email" class="form-control" id="emailInput"
+                                            placeholder="name@example.com" onkeyup="userEmailValidation()" required />
+                                        <div class="valid-feedback">
+                                            Looks Good!👍
+                                        </div>
+                                        <div class="invalid-feedback" id="email-feedback">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="usernameInput" class="form-label">Username<span style="color: red;">*</span></label>
+                                        <input type="text" id="usernameInput" onkeyup="validateUsername()" class="form-control">
+                                        <div id="usernameValidationMessage"></div>
+
+
+                                    </div>
+                                </div>
+                                <div class="row d-flex flex-lg-row">
+                                    <div class="col-sm-6">
+                                        <label for="dateOfBirthInput" class="form-label">Date of Birth<span
+                                                style="color: red;">*</span></label>
+
+                                        <input type="date" class="form-control" id="dob" max="2005-07-30"
+                                            onchange="validateDOB()" required />
+                                            <span id="dobError" style="color: red;"></span>
+
+
+
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="phoneInput" class="form-label">Phone Number<span
+                                                style="color: red;">*</span></label>
+
+                                        <input type="text" class="form-control" id="phoneInput" min="10" max="10"
+                                            onkeyup="phoneNumberValidation()" required />
+                                        <div class="invalid-feedback" id="phoneNo-feedback">
+                                        </div>
+                                    </div>
+
+                                    <div class="row d-flex flex-lg-row">
+                                        <div class="col-sm-6">
+                                            <label for="passwordInput" class="form-label">Password<span
+                                                    style="color: red;">*</span></label>
+                                         &nbsp;   <input type="text" class="form-control" id="passwordInput"
+                                                onkeyup="passwordValidation()"    required />
+                                                <div class="invalid-feedback" id="pwd-feedback">
+                                                </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            
+                                            <label for="confirmPasswordInput" class="form-label">&nbsp; Confirm Password<span
+                                                    style="color: red;">*</span></label>
+                                           &nbsp;&nbsp; <input type="text" class="form-control ms-2" id="confirmPasswordInput"
+                                                onkeyup="confirmPassword(document.getElementById('passwordInput').value)"
+                                                required />
+                                                <div class="invalid-feedback" id="confirmPwd-feedback">
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <p></p>
+                                    <div class="row d-flex flex-lg-row">
+                                        <div class="col-sm-6">
+                                            <input type="checkbox"><span>Remember me</span>
+
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <span style="color: rgb(106, 106, 215);">Reset Password?</span>
+
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <p></p>
+                                    
+                                    
+                            </form>
+                            <div class="row ">
+                                <button id="myButton" class="signupButton">Signup</button>
+
+                            </div>
+
+                            <div class="d-flex align-items-center"> <!-- Use a container to control alignment -->
+                                <span class="ps-lg-5 ms-5">Already have an account?</span>
+                                <a href="#" style="text-decoration: none;">Login</a>
+                            </div>
+                        </div>
+                        <div style="height: 250px; width: 50px;">
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+<script src="script.js"></script>
+
+</html>
