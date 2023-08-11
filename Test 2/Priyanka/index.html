@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <div class="row justify-content-center">
+        <div class="col-md-6 p-2" style="border: 2px solid grey">
+          <form id="registrationForm" onsubmit="return false" class="p-4">
+            <h2 class="text-center">Registration form</h2>
+            <br />
+
+            <!-- Name Field -->
+            <div class="row">
+              <div class="mb-2" style="width: 50%">
+                <label for="firstName" class="form-label">First Name*</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstNameInput"
+                  name="firstName"
+                  placeholder="Enter First Name"
+                />
+                <span
+                  id="firstNameError"
+                  class="text-danger font-weight-bold"
+                ></span>
+              </div>
+              <div class="mb-2" style="width: 50%">
+                <label for="lastName" class="form-label">Last Name*</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastNameInput"
+                  name="lastName"
+                  placeholder="Enter last Name"
+                />
+                <span
+                  id="lastNameError"
+                  class="text-danger font-weight-bold"
+                ></span>
+              </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email*</label>
+              <input
+                type="email"
+                class="form-control"
+                id="emailInput"
+                name="email"
+                placeholder="Enter Email"
+              />
+              <span id="emailError" class="text-danger font-weight-bold"></span>
+            </div>
+
+            <!-- Phone Number Field -->
+            <div class="mb-3">
+              <div class="row">
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number*</label>
+                  <input
+                  type="text"
+                  class="form-control"
+                  id="callingCode"
+                  name="phone"
+                  placeholder="Enter Phone Number"
+                />
+                </div>
+              
+              </div>
+            </div>
+            <span id="phoneError" class="text-danger font-weight-bold"></span>
+
+            <!-- Date of Birth Field -->
+            <div class="row">
+              <div class="mb-3" style="width: 50%">
+                <label for="dob" class="form-label">Date of Birth*</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="dobInput"
+                  name="dob"
+                />
+                <span id="dobError" class="text-danger font-weight-bold"></span>
+              </div>
+
+              <!-- Date of Joining Field -->
+              <div class="mb-3" style="width: 50%">
+                <label for="doj" class="form-label">Date of Joining*</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="dojInput"
+                  name="doj"
+                />
+                <span id="dojError" class="text-danger font-weight-bold"></span>
+              </div>
+            </div>
+
+            <!-- Gender Field -->
+            <div class="mb-3">
+              <label class="form-label">Gender*</label>
+              <div class="d-flex justify-content-around" id="gender">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    id="male"
+                    value="male"
+                  />
+                  <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    id="female"
+                    value="female"
+                  />
+                  <label class="form-check-label" for="female">Female</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="gender"
+                    id="other"
+                    value="other"
+                  />
+                  <label class="form-check-label" for="other">Other</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Password Field -->
+            <div class="row">
+              <div class="mb-2">
+                <label for="password" class="form-label">Password*</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="passwordInput"
+                  name="password"
+                  placeholder="Enter Password"
+                  autocomplete="on"
+                />
+                <span
+                  id="passwordError"
+                  class="text-danger font-weight-bold"
+                ></span>
+              </div>
+              <div class="mb-2">
+                <label for="confirmed-password" class="form-label"
+                  >Confirmed password*</label
+                >
+                <input
+                  type="password"
+                  class="form-control"
+                  id="confirmed-password"
+                  name="confirmed-password"
+                  placeholder="Confirm Password"
+                  autocomplete="on"
+                />
+                <span
+                  id="confirmedPasswordError"
+                  class="text-danger font-weight-bold"
+                ></span>
+              </div>
+            </div>
+            <br />
+
+            <button type="submit" class="btn btn-primary" id="submitBtn">
+              Next Page
+            </button>
+
+            <p id="demo"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

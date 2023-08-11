@@ -1,0 +1,65 @@
+.form-control:hover {
+  border-color: green;
+  box-shadow: 0 0 5px green;
+  background-color: #e0f6db;
+}
+
+.form-control {
+  box-shadow: 0 0 5px #ccc;
+  background-color: #fafcfd;
+}
+
+.btn {
+  width: 100%;
+  background-color: skyblue;
+  justify-content: center;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+
+.product-images {
+  flex-basis: calc(33.33% - 20px);
+  margin: 10px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  flex: 1;
+  margin-right: 10px;
+  position: relative;
+  top: -100px;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .product {
+    flex-direction: column;
+  }
+
+  .product-images {
+    flex-basis: 100%;
+  }
+}
+.container-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.colors {
+  text-align: center;
+  padding: 20px;
+}
+
+.color-button {
+  border-radius: 20px;
+  border: none;
+  padding: 10px 40px;
+  background-color: pink;
+}
+
+.navbar.fixed-top {
+    position: fixed;}
