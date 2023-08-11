@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test2</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="main_container_section pt-5 pb-5">
+     
+
+     
+        <div
+          class="col-9 m-auto row p-0 m-0 rounded-5"
+        >
+          <div class="left_section col-lg-6 m-0 p-0">
+            <div
+              class="col-12 images_sec d-flex flex-column justify-content-end" id="imageElement"
+              style="
+                width: 100%;
+                height: 100%;
+                background-image: url('https://2.bp.blogspot.com/-MEZcdphl0S4/T_zi-VAJSkI/AAAAAAAAAsE/VPCpNthcFb4/s1600/138016.jpg');
+                background-size: cover;
+                filter: grayscale(80%);
+              "
+            >
+            <div class="m-4 mb-3">
+                <p class="text-white image_quote fs-2 fw-bold">Bring Your Music Along</p>
+                <p class="text-white mb-5 fs-4 fw-medium">try Unlimited</p>
+                <p class="text-end mt-3 text-white"><span class="fw-bold fs-3">$<span id="priceVal1"></span>.<span id="priceVal2"></span><span class="fw-bold fs-5">/Month</span></p>
+            </div>
+           
+            </div>
+          </div>
+
+          <div class="right_section col-lg-6 mt-0 bg-white">
+            <div class="mb-5 mb-lg-0">
+              <div class="col-12">
+                <div class="card-body py-5 px-md-5">
+                  <h2 class="mb-3 fw-bold">Registration Form</h2>
+                  <form id="myForm">
+                    <!-- 2 column grid layout with text inputs for the first and last names -->
+                    <div class="row">
+                      <div class="form-outline col-12">
+                        <label class="form-label fw-medium" for="form3Example1"
+                          >Full Name:</label
+                        >
+                        <input
+                          type="text"
+                          id="fullName"
+                          placeholder="ex: Lindey Wilson"
+                          class="form-control"
+                        />
+                        <p id="fnameErrorMsg" class="text-danger"></p>
+                      </div>
+                    </div>
+                    <!-- Email input  -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label fw-medium" for="form3Example3"
+                        >Your Email</label
+                      >
+                      <input
+                        type="text"
+                        id="email"
+                        placeholder="Enter Mail"
+                        class="form-control"
+                      />
+                      <p id="emailErrorMsg" class="text-danger"></p>
+                    </div>
+
+                    <div class="row">
+                      <label class="form-label fw-medium" for="form3Example1"
+                        >Phone Number:</label
+                      >
+
+                      <div class="form-outline col-12">
+                        <input
+                          type="text"
+                          id="phoneInput"
+                          placeholder="Enter Phone Number"
+                          class="form-control"
+                        />
+                        <p id="phoneErrorMsg" class="text-danger"></p>
+                      </div>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label fw-medium" for="form3Example1"
+                        >Password:</label
+                      >
+                      <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter Password"
+                        class="form-control"
+                      />
+                      <p id="passwordErrMsg" class="text-danger"></p>
+                    </div>
+
+                    <div class="form-outline mb-4">
+                      <label class="form-label fw-medium" for="form3Example1"
+                        >Confirmed Password:</label
+                      >
+                      <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Enter Password Again"
+                        class="form-control"
+                      />
+                      <p id="confirmPasswordErrMsg" class="text-danger"></p>
+                    </div>
+
+                    <!-- Checkbox -->
+                    <div
+                      class="form-check d-flex justify-content-center mb-4 col-12 row m-0 p-0"
+                    >
+                   
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        id="form2Example33"
+                      />
+                      <label class="form-check-label col-11 row" for="form2Example33">
+                        <span class="col-12">By signing up, you agree to the</span> 
+                        <u class="terms_color col-12 fw-medium">Play Term of Service</u>
+                      </label>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button
+                      type="submit"
+                      class="btn_bg_color mb-lg-4 col-4 rounded-2 border-0 pt-2 pb-2 fw-medium"
+                    >
+                      Register
+                    </button>
+
+                    <p
+                      id="successMsg"
+                      class="col-10 m-auto mb-3 text-success fw-bold"
+                    ></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+ 
+
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
