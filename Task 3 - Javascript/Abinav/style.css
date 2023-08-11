@@ -1,0 +1,96 @@
+.nav-bar{
+    justify-content: space-between !important;
+
+}
+
+@media screen and (min-width: 1024px) {
+    #navbarHeading {
+      margin-left: 2% !important;
+      
+    }
+}
+@media (max-width: 600px) {
+    .main{
+      height: 900px !important; 
+    }
+    
+    
+  }
+  @media (max-width: 600px) {
+    #third-main{
+      height: 900px !important; 
+    }
+    
+    
+  }
+ 
+  
+  
+  
+  
+  
+#navbarHeading{
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-end {
+      margin-right: 6% !important;
+      
+    }
+}
+#bell{
+    background-color: #E6F7EE !important;
+    border-radius: 50% !important;
+    padding: 5px 8px 5px 8px;
+    border-radius: 50% !important;
+    color: green !important;
+
+}
+#person{
+    background-color: #E6F7EE !important;
+    padding: 5px 8px 5px 8px !important;
+    margin-left: 15px !important;
+    border-radius: 50% !important;
+    color: green !important;
+
+
+}
+#dots{
+    background-color: #E6F7EE !important;
+    padding: 0px !important;
+    margin-left: 15px !important;
+    border-radius: 50% !important;
+    color: green !important;
+
+
+
+}
+.firstname, .lastname{
+    border-radius: 8px;
+    background-color:#F7F9FD;
+    border:none;
+    height: 35px;
+}
+.abu{
+    border: ;
+}
+input.green-border {
+    border-color: green;
+}
+body{
+    
+}
+
+.form-control{
+    border: none !important;
+    background-color:#F7F9FD;
+}
+.errorclass{
+    color: red;
+}
+.login{
+    text-decoration: none;
+    color: lightgreen;
+    font-weight: 600;
+}

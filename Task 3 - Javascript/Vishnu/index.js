@@ -31,18 +31,18 @@ const radioButtonOther = document.getElementById("inlineCheckbox3");
 
 formSubmit.addEventListener("submit",function(event){
     event.preventDefault();
-    const fname=validateFirstName();
-    const lname=validateLastName();
-    const ename=validateEmailName();
-    const pnum=validatePhoneNumber();
-    const pcode=validateCode();
-    const dob=validateDateOfBirth();
-    const doj=validateDateOfJoin();
+    const firstnameValidate=validateFirstName();
+    const lastnameValidate=validateLastName();
+    const emailValidate=validateEmailName();
+    const phoneValidate=validatePhoneNumber();
+    const codeValidate=validateCode();
+    const dobValidate=validateDateOfBirth();
+    const dojValidate=validateDateOfJoin();
     const formcountries=validateCountries();
-    const pwd=validatePassword();
-    const confirmpwd=validateConfirmPassword();
+    const passwordValidate=validatePassword();
+    const confirmValidate=validateConfirmPassword();
     const agreementStatus=agreement.checked;
-    if(fname===true && lname===true && ename===true && pnum===true && pcode===true && dob===true && doj===true && formcountries===true && pwd===true && 
+    if(firstnameValidate===true && lastnameValidate===true && emailValidate===true && phoneValidate===true && codeValidate===true && dobValidate===true && dojValidate===true && formcountries===true && passwordValidate===true && 
         agreementStatus===true && (radioButtonMale.checked || radioButtonFemale.checked || radioButtonOther.checked)){  
         formError.textContent="Registration successful";   
         formError.style.color="green";
@@ -201,12 +201,12 @@ function validateEmailName(event){
         return false; 
     }
     else if (lastEmailValue.match(/@/g).length>1) {
-        emailError.textContent = "only one @ is allowed.";
+        emailError.textContent = "Only one @ is allowed.";
         emailError.style.display="block"; 
         return false;
     }
     else if (lastEmailValue.includes("..")) {
-        emailError.textContent = "consecutive dots are not allowed.";
+        emailError.textContent = "Consecutive dots are not allowed.";
         emailError.style.display="block"; 
         return false;
     }
@@ -229,7 +229,7 @@ password.addEventListener("blur",validatePassword);
 function validatePassword() {
     
     const passwordInput = password.value;
-    const commonPasswords = ["password", "123456", "qwerty", "abcdef", "admin", "letmein"];
+    const commonPasswords = ["password", "123456", "hello", "abcdef", "admin", "username"];
   
     if (!passwordInput) {
         passwordError.textContent="*Password cannot be empty.";
@@ -260,7 +260,7 @@ function validatePassword() {
         return false;
         
     }
-    else if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~]/.test(passwordInput)) {
+    else if (!/[!@#$%^&*()_+{}:;<>,.?~]/.test(passwordInput)) {
         passwordError.textContent = "Password should contain at least one special character.";
         passwordError.style.display="block";
         return false;

@@ -1,0 +1,22 @@
+.violett{
+    height:30px;
+    width:100vw;
+}
+.mail{
+    background-color: #5140e8;
+    border-radius: 50%;
+    padding: 6px;
+}
+.form_2,.form_1{
+    position: absolute;
+    bottom:30px;
+    margin-right: 80px;
+}
+.validation {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.error {
+  color: red;
+}
