@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 2 | Astik Mishra</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="col-12 col-lg-11 m-lg-auto m-0 mt-0 mt-lg-5 mb-0 mb-lg-5 rounded-4 shadow bg-white">
+    <nav class="navbar navbar-expand-lg" style="background-color: rgb(33, 42, 50);">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white border-end border-secondary p-3 m-2" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+                  </svg>
+                Gaspar
+              </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav text-center text-lg-start d-flex me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link text-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Solutions
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary" href="#">Resources</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link text-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Company
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary" href="#">Contact Us</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav gap-2">
+                <button type="button" class="btn text-white rounded-pill">Find an agent</button>
+                <button type="button" class="btn bg-white text-black rounded-pill">Get a quote</button>
+                <li class="nav-item d-none d-lg-block">
+                  <a class="nav-link rounded-pill pe-auto text-white text-center" style="width: 40px; background-color: rgba(255, 255, 255, 0.19);" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
+                  </a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+<div class="w-100 align-items-center">
+    <div class="p-5 col-12 col-lg-6 float-start rounded-5 rounded-top-0" style="background-color: rgb(33, 42, 50);">
+        <p class="text-secondary">CONTACT US</p>
+        <div class="text-white" id="quote">
+        </div>
+        <p class="text-secondary">Send us message and we'll get your questions answered as soon as possible.</p>
+        <div class="d-flex gap-4">
+            <button type="button" class="btn bg-white rounded-pill" style="color: rgb(33, 42, 50); "><b>Find an agent</b></button>
+            <div class="w-25 d-flex gap-3 align-items-center text-white" id="phNo">
+                <!-- <p><u></u></p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                  </svg> -->
+            </div>
+        </div>
+    </div>
+    <div class="col-12 col-lg-6 m-auto bg-white shadow float-end">
+        <div class="m-5">
+            <form action="" name="myForm" onsubmit="event.preventDefault(); formValidation()">
+                <div id="firstName">
+                <input class="w-100 form-control shadow" type="text" name="firstName" placeholder="First Name*" required/>
+                <p class="formErr"></p>
+            </div>
+            <div id="lastName">
+                <input class="w-100 form-control shadow" type="text" name="lastName" placeholder="Last Name*" required/>
+                <p class="formErr"></p>
+            </div>
+            <div id="email">
+                <input class="w-100 form-control shadow" type="email" name="email" placeholder="Email Address*" required/>
+                <p class="formErr"></p>
+            </div>
+            <div id="phone">
+                <input class="w-100 form-control shadow" type="text" name="phone"  placeholder="Phone Number*" required/>
+                <p class="formErr"></p>
+            </div>
+            <div id="bestTime">
+                <input class="w-100 form-control shadow" type="text" name="bestTime"  placeholder="Best time to contact you?" required/>
+                <p class="formErr"></p>
+            </div>
+            <div id="select">
+                <select class="form-control shadow">
+                    <option value="0">What's your preferred method of contact?</option>
+                    <option value="1">WhatsApp</option>
+                    <option value="2">Email</option>
+                    <option value="3">Phone</option>
+                    <option value="4">Zoom</option>
+                </select>
+            </div>
+            <br>
+            <div id="additionalInfo">
+                <textarea class="form-control shadow" id="exampleFormControlTextarea1" name="additionalInfo" rows="3" placeholder="Do you have any additional information?"></textarea>
+                <p class="formErr"></p>
+            </div>
+            <div id="submit">
+                <input type="submit" class="w-100 p-2 shadow rounded-2 text-white" style="background-color: rgb(33, 42, 50);" value="Submit your message">
+            </div>
+                <br>
+                <br>
+                <p>Gasper uses the contact information you provided to us to contact you about your relevant content, products, and services. You may unsubscribe from these communications at any time. For information, check out our <a href="" class="text-decoration-none" style="color: rgb(33, 42, 50);"><b>Privacy Poilcy</b></a></p>
+            </form>
+        </div>
+    </div>
+    <div class="p-5 col-12 col-lg-6 float-start rounded-5 rounded-top-0" id="emailApi">
+    </div>
+</div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
