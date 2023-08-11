@@ -1,0 +1,65 @@
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+}
+
+.left-container{
+    background-color: #4f4f4f;
+
+    
+}
+.right-container{
+    background-color: #f8fcff;
+   
+   
+
+}
+.person-heading{
+    color:#6767ff;
+}
+
+/*form*/
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    display: inline-block;
+    border: none;
+    background:  #fafafa, white;
+    border-radius: 5px;
+  }
+
+
+  /* input[type=text]:focus, input[type=password]:focus ,input[type=radio]:focus, input[type=date]:focus {
+    background-color: #e9f2ec;
+    border: 1px solid #04AA6D;
+    border-radius: 5px;
+  } */
+  .error-message {
+    color: #dc3545;
+    font-family: "Roboto";
+    font-size: 14px;
+  }
+
+  .cancel{
+    border-radius: 5px;
+    padding: 5px;
+    background-color:  white;
+    border: 1px solid black;
+  }
+  .submit{
+    border-radius: 5px;
+    padding: 5px;
+    background-color:  #3457D5;
+    color:white;
+    border: none;
+  }
+
+  .total_bill{
+    padding-top: 35px;
+    margin-top: 45px;
+  }
