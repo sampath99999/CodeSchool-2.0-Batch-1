@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Create account</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <link href="style.css" rel="stylesheet"> 
+    </head>
+    <body>
+        <div >
+            <div class="col-md-5  mt-md-5 m-md-auto rounded" style="background-color: white;">
+                <div class="col-md-6   m-auto p-5">
+                        <h5><b>CREATE ACCOUNT</b></h5>
+                </div>
+                <div>
+                    <form class="w-75 m-auto pb-3 rounded" onclick='signUp()' >
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="Name2" placeholder="John Doe" oninput="name1()" >
+                            <small id="name-error" style="color:red"></small>
+                        </div>
+                        <div class="mb-3">
+                          
+                          <input type="email" class="form-control" id="Email" oninput="email()" placeholder="Your Email" aria-describedby="emailHelp">
+                          <div id="email-error" class="form-text" style="color:red"></div>
+                        </div>
+                        <div class="mb-3">
+                          <input type="password" class="form-control" placeholder="Password" oninput="password()" id="Password">
+                          <div id="password-error" style="color:red"></div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="Repeate your Password" oninput="check()" id="confirm-Password">
+                            <div id="confirm-error" style="color:red"></div>
+                        </div>
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">I agree all statements in <u><b>Terms of service</b></u></label>
+                        </div>
+                        <div class="">
+                            <button type="submit"  class="btn btn-primary">Sign up</button>
+                        </div>
+                        <div class="d-flex p-5">
+                            <div class="">
+                                Have already an account ? 
+                            </div>
+                            <div class="">
+                                <a href="#"><u><b>Login here</b></u></a>                        
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="javascript.js"></script>
+    </body>
+</html>
