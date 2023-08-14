@@ -1,0 +1,63 @@
+/* Set text color to black */
+.navbar {
+    color: black;
+  }
+  
+  /* Style the dropdown menu */
+  .dropdown-menu {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Set the color of dropdown menu items on hover */
+  .dropdown-item:hover {
+    background-color: #E6F7EE;
+  }
+  
+  /* Add space between the icons */
+  .d-flex a {
+    margin-right: 10px;
+  }
+  .icon{
+    color: #11A755;
+    text-decoration: none;
+  }
+  .circle-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px; /* Adjust the size of the circle as needed */
+    height: 28px;
+    background-color: #E6F7EE;
+    border-radius: 50%;
+  }
+  #image{
+    width: 600px;
+    height: 100%;
+    border-radius: 10px;
+  }
+  .firstname{
+    background-color: #F7F9FD;
+    border: groove #F7F9FD 1px;
+  }
+  .btn{
+    width: 100%;
+  }
+.log{
+    color: #11A755;
+    text-decoration: none;
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+  }
+#passwordMatchMessage {
+    font-size: 12px;
+  }
+.password-match {
+  color: #11A755;
+  }
+.password-not-match {
+    color: red;
+  }
+  
