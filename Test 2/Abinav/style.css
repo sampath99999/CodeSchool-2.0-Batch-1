@@ -1,0 +1,177 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.profileImageDivison {
+  padding-top: 10px;
+  margin-left: 20%;
+
+  margin-top: 4%;
+}
+#profileImage {
+  border-radius: 50% !important;
+}
+#profileUserName {
+  margin-left: 25%;
+  margin-top: 10% !important;
+}
+#profileImagemobileview {
+  border-radius: 50% !important;
+}
+#profileUserNamemobileview {
+  margin-left: 25%;
+  margin-top: 10% !important;
+}
+.searchBar {
+  background-color: rgb(234, 234, 234);
+}
+.maincontainer .badge {
+  background-color: rgb(198, 35, 198) !important;
+
+  top: 5px !important;
+
+  border-radius: 50%;
+  font-size: 10px !important;
+  font-weight: 600;
+}
+.maincontainer {
+  background-color: rgb(249, 249, 249);
+  height: 700px;
+}
+.vertical-line {
+  border-left: 1px solid black;
+  height: 1vh;
+  margin: 0;
+  padding: 0;
+  padding-left: 0px;
+  padding-right: 10px;
+  margin: 0px;
+}
+.SearchbarButton {
+  border: none;
+  background-color: rgb(198, 35, 198);
+  border-radius: 20px;
+  padding: 7px;
+  font-size: 12px;
+  color: white;
+  font-weight: 600;
+}
+.EmployeeDetailSection {
+  padding-left: 20px;
+  padding-top: 30px;
+  min-height: 100%;
+
+  height: 800;
+}
+.saveButton {
+  border: none;
+  width: 100%;
+  border-radius: 40px;
+  padding: 15px;
+  background-color: rgb(198, 35, 198);
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+}
+.SaveAddButton {
+  border: none;
+  width: 100%;
+  border-radius: 40px;
+  padding: 15px;
+  background-color: blueviolet;
+  color: white;
+  font-weight: 600;
+  font-size: 13px;
+}
+.cancelButton {
+  border: none;
+  width: 100%;
+  border-radius: 40px;
+  padding: 15px;
+
+  color: rgb(100, 100, 100);
+  font-weight: 600;
+}
+@media screen and (min-width: 1024px) {
+  .optionsContainer {
+    padding-top: 25%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .saveButton {
+    border: none;
+    width: 180px;
+    border-radius: 40px;
+    padding: 15px;
+    background-color: rgb(198, 35, 198);
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .SaveAddButton {
+    border: none;
+    width: 180px !important;
+    border-radius: 40px;
+    padding: 15px;
+    background-color: blueviolet;
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .cancelButton {
+    border: none;
+    width: 180px;
+    border-radius: 40px;
+    padding: 15px;
+
+    color: rgb(100, 100, 100);
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .optionsContainer {
+    padding-left: 5%;
+  }
+}
+.optionsContainer .bi {
+  font-size: 25px !important;
+  color: rgb(122, 122, 122);
+}
+.options {
+  font-size: 14px;
+  padding-left: 9px;
+  font-weight: 600;
+  color: rgb(104, 104, 104);
+  margin-bottom: 5px;
+}
+
+.optionsContainer li:hover {
+  background-color: rgb(232, 232, 232);
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .dot {
+        width: 16px;
+        height: 16px;
+        background-color: green;
+        border-radius: 50%;
+        position: absolute;
+        top: 90px; 
+        left: 60px;
+        border: 2px solid white;
+      }
+
+      .profileImageDivison {
+        padding-top: 10px;
+        margin-left: 20%;
+      
+        margin-top: 4%;
+        position: relative;
+        display: inline-block;
+      }
+  
+  }

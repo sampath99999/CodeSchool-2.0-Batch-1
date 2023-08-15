@@ -1,0 +1,152 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="row col-md-8 m-auto mt-md-4 p-0">
+      <div class="col-md-6 rounded-left d-none d-md-block" id="image">
+        <div class="d-flex flex-column gap-3">
+          <div class="col-12">
+            <h5 id="quote" style="padding-top: 130%; color: white"></h5>
+          </div>
+          <div
+            id="cost"
+            style="color: white"
+            class="col-12 d-flex justify-content-end gap-2"
+          ></div>
+        </div>
+      </div>
+      <div
+        class="col-md-6 ps-5 pt-5 rounded-right pe-4 pe-5"
+        style="background-color: white"
+      >
+        <div class="mb-3">
+          <h4><b>Registration Form</b></h4>
+        </div>
+        <div>
+          <form>
+            <div class="mb-3" onclick="Register()">
+              <label for="exampleInputEmail1" class="form-label"
+                >Full Name:</label
+              >
+              <input
+                type="Name"
+                class="form-control"
+                oninput="Name()"
+                id="name"
+              />
+              <div id="name-error" class="form-text" style="color: red"></div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"
+                >Your Email:</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="Email"
+                oninput="email()"
+                aria-describedby="emailHelp"
+              />
+              <div id="email-error" class="form-text" style="color: red"></div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Phone No:</label>
+              <input
+                type="text"
+                onkeypress="return isNumberKey(event)"
+                class="form-control"
+                id="phone-no"
+                maxlength="10"
+              />
+              <div id="phone-error" class="form-text" style="color: red"></div>
+            </div>
+            <div class="d-flex gap-3 mb-3">
+              <label>Gender:</label>
+              <div class="d-flex gap-1">
+                <input type="radio" name="gender" id="male" />Male
+              </div>
+              <div class="d-flex gap-1">
+                <input type="radio" name="gender" id="female" />Female
+              </div>
+              <div class="d-flex gap-1">
+                <input type="radio" name="gender" id="other" />Others
+              </div>
+              <div id="gender" style="color: red"></div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Password:</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="Password1"
+                oninput="Password()"
+              />
+              <div id="password-error" style="color: red"></div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label"
+                >Confirm-Password:</label
+              >
+              <input
+                type="password"
+                class="form-control"
+                id="Password2"
+                oninput="check()"
+              />
+              <div id="confirm_password-error" style="color: red"></div>
+            </div>
+            <div class="mb-3 form-check">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                id="exampleCheck1"
+              />
+              <label class="form-check-label" for="exampleCheck1"
+                >By signing up, you agree to the</label
+              >
+              <div>
+                <label
+                  ><a href="#"
+                    ><h6><u>Play Term of Service</u></h6></a
+                  ></label
+                >
+              </div>
+            </div>
+            <div class="pb-4">
+              <button
+                type="submit"
+                class="btn btn-primary w-50"
+                onclick="Register()"
+              >
+                Register
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+      <script src="./javascript.js"></script>
+    </div>
+  </body>
+</html>
