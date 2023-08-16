@@ -138,10 +138,12 @@ function partyNameFunction(event) {
       $("#party-name-error").text("*Should not contain special characters");
     }
   } else {
-    if (inputData.length === 0) {
-      $("#party-name-error").text("*Party name cannot be empty");
-    } else if (keyValue !== undefined) {
+    if (keyValue !== undefined) {
       inputData += keyValue;
+      $("#party-name-error").text("");
+    } else if (inputData.length === 0) {
+      $("#party-name-error").text("*Party name cannot be empty");
+    } else {
       $("#party-name-error").text("");
     }
   }
