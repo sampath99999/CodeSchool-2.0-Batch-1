@@ -451,17 +451,17 @@ $(document).ready(function () {
     console.log(partyAmountValue);
 
     //
-    one = ["", "one ", "two ", "three ", "four ",
-      "five ", "six ", "seven ", "eight ",
-      "nine ", "ten ", "eleven ", "twelve ",
-      "thirteen ", "fourteen ", "fifteen ",
-      "sixteen ", "seventeen ", "eighteen ",
-      "nineteen "];
+    one = ["", "One ", "Two ", "Three ", "Four ",
+      "Five ", "Six ", "Seven ", "Eight ",
+      "Nine ", "Ten ", "Eleven ", "Twelve ",
+      "Thirteen ", "Fourteen ", "Fifteen ",
+      "Sixteen ", "Seventeen ", "Eighteen ",
+      "Nineteen "];
 
 
-    ten = ["", "", "twenty ", "thirty ", "forty ",
-      "fifty ", "sixty ", "seventy ", "eighty ",
-      "ninety "];
+    ten = ["", "", "Twenty ", "Thirty ", "Forty ",
+      "Fifty ", "Sixty ", "Seventy ", "Eighty ",
+      "Ninety "];
 
 
     n = parseInt(partyAmountValue);

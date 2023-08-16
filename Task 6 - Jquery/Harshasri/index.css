@@ -463,22 +463,11 @@ input[type=password] {
   font-family: "Roboto";
   font-size: 14px;
   text-align: start;
-  margin-left: 200px;
+  
 
 
 }
 
-@media screen and (max-width:576px) {
-  .error-message1 {
-    color: black;
-    font-family: "Roboto";
-    font-size: 14px;
-    text-align: start;
-    margin-left: 0px;
-
-  }
-
-}
 
 .radio {
   font-size: 14px;

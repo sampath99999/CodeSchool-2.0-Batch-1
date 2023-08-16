@@ -38,21 +38,7 @@
         <li><a href="#">pb Budget Check</a></li>
         <li><a href="#">Update Receipts Used Amount</a></li>
       </ul>
-      <!-- <ul class="sidebar-nav">
-            <li class="active">
-              <a href="#">
-                </i>Home</a>
-            </li>
-            <li><a href="#">Employee Masters</a></li>
-            <li>
-              <a href="#">
-                </i>Plugins</a>
-            </li>
-            <li>
-              <a href="#">
-                </i>Users</a>
-            </li>
-          </ul> -->
+     
     </aside>
 
     <div id="navbar-wrapper">
@@ -63,7 +49,7 @@
               class="logo-image d-block d-md-none" />
             <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
             <button class="menu-button d-flex align-items-center gap-2">
-              <i class="fa fa-home" style="font-size: 24px; color: white"></i>
+              <i class="bi bi-boxes" style="font-size: 24px; color: white"></i>
               MODULES
             </button>
           </div>
@@ -104,7 +90,7 @@
             <li class="dropdown">
               <ul class="menu-button1 dropbtn gap-2 d-flex justify-content-center align-items-center list-unstyled">
                 <li>
-                  <i class="fa fa-user" style="font-size: 24px; color: white"></i>
+                  <i class="fa fa-user ps-1" style="font-size: 24px; color: white"></i>
                 </li>
                 <li>
                   <p class="login-time profile text-start mt-3">
@@ -217,6 +203,7 @@
                 </div>
               </div>
 
+              <!-- //party Acc? -->
               <div class="col-12 col-md-6 d-flex flex-column">
                 <div class="d-flex flex-column flex-md-row align-items-md-center">
                   <label for="partyAccount" class="form-label col-md-5"><b>Party Account no<span
@@ -225,7 +212,7 @@
                     class="form-control col-md-7" />
                 </div>
                 <p id="partyAccountErrorMsg"
-                  class="error-message col-md-12 ms-md-5 d-md-flex justify-content-md-center">
+                  class="error-message">
                   *Party Account should not be Empty!
                 </p>
               </div>
@@ -237,7 +224,7 @@
                     class="form-control col-md-7" />
                 </div>
                 <p id="confirmPartyAccountErrorMsg"
-                  class="error-message col-md-12 ms-md-5 ps-md-5 d-md-flex justify-content-md-center">
+                  class="error-message">
                   *Confirm Party Account should not be Empty!
                 </p>
               </div>
@@ -248,7 +235,7 @@
                   <input id="partyName" type="text" placeholder="Enter Party Name" name="partyAccount"
                     class="form-control col-md-7" />
                 </div>
-                <p id="partyNameErrorMsg" class="error-message col-md-12 ms-md-5 d-md-flex justify-content-md-center">
+                <p id="partyNameErrorMsg" class="error-message">
                   *Party Name should not be Empty!
                 </p>
               </div>
@@ -267,7 +254,7 @@
                       </div>
                     </div>
                   </div>
-                  <p id="ifscErrorMsg" class="error-message col-md-7 d-md-flex justify-content-md-center">
+                  <p id="ifscErrorMsg" class="error-message">
                     *IFSC Code should not be Empty!
                   </p>
                 </div>
@@ -298,7 +285,7 @@
                       <option value="5">2204000030006300303NVN</option>
                     </select>
                   </div>
-                  <p id="HeadOfErrorMsg" class="error-message col-md-12 ms-md-5 d-md-flex justify-content-md-center">
+                  <p id="HeadOfErrorMsg" class="error-message">
                   </p>
                 </div>
                 <div class="col-12 col-md-6 d-flex flex-column">
@@ -363,15 +350,10 @@
                   <label for="purpose" class="form-label col-md-5"><b>Purpose<span
                         class="text-danger">*</span></b></label>
                   <textarea class="form-control col-md-7" id="purpose" placeholder="Purpose" rows="3"></textarea>
-                  <!-- <textarea
-                      id="purpose"
-                      name="purpose"
-                      rows="2"
-                      class="form-control text-area col-md-7"
-                    > -->
+               
                   </textarea>
                 </div>
-                <p id="purposeErrorMsg" class="error-message col-md-12 ms-md-5 d-md-flex justify-content-md-center">
+                <p id="purposeErrorMsg" class="error-message">
                   *Purpose should not be Empty!
                 </p>
               </div>
@@ -383,7 +365,7 @@
                     class="form-control col-md-7" />
                 </div>
                 <p id="partyAmountMsg"
-                  class="error-message1 col-md-12 text-md-center d-md-flex justify-content-md-center"></p>
+                  class="error-message1"></p>
 
               </div>
 
@@ -402,7 +384,7 @@
                     </div>
                   </div>
                 </div>
-                <p id="DocumentsErrorMsg" class="error-message col-md-12 ms-md-5 d-md-flex justify-content-md-center">
+                <p id="DocumentsErrorMsg" class="error-message">
                 </p>
                 <p>
                   <i>Note : Documents of Cheque(Letter/G.D etc) can be
@@ -411,13 +393,14 @@
                 </p>
                 <div id="fileWrapper"></div>
               </div>
+             
+              
               <hr />
-              <div class="col-8 d-flex justify-content-end">
-                <button class="btn btn-primary" type="submit">
-                  <i class="bi bi-caret-right"></i> Next
-                </button>
-              </div>
-
+                <div class="col-8 d-flex justify-content-end">
+                  <button class="btn btn-primary" type="submit">
+                    <i class="bi bi-caret-right"></i> Next
+                  </button>
+                </div>
               <div class="col-12 mt-1 d-flex flex-row justify-content-center align-items-center text-success fs-6">
                 <p id="demo"></p>
               </div>
