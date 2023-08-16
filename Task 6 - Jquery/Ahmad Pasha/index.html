@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+    integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+</head>
+
+
+<body class="m-0 p-0">
+  <div class="main_container mt-0 pt-0">
+    <div class="container-fluid mt-0 pt-0">
+      <div class="row mt-0 pt-0">
+
+        <div class="left_section col-2 m-0 p-0 h-75" id="navBg">
+          <div class="collapse navbar-collapse " id="navbarNavDropdown">
+            <h1 class="text-white text-center mt-2">IFMIS</h1>
+            <hr class="text-white">
+            <ul class="navbar-nav pb-4">
+              <li class="menu_home"><a href="#"><i class="fa-solid fa-house"></i>&nbsp;Home</a></li>
+              <li><a href="#">Masters</a></li>
+              <li><a href="#">Transcations</a></li>
+              <li><a href="#">Reports</a></li>
+              <li><a href="#">Return Cheque Generation</a></li>
+              <li><a href="#">Forest Transcations</a></li>
+              <li><a href="#">Forest Transcations Report</a></li>
+              <li><a href="#">E-Kuber Return Recieved List</a></li>
+              <li><a href="#">E-Kuber Return Challan Print</a></li>
+              <li><a href="#">UTR Search</a></li>
+              <li><a href="#">Falled transactions (ACK Reject)</a></li>
+              <li><a href="#">Cheque Status Report</a></li>
+              <li><a href="#">Rejected Cheques due to FinYearEnd</a></li>
+              <li><a href="#">Finyear New Cheques Report</a></li>
+              <li><a href="#">Pb Budget Ckecks</a></li>
+              <li><a href="#">Update Receipts Used Amouns</a></li>
+            </ul>
+          </div>
+
+          <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header" id="navBg">
+              <img src="ifmis-logo-2.png">
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body h-100" id="navBg">
+              <ul class="navbar-nav">
+                <li class="menu_home"><a href="#"><i class="fa-solid fa-house"></i>&nbsp;Home</a></li>
+                <li><a href="#">Masters</a></li>
+                <li><a href="#">Transcations</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Return Cheque Generation</a></li>
+                <li><a href="#">Forest Transcations</a></li>
+                <li><a href="#">Forest Transcations Report</a></li>
+                <li><a href="#">E-Kuber Return Recieved List</a></li>
+                <li><a href="#">E-Kuber Return Challan Print</a></li>
+                <li><a href="#">UTR Search</a></li>
+                <li><a href="#">Falled transactions (ACK Reject)</a></li>
+                <li><a href="#">Cheque Status Report</a></li>
+                <li><a href="#">Rejected Cheques due to FinYearEnd</a></li>
+                <li><a href="#">Finyear New Cheques Report</a></li>
+                <li><a href="#">Pb Budget Ckecks</a></li>
+                <li><a href="#">Update Receipts Used Amouns</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="right_section m-0 p-0">
+          <nav class="navbar align-items-center col-12">
+            <div class="container-fluid align-items-center d-flex">
+              <div class="d-flex gap-1 gap-lg-2 align-items-center">
+                <img src="ifmis-logo.png" class="d-lg-none m-0 p-0 h-50 w-50">
+                <button class="btn d-lg-none text-white" type="button" id="offcanvasToggleButton">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+                <button class="navbar-toggler d-none d-lg-block text-white" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="flase"
+                  aria-label="Toggle navigation">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+                <button class="btn_color fw-medium p-2 d-flex flex-nowrap gap-2"><i class="bi bi-boxes"></i>Modules</button>
+              </div>
+              <div class="d-flex gap-2 align-items-center">
+                <div class="text-white d-none d-lg-block">
+                  <h6>Last Login</h6>
+                  <span id="loginDate"></span>
+                  <span id="loginTime"></span>
+                </div>
+                <div class="input-group input-group-md btn_color">
+                  <span class="input-group-text bg-transparent text-white border-0"><i
+                      class="bi bi-person-circle border-0"></i>
+                  </span>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                      aria-expanded="false">
+                      <div class="d-lg-flex flex-column d-none d-lg-block">
+                        <span>Welcome M.USHASHREE</span>
+                        <span>(23031013097)</span>
+                      </div>
+                    </a>
+                    <ul class="dropdown-menu ps-2">
+                      <li><a class="dropdown-item" href="#">Profile</a></li>
+                      <li><a class="dropdown-item" href="#">Change Password</a></li>
+                      <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                  </li>
+
+                </div>
+                <div>
+                  <button class="btn_color p-2 fw-medium d-none d-lg-block d-lg-flex flex-nowrap gap-2" id="logout">Logout<i class="bi bi-box-arrow-right"></i></button>
+                </div>
+
+              </div>
+
+            </div>
+          </nav>
+
+          <div class="issue_cheque_section d-lg-flex m-3 p-3 gap-3 d-none d-lg-block">
+            <i class="fa-solid fa-money-check-dollar fs-4 m-0 fw-bold"></i>
+            <p class="fs-6 m-0 fw-bold">Issue Cheque (E-Kuber Cheque From 01/03/2019)</p>
+          </div>
+
+          <div class="sub_content m-lg-4 m-0 ms-lg-5">
+            <div class="points p-3">
+              <p class="fw-bold">Points to remember</p>
+              <ul>
+                <li>Please note that all cheques which are approved from DDOChecCKer/Ohicer/Govt trom 01/03/2019 shall
+                  get paid through Ekuber which iIS a Core Banking Solution ot RBI.</li>
+                <li>There is no need to present the cheques at the Bank for these cheques which got approved after
+                  01/03/2019.
+                </li>
+                <li>Please give correct account details as it is when the Account was opened.</li>
+                <li>Make sure there is no 'Your self' or 'Self" in the account names while issuing cheques.Such cheques
+                  get auto-rejected by the EKuber
+                </li>
+                <li>Please check the exact length of the Bank Account Number and NO special characters are to be
+                  entered, which leads to auto rejection
+                </li>
+                <li>Finally, in multiple party cheques please do not enter the same party details in the same chequeno
+                  which will be considered as a duplicacy transaction and gets auto-rejeted.
+                </li>
+                <li>This is just a one-time procedure to get your Party details corrected and once when corrected the
+                  same details can be re-used for smooth transactions.
+                </li>
+                <li> PD-to-PD cheques shall be adjusted in treasury itself in the regular procedure.</li>
+              </ul>
+            </div>
+            <div class="form_section mt-4 p-4 p-lg-0 col-12">
+            <form class="col-12 col-lg-9">
+                <div class="mb-3 row col-12">
+                  <label class="form-label col-lg-3 col-12 fw-medium">Transcation Type<span class="text-danger">*</span></label>
+                  <div class="d-flex gap-2 col-lg-9 col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                        checked>
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Single Party
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Multiple Parties
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3">
+                      <label class="form-check-label" for="flexRadioDefault3">
+                        PD Account to PD Account
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4">
+                      <label class="form-check-label" for="flexRadioDefault4">
+                        PD Account to other
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="mb-3 row">
+                  <div  class="col-12 col-lg-3">
+                    <label class="form-label fw-medium">Party Account
+                      no<span class="text-danger">*</span></label>
+                  </div>
+                  <div class="col-lg-9 col-12">
+                    <input type="password" class="form-control" id="partyAccount" placeholder="Enter A/C no">
+                    <p id="partyAccountErrMsg"></p>
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <div  class="col-12 col-lg-3">
+                    <label for="exampleFormControlInput1" class="form-label fw-medium">Confirm Party Account no<span class="text-danger">*</span></label>
+                  </div>
+                  <div class="col-lg-9 col-12">
+                  <input type="text" class="form-control" id="conPartyAccNo" placeholder="Confirm A/C no">
+                  <p id="conPartyAccNoErrMsg"></p>
+                </div>
+                </div>
+                <div class="mb-3 row">
+                  <div  class="col-12 col-lg-3">
+                    <label for="exampleFormControlInput1" class="form-label fw-medium">Party Name<span class="text-danger">*</span></label>
+                  </div>
+                  <div class="col-lg-9 col-12">
+                    <input type="text" class="form-control" id="partyName" placeholder="Enter Party Name">
+                    <p id="partyNameErrMsg"></p>
+                  </div>
+                 </div>
+
+                <div class="mb-3 row">
+                  <div class="col-12 col-lg-3">
+                  <label for="exampleFormControlInput1" class="form-label fw-medium">Bank IFSC Code<span class="text-danger">*</span></label>
+                  </div>
+                  <div class="col-lg-9 col-12">
+                    <div class="d-flex gap-2">
+                      <input type="text" class="form-control" id="ifscCode" placeholder="Enter IFSC Code">
+                      <button class="btn btn-primary" onclick="bankDetails()">Search</button>
+                    </div>
+                    <p id="ifscCodeErrMsg"></p>
+                   
+                  </div>
+                </div>
+
+                <div class="mb-3 row">
+                  <div class="col-12 col-lg-3">
+                    <label for="exampleFormControlInput1" class="form-label fw-medium">Bank Name<span class="text-danger">*</span></label>
+                  </div>
+                  <div class="col-lg-9 col-12">
+                  <p id="bankName">XXXXX</p>
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <div class="col-12 col-lg-3">
+                  <label for="exampleFormControlInput1" class="form-label fw-medium">Bank Branch</label>
+                  </div>
+                  <div class="col-lg-9 col-12">
+                  <p id="branch">XXXXX</p>
+                 </div>
+                </div>
+                <div class="mb-3 row">
+                  <div class="col-12 col-lg-3">
+                  <label for="exampleFormControlInput1" class="form-label fw-medium">Head of account<span class="text-danger">*</span></label>
+                  </div>
+                  <div class="col-lg-9 col-12">
+                  <select class="form-select" aria-label="Default select example" id="headAccount">
+                    <option selected>Select</option>
+                    <option value="1">0853001020002000000NVN</option>
+                    <option value="2">8342001170004001000NVN</option>
+                    <option value="3">2071011170004320000NVN</option>
+                    <option value="4">8342001170004002000NVN</option>
+                    <option value="5">2204000030006300303NVN</option>
+                  </select>
+                </div>
+                </div>
+                <div class="mb-3 row">
+                  <div class="col-12 col-lg-3">
+                  <label for="exampleFormControlInput1" class="form-label fw-medium">Balance(in Rs.)
+                  </label>
+                </div>
+                <div class="col-lg-9 col-12">
+                  <p id="balance">XXXXX</p>
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <div class="col-12 col-lg-3">
+                  <label for="exampleFormControlInput1" class="form-label fw-medium">LOC(in Rs.)
+                  </label>
+                  </div>
+              
+                  <div class="col-lg-9 col-12">
+                  <p id="loc">XXXXX</p>
+                </div>
+              </div>
+
+                <div class="mb-3 row">
+                  <div class="col-12 col-lg-3">
+                  <label for="exampleFormControlInput1" class="form-label fw-medium">Expenditure Type<span class="text-danger">*</span></label>
+                  </div>
+                  <div class="col-lg-9 col-12">
+                 
+                  <select class="form-select" aria-label="Default select example" onchange="expenditureFun()" id="expenditure">
+                    <option selected>Select</option>
+                    <option value="Capital Expenditure">Capital Expenditure</option>
+                    <option value="Revenue Expenditure">Revenue Expenditure</option>
+                    <option value="Deferred Revenue Expenditure">Deferred Revenue Expenditure</option>
+                  </select>
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <div class="col-12 col-lg-3">
+                    <label for="exampleFormControlInput1" class="form-label  fw-medium">Purpose Type<span class="text-danger">*</span></label>
+                  </div>
+                  <div class="col-lg-9 col-12">
+                  <select class="form-select" aria-label="Default select example" id="purposeOptions">
+                    <option selected>Select</option>
+                  </select>
+                </div>
+
+                </div>
+
+                <div class="mb-3 row">
+                  <div class="col-12 col-lg-3">
+                  <label for="purpose" class="form-label  fw-medium">Purpose<span class="text-danger">*</span></label>
+                  </div>
+                  <div class="col-lg-9 col-12">
+                  <textarea class="form-control" id="purpose" placeholder="Purpose"
+                    rows="3"></textarea>
+                    <p id="purposeErrMsg"></p>
+                  </div>
+                </div>
+               
+                  <div class="mb-3 row">
+                    <div class="col-12 col-lg-3">
+                    <label for="exampleFormControlInput1" class="form-label fw-medium" >Party Amount(in Rs.)</label>
+                    </div>
+                    <div class="col-lg-9 col-12">
+                      <input type="number" class="form-control" onchange="onInputChange(event)" id="partyAmoutInWords" placeholder="Enter Party Amount">
+                      <p id="amountInWords"></p>
+                    </div>
+                  </div>
+                    
+                <div class="mb-3 row">
+                  <div class="col-12 col-lg-3">
+                    <label for="exampleFormControlInput1" class="form-label fw-medium">Upload Documents</label>
+                  </div>
+                 
+                  <div class="col-lg-9 col-12">
+                    <div class="d-flex gap-2 col-12">
+                     <input type="file" class="form-control" id="upload" multiple>
+                     <button class="btn btn-primary" id="addBtn">+Add</button>
+                    </div>
+                    <ul class="upload_items"></ul>
+                    <p>Note: Documents of Cheque(Letter/G.O.etc) can be uploaded here.</p>
+                  </div>
+               
+            </form>
+           
+            </div>
+            <hr>
+            <div class="text-center mb-5 col-12">
+             <button type="submit" class="btn btn-primary" onclick="submit()">Next</button>
+             </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
