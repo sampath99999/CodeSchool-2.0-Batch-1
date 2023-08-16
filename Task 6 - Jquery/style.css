@@ -1,0 +1,74 @@
+.header {
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
+}
+ul li::marker {
+  color: #a08e51;
+}
+
+.file-upload {
+  text-align: center;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+#file-list {
+  margin-top: 20px;
+}
+.offcanvas-show {
+  margin-left: 220px;
+  /* Width of the offcanvas sidebar */
+}
+
+.offcanvas {
+  width: 250px !important;
+  background-color: #1b364d !important;
+
+  /* Set your desired width here */
+}
+.offcanvas-body {
+  width: 100% !important;
+}
+.offcanvasHeading {
+  color: white;
+  padding-left: 28%;
+  font-weight: 600;
+  font-size: 30px;
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+.offcanvasmenu {
+  color: white;
+  font-size: 14px;
+}
+.offcanvasmenu li {
+  padding-left: 5%;
+  margin-bottom: 3px;
+  font-weight: 300;
+  height: 30px;
+  padding-top: 2%;
+  align-items: center;
+}
+.offcanvasmenu li:hover {
+  background-color: rgb(241, 241, 238, 0.1);
+  border-left: 1px solid #f49b2e;
+}
+.offcanvasMenuHome {
+  background-color: rgb(241, 241, 238, 0.1);
+  border-left: 1px solid #f49b2e;
+}
+@media (min-width: 992px) {
+  .moveLeft {
+    /* transition: transform 0.3s ease; Adjust the duration and easing as needed */
+    margin-left: 16%;
+    transition: margin-left 1s ease;
+  }
+  .moveRight {
+    /* transition: transform 0.3s ease; */
+    transition: margin-left 1s ease;
+  }
+
+  .offcanvas {
+    transition: transform 1s !important;
+  }
+}

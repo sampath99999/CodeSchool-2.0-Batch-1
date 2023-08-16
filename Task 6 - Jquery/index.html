@@ -1,0 +1,280 @@
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="header col-12  d-flex">
+                <div class="d-flex d-block d-md-none align-items-center ">
+                    <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png" width="200px" height="50px">
+                </div>
+                <div class=" p-2" >
+                    <!-- left nav bar -->
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" style="color: white;"><i class="bi fs-4 bi-list"></i></button>
+                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header" style="background-color: #1B74CC;">
+                        <h3 class="offcanvas-title p-3" id="offcanvasScrollingLabel">IFMIS</h3>
+                        
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <hr>
+                    <div class="offcanvas-body">
+                        <ul>
+                            <li><small></small></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+                <div class=" p-1 mt-1">
+                    <button class="border-0 rounded p-1 ps-2 pt-2 pb-2 pe-2" style="background-color:#5F656E;color:white"><i class="bi bi-boxes"></i> Modules</button>
+                </div>
+                <div class="col-lg-10 ms-md-5 gap-2 d-flex  justify-content-end ">
+                    <div class="d-none d-md-block">
+                        <div class="d-flex flex-column  align-items-end" style="color:white">
+                            <small>last login</small>
+                            <small class="date"></small>
+                            <small class="time"></small>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="dropdown">
+                            <button class="border-0 d-flex p-1 mt-2  dropdown-toggle" style="background-color:#5F656E;color:white" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="pt-2 pe-1"><i class="bi fs-4 bi-person-circle"></i></div>
+                                <div class="text-start d-none d-md-block">
+                                    <div><small>Welcome M.USHASHREE</small></div>
+                                    <div><small>(23031013097)</small></div>
+                                </div>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#"><i class="bi bi-person" style="color:green"></i> Profile</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i class="bi bi-gear" style="color:green"></i> Change Password</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right" style="color:green"></i> Logout</a>
+                            </div>
+                        </div>    
+                    </div>
+                    <div class="d-none d-md-block mt-3">
+                        <button class="bg-secondary  ps-2 pt-2 pb-2 pe-2" style="color: white;"><i class="bi  bi-box-arrow-right border-0 p-2"></i><small id="logButton">Logout</small></button>
+                    </div>
+                </div>
+                <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                <div class="offcanvas-body p-0 m-0">
+                    <h5 class="offcanvasHeading ">IFIMS</h5>
+                    <hr style="color: white;width: 100%;">
+                    <button type="button" class="btn-close d-md-none" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                    <ul class="list-unstyled offcanvasmenu">
+                        <li class="offcanvasMenuHome">Home</li>
+                        <li>Maters</li>
+                        <li>Transactions</li>
+                        <li>Reports</li>
+                        <li>Return Cheque Generation</li>
+                        <li>Forest Transactions</li>
+                        <li>Forest Transaction Report</li>
+                        <li>E-Kuber Return Challan print</li>
+                        <li>UTR Search</li>
+                        <li>Failed Transactions(ACK Reject)</li>
+                        <li>Reject Cheque due to Fin Year End</li>
+                        <li>Fin Year New Cheque Report</li>
+                        <li>Forest Transaction Reports</li>
+                        <li>pb budget cheque </li>
+                        <li>Update Receipts Used Amount</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+            <div class="p-2 d-none d-md-block">
+                <div class="p-1" style="background-color: #DFECFB;">
+                    <small style="color: #1B74CC;"><i class="bi bi-credit-card-2-front"></i>  <b>Issue Cheque (E-Kuber Cheque From 01/03/2019)</b> </small>
+                </div>
+            </div>
+            <div class="p-md-3">
+                <div class="p-2" style="background-color:#FBF8E3;">
+                    <h6>Points to remember</h6>
+                    <div>
+                        <small>
+                            <ul>
+                                <li>
+                                    Please note that all cheques which are approved from DDOChecCKer/Ohicer/Govt trom 01/03/2019 shall get paid through Ekuber which iIS a Core Banking Solution ot RBl.
+                                </li>
+                                <li>There is no need to present the cheques at the Bank for these cheques which got approved after 01/03/2019.</li>
+                                <li> Please give correct account details as it is when the Account was opened.</li>
+                                <li> Make sure there is no 'Your self' or 'Self" in the account names while issuing cheques.Such cheques get auto-rejected by the EKuber</li>
+                                <li> Please check the exact length of the Bank Account Number and NO special characters are to be entered, which leads to auto rejection</li>
+                                <li> Finally, in multiple party cheques please do not enter the same party details in the same chequeno which will be considered as a duplicacy transaction and gets auto-rejeted.</li>
+                                <li>This is just a one-time procedure to get your Party details corrected and once when corrected the same details can be re-used for smooth transactions.</li>
+                                <li> PD-to-PD cheques shall be adjusted in treasury itself in the regular procedure.</li>
+                            </ul>
+                        </small>
+                    </div>
+                </div>
+            </div>
+            <div class="p-md-2 ps-2">
+                <div class="row p-1 pb-2 " style="background-color: #F8F9FA;">
+                    <div class="col-lg-2"><small>Transcation Type<span style="color:red">*</span></small></div>
+                    <div class=" col-lg-6">
+                        <small>
+                            <input type="radio" name="party"> Single Party
+                            <input type="radio" name="party"> Multiple paries
+                            <input type="radio" name="party"> PD Account to PD Account
+                            <input type="radio" name="party"> PD Account to other
+                        </small><br>
+                        <small id="typeError" class="error" style="color: red;"></small>
+                    </div>
+                </div>
+                <div class="row p-1 ">
+                    <div class="col-lg-2"><small>Party Account no<span style="color:red">*</span></small></div>
+                    <div class="col-lg-6">
+                        <input type="password" onkeypress="return isNumberKey(event)" class="form-control" id="accountNumber" name="accountNumber" oninput="validateAccountNumber()" />
+                        <small id="errorText" style="color: red;"></small>
+                    </div>
+                </div>
+                <div class="row p-1 ">
+                    <div class="col-lg-2"><small>confirm Party Account no<span style="color:red">*</span></small></div>
+                    <div class="col-lg-6">        
+                        <input type="text" class="form-control" id="confirmAccountNumber" name="confirmAccountNumber" oninput="validateConfirmation()">
+                        <small id="confirmErrorText" style="color: red;"></small>
+                    </div>
+                </div>
+                
+                <div class="row p-1 pb-2">
+                    <div class="col-lg-2"><small>Party Name<span style="color:red">*</span></small></div>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control" id="partyName" name="partyName" oninput="validatePartyName()">
+                        <small id="partyNameError" style="color: red;"></small>
+                    </div>
+                </div>
+                <div  style="background-color: #F8F9FA;">
+                    <div class="row p-1 pb-2" >
+                        <div class="col-lg-2" ><small>Bank IFSC Code<span style="color:red">*</span></small></div>
+                        <div class="col-lg-6 ">
+                            <div class="col-lg-12 ">
+                                <div class="d-flex">
+                                    <input type="text" id="ifscCode" name="ifscCode" class="form-control" oninput="validateIFSCCode()">
+                                    <button type="button" class="btn btn-primary" onclick="searchBank()">Search</button>
+                                </div>
+                            </div>
+                            <small id="ifscCodeError" style="color: red;"></small>
+                        </div>
+                    </div>
+                    <div class="row p-1 pb-2">
+                        <div class="col-lg-2" ><small>Bank Name</small></div>
+                        <div class="col-lg-6"><small id="bankName">xxxxx</small></div>
+                    </div>
+                    <div class="row p-1 pb-2">
+                        <div class="col-lg-2"><small>Bank Branch</small></div>
+                        <div  class="col-lg-6"><small id="bankBranch">xxxxx</small></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row p-1 pb-2">
+                        <div class="col-lg-2"><small>Head of account<span style="color:red">*</span></small></div>
+                        <div class="col-lg-6">
+                            <select id="headOfAccount" class="form-control" >
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="0853001020002000000NVN">0853001020002000000NVN</option>
+                                <option value="8342001170004001000NVN">8342001170004001000NVN</option>
+                                <option value="2071011170004320000NVN">2071011170004320000NVN</option>
+                                <option value="8342001170004002000NVN">8342001170004002000NVN</option>
+                                <option value="2204000030006300303NVN">2204000030006300303NVN</option>
+                            </select>
+                            <small id="accountError" class="error" style="color:red"></small>
+                        </div>
+                    </div>
+                    <div id="result" class="row p-1 pb-2">
+                        <div class="col-lg-2 "><small>Balance (in Rs.)</small></div>
+                        <div class="col-lg-6"><small><span id="balance">xxxxx</span></small></div>
+                    </div>
+                    <div class="row p-1 pb-2">
+                        <div class="col-lg-2"><small>LOC (in Rs.)</small></div>
+                        <div class="col-lg-6"><small><span id="loc">xxxxx</span></small></div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="row p-1 pb-2">
+                        <div class="col-lg-2"><small>Expenditure Type<span style="color:red">*</span></small></div>
+                        <div class="col-lg-6">
+                            <select id="expenditureType" class="form-control" onchange="updatePurposeTypes()">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="capital">Capital Expenditure</option>
+                                <option value="revenue">Revenue Expenditure</option>
+                                <option value="deferred">Deferred Revenue Expenditure</option>
+                            </select>
+                            <small id="expenditureError" class="error" style="color: red;"></small>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div id="purposeTypesContainer">
+                    <div class="row p-1 pb-2">
+                        <div class="col-lg-2"><small>Purpose Type<span style="color:red">*</span></small></div>
+                        <div class="col-lg-6">
+                            <select id="purposeType" class="form-control">
+                                <option value="" disabled selected>Select an option</option>
+                            </select>
+                            <small id="purposeError" class="error" style="color: red;"></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="row p-1 pb-2">
+                    <div class="col-lg-2"><small>Purpose<span style="color:red">*</span></small></div>
+                    <div class="col-lg-6">
+                        <textarea id="purposeTextarea" class="col-12" cols="50" maxlength="500" oninput="validateCharacterCount()"></textarea>
+                        <small id="errorMessage" style="color: red;"></small>
+                    </div>
+                </div>
+                <div class="row p-1 pb-2">
+                    <div class="col-lg-2"><small>Party Amount<span>(in Rs.)</span></small></div>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control" name="partyAmount" id="partyAmountInput" placeholder="Enter Party Amount" oninput="validatePartyAmount()">
+                        <small id="amountError" style="color: red;"></small>
+                        <div><span id="amountInWords"></span></div>
+                    </div>                    
+                </div>
+                <div>
+                    <div>
+                        <div class="row p-1 pb-2">
+                            <form id="upload-form">
+                                <div id="upload-container">
+                                  <div class="row">
+                                    <div class="col-lg-2"><small>Upload Documents</small></div>
+                                    <div class="col-lg-6 d-flex">
+                                      <input type="file" id="file-input" multiple>
+                                      <button type="button" id="select-files-button">Select Files</button>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-lg-2"></div>
+                                    <div class="col-lg-6">
+                                        <div id="file-list"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                            </form>
+                            <div class="row pt-3">
+                                <div class="col-lg-2"></div>
+                                <small class="col-lg-6">Note:Documents of Cheque(Letter/G.O. etc) can be uploaded here.</small></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <hr class="ms-3 me-3">
+            <div class="col-12 d-flex justify-content-center">
+                <button type="button" id="Next" class="btn btn-primary" onclick="next()" >Next <i class="bi bi-caret-right"></i></button>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="javascript.js"></script>
+    </body>
+</html>
