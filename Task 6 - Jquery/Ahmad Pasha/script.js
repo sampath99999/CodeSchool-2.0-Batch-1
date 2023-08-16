@@ -19,6 +19,17 @@ let loginDate = $("#loginDate");
 let logout = $("#logout");
 let addBtn = $("#addBtn");
 
+var partyAccountNoRes;
+var confirmPartyAccountRes;
+var partyNameRes;
+var bankIfscRes;
+var headOfAccountRes;
+var expenditureTypeRes;
+var purposeTypeRes;
+var purposeRes;
+var partyAmountRes;
+var uploadDocumentsRes;
+
 const months = [
   "Jan",
   "Feb",
@@ -38,11 +49,11 @@ let dateTime = new Date();
 let month = months[dateTime.getMonth()];
 let year = dateTime.getFullYear();
 let date = dateTime.getDate();
-
 const now = new Date()
   .toLocaleTimeString([], {
     hour: "2-digit",
     minute: "2-digit",
+    second: "2-digit",
     hour12: true,
   })
   .toLowerCase();
@@ -108,24 +119,30 @@ $(document).ready(function () {
     }
     upload.val("");
   });
+});
 
+function addDetails(data) {
+  const { BANK, BRANCH } = data;
+  $("#bankName").text(BANK);
+  $("#branchName").text(BRANCH);
+}
 
-  function bankDetails(e){
-    e.preventDefault()
-    let code = $('#ifscCode').val();
-    $.get(`https://ifsc.razorpay.com/${code}`,function(data){
-      console.log(data)
-    });
-    
-  }
+$("#searchBtn").click(function (e) {
+  e.preventDefault();
+  console.log("from search");
 
-  $("button").click(function(){
-    $.get("demo_test.asp", function(data, status){
-      alert("Data: " + data + "\nStatus: " + status);
-    });
+  let ifscCodeVal = $("#ifscCode").val();
+  $.ajax({
+    url: `https://ifsc.razorpay.com/${ifscCodeVal}`,
+    type: "GET",
+    success: function (data) {
+      addDetails(data);
+    },
+    error: function (data) {
+      $("#bankName").text("XXXXX");
+      $("#branchName").text("XXXXX");
+    },
   });
-
-  
 });
 
 let obj = {
@@ -229,100 +246,283 @@ function onInputChange(e) {
     }
   }
   $("#amountInWords").text(res);
-  
 }
 
-function expenditureFun(){
-    let item = $('#expenditure').val();
-    let expenOptions=""
-    if(item==='Capital Expenditure'){
-      let itemOption=`
+function expenditureFun() {
+  let item = $("#expenditure").val();
+  let expenOptions = "";
+  if (item === "Capital Expenditure") {
+    let itemOption = `
       <option>Maintain current levels of operation within the organization</option>
       <option>Expenses to permit future expansion.</option>
       <option>Revenue Expenditure</option>
                 `;
-          expenOptions+=itemOption;
-
-    }
-    else if(item==='Revenue Expenditure'){
-     
-      let itemOption=`<option>Sales costs or All expenses incurred by the firm that are directly tied to the manufacture and selling of its goods or services.</option>
+    expenOptions += itemOption;
+  } else if (item === "Revenue Expenditure") {
+    let itemOption = `<option>Sales costs or All expenses incurred by the firm that are directly tied to the manufacture and selling of its goods or services.</option>
       <option>All expenses incurred by the firm to guarantee the smooth operation.</option>
       `;
-      expenOptions+=itemOption;
-    }
-    else if(item==='Deferred Revenue Expenditure'){
-      let itemOption=`<option>Exorbitant Advertising Expenditures</option>
+    expenOptions += itemOption;
+  } else if (item === "Deferred Revenue Expenditure") {
+    let itemOption = `<option>Exorbitant Advertising Expenditures</option>
       <option>Unprecedented Losses</option>
       <option>Development and Research Cost</option>`;
-      expenOptions+=itemOption;
-    }
-    console.log(expenOptions);
-    $('#purposeOptions').html(expenOptions);
+    expenOptions += itemOption;
+  }
+  console.log(expenOptions);
+  $("#purposeOptions").html(expenOptions);
 }
 
+$("#partyAccountErrMsg").hide();
+$("#partyAccount").keyup(function () {
+  validatePartyAccount();
+});
 
-function validateAccountNumber() {
-  const accountNumberInput = $("#partyAccount");
-  const errorText = $("#partyAccountErrMsg");
-  const accountNumber = accountNumberInput.val().replace(/\D/g, '');
+function validatePartyAccount() {
+  let partyAccountValue = $("#partyAccount").val();
+  const number = /^\d+$/.test(partyAccountValue);
 
-  if (accountNumber.length === 0) {
-      errorText.text("Party account number should not be empty.");
-      return false;
-  } else if (accountNumber.length < 12 || accountNumber.length > 22) {
-      errorText.text("Account number length must be between 12 and 22 digits.");
-      return false;
-  } else if (accountNumber.length > 1 && accountNumber.charAt(0) !== '0') {
-      errorText.text("Account number cannot have leading zeros except for a single zero.",accountNumber.charAt(0));
-      return false;
+  if (!partyAccountValue) {
+    $("#partyAccountErrMsg").show();
+    partyAccountNoRes = false;
+  } else if (!number) {
+    $("#partyAccountErrMsg").show();
+    $("#partyAccountErrMsg").html(
+      "*Party Account should contain Number Only..!"
+    );
+    partyAccountNoRes = false;
+  } else if (partyAccountValue[0] != "0") {
+    $("#partyAccountErrMsg").show();
+    $("#partyAccountErrMsg").html(
+      "*Party Account Number Can have zero in the begining.."
+    );
+    partyAccountNoRes = false;
+  } else if (partyAccountValue.length < 12 || partyAccountValue.length > 22) {
+    $("#partyAccountErrMsg").show();
+    $("#partyAccountErrMsg").html("*Length Must Be In Between 12 and 22");
+    partyAccountNoRes = false;
   } else {
-      errorText.text("");
-      return true;
-   }
+    $("#partyAccountErrMsg").hide();
+    partyAccountNoRes = true;
+  }
 }
 
+function confirmPartyAccFunc() {
+  if ($("#conPartyAccNo").val() === "") {
+    console.log("empty cnf");
+    confirmPartyAccountRes = false;
+    $("#conPartyAccNoErrMsg").text("*Confirm Account No Should Not Be Empty");
+  } else if ($("#conPartyAccNo").val() !== $("#partyAccount").val()) {
+    confirmPartyAccountRes = false;
+    $("#conPartyAccNoErrMsg").text(
+      "*Party Account And Confirm Party Account Should Be Same"
+    );
+  } else if (
+    $("#conPartyAccNo").val() === $("#partyAccount").val() &&
+    $("#conPartyAccNo").val() !== ""
+  ) {
+    confirmPartyAccountRes = true;
+    $("#conPartyAccNoErrMsg").text("");
+  }
+}
 
+$("#partyNameErrMsg").hide();
+$("#partyName").keyup(function () {
+  validatePartyName();
+});
 
-var headAccOption="";
+function validatePartyName() {
+  function firstChar(str) {
+    return /^[A-Z]/.test(str);
+  }
+
+  function onlyLettersAndNumbers(str) {
+    return /^[A-Za-z]*$/.test(str);
+  }
+
+  let partyNameValue = $("#partyName").val();
+  let specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+  let isSpecial = specialChars.test(partyNameValue);
+
+  if (!partyNameValue) {
+    $("#partyNameErrMsg").show();
+    partyNameRes = false;
+  } else if (firstChar(partyNameValue[0]) === false) {
+    $("#partyNameErrMsg").show();
+    $("#partyNameErrMsg").text(
+      "*First Character Should Be Title Case/Upper Case"
+    );
+    partyNameRes = false;
+  } else if (partyNameValue.length < 2 || partyNameValue.length > 50) {
+    $("#partyNameErrMsg").show();
+    $("#partyNameErrMsg").text(
+      "*Length Of Party Name Must Be Between 2 and 50 Characters"
+    );
+    partyNameRes = false;
+  } else if (isSpecial) {
+    $("#partyNameErrMsg").show();
+    $("#partyNameErrMsg").text(
+      "*Party Name Should Not Contain Special Characters!"
+    );
+    partyNameRes = false;
+  } else if (onlyLettersAndNumbers(partyNameValue) === false) {
+    $("#partyNameErrMsg").show();
+    $("#partyNameErrMsg").text("*Party Name Should Not Contain Numbers!");
+    partyNameRes = false;
+  } else {
+    $("#partyNameErrMsg").hide();
+    partyNameRes = true;
+  }
+}
+
+$("#ifscCodeErrMsg").hide();
+
+$("#ifscCode").keyup(function () {
+  validateIfscCode();
+});
+
+function validateIfscCode() {
+  let ifscCodeValue = $("#ifscCode").val();
+  function checkIfsc(str) {
+    let reg = /^[A-Z|a-z]{4}[0][0-9]{6}$/;
+    if (ifscCodeValue.match(reg)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  if (!ifscCodeValue) {
+    $("#ifscCodeErrMsg").show();
+    bankIfscRes = false;
+  }
+
+  if (ifscCodeValue.charAt(4) != "0") {
+    $("#ifscCodeErrMsg").show();
+    $("#ifscCodeErrMsg").text("*Ifsc Code Should Contain 0 At 5th Character!");
+    bankIfscRes = false;
+  }
+  if (ifscCodeValue.length != 11) {
+    $("#ifscCodeErrMsg").show();
+    $("#ifscCodeErrMsg").text("*Ifsc Code Should Be 11 Characters!");
+    bankIfscRes = false;
+  }
+
+  if (checkIfsc(ifscCodeValue) === false) {
+    $("#ifscCodeErrMsg").show();
+    $("#ifscCodeErrMsg").text("*Invalid IFSC Code...!");
+    bankIfscRes = false;
+  } else {
+    $("#ifscCodeErrMsg").hide();
+    bankIfscRes = true;
+  }
+}
+
+function validateHeadAccount() {
+  if ($("#headAccount").val() === "") {
+    headOfAccountRes = false;
+    $("#headAccountErrMsg").text("*Head Of Account Should Not Be Empty.");
+  } else {
+    headOfAccountRes = true;
+    $("#headAccountErrMsg").text("");
+  }
+}
+function validateExpenditure() {
+  if ($("#expenditure").val() === "") {
+    expenditureTypeRes = false;
+    $("#expenditureErrMsg").text("*Expenditure Type Should Not Be Empty.");
+  } else {
+    expenditureTypeRes = true;
+    $("#expenditureErrMsg").text("");
+  }
+}
+
+function validatePurposeType() {
+  if ($("#purposeOptions").val() === "") {
+    purposeTypeRes = false;
+    $("#purposeTypeErrMsg").text("*Purpose Type Should Not Be Empty.");
+  } else {
+    purposeTypeRes = true;
+    $("#purposeTypeErrMsg").text("");
+  }
+}
+
+function validatePurpose() {
+  if ($("#purpose").val() === "") {
+    purposeRes = false;
+    $("#purposeErrMsg").text("*Purpose Should Not Be Empty.");
+  } else if ($("#purpose").val().length >= 500) {
+    purposeRes = false;
+    $("#purposeErrMsg").text("*Purpose Should Below 500 Characters.");
+  } else {
+    purposeRes = true;
+    $("#purposeErrMsg").text("");
+  }
+}
+
+function validatePartyAmount() {
+  if ($("#partyAmoutInWords").val() === "") {
+    partyAmountRes = false;
+    $("#partyAmoutInWordsErrMsg").text("*Party Amount Should Not Be Empty.");
+  } else {
+    partyAmountRes = true;
+    $("#partyAmoutInWordsErrMsg").text("");
+  }
+}
+
+var headAccOption = "";
 $(document).on("change", "#headAccount", function () {
   headAccOption = $(this).find("option:selected").text();
   var val = this.value;
-  validateHeadAcc(headAccOption,val);
+  validateHeadAcc(headAccOption, val);
 });
 function validateHeadAcc(headAccOption, val) {
-  
   if (val === "1") {
-    $("#balance").html("1000000");
-    $("#loc").html("500");
+    $("#balance").text("1000000");
+    $("#loc").text("500");
   } else if (val === "2") {
-    $("#balance").html("1008340");
-    $("#loc").html("4000");
+    $("#balance").text("1008340");
+    $("#loc").text("4000");
   } else if (val === "3") {
-    $("#balance").html("14530000");
-    $("#loc").html("78000");
+    $("#balance").text("14530000");
+    $("#loc").text("78000");
   } else if (val === "4") {
-    $("#balance").html("1056400");
-    $("#loc").html("34000");
+    $("#balance").text("1056400");
+    $("#loc").text("34000");
   } else if (val === "5") {
-    $("#balance").html("123465400");
-    $("#loc").html("5000");
+    $("#balance").text("123465400");
+    $("#loc").text("5000");
   } else {
-    $("#balance").html("XXXXX");
-    $("#loc").html("XXXXX");
-}
-}
-
-
-function submit(){
-  validateAccountNumber();
-  console.log($('#partyAmoutInWords').val())
-  if($('#partyAmoutInWords').val()===""){
-    $('amountInWords').text('Party amount should not be empty.')
+    $("#balance").text("XXXXX");
+    $("#loc").text("XXXXX");
   }
-  if($('#purpose').val().length>=500){
-    $('#purposeErrMsg').text('Maximum limit should be 500 characters');
-  }
-  console.log('submitted');
 }
 
+$("#validate").click(function (e) {
+  e.preventDefault();
+  validatePartyAccount();
+  confirmPartyAccFunc();
+  validatePartyName();
+  validateIfscCode();
+  validateHeadAccount();
+  validateExpenditure();
+  validatePurposeType();
+  validatePurpose();
+  validatePartyAmount();
+
+  if (
+    partyAccountNoRes &&
+    confirmPartyAccountRes &&
+    partyNameRes &&
+    bankIfscRes &&
+    headOfAccountRes &&
+    expenditureTypeRes &&
+    purposeRes &&
+    purposeTypeRes &&
+    partyAmountRes
+  ) {
+    $("#successMsg").text("*** Success ***");
+  } else {
+    $("#successMsg").text("");
+  }
+});

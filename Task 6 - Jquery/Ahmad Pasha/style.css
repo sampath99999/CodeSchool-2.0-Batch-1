@@ -40,20 +40,19 @@
   background-color: #324a5f;
 }
 
-.navbar-toggler{
-  border: none!important;
+.navbar-toggler {
+  border: none !important;
 }
 
-.btn_color{
+.btn_color {
   background-color: #3f5162;
   color: #f3faff;
   border: none;
 }
 
-#logout{
+#logout {
   width: 95px;
 }
-
 
 /* 
 .navbar .nav-item .dropdown-menu{display:block;   visibility: hidden;margin-top:0; margin-left: -25px;}
@@ -70,12 +69,11 @@
   background-color: #fcf8e3;
 }
 
-.points ul li::marker{
+.points ul li::marker {
   color: #7b6301 !important;
-
 }
 
-.right_section{
+.right_section {
   overflow-y: scroll;
   height: 100vh;
 }
