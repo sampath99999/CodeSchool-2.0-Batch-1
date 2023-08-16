@@ -50,25 +50,25 @@ function updateCurrentTime() {
 updateCurrentTime();
 
 $("#acNo").on("input", function () {
-  $(this).val($(this).val().replace(/\D/g, "")); // Remove non-numeric characters
+  $(this).val($(this).val().replace(/\D/g, "")); 
 
   if ($(this).val().length > 22) {
-    $(this).val($(this).val().substring(0, 22)); // Limit input to 22 characters
+    $(this).val($(this).val().substring(0, 22)); 
   }
 });
 
 $("#confirmAcNo").on("input", function () {
-  $(this).val($(this).val().replace(/\D/g, "")); // Remove non-numeric characters
+  $(this).val($(this).val().replace(/\D/g, ""));
 
   if ($(this).val().length > 22) {
-    $(this).val($(this).val().substring(0, 22)); // Limit input to 22 characters
+    $(this).val($(this).val().substring(0, 22)); 
   }
 });
 $("#partyAmount").on("input", function () {
-  $(this).val($(this).val().replace(/\D/g, "")); // Remove non-numeric characters
+  $(this).val($(this).val().replace(/\D/g, "")); 
 
   if ($(this).val().length > 22) {
-    $(this).val($(this).val().substring(0, 22)); // Limit input to 22 characters
+    $(this).val($(this).val().substring(0, 22)); 
   }
 });
 
@@ -173,7 +173,7 @@ function ifscCodeValidation() {
   }
 
   errorclass.text("");
-  // If all conditions are met
+  
   input.removeClass("is-invalid");
   input.addClass("is-valid");
   return true;
@@ -223,7 +223,7 @@ const mainObject = [
   },
 ];
 
-// Function to get the balance for a specific key
+
 function getBalanceForKey(key) {
   for (const obj of mainObject) {
     if (obj.key === key) {
@@ -233,12 +233,12 @@ function getBalanceForKey(key) {
       return;
     }
   }
-  return null; // Return null if key not found
+  return null; 
 }
 
 $(document).ready(function () {
   $("#options").on("change", function () {
-    // Get the selected option value
+    
     var selectedValue = $(this).val();
 
     getBalanceForKey(selectedValue);
@@ -246,7 +246,7 @@ $(document).ready(function () {
 });
 
 $("#exp").on("change", function () {
-  // Get the selected option value
+  
   var selectedValue = $(this).val();
 
   getDetails(selectedValue);
@@ -293,15 +293,15 @@ function showFiles() {
     newDiv.addClass("row col-12");
     fileText.addClass("col-8");
     buttonDiv.addClass("col-4");
-    // Create a delete button and attach the click event handler
+    
     var deleteButton = $('<button><i class="bi bi-x"></i></button>');
     deleteButton.addClass("filesClass");
     deleteButton.on("click", Delete(newDiv));
     buttonDiv.append(deleteButton);
 
-    // Add the delete button to the div
+    
 
-    // Add text to the <div> AFTER the delete button
+  
     fileText.append(document.createTextNode(selectedFiles[i].name));
     newDiv.append(fileText);
     newDiv.append(buttonDiv);
@@ -353,10 +353,10 @@ function formValidation() {
     $("#fileError").text("");
   }
 }
-/* Add a class to the body when the offcanvas is shown */
+
 
 $(document).ready(function () {
-  // Check if the screen width is greater than or equal to 992px (large screen)
+  
   if ($(window).width() >= 992) {
     $("#move").on("click", function () {
       var attributeValue = $("#body").attr("flag");
