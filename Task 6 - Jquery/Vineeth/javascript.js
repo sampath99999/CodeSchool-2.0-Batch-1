@@ -16,6 +16,12 @@ $(document).ready(function(){
     $('.date').append(`${day}-${month}-${year}`)
     $('.time').append(`${Hours}:${minutes}:${seconds} ${amPM}`)   
 });
+function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode;
+    if ((charCode < 48 || charCode > 57))
+        return false;
+    return true;
+}
 $(document).ready(function() {
     const logButton = $('#logButton');
     let isLoggedIn = true;
@@ -95,6 +101,8 @@ function updateValues() {
         return true;
     }
 }
+
+
 
 function updatePurposeTypes() {
     const purposeTypes = {
@@ -243,59 +251,87 @@ function validatePartyAmount() {
         amountInWordsDisplay.text('');
     } else {
         errorDisplay.text('');
-        const amountInWords = convertAmountToWords(amountValue);
+        const amountInWords = partyAmountInWords(amountValue);
         amountInWordsDisplay.text(amountInWords);
     }
 }
-
-function convertAmountToWords(amount) {
-    const units = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
-    const teens = ["", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
-    const tens = ["", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
-    const thousands = ["", "Thousand", "Lakh", "Crore"];
-    
-    let words = "";
-    
-    if (amount === "0") {
-        words = "Zero";
-    } else {
-        const chunks = [];
-        while (amount.length > 0) {
-            chunks.unshift(amount.slice(-2));
-            amount = amount.slice(0, -2);
-        }
-        
-        for (let i = 0; i < chunks.length; i++) {
-            const chunk = parseInt(chunks[i]);
-            if (chunk === 0) continue;
-            
-            const chunkWords = [];
-            
-            const tensDigit = chunk % 100;
-            if (tensDigit >= 11 && tensDigit <= 19) {
-                chunkWords.push(teens[tensDigit - 10]);
-            } else {
-                const tensDigitFirst = Math.floor(tensDigit / 10);
-                const unitsDigit = tensDigit % 10;
-                if (tensDigitFirst > 0) {
-                    chunkWords.push(tens[tensDigitFirst]);
-                }
-                if (unitsDigit > 0) {
-                    chunkWords.push(units[unitsDigit]);
-                }
-            }
-            
-            if (i > 0) {
-                chunkWords.push(thousands[i]);
-            }
-            
-            words = chunkWords.join(" ") + " " + words;
-        }
+function partyAmountInWords(amount) {
+    var ones = [
+      "",
+      "One",
+      "Two",
+      "Three",
+      "Four",
+      "Five",
+      "Six",
+      "Seven",
+      "Eight",
+      "Nine",
+    ];
+    var teens = [
+      "",
+      "Eleven",
+      "Twelve",
+      "Thirteen",
+      "Fourteen",
+      "Fifteen",
+      "Sixteen",
+      "Seventeen",
+      "Eighteen",
+      "Nineteen",
+    ];
+    var tens = [
+      "",
+      "Ten",
+      "Twenty",
+      "Thirty",
+      "Fourty",
+      "Fifty",
+      "Sixty",
+      "Seventy",
+      "Eighty",
+      "Ninety",
+    ];
+  
+    function numbersToWords(number) {
+      if (number === 0) return "";
+      else if (number < 10) return ones[number];
+      else if (number < 20) return teens[number - 10];
+      else if (number < 100)
+        return tens[Math.floor(number / 10)] + " " + ones[number % 10];
+      else
+        return (
+          ones[Math.floor(number / 100)] +
+          " Hundred " +
+          numbersToWords(number % 100)
+        );
     }
-    
+    var words = "";
+    var crores = Math.floor(amount / 10000000);
+    var lakhs = Math.floor((amount % 10000000) / 100000);
+    var thousands = Math.floor((amount % 100000) / 1000);
+    var remaining = Math.round(amount % 1000);
+  
+    if (crores > 0) {
+      words += numbersToWords(crores) + " Crore ";
+    }
+  
+    if (lakhs > 0) {
+      words += numbersToWords(lakhs) + " Lakh ";
+    }
+  
+    if (thousands > 0) {
+      words += numbersToWords(thousands) + " Thousand ";
+    }
+  
+    if (remaining > 0) {
+      words += numbersToWords(remaining);
+    }
+  
     return words;
-   
-}
+  }
+
+
 $(document).ready(function() {
     $('#file-input').on('change', function(e) {
       const fileList = e.target.files;
@@ -315,7 +351,7 @@ $(document).ready(function() {
       }
     });
 });
-function next(){
+function next(e){
     event.preventDefault();
     validateAccountNumber();
     validateConfirmation();
@@ -323,4 +359,95 @@ function next(){
     validateIFSCCode();
     validateCharacterCount();
     validatePartyAmount();
+    validatePurposeType(); 
+    validateSelection();
+    validateExpenditureType(); 
+    
 }
+
+
+function validateExpenditureType() {
+    const expenditureTypeSelect = document.getElementById('expenditureType');
+    const expenditureError = document.getElementById('expenditureError');
+    const selectedOption = expenditureTypeSelect.value;
+    
+    if (selectedOption === "") {
+        expenditureError.textContent = "Expenditure Type cannot be empty";
+    } else {
+        expenditureError.textContent = "";
+    }
+}
+
+
+
+function validatePurposeType() {
+    const purposeTypeSelect = document.getElementById('purposeType');
+    const purposeError = document.getElementById('purposeError');
+    const selectedOption = purposeTypeSelect.value;
+    
+    if (selectedOption === "") {
+        purposeError.textContent = "Purpose Type cannot be empty";
+    } else {
+        purposeError.textContent = "";
+    }
+}
+const headOfAccountSelect = document.getElementById("headOfAccount");
+const accountError = document.getElementById("accountError");
+
+// Function to validate the selection
+function validateSelection() {
+    if (headOfAccountSelect.value === "") {
+        accountError.textContent = "Please select an option.";
+    } else {
+        accountError.textContent = "";
+    }
+}
+
+// Add an event listener to the select element to trigger validation on change
+headOfAccountSelect.addEventListener("change", validateSelection);
+
+
+
+
+
+
+
+
+    function searchBank() {
+        const ifscCodeInput = document.getElementById("ifscCode");
+        const bankNameOutput = document.getElementById("bankName");
+        const bankBranchOutput = document.getElementById("bankBranch");
+        const ifscCode = ifscCodeInput.value;
+
+        $.ajax({
+            url: `https://ifsc.razorpay.com/${ifscCode}`,
+            type: "GET",
+            dataType: "json",
+            success: function (bankData) {
+                
+                bankNameOutput.textContent = bankData.BANK;
+                bankBranchOutput.textContent = bankData.BRANCH;
+            },
+            error: function (xhr, status, error) {
+                console.error("Error fetching bank information:", error);
+            }
+        });
+    }
+
+$(document).ready(function () {
+   
+      $("#side").on("click", function () {
+        var attributeValue = $("#Body").attr("site");
+        console.log(attributeValue);
+        if (attributeValue === "0") {
+          $("#Body").attr("site", "1");
+          $("#Body").removeClass("moveRight");
+          $("#Body").addClass("moveLeft");
+        } else {
+          $("#Body").attr("site", "0");
+          $("#Body").removeClass("moveLeft");
+          $("#Body").addClass("moveRight");
+        }
+      });
+  
+  });

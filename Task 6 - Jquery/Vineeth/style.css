@@ -72,3 +72,32 @@ ul li::marker {
     transition: transform 1s !important;
   }
 }
+
+.navbar-nav a {
+  text-decoration: none;
+}
+.navbar-nav li {
+  padding: 10px;
+}
+.nav-item {
+  list-style-type: none;
+}
+.navbar-nav li:hover {
+  border-left: 4px solid #e5b96a;
+  background-color: #324a5f;
+}
+
+.navbar-nav li a {
+  background-color: #324a5f;
+}
+
+.navbar-toggler{
+  border: none!important;
+}
+
+.moveLeft{
+    margin-left: 16%;
+}
+.moveRight{
+  margin-left: 0%;
+}

@@ -8,29 +8,44 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     </head>
-    <body>
+    <body id="Body" site="0" class="">
         <div class="container-fluid">
             <div class="header col-12  d-flex">
                 <div class="d-flex d-block d-md-none align-items-center ">
                     <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png" width="200px" height="50px">
                 </div>
-                <div class=" p-2" >
+                <div class="p-2 " >
                     <!-- left nav bar -->
-                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" style="color: white;"><i class="bi fs-4 bi-list"></i></button>
-                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                    <div class="offcanvas-header" style="background-color: #1B74CC;">
-                        <h3 class="offcanvas-title p-3" id="offcanvasScrollingLabel">IFMIS</h3>
-                        
+                    <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling" id="side" style="color: white;"><i class="bi fs-4 bi-list"></i></button>
+                    <div class="offcanvas offcanvas-start h-100" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div class="offcanvas-header" >
+                        <h3 class="offcanvas-title " id="offcanvasScrollingLabel" style="color:white">IFMIS</h3>
+                        <hr class="text-white">
                         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
-                    <hr>
                     <div class="offcanvas-body">
-                        <ul>
-                            <li><small></small></li>
-                        </ul>
+                        <ul class="navbar-nav " style="color:white" >
+                            <li>Home</li>
+                            <li>Masters</li>
+                            <li>Transcations</li>
+                            <li>Reports</li>
+                            <li>Return Cheque Generation</li>
+                            <li>Forest Transcations</li>
+                            <li>Forest Transcations Report</li>
+                            <li>E-Kuber Return Recieved List</li>
+                            <li>E-Kuber Return Challan Print</li>
+                            <li>UTR Search</li>
+                            <li>Falled transactions (ACK Reject)</li>
+                            <li>Cheque Status Report</li>
+                            <li>Rejected Cheques due to FinYearEnd</li>
+                            <li>Finyear New Cheques Report</li>
+                            <li>Pb Budget Ckecks</li>
+                            <li>Update Receipts Used Amouns</li>
+                          </ul>
                     </div>
                     </div>
                 </div>
+
                 <div class=" p-1 mt-1">
                     <button class="border-0 rounded p-1 ps-2 pt-2 pb-2 pe-2" style="background-color:#5F656E;color:white"><i class="bi bi-boxes"></i> Modules</button>
                 </div>
@@ -203,7 +218,7 @@
                     <div class="row p-1 pb-2">
                         <div class="col-lg-2"><small>Expenditure Type<span style="color:red">*</span></small></div>
                         <div class="col-lg-6">
-                            <select id="expenditureType" class="form-control" onchange="updatePurposeTypes()">
+                            <select id="expenditureType" class="form-control"  onchange="updatePurposeTypes()">
                                 <option value="" disabled selected>Select an option</option>
                                 <option value="capital">Capital Expenditure</option>
                                 <option value="revenue">Revenue Expenditure</option>
@@ -249,7 +264,6 @@
                                     <div class="col-lg-2"><small>Upload Documents</small></div>
                                     <div class="col-lg-6 d-flex">
                                       <input type="file" id="file-input" multiple>
-                                      <button type="button" id="select-files-button">Select Files</button>
                                     </div>
                                   </div>
                                   <div class="row">
