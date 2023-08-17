@@ -80,9 +80,10 @@
             <div class="offcanvas-body">
                 <div class="menu-container" id="menu-container-canvas-id">
                     <div class="ifmis-container d-flex align-items-center justify-content-center">
-                        <div style="margin-right: 7px;width: 67px;margin-right: 7p;height: 63px;"><img src="./logo.jpg"
+                        <div style="margin-right: 7px;width: 50%;height: 63px;"><img
+                                src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png"
                                 style="height: 100%; width: 100%;"></div>
-                        <h2 class="ifmis-heading">IFMIS</h2>
+
                     </div>
                     <ul class="menu">
                         <li>
@@ -140,6 +141,8 @@
         <div class="body-container body-container-position col-lg-10 col-12" id="body-container-id">
             <nav class="header-container d-flex justify-content-between">
                 <div class="modules-container d-flex">
+                    <div style="margin-right: 7px;width: 67px;;height: 63px;" class="d-lg-none"><img src="./logo.jpg"
+                            style="height: 100%; width: 100%;"></div>
                     <button class="hamburger-button d-lg-none" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"
                         id="hamburger-button-canvas-id"><i class="bi bi-list"></i></button>
@@ -258,7 +261,8 @@
                                         <div class="input-group input-group-sm">
                                             <input type="password" class="form-control"
                                                 aria-label="Sizing example input"
-                                                aria-describedby="inputGroup-sizing-sm" id="party-account-id" placeholder="Enter A/C no">
+                                                aria-describedby="inputGroup-sizing-sm" id="party-account-id"
+                                                placeholder="Enter A/C no">
                                         </div>
                                         <p class="mb-0 error-message" id="party-account-error"></p>
                                     </div>
@@ -271,7 +275,8 @@
                                         <div class="input-group input-group-sm">
                                             <input type="password" class="form-control"
                                                 aria-label="Sizing example input"
-                                                aria-describedby="inputGroup-sizing-sm" id="confirm-party-account-id" placeholder="Confirm A/C no">
+                                                aria-describedby="inputGroup-sizing-sm" id="confirm-party-account-id"
+                                                placeholder="Confirm A/C no">
                                         </div>
                                         <p class="mb-0 error-message" id="confirm-party-account-error"></p>
                                     </div>
@@ -283,7 +288,8 @@
                                     <div class="col-lg-7 col-12">
                                         <div class="input-group input-group-sm">
                                             <input type="text" class="form-control" aria-label="Sizing example input"
-                                                aria-describedby="inputGroup-sizing-sm" id="party-name-id" placeholder="Enter Party Name">
+                                                aria-describedby="inputGroup-sizing-sm" id="party-name-id"
+                                                placeholder="Enter Party Name">
                                         </div>
                                         <p class="mb-0 error-message" id="party-name-error"></p>
                                     </div>
@@ -297,7 +303,8 @@
                                             <div class="input-group input-group-sm">
                                                 <input type="text" class="form-control me-3"
                                                     aria-label="Sizing example input"
-                                                    aria-describedby="inputGroup-sizing-sm" id="bank-ifsc-id" placeholder="Enter IFSC Code">
+                                                    aria-describedby="inputGroup-sizing-sm" id="bank-ifsc-id"
+                                                    placeholder="Enter IFSC Code">
                                                 <button type="button" class="btn btn-primary" id="ifsc-search-id"
                                                     style="border-radius:5px;">Search</button>
                                             </div>
@@ -400,7 +407,8 @@
                                         <h5>Purpose<span class="text-danger">*</span></h5>
                                     </div>
                                     <div class="col-lg-7 col-12">
-                                        <textarea rows="2" cols="91%" class="border" id="purose-description-id" placeholder="Purpose">
+                                        <textarea rows="2" cols="91%" class="border" id="purose-description-id"
+                                            placeholder="Purpose">
                                         </textarea>
                                         <p class="mb-0 error-message" id="purpose-description-error"></p>
                                     </div>
@@ -412,7 +420,8 @@
                                     <div class="col-lg-7 col-12">
                                         <div class="input-group input-group-sm">
                                             <input type="number" class="form-control" aria-label="Sizing example input"
-                                                aria-describedby="inputGroup-sizing-sm" id="number-input-id" placeholder="Enter Party Amount">
+                                                aria-describedby="inputGroup-sizing-sm" id="number-input-id"
+                                                placeholder="Enter Party Amount">
                                         </div>
                                         <p class="mb-0" id="number-to-words-id"></p>
                                     </div>
@@ -442,7 +451,7 @@
                             </div>
                             <hr />
                             <div class="text-center">
-                                <button type="submit" class="btn btn-primary">Next</button>
+                                <button type="submit" class="btn btn-primary">Next <i class="bi bi-caret-right"></i></button>
                             </div>
                         </form>
                     </div>
