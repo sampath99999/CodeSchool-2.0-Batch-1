@@ -4,6 +4,7 @@ $(document).ready(function () {
   });
 });
 
+
 // Logout
 
 $(document).ready(function () {
@@ -146,22 +147,18 @@ $(document).ready(function () {
   options.forEach(function (option) {
     select.append($("<option>").val(option.value).text(option.text));
   });
-
-  select.on("change", function () {
-    var selectedValue = $(this).val();
-    var selectedText = options.find(
-      (option) => option.value === selectedValue
-    ).text;
-    expenditureErrorSpan.text(selectedText);
-  });
 });
 
 // purpose Type
 $(document).ready(function () {
   var options = [
-    { value: "Capital", text: "Capital Expenditure" },
-    { value: "Revenue", text: "Revenue Expenditure" },
-    { value: "Deferred", text: "Deferred Revenue Expenditure" },
+    { value: "Capital", text: "Maintain current levels of operation within the organization" },
+    { value: "Capital", text: " Expenses to permit future expansion" },
+    { value: "Revenue", text: "Sales costs or All expenses incurred by the firm that are directly tied to the manufacture and selling of its goods or services." },
+    { value: "Revenue", text: "All expenses incurred by the firm to guarantee the smooth operation." },
+    { value: "Deferred", text: "Exorbitant Advertising Expenditures" },
+    { value: "Deferred", text: "Unprecedented Losses" },
+    { value: "Deferred", text: "Development and Research Cost" },
   ];
 
   var select = $("#purposeTypeSelect");
@@ -171,13 +168,7 @@ $(document).ready(function () {
     select.append($("<option>").val(option.value).text(option.text));
   });
 
-  select.on("change", function () {
-    var selectedValue = $(this).val();
-    var selectedText = options.find(
-      (option) => option.value === selectedValue
-    ).text;
-    purposeTypeErrorSpan.text(selectedText);
-  });
+
 });
 
 // Purpose Name
