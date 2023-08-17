@@ -13,10 +13,12 @@
 
 <body class="bg-body-secondary">
   <!-- Offcanvas MenuBar -->
-  <div class="offcanvas offcanvas-start" data-bs-scroll="false" data-bs-backdrop="true" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas offcanvas-start" data-bs-scroll="false" data-bs-backdrop="true" tabindex="-1"
+    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
     <div class="offcanvas-header">
       <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button> -->
-      <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png" width="200" height="50" alt="ifmis-logo">
+      <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png" width="200" height="50"
+        alt="ifmis-logo">
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body p-0 py-3">
@@ -78,7 +80,8 @@
       <div class="row container-fluid px-0">
         <div class="col-6 d-inline-flex align-items-center">
           <!-- Side Menu Toggler -->
-          <button class="border-0 bg-transparent px-1" type="button"  data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+          <button class="border-0 bg-transparent px-1" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
             <img src="images/TS_GOV_LOGO.png" width="38" height="38" alt="">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
               class="bi bi-list text-white" viewBox="0 0 16 16">
@@ -113,13 +116,13 @@
                 <path fill-rule="evenodd"
                   d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
               </svg>
-              <div class="wrapper-block m-2 d-none d-md-block" id="userProfile">
+              <div class="wrapper-block m-2 d-none d-md-none d-md-block" id="userProfile">
                 <p class="m-0 text-start">Welcome M.USHASHREE</p>
                 <p class="m-0 text-start">(23031013097)</p>
               </div>
             </button>
             <!-- Profile Options -->
-            <ul class="dropdown-menu dropdown-menu-end rounded-0">
+            <ul class="dropdown-menu dropdown-menu-center rounded-0">
               <li>
                 <a class="dropdown-item" href="#">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -157,7 +160,8 @@
             </ul>
           </div>
           <!-- Logout Option -->
-          <div class="d-inline-flex align-items-center container-wrapper mx-1 px-2 d-none d-md-inline-flex" role="button" onclick="loginUser($('#login-credentials'))">
+          <div class="d-inline-flex align-items-center container-wrapper mx-1 px-2 d-none d-md-inline-flex"
+            role="button" onclick="loginUser($('#login-credentials'))">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
               class="bi bi-box-arrow-right m-1" viewBox="0 0 16 16">
               <path fill-rule="evenodd"
@@ -165,7 +169,7 @@
               <path fill-rule="evenodd"
                 d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
             </svg>
-            <p id="login-credentials">Logout</p>
+            <p id="login-credentials">Login</p>
           </div>
         </div>
       </div>
@@ -238,14 +242,16 @@
                 <label class="form-check-label" for="multiple-parties">Multiple Parties</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="transactionType" id="pd-to-pd" value="PD Account to PD Account">
+                <input class="form-check-input" type="radio" name="transactionType" id="pd-to-pd"
+                  value="PD Account to PD Account">
                 <label class="form-check-label" for="pd-to-pd">PD Account to PD Account</label>
               </div>
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="transactionType" id="pd-to-other" value="PD Account to other">
+                <input class="form-check-input" type="radio" name="transactionType" id="pd-to-other"
+                  value="PD Account to other">
                 <label class="form-check-label" for="pd-to-other">PD Account to other</label>
-              </div>   
-              <div id="transactionTypeFeedback" class="invalid-feedback p-2"></div>           
+              </div>
+              <div id="transactionTypeFeedback" class="invalid-feedback p-2"></div>
             </div>
           </div>
           <!-- Part Account no. -->
@@ -279,9 +285,10 @@
             <div class="col-md-6">
               <div class="row form-feature">
                 <input type="text" class="form-control col me-1" id="bankIfscCode" placeholder="Enter IFSC Code">
-                <button class="btn btn-primary d-inline-flex col-auto ms-1" type="button" onclick="loadBankDetails($('#bankIfscCode').val())">Search</button>
-                <div id="bankIfscFeedback" class="invalid-feedback"></div>  
-              </div>           
+                <button class="btn btn-primary d-inline-flex col-auto ms-1" type="button"
+                  onclick="loadBankDetails($('#bankIfscCode').val())">Search</button>
+                <div id="bankIfscFeedback" class="invalid-feedback"></div>
+              </div>
             </div>
           </div>
           <!-- Bank Name -->
@@ -302,7 +309,7 @@
           <div class="row mb-3">
             <label for="headOfAccount" class="form-label col-md-2">Head of account<span>*</span></label>
             <div class="col-md-6">
-              <select class="form-select" id="headOfAccount" onchange="loadHoAccountDetails($('#headOfAccount').val())" >
+              <select class="form-select" id="headOfAccount" onchange="loadHoAccountDetails($('#headOfAccount').val())">
                 <option value="Select" selected disabled>Select</option>
                 <option value="0853001020002000000NVN">0853001020002000000NVN</option>
                 <option value="8342001170004001000NVN">8342001170004001000NVN</option>
@@ -356,7 +363,8 @@
           <div class="row mb-3">
             <label for="briefPurpose" class="form-label col-md-2">Purpose<span>*</span></label>
             <div class="col-md-6">
-              <textarea class="form-control" id="briefPurpose" placeholder="Purpose" onkeyup="validateBriefPurpose()" rows="3"></textarea>
+              <textarea class="form-control" id="briefPurpose" placeholder="Purpose" onkeyup="validateBriefPurpose()"
+                rows="3"></textarea>
               <div id="briefPurposeFeedback" class="invalid-feedback"></div>
             </div>
           </div>
@@ -375,14 +383,25 @@
               <div class="row form-feature">
                 <input class="form-control col me-1" type="file" id="formFileMultiple" multiple="">
                 <button class="btn btn-primary d-inline-flex col-auto ms-1" type="button">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus text-white" viewBox="0 0 16 16">
-                    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-plus text-white" viewBox="0 0 16 16">
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
                   </svg>
                   Add
                 </button>
-              </div>       
-              <div id="document-help" class="form-text"><em>Note: Documents of Cheque(Letter/G.O. etc) can be uploaded
-                  here.</em></div>
+              </div>
+              <div id="document-help" class="form-text">
+                <em>Note: Documents of Cheque(Letter/G.O. etc) can be uploaded here.</em>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-6">
+              <div class="toast-container position-static">
+                <!-- Added Documents -->
+              </div>
             </div>
           </div>
           <hr class="my-4">
@@ -391,12 +410,14 @@
             <div class="col-8">
               <button class="btn btn-primary float-end mb-4" type="submit">
                 Next
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
-                  <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-caret-right" viewBox="0 0 16 16">
+                  <path
+                    d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
                 </svg>
               </button>
             </div>
-          </div>         
+          </div>
         </form>
       </div>
     </div>
@@ -407,4 +428,5 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="main.js"></script>
 </body>
+
 </html>

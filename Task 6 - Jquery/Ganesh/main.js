@@ -1,10 +1,3 @@
-// Get Last Login Date & Time.
-$("document").ready(function(){
-    const dateObject = new Date();
-    $("#login-date").text(dateObject.getDate() +"-"+ (dateObject.toLocaleString('default', { month: 'short'})) +"-"+ dateObject.getFullYear())
-    $("#login-time").text(dateObject.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }))
-});
-
 // Login and Logout credentials
 function loginUser(credential){
     if(credential.text() === 'Logout'){
@@ -13,11 +6,17 @@ function loginUser(credential){
     }else{
         credential.text("Logout");
         $("#userProfile").removeClass("d-md-none");
+        const dateObject = new Date();
+        $("#login-date").text(dateObject.getDate() +"-"+ (dateObject.toLocaleString('default', { month: 'short'})) +"-"+ dateObject.getFullYear());
+        $("#login-time").text(dateObject.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true }));
     }
 }
 
 // Load Bank Details by IFSC Code.
 function loadBankDetails(ifscCode){
+    $("#bankIfscCode").on("keydown", function(){
+        $("#bankIfscCode").removeClass("is-invalid");
+    });
     if(ifscCode == ''){
         $("#bankName").val("XXXXX");
         $("#bankBranch").val("XXXXX");
@@ -139,6 +138,9 @@ function validateTransType(){
 // Validating function for party account number.
 function validatePartyAccount(){
     let acNumber = $("#partyAccountNum");
+    acNumber.on("keydown", function(){
+        acNumber.removeClass("is-invalid");
+    });
     if(acNumber.val() == ''){
         acNumber.addClass("is-invalid");
         $("#partyAccountNumFeedback").text("Field is required!");
@@ -146,7 +148,7 @@ function validatePartyAccount(){
     }
     else if(!(acNumber.val().length >= 12 && acNumber.val().length <= 22)){
         acNumber.addClass("is-invalid");
-        $("#partyAccountNumFeedback").text("Account should be min 12 and max 22 digits");
+        $("#partyAccountNumFeedback").text("Account number should be min 12 and max 22 digits");
         return false;
     }
     else{
@@ -159,6 +161,9 @@ function validatePartyAccount(){
 function confirmPartyAccount(){
     let account = $("#partyAccountNum");
     let confirmAccount = $("#partyConfirmAccountNum");
+    confirmAccount.on("keydown", function(){
+        confirmAccount.removeClass("is-invalid");
+    });
     if(confirmAccount.val() == ''){
         confirmAccount.addClass("is-invalid");
         $("#partyConfirmAccountNumFeedback").text("Field is required!");
@@ -166,7 +171,7 @@ function confirmPartyAccount(){
     }
     else if(account.val() !== confirmAccount.val()){
         confirmAccount.addClass("is-invalid");
-        $("#partyConfirmAccountNumFeedback").text("Account Number does not match!");
+        $("#partyConfirmAccountNumFeedback").text("Account number does not match!");
         return false;
     }
     else{
@@ -179,6 +184,9 @@ function confirmPartyAccount(){
 function validatePartyName(){
     let nameRegExp = /^[A-Za-z ]{2,}$/;
     let name = $("#partyName");
+    name.on("keydown", function(){
+        name.removeClass("is-invalid");
+    });
     if(name.val() == ''){
         name.addClass("is-invalid");
         $("#partyNameFeedback").text("Field is required!");
@@ -216,6 +224,7 @@ function validateBriefPurpose(){
         return false;
     }
     else if(purpose.val().length > 500){
+        purpose.val(purpose.val().slice(0,500));
         $("#briefPurposeFeedback").text("Max 500 characters allowed");
         purpose.addClass("is-invalid");
         return false;
@@ -244,3 +253,25 @@ function checkPartyTransDetails(){
         return false;
     }
 }
+
+// Load Document Details.
+$("#formFileMultiple").on("change", function(){
+    let files = $("#formFileMultiple").prop('files');
+    for(let i=0; i<files.length; i++){
+        let fileName = files[i].name;
+        let fileSize = (files[i].size/1024).toFixed(0);
+        let htmlTemplate = `
+        <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-body">
+                <strong>${fileName}</strong>
+                <div class="float-end">
+                    <small class="me-3">${fileSize}KB</small>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div> 
+            </div>
+        </div>
+        `;
+        $(".toast-container").append(htmlTemplate);
+    }
+    $("#formFileMultiple").val('');
+});
