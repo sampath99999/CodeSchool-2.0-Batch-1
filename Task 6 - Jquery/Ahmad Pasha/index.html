@@ -107,10 +107,13 @@
                         <span>(23031013097)</span>
                       </div>
                     </a>
-                    <ul class="dropdown-menu ps-2">
-                      <li><a class="dropdown-item" href="#">Profile</a></li>
-                      <li><a class="dropdown-item" href="#">Change Password</a></li>
-                      <li><a class="dropdown-item" href="#">Logout</a></li>
+                    <ul class="dropdown-menu ps-lg-2 p-0" id="dropDownList">
+                      <li><a class="dropdown-item" href="#"><i
+                            class="bi bi-person text-success fw-bold"></i>&nbsp;Profile</a></li>
+                      <li><a class="dropdown-item" href="#"><i class="bi bi-gear text-success fw-bold"></i>&nbsp;Change
+                          Password</a></li>
+                      <li><a class="dropdown-item" href="#"><i
+                            class="bi bi-box-arrow-right text-success fw-bold"></i>&nbsp;Logout</a></li>
                     </ul>
                   </li>
                 </div>
@@ -332,7 +335,7 @@
                     <label for="partyAmoutInWords" class="form-label fw-medium">Party Amount(in Rs.)</label>
                   </div>
                   <div class="col-lg-9 col-12">
-                    <input type="number" class="form-control" onchange="onInputChange(event)" id="partyAmoutInWords"
+                    <input type="number" class="form-control" onkeyup="onInputChange(event)" id="partyAmoutInWords"
                       placeholder="Enter Party Amount">
                     <p id="amountInWords"></p>
                     <p class="text-danger" id="partyAmoutInWordsErrMsg"></p>

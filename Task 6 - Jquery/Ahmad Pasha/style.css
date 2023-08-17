@@ -98,3 +98,13 @@
   color: red;
   cursor: pointer;
 }
+
+#dropDownList {
+  margin-left: -150px;
+}
+
+@media screen and (width >=800px) {
+  #dropDownList {
+    margin-left: 0px !important;
+  }
+}
