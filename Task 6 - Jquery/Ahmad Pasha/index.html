@@ -21,8 +21,8 @@
   <div class="main_container mt-0 pt-0">
     <div class="container-fluid mt-0 pt-0">
       <div class="row mt-0 pt-0">
-        <div class="left_section col-2 m-0 p-0 h-75" id="navBg">
-          <div class="collapse navbar-collapse " id="navbarNavDropdown">
+        <div class="left_section  m-0 col-2 p-0 h-75" id="navBg">
+          <div>
             <h1 class="text-white text-center mt-2">IFMIS</h1>
             <hr class="text-white">
             <ul class="navbar-nav pb-4">
@@ -73,7 +73,7 @@
           </div>
         </div>
 
-        <div class="right_section m-0 p-0">
+        <div class="right_section flex-grow-1 m-0 p-0 col-10">
           <nav class="navbar align-items-center col-12">
             <div class="container-fluid align-items-center d-flex">
               <div class="d-flex gap-1 gap-lg-2 align-items-center">
@@ -335,7 +335,7 @@
                     <label for="partyAmoutInWords" class="form-label fw-medium">Party Amount(in Rs.)</label>
                   </div>
                   <div class="col-lg-9 col-12">
-                    <input type="number" class="form-control" onkeyup="onInputChange(event)" id="partyAmoutInWords"
+                    <input type="number" class="form-control" onkeyup="onInputChange()" id="partyAmoutInWords"
                       placeholder="Enter Party Amount">
                     <p id="amountInWords"></p>
                     <p class="text-danger" id="partyAmoutInWordsErrMsg"></p>

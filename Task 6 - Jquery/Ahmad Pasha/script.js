@@ -90,7 +90,7 @@ $(document).ready(function () {
   });
 
   $(".navbar-toggler").click(function () {
-    $(".right_section").toggleClass("col-10");
+    $(".left_section").toggle(3000);
   });
 
   let fileListContainer;
@@ -145,107 +145,101 @@ $("#searchBtn").click(function (e) {
   });
 });
 
-let obj = {
-  1: "One",
-  2: "Two",
-  3: "Three",
-  4: "Four",
-  5: "Five",
-  6: "Six",
-  7: "Seven",
-  8: "Eight",
-  9: "Nine",
-  0: "Zero",
-  10: "Ten",
-  11: "Eleven",
-  12: "Twelve",
-  13: "Thirteen",
-  14: "Fourteen",
-  15: "Fifteen",
-  16: "Sixteen",
-  17: "Seventeen",
-  18: "Eighteen",
-  19: "Nineteen",
-  20: "Twenty",
-  30: "Thirty",
-  40: "Forty",
-  50: "Fifty",
-  60: "Sixty",
-  70: "Seventy",
-  80: "Eighty",
-  90: "Ninety",
-};
+function onInputChange() {
+  const inputField = $("#partyAmoutInWords");
+  const errorDisplay = $("#partyAmoutInWordsErrMsg");
+  const amountInWordsDisplay = $("#amountInWords");
 
-let lengthValues = {
-  3: "Hundred",
-  4: "Thousend",
-  6: "Lakh",
-  8: "Crore",
-};
+  const amountValue = inputField.val().trim();
+  const isValidAmount = /^\d+$/.test(amountValue);
 
-function onInputChange(e) {
-  let x = e.target.value;
-  let res = "";
-  let j = 0;
-  let Thousends = false;
-  let Lakhs = false;
-  for (let i of x) {
-    let char = x.slice(j, x.length + 1);
-
-    j += 1;
-
-    if (char.length > 8) {
-      res = "can not determine";
-      break;
-    } else if (char.length === 8) {
-      res += obj[i] + lengthValues[8] + " ";
-    } else if (char.length === 7) {
-      Lakhs = true;
-
-      let secondDigit = char.slice(1, 2);
-      let twoDigi = char.slice(0, 1) + "0";
-      res += obj[twoDigi] + obj[secondDigit] + lengthValues[6] + " ";
-    } else if (char.length === 6) {
-      if (Lakhs) {
-        continue;
-      } else {
-        res += obj[i] + lengthValues[6] + " ";
-      }
-    } else if (char.length === 5) {
-      Thousends = true;
-      let secondDigit = char.slice(1, 2);
-      let twoDigi = char.slice(0, 1) + "0";
-
-      if (parseInt(secondDigit) !== 0) {
-        res += obj[twoDigi] + obj[secondDigit] + lengthValues[4] + " ";
-      } else {
-        res += obj[twoDigi] + lengthValues[4] + " ";
-      }
-    } else if (char.length === 4) {
-      if (Thousends) {
-        continue;
-      } else {
-        res += obj[i] + lengthValues[4] + " ";
-      }
-    } else if (char.length === 3 && parseInt(i) > 0) {
-      res += obj[i] + lengthValues[3] + " ";
-    } else if (char.length === 2 && parseInt(i) > 0) {
-      if (parseInt(char) < 20) {
-        res += obj[char] + " ";
-        break;
-      } else if (parseInt(char) >= 20) {
-        let secondDigit = char.slice(1, 2);
-        console.log(secondDigit);
-        let twoDigi = char.slice(0, 1) + "0";
-        console.log(twoDigi);
-        res += obj[twoDigi] + obj[secondDigit] + " ";
-        break;
-      }
-    } else if (char.length === 1) {
-      res += obj[char];
-    }
+  if (amountValue === "") {
+    errorDisplay.text("Party Amount should not be empty.");
+    amountInWordsDisplay.text("");
+  } else if (!isValidAmount) {
+    errorDisplay.text("Party Amount should be a whole number.");
+    amountInWordsDisplay.text("");
+  } else {
+    errorDisplay.text("");
+    const amountInWords = partyAmountInWords(amountValue);
+    amountInWordsDisplay.text(amountInWords);
   }
-  $("#amountInWords").text(res);
+}
+
+function partyAmountInWords(amount) {
+  var ones = [
+    "",
+    "One",
+    "Two",
+    "Three",
+    "Four",
+    "Five",
+    "Six",
+    "Seven",
+    "Eight",
+    "Nine",
+  ];
+  var teens = [
+    "",
+    "Eleven",
+    "Twelve",
+    "Thirteen",
+    "Fourteen",
+    "Fifteen",
+    "Sixteen",
+    "Seventeen",
+    "Eighteen",
+    "Nineteen",
+  ];
+  var tens = [
+    "",
+    "Ten",
+    "Twenty",
+    "Thirty",
+    "Fourty",
+    "Fifty",
+    "Sixty",
+    "Seventy",
+    "Eighty",
+    "Ninety",
+  ];
+
+  function numbersToWords(number) {
+    if (number === 0) return "";
+    else if (number < 10) return ones[number];
+    else if (number < 20) return teens[number - 10];
+    else if (number < 100)
+      return tens[Math.floor(number / 10)] + " " + ones[number % 10];
+    else
+      return (
+        ones[Math.floor(number / 100)] +
+        " Hundred " +
+        numbersToWords(number % 100)
+      );
+  }
+  var words = "";
+  var crores = Math.floor(amount / 10000000);
+  var lakhs = Math.floor((amount % 10000000) / 100000);
+  var thousands = Math.floor((amount % 100000) / 1000);
+  var remaining = Math.round(amount % 1000);
+
+  if (crores > 0) {
+    words += numbersToWords(crores) + " Crore ";
+  }
+
+  if (lakhs > 0) {
+    words += numbersToWords(lakhs) + " Lakh ";
+  }
+
+  if (thousands > 0) {
+    words += numbersToWords(thousands) + " Thousand ";
+  }
+
+  if (remaining > 0) {
+    words += numbersToWords(remaining);
+  }
+  console.log(words);
+  return words;
 }
 
 function expenditureFun() {
