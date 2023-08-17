@@ -1,8 +1,8 @@
 .menuSidebar {
-    
     margin: 0;
     padding: 0;
 }
+
 .horizontal-navbar {
     width: 100%;
     height: 70px;
@@ -35,4 +35,8 @@
   }
 .impStar{
     color: red;
+}
+.main-body{
+  padding: 0px !important;
+  margin: 0px !important;
 }
