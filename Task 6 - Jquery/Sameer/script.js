@@ -108,7 +108,6 @@ $("#searchButton").click(function () {
   }
 });
 
-
   function updateOutput() {
     const headOfAccount = document.getElementById('headOfAccount');
     const balance = document.getElementById('balance');
@@ -131,8 +130,8 @@ $("#searchButton").click(function () {
       balance.textContent = '123465400 ';
       loc.textContent='5000';
     } else {
-      balance.textContent = 'xxxxx';
-      loc.textContent='xxxxx';
+      balance.textContent = 'XXXXX';
+      loc.textContent='XXXXX';
 
     }
   }

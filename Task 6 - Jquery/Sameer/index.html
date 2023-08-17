@@ -36,8 +36,8 @@
                   </ul>
             </div>
             
-            <!-- Horizontal Navbar and Content Area -->
-            <div class="col-md-10 col-12 ms-sm-0 pe-2 d-flex flex-column main-body" id="mainBody">
+            
+            <div class="col-md-10 col-12 ms-sm-0 pe-2 d-flex flex-column main-body mb-lg-0" id="mainBody">
 
                 <nav class="navbar navbar-expand-lg horizontal-navbar justify-content-between ms-0 d-flex" style="background-image: url('https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg');">
                    
@@ -57,20 +57,20 @@
                           Modules
                         </button>
                       </div>
-                    <div class="headerRight d-flex">
+                    <div class="headerRight d-flex d-sm-flex">
                         <div class="d-flex me-sm-2">
-                      <ul class="navbar-nav d-sm-block d-lg-flex text-light d-none text-end gap-3">
-                        <li class="nav-item">
-                            <div class="current-time text-white lastLogin" style="background-color: #233654; font-size: 10px;">
-                                <p class="mt-2">Last Login</p>
+                      <ul class="navbar-nav d-lg-flex text-light text-end gap-5">
+                        <li class="nav-item mt-2">
+                            <div class="current-time text-white lastLogin d-sm-block d-none mt-3" style="background-color: #233654; font-size: 10px;">
+                                <p class="">Last Login</p>
                                 <p id="currentDateTime"></p>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <div class="dropdown text-start text-light d-sm-block d-none mt-1">
+                            <div class="dropdown text-start text-light mt-1">
                                 <button type="button" class="btn dropdown-toggle text-white border-0 mb-1 mt-1 mt-sm-3 gap-2 text-light bg-secondary justify-content-center d-flex rounded-1" data-bs-toggle="dropdown" style="background-color: #3F5162;">
                                     <img src="https://static.vecteezy.com/system/resources/previews/014/391/422/original/man-avatar-icon-flat-vector.jpg" class="rounded-5 m-2" alt="Cinque Terre" style="width: 30px" height="30px">
-                                    Welcome M.USHASHREE<br>(23031013097)
+                                  <span class="d-sm-block d-none"> Welcome M.USHASHREE<br>(23031013097)</span>
                                 </button>
                                 <ul class="dropdown-menu ">
                                     <li><a class="dropdown-item" href="#"><i class="bi bi-person text-success"></i>Profile</a></li>
@@ -89,9 +89,9 @@
 
                 <div class="container-fluid mt-lg-4 flex-grow-1 m-sm-0">
                     <div class="head-paragrap text-primary d-none d-lg-flex "style="background-color:#E0ECFC">
-                        <p><i class="bi bi-credit-card"></i>  issue Cheque (E-kuber Cheque From 01/03/2019)</p>
+                        <p class="" style="font-weight: 600;"><i class="bi bi-credit-card px-1"></i>  issue Cheque (E-kuber Cheque From 01/03/2019)</p>
                     </div>
-                    <div class="paragraph mt-3" style="background-color: #FCF8E3;">
+                    <div class="paragraph mt-3 p-4" style="background-color: #FCF8E3;">
                         <h6><strong>Points to remember</strong></h6>
                         <ul>
                             <li>Please note that all cheques which are approved from DDOChecCKer/Ohicer/Govt trom 01/03/2019 shall get paid through Ekuber which iIS a Core Banking Solution ot RBl.</li>
@@ -156,13 +156,13 @@
                             <div class="row bg-light mt-3 mb-3">
                                 <div class="col-12">
                                     <div class="row p-0 mb-2">
-                                        <div class="col-lg-2 col-md-3 form-label"><strong>Bank IFSC Code</strong><span class="impStar">*</span></div>
+                                        <div class="col-lg-2 col-md-6 form-label"><strong>Bank IFSC Code</strong><span class="impStar">*</span></div>
                                         <div class="col-lg-5 col-md-6 "><input type="text" class="form-control" placeholder="Enter IFSC Code" id="bankIFSCCode" autocomplete="off" /></div>
                                         <div class="col-lg-1 col-md-1 btn text-white bg-primary" id="searchButton"><span>Search</span></div>
                                     </div>
-                                    <div class="row p-0 mb-2">
+                                   
                                         <div class="col-12 offset-md-3 col-md-7 text-danger" id="bankIFSCCodeError"></div>
-                                    </div>
+                                    
                                     <div class="row p-0 mb-2 mt-1">
                                         <div class="col-lg-2 col-md-3 form-label"><strong>Bank Name</strong></div>
                                         <div class="col-lg-10 col-md-7" id="bankName">XXXXX</div>
@@ -259,10 +259,10 @@
                                 <div class="col-sm-6  gap-2 align-items-center">
                                     <div class="input-group mb-3">
                                         <div class="d-flex">
-                                            <div class="input-group col-sm-12" style="width: 80%">
+                                            <div class="input-group col-sm-12" style="width: 100%">
                                               <input type="file"class="form-control"id="documents"name="documents[]" multiple>
                                             </div>
-                                            <button type="button"class="btn btn-primary ms-2"id="addFileInput">
+                                            <button type="button"class="btn btn-primary ms-5 d-flex"id="addFileInput">
                                               <i class="bi bi-plus"></i>Add
                                             </button>
                                           </div>
