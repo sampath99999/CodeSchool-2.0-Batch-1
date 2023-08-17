@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="sideBar" class="sidebar">
+      <h3 class="text-white text-center p-2">IFMIS</h3>
+      <hr style="color: #fcf8c3" />
+      <a href="#" class="p-2 ps-4">Home</a>
+      <a href="#" class="p-2 ps-4">Masters</a>
+      <a href="#" class="p-2 ps-4">Transactions</a>
+      <a href="#" class="p-2 ps-4">Reports</a>
+      <a href="#" class="p-2 ps-4">Return Cheque Generation</a>
+      <a href="#" class="p-2 ps-4">Forest Transactions</a>
+      <a href="#" class="p-2 ps-4">Forest Transactions Report</a>
+      <a href="#" class="p-2 ps-4">E-Kuber Return Received List </a>
+      <a href="#" class="p-2 ps-4">E-Kuber Return Challan Print</a>
+      <a href="#" class="p-2 ps-4">UTR Search</a>
+      <a href="#" class="p-2 ps-4">Failed Transactions(ACK Reject)</a>
+      <a href="#" class="p-2 ps-4">Cheque Status Report</a>
+      <a href="#" class="p-2 ps-4">Rejected Cheques due to FinYear End</a>
+      <a href="#" class="p-2 ps-4">FinYear New Cheques Report</a>
+      <a href="#" class="p-2 ps-4">Pb Budget Check</a>
+      <a href="#" class="p-2 ps-4">Update Receipts Used Amount</a>
+    </div>
+
+    <div id="main" class="d-flex justify-content-between">
+      <div class="d-flex align-items-center">
+        <span class="d-sm-flex d-md-none">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/6/61/Emblem_of_Telangana.svg/800px-Emblem_of_Telangana.svg.png"
+            style="width: 60px; height: 60px; margin-left: 0px"
+            alt="" />
+        </span>
+        <span class="openbtn" onclick="toggleNav()">☰ </span>
+        <button class="modules border-0 p-3 ms-1 d-flex align-items-center">
+          <i class="bi bi-boxes"></i>&nbsp;Modules
+        </button>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <div class="d-none d-md-block navbarLogin pt-3">
+          <div><small class="text-white" style="font-size: 12px;">Last Login:&nbsp;</small></div>
+          <div><small id="date" class="text-white"></small>&nbsp;</div>
+          <div><small id="time" class="text-white"></small>&nbsp;</div>
+        </div>
+        <div class="dropdown">
+          <button
+            class="btn text-white dropdown-toggle d-flex align-items-center p-0"
+            type="button"
+            id="dropdownMenuButton"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <div class="d-flex align-items-center">
+              <div>
+                <div class="p-sm-5 p-md-0">
+                  <i class="bi bi-person-circle"></i>&nbsp;
+                  <small class="d-none d-md-inline" style="font-size: 12px;">WELCOME M.USHASREE&nbsp;</small>
+                  
+                </div>
+                <div class="d-none d-md-inline"><p style="font-size: 12px;">(23031013097)</p></div>
+              </div>
+            </div>
+          </button>
+          <div
+            class="dropdown-menu equal-width"
+            aria-labelledby="dropdownMenuButton" >
+         
+            <a class="dropdown-item border-bottom" href="#"
+              ><i class="bi icon bi-person me-2"></i>Profile</a>
+           
+            <a class="dropdown-item border-bottom" href="#"
+              ><i class="bi icon bi-gear me-2"></i>Change Password</a>
+            
+            <a class="dropdown-item" href="#">
+              <i class="bi icon bi-box-arrow-right me-2"></i>Logout</a>
+           
+          </div>
+        </div>
+        <div>
+          <button
+            class="border-0 text-white ms-2 p-3 d-none d-md-block"
+            id="actionLink" style="font-size: 12px;">
+            <i class="bi bi-box-arrow-right"></i>Logout
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="containerBody">
+      <div class="row1 mt-3 ms-1 me-2 d-flex align-items-center   d-none d-md-block ">
+        <p>
+          <b>
+            <i class="bi bi-calendar4-range ms-1 me-1"></i>Issue Cheque (E-Kuber
+            Cheque From 01/03/2019)</b>
+          
+        </p>
+      </div>
+      <div class="row2 mt-4 pb-3" style="font-size: small">
+        <p class="ms-3"><b>Points to Remember</b></p>
+        <ul>
+          <li>
+            &nbsp;Please note that all cheques which are approved from
+            DDOChecCKer/Ohicer/Govt trom 01/03/2019 shall get paid through
+            Ekuber which iIS a Core Banking Solution ot RBl.
+          </li>
+
+          <li>
+            &nbsp;There is no need to present the cheques at the Bank for these
+            cheques which got approved after 01/03/2019.
+          </li>
+          <li>
+            &nbsp;Please give correct account details as it is when the Account
+            was opened.
+          </li>
+          <li>
+            &nbsp;Make sure there is no 'Your self' or 'Self" in the account
+            names while issuing cheques. Such cheques get auto-rejected by the
+            EKuber
+          </li>
+          <li>
+            &nbsp;Please check the exact length of the Bank Account Number and
+            NO special characters are to be entered, which leads to auto
+            rejection
+          </li>
+          <li>
+            &nbsp;Finally, in multiple party cheques please do not enter the
+            same party details in the same chequeno which will be considered as
+            a duplicacy transaction and gets auto-rejeted.
+          </li>
+          <li>
+            &nbsp;This is just a one-time procedure to get your Party details
+            corrected and once when corrected the same details can be re-used
+            for smooth transactions.
+          </li>
+          <li>
+            &nbsp;PD-to-PD cheques shall be adjusted in treasury itself in the
+            regular procedure.
+          </li>
+        </ul>
+      </div>
+      <!-- <div class="row3 ms-4 mt-4 bg-light p-2 d-flex">
+         <div class="col-6">
+           <label for="Transaction">Transaction Type <span style="color:red">*</span></label>
+          </div>
+          
+          <div class="form-check form-check-inline">
+           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+           <label class="form-check-label" for="inlineRadio1">Single Party</label>
+         </div>
+        
+         <div class="form-check form-check-inline">
+           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+           <label class="form-check-label" for="inlineRadio2">Multiple Parties</label>
+         </div>
+         
+         <div class="form-check form-check-inline">
+           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+           <label class="form-check-label" for="inlineRadio2">PD Account to PD Account</label>
+         </div>
+         
+         <div class="form-check form-check-inline">
+           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+           <label class="form-check-label" for="inlineRadio2">PD Account to Other Account</label>
+         
+       </div>
+      </div> -->
+      <!-- <div class="row4 ms-3 d-flex mt-2">
+       <div class="col-6"><label for="PartyAccount">Party Account No.</label></div>
+       <div class="col-6"><input type="text" style="width:60%;"></div>
+      </div> -->
+      <div class="container">
+        <div class="row3 bg-light mt-2">
+          <div class="label">
+            <label for="">
+              <b>Transaction Type </b><span class="mandatory">*</span></label >
+           
+          </div>
+          <div class="d-bloack">
+          <div class="ms-5 d-flex">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio1"
+                value="option1"
+              />
+              <label class="form-check-label" for="inlineRadio1"
+                >Single Party</label >
+             
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio2"
+                value="option2"
+              />
+              <label class="form-check-label" for="inlineRadio2"
+                >Multiple Parties</label>
+              
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio3"
+                value="option3"
+              />
+              <label class="form-check-label" for="inlineRadio3">
+                PD Account to PD Account</label >
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio4"
+                value="option4"
+              />
+              <label class="form-check-label" for="inlineRadio4">
+                PD Account to Other Account</label>
+            </div>
+           
+          </div>
+          <div id="transactionTypeError" class="error ms-5"></div>
+        </div></div>
+        <div class="mb-3 row mt-2">
+          <label for="exampleInputEmail1" class="col-sm-2 col-form-label">
+          <b>Party Account no</b><span class="mandatory">*</span></label >
+          <div class="col-sm-7">
+            <input
+              type="text"
+              class="form-control"
+              id="PartyAccountInputEmail1"
+              placeholder="Enter A/C no"
+              aria-describedby="textHelp"
+              name="party"
+            />
+            <span id="partyAccountError" class="error"></span>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label
+            for="confirmPartyAccount"
+            class="col-sm-2 col-form-label"
+            style="font-size: 14px"
+            ><b>Confirm Party Account no</b>
+            <span class="mandatory">*</span></label>
+          <div class="col-sm-7">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Confirm A/C no"
+              id="ConfirmPartyInputEmail1"
+              aria-describedby="textHelp"
+              name="cpartyno" />
+            <span id="ConfirmPartyError" class="error"></span>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="partyName" class="col-sm-2 col-form-label"
+            ><b>Party Name</b><span class="mandatory">*</span></label>
+          <div class="col-sm-7">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Enter Party Name"
+              id="PartyNameInputEmail1"
+              aria-describedby="textHelp"
+              name="cpartyname" />
+            <span id="PartyNameError" class="error"></span>
+          </div>
+        </div>
+
+        <div class="bg-light">
+          <div class="mb-3 row" style="padding-top: 10px">
+            <label for="ifsc" class="col-sm-2 col-form-label"
+              ><b>Bank IFSC Code</b><span class="mandatory">*</span></label >
+            <div class="col-sm-7 d-flex align-items-center">
+              <input
+                type="text"
+                class="form-control me-2"
+                placeholder="Enter IFSC Code"
+                id="IfscInputEmail1"
+                aria-describedby="textHelp"
+                name="ifsc" />
+              
+              <button class="btn btn-primary" type="button" id="searchButton">
+                Search
+              </button>
+           
+            </div>
+            <span id="IfscError" class="error bankError"></span>
+          </div>
+          <div class="mb-3 row">
+            <label for="bank" class="col-sm-2 col-form-label"><b>Bank Name</b></label >
+            <div class="col-sm-7 d-flex align-items-center">
+              <span id="BankName">&nbsp;XXXX</span>
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="branch" class="col-sm-2 col-form-label"
+              ><b>Bank Branch</b></label>
+            <div class="col-sm-7 d-flex align-items-center">
+              <span id="BranchName">&nbsp;XXXX</span>
+            </div>
+          </div>
+        </div>
+        <div class="mb-3 row">
+          <label for="headOfAccount" class="col-sm-2 col-form-label"><b>Head of Account</b><span class="mandatory">*</span></label>
+          <div class="col-sm-7">
+              <select class="form-select" id="headOfAccountSelect">
+                  <option value="Select" selected >Select</option>
+                  <option value="option1">0853001020002000000NVN</option>
+                  <option value="option2">8342001170004001000NVN</option>
+                  <option value="option3">2071011170004320000NVN </option>
+                  <option value="option4">8342001170004002000NVN</option>
+                  <option value="option5">2204000030006300303NVN </option>
+              </select>
+              <span id="HOAError" class="error"></span>
+          </div>
+      </div>
+      <div class="mb-3 row">
+          <label for="balance" class="col-sm-2 col-form-label"><b>Balance</b> (In Rs.)</label>
+          <div class="col-sm-7 d-flex align-items-center">
+              <span id="BalanceValue">&nbsp;XXXX</span>
+          </div>
+      </div>
+      <div class="mb-3 row">
+          <label for="loc" class="col-sm-2 col-form-label"><b>LOC</b> (In Rs.)</label>
+          <div class="col-sm-7 d-flex align-items-center">
+              <span id="LOCValue">&nbsp;XXXX</span>
+          </div>
+      </div>
+      
+  
+
+        <div class="mb-3 row">
+          <label for="expenditure" class="col-sm-2 col-form-label"
+            ><b>Expenditure Type</b><span class="mandatory">*</span></label>
+          <div class="col-sm-7">
+            <select
+              class="form-select"
+              aria-describedby="textHelp"
+              name="cpartyname"
+              id="ExpenditureTypeSelect">
+              <option value="Select"   selected>Select</option>
+              <option value="option1">Capital Expenditure</option>
+              <option value="option2">
+                Maintain current levels of operation within the organization
+              </option>
+              <option value="option3">
+                Expenses to permit future expansion.
+              </option>
+              <option value="option4">Revenue Expenditure</option>
+              <option value="option5">
+                Sales costs or All expenses incurred by the firm that are
+                directly tied to the manufacture and selling of its goods or
+                services.
+              </option>
+              <option value="option6">
+                All expenses incurred by the firm to guarantee the smooth
+                operation.
+              </option>
+              <option value="option7">Deferred Revenue Expenditure</option>
+              <option value="option8">Exorbitant Advertising Expenditure</option>
+              <option value="option9">Unprecedented Losses</option>
+              <option value="option10">Development and Research Cost</option>
+            </select>
+            <span id="ExpenditureError" class="error"></span>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="purpose" class="col-sm-2 col-form-label"
+            ><b>Purpose Type</b><span class="mandatory">*</span></label>
+          <div class="col-sm-7">
+            <select
+              class="form-select"
+              aria-describedby="textHelp"
+              name="cpartyname"
+              id="PurposeTypeSelect">
+              <option value="Select" selected>Select</option>
+              <option value="option1">Capital Expenditure.</option>
+              <option value="option2">
+                Maintain current levels of operation within the organization.
+              </option>
+              <option value="option3">
+                Expenses to permit future expansion.
+              </option>
+              <option value="option4">Revenue Expenditure</option>
+              <option value="option5">
+                Sales costs or All expenses incurred by the firm that are
+                directly tied to the manufacture and selling of its goods or
+                services.
+              </option>
+              <option value="option6">
+                All expenses incurred by the firm to guarantee the smooth
+                operation.
+              </option>
+              <option value="option7">Deferred Revenue Expenditure</option>
+              <option value="option8">Exorbitant Advertising Expediture</option>
+              <option value="option9">Unprecedented Losses</option>
+              <option value="option10">Development and Research Cost</option>
+            </select>
+            <span id="PurposeError" class="error"></span>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="PurposeTextArea" class="col-sm-2 col-form-label">
+            <b>Purpose</b><span class="mandatory">*</span></label >
+          <div class="col-sm-7">
+            <textarea
+              class="form-control"
+              placeholder="Purpose"
+              id="PartyNameTextArea"
+              aria-describedby="textHelp"
+              name="cpartyname"
+              rows="2"
+            ></textarea>
+            <span id="PurposeareaError" class="error"></span>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="partyAmount" class="col-sm-2 col-form-label"
+            ><b>Party Amount</b> (In Rs.)<span class="mandatory">*</span></label>
+          <div class="col-sm-7">
+            <input
+              type="number"
+              class="form-control"
+              placeholder="Enter Party Amount"
+              id="PartyAmountEmail1"
+              aria-describedby="textHelp"
+              name="cpartyname"
+              step="1"
+            />
+            <span id="PartyamountRSError" class="error"></span>
+          </div>
+        </div>
+
+        <!-- <div class="mb-3 row">
+        <label for="exampleInputEmail1" class="col-sm-2 col-form-label"><b>Upload Documents</b></label>
+        <div class="col-sm-7">
+            <input type="file" class="choose-file" placeholder="No File Chosen"> 
+            
+            <button type="button" class="btn btn-primary">+ Add</button>
+        </div>
+       
+    </div> -->
+
+    <div class="mb-3 row" style="padding-top: 10px">
+      <label for="upload" class="col-sm-2 col-form-label">
+          <b>Upload Documents</b>
+      </label>
+      <div class="col-sm-7 d-flex align-items-center">
+          <div id="fileInputs">
+              <input
+                  type="file"
+                  class="form-control me-2"
+                 
+                  aria-describedby="textHelp"
+                  name="ifsc"
+              />
+          </div>
+          <button class="btn btn-primary" type="button" id="AddButton">+Add</button>
+          <button class="btn btn-danger delete-button" type="button" id="DeleteButton">Delete</button>
+          <span id="DocumentError" class="error"></span>
+      </div>
+  </div>
+
+        <!-- <span class="row col-sm-8 d-flex align-items-center"><i>Note: Documents of Cheque (Letter/G.O. etc) can be uploaded here.</i></span> -->
+        <div class="mb-3 row">
+          <label
+            for=""
+            class="col-sm-2 col-form-label" ></label>
+          <div class="col-sm-7">
+            <span class="row col-sm-9 d-flex align-items-center"><i
+                >Note: Documents of Cheque (Letter/G.O. etc) can be uploaded
+                here.</i></span >
+          </div>
+        </div>
+      </div>
+      <div
+        class="d-flex justify-content-center"
+        style="border-top: 1px dotted rgb(156, 156, 156)">
+        <button class="btn btn-primary mt-3" type="submit" id="submitButton">
+          Next<i class="bi bi-play"></i>
+        </button>
+      </div>
+    </div>
+  </body>
+ 
+</html>
