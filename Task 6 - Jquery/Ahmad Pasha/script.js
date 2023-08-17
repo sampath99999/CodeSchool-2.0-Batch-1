@@ -90,7 +90,7 @@ $(document).ready(function () {
   });
 
   $(".navbar-toggler").click(function () {
-    $(".left_section").toggle(3000);
+    $(".left_section").toggle(50);
   });
 
   let fileListContainer;
