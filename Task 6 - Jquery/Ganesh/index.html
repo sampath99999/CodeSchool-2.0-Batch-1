@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="https://d20exy1ygbh3sg.cloudfront.net/fms/images/favicon.ico" type="image/x-icon">
+  <title>IFMIS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-body-secondary">
+  <!-- Offcanvas MenuBar -->
+  <div class="offcanvas offcanvas-start" data-bs-scroll="false" data-bs-backdrop="true" tabindex="-1"
+    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button> -->
+      <img src="https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/ifmis-logo.png" width="200" height="50"
+        alt="ifmis-logo">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body p-0 py-3">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Masters</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Transactions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Reports</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Return Check Generation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Forest Transactions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Forest Transactions Report</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">E-Kuber Return Received List</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">E-Kuber Return Challan Print</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">UTR Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Failed Transactions (ACK Reject)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Cheque Status Report</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Rejected Cheques due to FinYear End</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">FinYear New Cheques Report</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pb Budget Check</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Update Receipts Used Amount</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar p-1 text-white">
+    <div class="container-fluid px-0">
+      <div class="row container-fluid px-0">
+        <div class="col-6 d-inline-flex align-items-center">
+          <!-- Side Menu Toggler -->
+          <button class="border-0 bg-transparent px-1" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+            <img src="images/TS_GOV_LOGO.png" width="38" height="38" alt="">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+              class="bi bi-list text-white" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+            </svg>
+          </button>
+          <!-- Modules -->
+          <div class="d-inline-flex align-items-center container-wrapper px-2" role="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-boxes"
+              viewBox="0 0 16 16">
+              <path
+                d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z" />
+            </svg>
+            <p>Modules</p>
+          </div>
+        </div>
+        <div class="col-6 d-inline-flex justify-content-end align-items-center">
+          <!-- Last Login Time -->
+          <div class="wrapper-block text-end px-1 d-none d-md-block">
+            <p><small class="text-light">Last Login</small></p>
+            <p id="login-date">13-Jul-2023</p>
+            <p id="login-time">07:30 PM</p>
+          </div>
+          <!-- User Profile -->
+          <div class="dropdown  container-wrapper mx-1">
+            <button class="btn dropdown-toggle d-inline-flex align-items-center text-white px-2" type="button"
+              style="height: 44px;" data-bs-toggle="dropdown" aria-expanded="false">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                class="bi bi-person-circle" viewBox="0 0 16 16">
+                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                <path fill-rule="evenodd"
+                  d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+              </svg>
+              <div class="wrapper-block m-2 d-none d-md-none d-md-block" id="userProfile">
+                <p class="m-0 text-start">Welcome M.USHASHREE</p>
+                <p class="m-0 text-start">(23031013097)</p>
+              </div>
+            </button>
+            <!-- Profile Options -->
+            <ul class="dropdown-menu dropdown-menu-center rounded-0">
+              <li>
+                <a class="dropdown-item" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-person m-1 text-success" viewBox="0 0 16 16">
+                    <path
+                      d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                  </svg>
+                  Profile
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-gear m-1 text-success" viewBox="0 0 16 16">
+                    <path
+                      d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                    <path
+                      d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                  </svg>
+                  Change Password
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-box-arrow-right m-1 text-success" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+                    <path fill-rule="evenodd"
+                      d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+                  </svg>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Logout Option -->
+          <div class="d-inline-flex align-items-center container-wrapper mx-1 px-2 d-none d-md-inline-flex"
+            role="button" onclick="loginUser($('#login-credentials'))">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="bi bi-box-arrow-right m-1" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z" />
+              <path fill-rule="evenodd"
+                d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z" />
+            </svg>
+            <p id="login-credentials">Login</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Main Body Container -->
+  <div class="conntainer-fluid bg-white m-3">
+    <!-- Issue Cheque Note -->
+    <div class="bg-white my-2 ">
+      <div class="text-primary p-1 px-3 mb-3 d-none d-md-block" id="cheque-note">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+          class="bi bi-credit-card-2-front" viewBox="0 0 16 16">
+          <path
+            d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z" />
+          <path
+            d="M2 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5z" />
+        </svg>
+        Issue Cheque (E-Kuber Cheque From 01/03/2019)
+      </div>
+      <!-- Points to remember -->
+      <div class="p-4 p-md-2 m-md-4 rounded" id="noting-points">
+        <h5 class="ps-2">Points to remember</h5>
+        <ul class="ps-5">
+          <li>
+            Please note that all cheques which are approved from DDOChecCKer/Ohicer/Govt from 01/03/2019 shall get paid
+            through Ekuber which iS a Core Banking Solution at RBl.
+          </li>
+          <li>
+            There is no need to present the cheques at the Bank for these cheques which got approved after 01/03/2019.
+          </li>
+          <li>
+            Please give correct account details as it is when the Account was opened.
+          </li>
+          <li>
+            Make sure there is no 'Your self' or 'Self' in the account names while issuing cheques. Such cheques get
+            auto-rejected by the EKuber.
+          </li>
+          <li>
+            Please check the exact length of the Bank Account Number and NO special characters are to be entered, which
+            leads to auto rejection.
+          </li>
+          <li>
+            Finally, in multiple party cheques please do not enter the same party details in the same chequeno which
+            will be considered as a duplicacy transaction and gets auto-rejeted.
+          </li>
+          <li>
+            This is just a one-time procedure to get your Party details corrected and once when corrected the same
+            details can be re-used for smooth transactions.
+          </li>
+          <li>
+            PD-to-PD cheques shall be adjusted in treasury itself in the regular procedure.
+          </li>
+        </ul>
+      </div>
+      <!-- User Banking Details Form -->
+      <div class="p-2 m-4">
+        <form onsubmit="checkPartyTransDetails()">
+          <!-- Transaction Type -->
+          <div class="row mb-3">
+            <label for="transactionType" class="form-label col-md-2">Transaction Type<span>*</span></label>
+            <div class="col-md-6">
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="transactionType" id="single-party"
+                  value="Single Party">
+                <label class="form-check-label" for="single-party">Single Party</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="transactionType" id="multiple-parties"
+                  value="Multiple Parties">
+                <label class="form-check-label" for="multiple-parties">Multiple Parties</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="transactionType" id="pd-to-pd"
+                  value="PD Account to PD Account">
+                <label class="form-check-label" for="pd-to-pd">PD Account to PD Account</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="transactionType" id="pd-to-other"
+                  value="PD Account to other">
+                <label class="form-check-label" for="pd-to-other">PD Account to other</label>
+              </div>
+              <div id="transactionTypeFeedback" class="invalid-feedback p-2"></div>
+            </div>
+          </div>
+          <!-- Part Account no. -->
+          <div class="row mb-3">
+            <label for="partyAccountNum" class="form-label col-md-2">Party Account no<span>*</span></label>
+            <div class="col-md-6">
+              <input type="number" class="form-control" id="partyAccountNum" placeholder="Enter A/C no">
+              <div id="partyAccountNumFeedback" class="invalid-feedback"></div>
+            </div>
+          </div>
+          <!-- Confirm Party Account no. -->
+          <div class="row mb-3">
+            <label for="partyConfirmAccountNum" class="form-label col-md-2">Confirm Party Account
+              no<span>*</span></label>
+            <div class="col-md-6">
+              <input type="number" class="form-control" id="partyConfirmAccountNum" placeholder="Confirm A/C no">
+              <div id="partyConfirmAccountNumFeedback" class="invalid-feedback"></div>
+            </div>
+          </div>
+          <!-- Party Name -->
+          <div class="row mb-3">
+            <label for="partyName" class="form-label col-md-2">Party Name<span>*</span></label>
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="partyName" placeholder="Enter Party Name">
+              <div id="partyNameFeedback" class="invalid-feedback"></div>
+            </div>
+          </div>
+          <!-- Bank IFSC Code -->
+          <div class="row mb-3">
+            <label for="bankIfscCode" class="form-label col-md-2">Bank IFSC Code<span>*</span></label>
+            <div class="col-md-6">
+              <div class="row form-feature">
+                <input type="text" class="form-control col me-1" id="bankIfscCode" placeholder="Enter IFSC Code">
+                <button class="btn btn-primary d-inline-flex col-auto ms-1" type="button"
+                  onclick="loadBankDetails($('#bankIfscCode').val())">Search</button>
+                <div id="bankIfscFeedback" class="invalid-feedback"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Bank Name -->
+          <div class="row mb-3">
+            <label for="bankName" class="form-label col-md-2">Bank Name</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control-plaintext" id="bankName" value="XXXXX" readonly>
+            </div>
+          </div>
+          <!-- Bank Branch -->
+          <div class="row mb-3">
+            <label for="bankBranch" class="form-label col-md-2">Bank Branch</label>
+            <div class="col-md-6">
+              <input type="text" class="form-control-plaintext" id="bankBranch" value="XXXXX" readonly>
+            </div>
+          </div>
+          <!-- Head of Account -->
+          <div class="row mb-3">
+            <label for="headOfAccount" class="form-label col-md-2">Head of account<span>*</span></label>
+            <div class="col-md-6">
+              <select class="form-select" id="headOfAccount" onchange="loadHoAccountDetails($('#headOfAccount').val())">
+                <option value="Select" selected disabled>Select</option>
+                <option value="0853001020002000000NVN">0853001020002000000NVN</option>
+                <option value="8342001170004001000NVN">8342001170004001000NVN</option>
+                <option value="2071011170004320000NVN">2071011170004320000NVN</option>
+                <option value="8342001170004002000NVN">8342001170004002000NVN</option>
+                <option value="2204000030006300303NVN">2204000030006300303NVN</option>
+              </select>
+              <div id="headOfAccountFeedback" class="invalid-feedback"></div>
+            </div>
+          </div>
+          <!-- Balance in Rs. -->
+          <div class="row mb-3">
+            <label for="bankBalance" class="form-label col-md-2">Balance&nbsp;<small class="text-secondary">(in
+                Rs.)</small></label>
+            <div class="col-md-6">
+              <input type="text" class="form-control-plaintext" id="bankBalance" value="XXXXX" readonly>
+            </div>
+          </div>
+          <!-- Loc in Rs. -->
+          <div class="row mb-3">
+            <label for="bankLOC" class="form-label col-md-2">LOC&nbsp;<small class="text-secondary"> (in
+                Rs.)</small></label>
+            <div class="col-md-6">
+              <input type="text" class="form-control-plaintext" id="bankLOC" value="XXXXX" readonly>
+            </div>
+          </div>
+          <!-- Expenditure Type -->
+          <div class="row mb-3">
+            <label for="expenditureType" class="form-label col-md-2">Expenditure Type<span>*</span></label>
+            <div class="col-md-6">
+              <select class="form-select" id="expenditureType" onchange="loadPurposeTypes($('#expenditureType').val())">
+                <option value="Select" selected disabled>Select</option>
+                <option value="Capital Expenditure">Capital Expenditure</option>
+                <option value="Revenue Expenditure">Revenue Expenditure</option>
+                <option value="Deferred Revenue Expenditure">Deferred Revenue Expenditure</option>
+              </select>
+              <div id="expenditureTypeFeedback" class="invalid-feedback"></div>
+            </div>
+          </div>
+          <!-- Purpose Type -->
+          <div class="row mb-3">
+            <label for="purposeType" class="form-label col-md-2">Purpose Type<span>*</span></label>
+            <div class="col-md-6">
+              <select class="form-select" id="purposeType" onchange="validatePurposeType($('#purposeType'))">
+                <option value="Select" selected disabled>Select</option>
+              </select>
+              <div id="purposeTypeFeedback" class="invalid-feedback"></div>
+            </div>
+          </div>
+          <!-- Purpose Brief -->
+          <div class="row mb-3">
+            <label for="briefPurpose" class="form-label col-md-2">Purpose<span>*</span></label>
+            <div class="col-md-6">
+              <textarea class="form-control" id="briefPurpose" placeholder="Purpose" onkeyup="validateBriefPurpose()"
+                rows="3"></textarea>
+              <div id="briefPurposeFeedback" class="invalid-feedback"></div>
+            </div>
+          </div>
+          <!-- Party Amount in Rs. -->
+          <div class="row mb-3">
+            <label for="partyConfirmAccountNum" class="form-label col-md-2">Party Amount&nbsp;<small
+                class="text-secondary"> (in Rs.)</small></label>
+            <div class="col-md-6">
+              <input type="number" class="form-control" id="partyConfirmAccountNum" placeholder="Enter Party Amount">
+            </div>
+          </div>
+          <!-- Upload Documnets -->
+          <div class="row mb-3">
+            <label for="formFileMultiple" class="form-label col-md-2">Upload Documents</label>
+            <div class="col-md-6">
+              <div class="row form-feature">
+                <input class="form-control col me-1" type="file" id="formFileMultiple" multiple="">
+                <button class="btn btn-primary d-inline-flex col-auto ms-1" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-plus text-white" viewBox="0 0 16 16">
+                    <path
+                      d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z" />
+                  </svg>
+                  Add
+                </button>
+              </div>
+              <div id="document-help" class="form-text">
+                <em>Note: Documents of Cheque(Letter/G.O. etc) can be uploaded here.</em>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-md-2"></div>
+            <div class="col-md-6">
+              <div class="toast-container position-static">
+                <!-- Added Documents -->
+              </div>
+            </div>
+          </div>
+          <hr class="my-4">
+          <!-- Next Steps -->
+          <div class="row">
+            <div class="col-8">
+              <button class="btn btn-primary float-end mb-4" type="submit">
+                Next
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-caret-right" viewBox="0 0 16 16">
+                  <path
+                    d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
