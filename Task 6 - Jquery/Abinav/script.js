@@ -282,8 +282,14 @@ function getDetails(a) {
     $("#thirdOption").text("");
   }
 }
+$("#fileupload").on("change",function(){
+
+});
 function showFiles() {
   var selectedFiles = $("#fileUpload")[0].files;
+  
+  
+
 
   for (var i = 0; i < selectedFiles.length; i++) {
     var newDiv = $("<div>");
@@ -321,7 +327,7 @@ function formValidation() {
   confirmAccountValidation();
   partyNameValidation();
   ifscCodeValidation();
-  console.log($("#options").val());
+  
   if ($("#options").val() === "0") {
     $("#optionsError").text("Please Select Head Of Account");
   } else {
