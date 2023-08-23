@@ -1,6 +1,6 @@
 function displayProducts() {
   var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
+  xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       var products = JSON.parse(this.responseText);
       var productListDiv = document.getElementById("productList");
@@ -8,7 +8,7 @@ function displayProducts() {
       var productHTML = '';
       for (var i = 0; i < products.length; i++) {
         var product = products[i];
-        productHTML +=`
+        productHTML += `
         <div class="mt-4"> 
           <div class="card" style="width: 14rem; height:20rem;">
             <div class="text-end pe-2"><i class="bi bi-heart"></i></div>
@@ -23,7 +23,6 @@ function displayProducts() {
           </div>
         </div>`;
       }
-
       productListDiv.innerHTML = productHTML;
     }
   };
