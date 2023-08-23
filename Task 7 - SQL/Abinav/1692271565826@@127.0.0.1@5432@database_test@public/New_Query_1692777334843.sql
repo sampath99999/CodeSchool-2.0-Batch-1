@@ -272,6 +272,7 @@ CREATE Table
         paymentDate DATE,
         amount VARCHAR(100)
     );
+
 drop Table payments;
 
 INSERT INTO payments
@@ -397,7 +398,31 @@ SELECT
     employees.firstName,
     employees.lastName
 FROM offices
-LEFT JOIN employees ON offices.officeCode = employees.officeCode;
+    LEFT JOIN employees ON offices.officeCode = employees.officeCode;
 
+-----Given Queries
 
+--1)Top 3 companies serving customers
 
+SELECT
+    offices.officeCode,
+    COUNT(customers.customerNumber) AS customerCount
+FROM offices
+    LEFT JOIN employees ON offices.officeCode = employees.officeCode
+    LEFT JOIN customers ON employees.employeeNumber = customers.salesRepEmployeeNumber
+GROUP BY offices.officeCode
+ORDER BY customerCount DESC
+LIMIT 3;
+
+----2)All companies with recent order date
+
+SELECT
+    offices.officecode,max(orders.order_date)
+FROM offices
+    left JOIN employees on offices.officeCode = employees.officeCode
+    left join customers on customers.salesrepemployeenumber = employees.employeenumber
+    left join orders on orders.customernumber = customers.customernumber
+GROUP BY offices.officecode
+ORDER BY offices.officecode
+
+;
