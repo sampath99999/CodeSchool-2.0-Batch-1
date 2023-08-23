@@ -334,4 +334,36 @@ WHERE trans.employee_id IS NULL;
 
 
 -- QUERY 10. list of employees whos actual salary net amount not matched with net amount of salary received in last month.
-
+SELECT t1.id,
+t1.salary_net_amount as last_month_net_amount,
+t2.actual_net_amount 
+FROM
+( SELECT emp.id,
+emp.first_name,
+emp.last_name,
+trans.net_amount salary_net_amount
+FROM employees emp
+INNER JOIN transactions trans
+ON emp.id = trans.employee_id
+WHERE trans.date_of_transaction = '2023-08-03' ) as t1
+JOIN
+( SELECT emp.id, 
+(sum(
+  CASE 
+  WHEN earn.type = 1 THEN salary.amount
+  END
+) - 
+sum(
+  CASE 
+  WHEN earn.type = 2 THEN salary.amount
+  END
+)) actual_net_amount
+FROM employees emp
+INNER JOIN salary_details salary
+ON salary.employee_id = emp.id
+INNER JOIN earnings earn 
+ON earn.id = salary.earnings_id
+GROUP BY emp.id
+ORDER BY emp.id ) as t2
+ON t1.id = t2.id
+WHERE t1.salary_net_amount != t2.actual_net_amount;
