@@ -1,0 +1,133 @@
+.header {
+  background-image: url("https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg");
+}
+ul li::marker {
+  color: #a08e51;
+}
+
+.file-upload {
+  text-align: center;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  background-color: #fff;
+  cursor: pointer;
+}
+#file-list {
+  margin-top: 20px;
+}
+.offcanvas-show {
+  margin-left: 220px;
+<<<<<<< HEAD
+  /* Width of the offcanvas sidebar */
+=======
+>>>>>>> f0e8b3e (upadtes)
+}
+
+.offcanvas {
+  width: 250px !important;
+  background-color: #1b364d !important;
+<<<<<<< HEAD
+
+  /* Set your desired width here */
+=======
+>>>>>>> f0e8b3e (upadtes)
+}
+.offcanvas-body {
+  width: 100% !important;
+}
+.offcanvasHeading {
+  color: white;
+  padding-left: 28%;
+  font-weight: 600;
+  font-size: 30px;
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+.offcanvasmenu {
+  color: white;
+  font-size: 14px;
+}
+.offcanvasmenu li {
+  padding-left: 5%;
+  margin-bottom: 3px;
+  font-weight: 300;
+  height: 30px;
+  padding-top: 2%;
+  align-items: center;
+}
+.offcanvasmenu li:hover {
+  background-color: rgb(241, 241, 238, 0.1);
+  border-left: 1px solid #f49b2e;
+}
+.offcanvasMenuHome {
+  background-color: rgb(241, 241, 238, 0.1);
+  border-left: 1px solid #f49b2e;
+}
+@media (min-width: 992px) {
+  .moveLeft {
+<<<<<<< HEAD
+    /* transition: transform 0.3s ease; Adjust the duration and easing as needed */
+=======
+>>>>>>> f0e8b3e (upadtes)
+    margin-left: 16%;
+    transition: margin-left 1s ease;
+  }
+  .moveRight {
+<<<<<<< HEAD
+    /* transition: transform 0.3s ease; */
+    transition: margin-left 1s ease;
+  }
+
+=======
+    transition: margin-left 1s ease;
+  }
+>>>>>>> f0e8b3e (upadtes)
+  .offcanvas {
+    transition: transform 1s !important;
+  }
+}
+<<<<<<< HEAD
+
+=======
+>>>>>>> f0e8b3e (upadtes)
+.navbar-nav a {
+  text-decoration: none;
+}
+.navbar-nav li {
+  padding: 10px;
+}
+.nav-item {
+  list-style-type: none;
+}
+.navbar-nav li:hover {
+  border-left: 4px solid #e5b96a;
+  background-color: #324a5f;
+}
+
+.navbar-nav li a {
+  background-color: #324a5f;
+}
+
+<<<<<<< HEAD
+.navbar-toggler{
+  border: none!important;
+}
+
+.moveLeft{
+    margin-left: 16%;
+}
+.moveRight{
+  margin-left: 0%;
+}
+=======
+.navbar-toggler {
+  border: none !important;
+}
+
+.moveLeft {
+  margin-left: 16%;
+}
+.moveRight {
+  margin-left: 0%;
+}
+>>>>>>> f0e8b3e (upadtes)

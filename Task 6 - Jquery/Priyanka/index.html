@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="container-fluid p-0 m-0">
+      <div
+        id="menu"
+        class="navbar navbar-expand-md navbar-dark justify-content-between"
+      >
+        <div class="d-flex">
+          <button id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
+          <button id="btn-2" class="d-none d-sm-block">
+            <i class="fa-solid fa-cubes"></i>&nbsp; Modules
+          </button>
+          <ul class="navbar-nav ml-auto" id="menu-list">
+            <li class="d-flex">
+              <img
+                src="./Images/logo.png"
+                alt=""
+                class="d-none d-lg-block image"
+              />
+              <h1 class="menu-title p-2">IFMIS</h1>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Masters</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Transactions</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Reports</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Return Cheque Generation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Forest Transactions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Forest Transactions Report</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">E-Kuber Return Recieved List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">E-Kuber Return Challan Print</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">UTR Search</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Failed Transactions (ACK Reject)</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cheque Status Report</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                >Rejected Cheque due to FinYear End</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Finyear New Cheques Report</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pb Budget Check</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Update Receipts Used Amount</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="d-flex bg-none p-2">
+          <p
+            id="lastLoginInfo"
+            class="mx-2 my-3 text-white d-none d-sm-block"
+            style="font-size: small"
+          ></p>
+          <div class="dropdown m-2 p-3 position-relative d-none d-sm-block">
+            <button
+              class="btn-secondary dropdown-toggle"
+              id="btn-3"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8LnsAejtzN7cp0DLpTWCDnz8yeaCvPifY1Q&usqp=CAU"
+                alt="Profile Image"
+                class="mr-2"
+                width="30"
+                height="30"
+              />
+              Welcome M.USHASHREE
+              <br />
+              (2303101309)
+            </button>
+
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fa-regular fa-user" style="color: green"></i>
+                  &nbsp; Profile</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="fa-solid fa-gear" style="color: green"></i> &nbsp;
+                  Change Password</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item logout" href="#"
+                  ><i
+                    class="fa-solid fa-right-from-bracket"
+                    style="color: green"
+                  ></i
+                  >&nbsp; Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="d-flex d-none d-sm-block bg-none text-white p-2 logout mx-3 my-4 justify-content-center align-items-center"
+            style="background: #3f5162"
+          >
+            <i class="fas fa-sign-out-alt"></i>&nbsp; Logout
+          </div>
+        </div>
+      </div>
+
+      <!-- Section -->
+      <div class="container-fluid">
+        <div
+          class="container col-12 col-md-12 col-sm-12"
+          style="margin-top: 6%"
+        >
+          <div
+            class="m-2 p-2"
+            style="background-color: #e0ecfc; color: #4b72c8; font-weight: 600"
+          >
+            <i class="fa-solid fa-money-check-dollar"></i> &nbsp;Issue Cheque
+            (E-Kuber Cheque from 01/02/2019)
+          </div>
+          <div class="m-2 p-2" style="background: #fcf8e3">
+            <li>
+              Please note that all cheques which are approved from
+              DDOChecCKer/Ohicer/Govt trom 01/03/2019 shall get paid through
+              Ekuber which iIS a Core Banking Solution ot RBl.
+            </li>
+            <li>
+              There is no need to present the cheques at the Bank for these
+              cheques which got approved after 01/03/2019.
+            </li>
+            <li>
+              Please give correct account details as it is when the Account was
+              opened
+            </li>
+            <li>
+              Make sure there is no 'Your self' or 'Self" in the account names
+              while issuing cheques. Such cheques get auto-rejected by the
+              EKuber
+            </li>
+            <li>
+              Please check the exact length of the Bank Account Number and NO
+              special characters are to be entered, which leads to auto
+              rejection
+            </li>
+            <li>
+              Finally, in multiple party cheques please do not enter the same
+              party details in the same chequeno which will be considered as a
+              duplicacy transaction and gets auto-rejeted.
+            </li>
+            <li>
+              This is just a one-time procedure to get your Party details
+              corrected and once when corrected the same details can be re-used
+              for smooth transactions.
+            </li>
+            <li>
+              PD-to-PD cheques shall be adjusted in treasury itself in the
+              regular procedure.
+            </li>
+          </div>
+        </div>
+        <div class="container p-2 d-flex flex-column flex-lg-row gap-lg-4">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-weight: 600">Transaction Type</b>
+            <b class="text-danger">*</b>
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio1"
+                value="option1"
+              />
+              <label class="form-check-label" for="inlineRadio1"
+                >Single Party</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio2"
+                value="option2"
+              />
+              <label class="form-check-label" for="inlineRadio2"
+                >Multiple Parties</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio3"
+                value="option3"
+              />
+              <label class="form-check-label" for="inlineRadio3"
+                >PD Account to PD Account</label
+              >
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="inlineRadioOptions"
+                id="inlineRadio4"
+                value="option4"
+              />
+              <label class="form-check-label" for="inlineRadio4"
+                >PD Account to Other</label
+              >
+            </div>
+            <span
+              id="tranactionType"
+              class="text-danger font-weight-bold"
+            ></span>
+          </div>
+        </div>
+        <!-- 2 -->
+        <div class="container p-2 d-flex flex-column flex-lg-row gap-lg-4">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-weight: 600">Party Account no</b>
+            <b class="text-danger">*</b>
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="mb-3">
+              <input
+                type="Text"
+                class="form-control"
+                id="ac-No"
+                name="account-No"
+                placeholder="Enter A/C no"
+              />
+              <span
+                id="accountError"
+                class="text-danger font-weight-bold"
+              ></span>
+            </div>
+          </div>
+        </div>
+        <!-- 3 -->
+        <div class="container d-flex flex-column flex-lg-row gap-lg-4">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-weight: 600">Confirm Party Account no</b>
+            <b class="text-danger">*</b>
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="mb-3">
+              <input
+                type="Text"
+                class="form-control"
+                id="confirm-Ac-No"
+                name="confirm-Account-No"
+                placeholder="Confirm A/C no"
+              />
+              <span
+                id="confirm-Account-Error"
+                class="text-danger font-weight-bold"
+              ></span>
+            </div>
+          </div>
+        </div>
+        <!-- 4 -->
+        <div class="container d-flex flex-column flex-lg-row gap-lg-4">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-weight: 600">Party Name</b>
+            <b class="text-danger">*</b>
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="mb-3">
+              <input
+                type="Text"
+                class="form-control"
+                id="partyname"
+                name="party-Name"
+                placeholder="Enter Party Name"
+              />
+              <span
+                id="partyNameError"
+                class="text-danger font-weight-bold"
+              ></span>
+            </div>
+          </div>
+        </div>
+        <!-- 5 -->
+        <div class="container d-flex flex-column flex-lg-row gap-4">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-weight: 600">Enter IFSC </b
+            ><b class="text-danger">*</b>
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="mb-3 d-flex gap-2">
+              <input
+                type="text"
+                class="form-control w-90"
+                id="ifsc"
+                name="ifsc"
+                placeholder="Enter IFSC Code"
+              />
+              <button
+                class="btn btn-primary w-10"
+                id="searchButton"
+                style="border-radius: 8px"
+              >
+                Search
+              </button>
+            </div>
+            <span id="ifscError" class="text-danger font-weight-bold"></span>
+          </div>
+        </div>
+        <!-- 6 -->
+        <div class="container d-flex flex-column flex-lg-row gap-lg-4 p-2">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-weight: 600">Bank Name</b>
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="mb-3 d-flex gap-2">
+              <span id="banknameError" class="text-danger font-weight-bold"
+                >XXX</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- 7 -->
+        <div class="container d-flex flex-column flex-lg-row gap-lg-4 p-2">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-weight: 600">Bank Branch</b>
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="mb-3 d-flex gap-2">
+              <span id="branchError" class="text-danger font-weight-bold"
+                >XXX</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- 8 -->
+        <div class="container d-flex flex-column flex-lg-row gap-lg-4 p-2">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-weight: 600">Head of account</b>
+            <b class="text-danger">*</b>
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="mb-3">
+              <select class="form-select" id="headSelect">
+                <option value="" selected>Select</option>
+                <option value="0853001020002000000NVN">
+                  0853001020002000000NVN
+                </option>
+                <option value="8342001170004001000NVN">
+                  8342001170004001000NVN
+                </option>
+                <option value="2071011170004320000NVN">
+                  2071011170004320000NVN
+                </option>
+                <option value="8342001170004002000NVN">
+                  8342001170004002000NVN
+                </option>
+                <option value="2204000030006300303NVN">
+                  2204000030006300303NVN
+                </option>
+              </select>
+              <span id="headError" class="text-danger font-weight-bold"></span>
+            </div>
+          </div>
+        </div>
+        <!-- 9 -->
+        <div class="container d-flex flex-column flex-lg-row gap-lg-4 p-2">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-weight: 600">Balance</b> (in Rs.)
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="mb-3 d-flex">
+              <input
+                type="text"
+                class="form-control"
+                id="balanceSelect"
+                readonly
+              />
+              <span
+                id="balanceError"
+                class="text-danger font-weight-bold"
+              ></span>
+            </div>
+          </div>
+        </div>
+        <!-- 10 -->
+        <div class="container d-flex flex-column flex-lg-row gap-lg-4 p-2">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-weight: 600">LOC</b> (in Rs.)
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="mb-3 d-flex gap-2">
+              <input type="text" class="form-control" id="locSelect" readonly />
+              <span id="locError" class="text-danger font-weight-bold"></span>
+            </div>
+          </div>
+        </div>
+        <!-- 11 -->
+        <div class="container d-flex flex-column flex-lg-row gap-lg-4 p-2">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-weight: 600">Expenditure Type</b>
+            <b class="text-danger">*</b>
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="mb-3">
+              <select class="form-select" id="expenditureSelect">
+                <option value="" selected>Select</option>
+              </select>
+              <span
+                id="expenditureError"
+                class="text-danger font-weight-bold"
+              ></span>
+            </div>
+          </div>
+        </div>
+        <!-- 12 -->
+        <div class="container d-flex flex-column flex-lg-row gap-lg-4 p-2">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-weight: 600">Purpose Type</b>
+            <b class="text-danger">*</b>
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="mb-3">
+              <select class="form-select" id="purposeTypeSelect">
+                <option value="" selected>Select</option>
+              </select>
+              <span
+                id="purposeTypeError"
+                class="text-danger font-weight-bold"
+              ></span>
+            </div>
+          </div>
+        </div>
+        <!-- 13 -->
+        <div class="container d-flex flex-column flex-lg-row gap-lg-4">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-style: 600">Purpose</b> <b class="text-danger">*</b>
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                id="purposeName"
+                name="purposeName"
+                rows="4"
+              ></textarea>
+              <span
+                id="purposeError"
+                class="text-danger font-weight-bold"
+              ></span>
+            </div>
+          </div>
+        </div>
+        <!-- 14 -->
+        <div class="container p-2 d-flex flex-column flex-lg-row gap-lg-4">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-weight: 600">Party Amount</b> (in Rs.)
+            <b class="text-danger">*</b>
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="amount"
+                name="amount"
+                placeholder="Enter Party Amount"
+              />
+              <span
+                id="amountError"
+                class="text-danger font-weight-bold"
+              ></span>
+              <p id="amountInWords" class="text-success"></p>
+            </div>
+          </div>
+        </div>
+        <!-- 15 -->
+        <div class="container p-2 d-flex flex-column flex-lg-row gap-lg-4">
+          <div class="mr-lg-4 mb-3 col-12 col-lg-3">
+            <b style="font-weight: 600">Upload Documents</b>
+            <b class="text-danger">*</b>
+          </div>
+          <div class="gap-2 col-12 col-lg-7">
+            <div class="mb-3">
+              <input
+                type="file"
+                class="form-control"
+                id="documents"
+                name="documents"
+                multiple
+              />
+              <p class="additional">
+                Note: Documents of Cheque(Letter/G.O.etc) can be Uploaded here
+              </p>
+              <span
+                id="documentsError"
+                class="text-danger font-weight-bold"
+              ></span>
+            </div>
+            <div id="selectedFiles" class="mb-3"></div>
+          </div>
+        </div>
+        <div style="border-bottom: 2px groove"></div>
+        <!-- Btn -->
+        <div
+          class="container col-6 p-2 d-flex flex-column flex-lg-row justify-content-end"
+        >
+          <button
+            id="nextButton"
+            style="
+              padding: 4px 20px;
+              background-color: #4b72c8;
+              color: white;
+              border: none;
+              border-radius: 8px;
+            "
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+      integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,106 +1,106 @@
 
 function validateFirstName() {
-    const firstName = document.getElementById('firstName').value;
-    console.log(firstName);
-    if(firstName===''){
-      document.getElementById('firstNameError').innerHTML ='required field!';
-      return false;
-    }
-    else if (firstName.length < 3 || firstName.length > 50) {
-        document.getElementById('firstNameError').innerHTML = 'First Name must be between 2 and 50 characters.';
-        return false;
-    } else if (!/^[A-Z][a-z]{1,49}$/.test(firstName)) {
-        document.getElementById('firstNameError').innerHTML = 'first letter must should be capital only.';
-        return false;
-    } else {
-        document.getElementById('firstNameError').style.display = 'none';
-        return true;
-    }
+  const firstName = document.getElementById('firstName').value;
+  console.log(firstName);
+  if (firstName === '') {
+    document.getElementById('firstNameError').innerHTML = 'Please enter the first name';
+    return false;
+  }
+  else if (firstName.length < 3 || firstName.length > 50) {
+    document.getElementById('firstNameError').innerHTML = 'First Name must be between 2 and 50 characters.';
+    return false;
+  } else if (!/^[A-Z][a-z]{1,49}$/.test(firstName)) {
+    document.getElementById('firstNameError').innerHTML = 'First letter must should be capital only.';
+    return false;
+  } else {
+    document.getElementById('firstNameError').style.display = 'none';
+    return true;
+  }
 }
 function validateLastName() {
-    const lastName = document.getElementById('lastName').value;
-    console.log(lastName);
-    if(lastName===''){
-      document.getElementById('lastNameError').innerHTML ='required field!';
-      return false;
-    }
-    else if (lastName.length < 3 || lastName.length > 50) {
-        document.getElementById('lasttNameError').innerHTML= 'last Name must be between 2 and 50 characters.';
-        return false;
-    } else if (!/^[A-Z][a-z]{1,49}$/.test(lastName)) {
-        document.getElementById('lastNameError').innerHTML = 'first letter must should be capital only.';
-        return false;
-    } else {
-        document.getElementById('lastNameError').style.display = 'none';
-        return true;
-    }
+  const lastName = document.getElementById('lastName').value;
+  console.log(lastName);
+  if (lastName === '') {
+    document.getElementById('lastNameError').innerHTML = 'Please enter the last name';
+    return false;
+  }
+  else if (lastName.length < 3 || lastName.length > 50) {
+    document.getElementById('lasttNameError').innerHTML = 'last Name must be between 2 and 50 characters.';
+    return false;
+  } else if (!/^[A-Z][a-z]{1,49}$/.test(lastName)) {
+    document.getElementById('lastNameError').innerHTML = 'first letter must should be capital only.';
+    return false;
+  } else {
+    document.getElementById('lastNameError').style.display = 'none';
+    return true;
+  }
 }
 function isValidEmail() {
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const email=document.getElementById('email').value;
-    console.log(email);
-    if(email===''){
-      document.getElementById('emailError').innerHTML="Required Field";
-      return false;
-    }
-    else if (!emailRegex.test(email)){
-        document.getElementById('emailError').innerHTML='please enter the vaild email';
-        return false;
-    }
-    else{
-        document.getElementById('emailError').style.display='none';
-        return true;
-    }
+  const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const email = document.getElementById('email').value;
+  console.log(email);
+  if (email === '') {
+    document.getElementById('emailError').innerHTML = "Required Field";
+    return false;
+  }
+  else if (!emailRegex.test(email)) {
+    document.getElementById('emailError').innerHTML = 'please enter the vaild email';
+    return false;
+  }
+  else {
+    document.getElementById('emailError').style.display = 'none';
+    return true;
+  }
 }
-function phoneCodeAPI(){
-    const xhttp = new XMLHttpRequest();
-    xhttp.onload = function(){
-        let jsonData = JSON.parse(this.responseText);
-        userPhoneCodes = document.getElementById("phoneCodeInput");
-        for(let code in jsonData.countries){
-            userPhoneCodes.innerHTML += `
+function phoneCodeAPI() {
+  const xhttp = new XMLHttpRequest();
+  xhttp.onload = function () {
+    let jsonData = JSON.parse(this.responseText);
+    userPhoneCodes = document.getElementById("phoneCodeInput");
+    for (let code in jsonData.countries) {
+      userPhoneCodes.innerHTML += `
             <option value="${jsonData.countries[code].code}">
             (${jsonData.countries[code].code}) 
             </option>
              `;
-        }
     }
-    xhttp.open("GET", "phoneCode.json");
-    xhttp.send();
+  }
+  xhttp.open("GET", "phoneCode.json");
+  xhttp.send();
 }
-function listCountries(){
-    const xhttp = new XMLHttpRequest();
-    const countriesList = document.getElementById("inputCountry");
-    xhttp.onload = function(){
-        let jsonData = JSON.parse(this.responseText);
-        for (let index in jsonData){
-            countriesList.innerHTML += `
+function listCountries() {
+  const xhttp = new XMLHttpRequest();
+  const countriesList = document.getElementById("inputCountry");
+  xhttp.onload = function () {
+    let jsonData = JSON.parse(this.responseText);
+    for (let index in jsonData) {
+      countriesList.innerHTML += `
             <option value="${jsonData[index].name.common}">
                 ${jsonData[index].name.common}
             </option>
             `;
-        }
     }
-    xhttp.open("GET", "https://restcountries.com/v3.1/all");
-    xhttp.send();
+  }
+  xhttp.open("GET", "https://restcountries.com/v3.1/all");
+  xhttp.send();
 }
-function listUniversitiesAPI(country){
-    const universitiesList = document.getElementById("inputUniversity");
-    const xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function(){
-        if(this.readyState == 4){
-            let jsonData = JSON.parse(this.responseText);
-            for (let index in jsonData){
-                universitiesList.innerHTML += `
+function listUniversitiesAPI(country) {
+  const universitiesList = document.getElementById("inputUniversity");
+  const xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function () {
+    if (this.readyState == 4) {
+      let jsonData = JSON.parse(this.responseText);
+      for (let index in jsonData) {
+        universitiesList.innerHTML += `
                 <option value="${jsonData[index].name}">
                     ${jsonData[index].name}
                 </option>
                 `;
-            }
-        }
+      }
     }
-    xhttp.open("GET", "http://universities.hipolabs.com/search?country="+country);
-    xhttp.send();
+  }
+  xhttp.open("GET", "http://universities.hipolabs.com/search?country=" + country);
+  xhttp.send();
 }
 const dobInput = document.getElementById('dob');
 dobInput.addEventListener('input', validateDOB);
@@ -134,7 +134,7 @@ function validateDOJ() {
   const dojError = document.getElementById('dojError');
   const dateDifference = doj - dob;
   const ageInYears = dateDifference / (1000 * 60 * 60 * 24 * 365.25);
-  
+
   if (isNaN(doj.getTime())) {
     dojError.textContent = 'Please enter a valid date.';
     return false;
@@ -158,8 +158,8 @@ function validatePhone() {
 
   const phoneRegex = /^\d{10}$/;
 
-  if(phone===''){
-    phoneError.textContent='plz enter the number!'
+  if (phone === '') {
+    phoneError.textContent = 'plz enter the number!'
     return false;
   }
   else if (phone.length !== 10) {
@@ -175,65 +175,111 @@ function validatePhone() {
     phoneError.textContent = '';
     return true;
   }
-}  
+}
 
 
 function validatePassword() {
-    const password = passwordInput.value;
-    
-    const passwordError = document.getElementById('passwordError');
+  const password = passwordInput.value;
 
-    const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,25}$/;
-    if(password===''){
-      passwordError.textContent ='Please Enter Password';
-      return false;
-    }
-    else if (password.length < 5 || password.length > 25) {
-      passwordError.textContent = 'Password must be between 5 and 25 characters.';
-      return false;
+  const passwordError = document.getElementById('passwordError');
 
-    } else if (!passwordRegex.test(password)) {
-      passwordError.textContent =
-        'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.';
-      return false;  
-    } else if (/\s/.test(password)) {
-      passwordError.textContent = 'Password cannot contain spaces.';
-      return false;
-    } else {
-      passwordError.textContent = '';
-      return true;
-    }
-    validateConfirmedPassword();
+  const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,25}$/;
+  if (password === '') {
+    passwordError.textContent = 'Please Enter Password';
+    return false;
+  }
+  else if (password.length < 5 || password.length > 25) {
+    passwordError.textContent = 'Password must be between 5 and 25 characters.';
+    return false;
+
+  } else if (!passwordRegex.test(password)) {
+    passwordError.textContent =
+      'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.';
+    return false;
+  } else if (/\s/.test(password)) {
+    passwordError.textContent = 'Password cannot contain spaces.';
+    return false;
+  } else {
+    passwordError.textContent = '';
+    return true;
+  }
+  validateConfirmedPassword();
 }
+
 const passwordInput = document.getElementById('password');
 passwordInput.addEventListener('input', validatePassword);
 const confirmedPasswordInput = document.getElementById('confirmed-password');
 confirmedPasswordInput.addEventListener('input', validateConfirmedPassword);
 function validateConfirmedPassword() {
-    const confirmedPassword = confirmedPasswordInput.value;
-    const confirmedPasswordError = document.getElementById('confirmedPasswordError');
-    const password = passwordInput.value;
+  const confirmedPassword = confirmedPasswordInput.value;
+  const confirmedPasswordError = document.getElementById('confirmedPasswordError');
+  const password = passwordInput.value;
+  if (confirmedPassword == '') {
+    confirmedPasswordError.textContent = 'Please enter the Passwords .';
+    return false;
 
-    if (confirmedPassword !== password) {
-      confirmedPasswordError.textContent = 'Passwords does not match.';
-      return false;
-    } else {
-      confirmedPasswordError.textContent = '';
-      return true;
-    }
+  }
+  else if (confirmedPassword !== password) {
+    confirmedPasswordError.textContent = 'Passwords does not match.';
+    return false;
+  } else {
+    confirmedPasswordError.textContent = '';
+    return true;
+  }
+}
+function validateCountry() {
+  const countrySelect = document.getElementById('inputCountry');
+  const universitySelect = document.getElementById('inputUniversity');
+
+  let valid = true;
+
+  if (countrySelect.value === 'SELECT') {
+    document.getElementById('countryError').textContent = 'Please select a country.';
+    valid = false;
+  } else {
+    document.getElementById('countryError').textContent = '';
+  }
+
+  if (universitySelect.value === 'SELECT') {
+    document.getElementById('universityError').textContent = 'Please select a university.';
+    valid = false;
+  } else {
+    document.getElementById('universityError').textContent = '';
+  }
 }
 function getRandomImage() {
-    const apiUrl = 'https://source.unsplash.com/random/800x1000'; 
-    const imageContainer = document.getElementById('image-container');
-    const img = new Image();
-    img.onload = function () {
-      imageContainer.innerHTML = '';
-      imageContainer.appendChild(img);
-    };
-    img.src = apiUrl + '?random=' + Math.random(); 
-    setTimeout(getRandomImage, 3000); 
+  const apiUrl = 'https://source.unsplash.com/random/800x1000';
+  const imageContainer = document.getElementById('image-container');
+  const img = new Image();
+  img.onload = function () {
+    imageContainer.innerHTML = '';
+    imageContainer.appendChild(img);
+  };
+  img.src = apiUrl + '?random=' + Math.random();
+  setTimeout(getRandomImage, 3000);
 }
-getRandomImage(); 
+getRandomImage();
+
+function validateGender() {
+  const genderOptions = document.getElementsByName('gender');
+  let selected = false;
+
+  for (const option of genderOptions) {
+    if (option.checked) {
+      selected = true;
+      break;
+    }
+  }
+
+  if (!selected) {
+    const errorMessage = "Please select a gender.";
+    document.getElementById('form').textContent = errorMessage;
+  } else {
+    document.getElementById('form').textContent = "";
+
+  }
+}
+
 
 function submitForm() {
   event.preventDefault();
@@ -242,46 +288,48 @@ function submitForm() {
   isValidEmail();
   validatePhone();
   validateDOB();
+  validateCountry();
   validateDOJ();
   validatePassword();
-  
-  if(validateFirstName() && validateLastName() && isValidEmail()&& validatePhone() && validateDOB() && validateDOJ && validatePassword()){
+  validateConfirmedPassword();
+  validateGender();
+
+  if (validateFirstName() && validateLastName() && isValidEmail() && validatePhone() && validateDOB() && validateDOJ && validatePassword()) {
     var user = {};
 
-  user.firstName = document.getElementById('firstName').value;
+    user.firstName = document.getElementById('firstName').value;
 
-  user.lastName = document.getElementById('lastName').value;
+    user.lastName = document.getElementById('lastName').value;
 
-  user.email = document.getElementById('email').value;
-  user.countryName = document.getElementById('inputCountry').value;
-  user.University = document.getElementById('inputUniversity').value;
-  user.password =document.getElementById('password').value;
+    user.email = document.getElementById('email').value;
+    user.countryName = document.getElementById('inputCountry').value;
+    user.University = document.getElementById('inputUniversity').value;
+    user.password = document.getElementById('password').value;
 
-  user.doj = document.getElementById('doj').value;
-  user.dob = document.getElementById('dob').value;
+    user.doj = document.getElementById('doj').value;
+    user.dob = document.getElementById('dob').value;
 
 
-  console.log(user);
+    console.log(user);
 
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", " https://demo-api-wh0x.onrender.com/register");
-  xhr.onreadystatechange = function () {
-    if (this.readyState == 4) {
-      var resultObj = JSON.parse(this.responseText);
-      document.getElementById("result").innerHTML = `Welcome, ${resultObj.firstName} ${resultObj.lastName} <br> You are successfully Registered!`
-    }
-   
-  };
-  xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-  xhr.send(JSON.stringify(user));
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", " https://demo-api-wh0x.onrender.com/register");
+    xhr.onreadystatechange = function () {
+      if (this.readyState == 4) {
+        var resultObj = JSON.parse(this.responseText);
+        document.getElementById("result").innerHTML = `Welcome, ${resultObj.firstName} ${resultObj.lastName} <br> You are successfully Registered!`
+      }
+
+    };
+    xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xhr.send(JSON.stringify(user));
+  }
+  else {
+    document.getElementById("result").innerHTML = `There was an Error Signing you up!`;
+  }
+
 }
-else{
-  document.getElementById("result").innerHTML = `There was an Error Signing you up!`;
-}
-
-}
 
 
-  
 
-  
+
