@@ -216,15 +216,17 @@ SELECT e.*, d.DepartmentName
 FROM Employees e
 INNER JOIN Departments d ON e.DepartmentID = d.DepartmentID;
 
+--Query to get all Employees Present on Date
 SELECT * FROM Attendance
 WHERE Date = '2023-08-01';
 
+--Query to get Totalhours Worked from Attendence
 SELECT EmployeeID, SUM(TotalHours) AS TotalHoursWorked
 FROM Attendance
 WHERE EmployeeID = 4
 GROUP BY EmployeeID;
 
---query to payroll details for single date
+--Query to payroll details for single date
 SELECT a.EmployeeID, a.Date, a.TotalHours,
        (a.TotalHours * s.BaseSalary) AS GrossEarnings,
        s.Deductions,
