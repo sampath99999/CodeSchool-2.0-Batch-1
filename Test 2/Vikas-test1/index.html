@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrationpage</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+ </head>
+  <body>
+    <div class="container" style="width: 700px;">
+        <div class="title text-center p-4">CREATE ACCOUNT</div>
+        <div class="content d-inline">
+          <form action="http://127.0.0.1:5500/Vikas-test1/Vikas-test%201.1/index.html" id="myform">
+            <div class="user-details">
+              <div class="input-box">
+                <input type="text" placeholder="Enter your name" id="firstName" oninput="validateUsername()">
+                <span id="firstNameError" class="error-message"></span>
+              </div>
+              <div class="input-box">
+               <input type="text" placeholder="your Email" id="Email"  oninput="validateEmail()">
+               <span id="emailError" class="error-message"></span>
+
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Enter your password"  id="password" oninput="validatePassword()" >
+                <span id="passwordError" class="error-message"></span>
+              </div>
+              <div class="input-box">
+                <input type="text" placeholder="Confirm your password"  id="confirmPassword" oninput="validatePassword2()">
+                <span id="passwordMatchMessage"></span>
+              </div>
+            </div>
+            <div class="input-box">
+                <input type="checkbox"><span> I agree all the statements in</span><span style="text-decoration: underline;">Terms of service</span>
+            </div>
+           
+            <div class="button">
+              <input type="submit" value="SIGN UP" onclick="signUp()">
+            </div>
+          </form>
+          <div class="text-center">
+            <p>Have already an account?<span style="text-decoration: underline; font-weight: bold;"><a class="text-decoration-none" href="#"> Login here</a></span></p>
+          </div>
+        </div>
+      </div>
+   
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+    <script src="jquery-3.6.4.min.js"></script>
+ </body>
+</html>

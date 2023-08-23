@@ -1,0 +1,45 @@
+.nav{
+    height:70px;
+    
+}
+.middlePart{
+    background-color: #929292;
+    height:440px;
+}
+.text{
+    font-size: 60px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: lighter;
+    padding-top: 70px;
+    
+}
+.heart{
+    font-size: 50px;
+}
+.badge{
+    background-color: #878787;
+   
+}
+.buttonText{
+    font-size: 15px;
+    font-weight: 500;
+}
+.product{
+    position:relative;
+    bottom:80px;
+}
+.lastPart{
+    background-color:#f8f8f8;
+    height:410px;
+}
+@media screen and (max-width: 768px) {
+    .lastPart {
+      background-color:#f8f8f8;
+      height:1220px;
+    }
+    .product{
+        margin-left: 120px;
+        margin-bottom: 20px;
+        width:90%;
+    }
+  }
