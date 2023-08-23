@@ -1,0 +1,23 @@
+.form-control:focus{
+    box-shadow: none;
+}
+header{
+    border-bottom: 1px solid #d4d8db;
+}
+.nav-link{
+    color: #6d6b6b;
+    font-weight: 400;
+}
+.nav-item{
+    list-style: none;
+}
+.card-img-top {
+    float: left;
+    height: 180px;
+    object-fit: contain;
+}
+.title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

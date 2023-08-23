@@ -1,0 +1,117 @@
+.social-block{
+    background-color: #DA463A;
+    font-size: 13px;
+}
+.social-block .nav-link{
+    color: white;
+}
+.social-block .nav-link:hover, .social-block .nav-link:active{
+    color:whitesmoke;
+}
+/* Website Main Navbar */
+.main-web-nav .nav-item{
+    border: 1px groove;
+    padding: 1px 2px;
+}
+@media screen and (max-width:540px) {
+    .main-web-nav .nav-item{
+        border: 0px groove;
+    }    
+}
+.main-web-nav .nav-link{
+    color: black;
+    font-weight:500;
+}
+.main-web-nav .nav-item:hover, .main-web-nav .nav-item:active{
+    background-color: white;
+    border-top: 0px;
+    
+}
+.main-web-nav .nav-link:hover, .main-web-nav .nav-link:active{
+    color:#DA463A;
+}
+.menu-icon{
+    color: #DA463A;
+    font-weight: bolder;
+}
+/* Contents of article  */
+p.card-text{
+    font-size: 13px;
+}
+#moreLatestNews{
+    background-color: #DA463A;
+    color: white;
+}
+#fashion-card{
+    border-top: 3px solid #E54E7E !important;
+}
+#lifestyle-card{
+    border-top: 3px solid #F4B23F !important;
+}
+#food-card{
+    border-top: 3px solid #61C436 !important;
+}
+#environment-card{
+    border-top: 3px solid #CA85CA !important;
+}
+#latest-articles-card{
+    border-top: 3px solid #DA463A !important;
+}
+/* Categories */
+#environment-category{
+    border-left: 4px solid #CA85CA !important;
+}
+#fashion-category{
+    border-left: 4px solid #E54E7E !important;
+}
+#food-category{
+    border-left: 4px solid #61C436 !important;
+}
+#lifestyle-category{
+    border-left: 4px solid #F4B23F !important;
+}
+#music-category{
+    border-left: 4px solid #46C49C !important;
+}
+#tech-category{
+    border-left: 4px solid #607EC7 !important;
+}
+/* Footer News Feed */
+.footer-container{
+    background-color: #373941;
+}
+.foot-feed-header{
+    background-color: #25272C;
+}
+.foot-feed-body{
+    background-color: #2C2E34;
+    color: white;
+}
+/* SOCIAL MEDIA */
+#instagram{
+    background-color: #B53974;
+}
+#tweeter{
+    background-color: #4DA7DE;
+}
+#facebook{
+    background-color: #3E5B98;
+}
+#youtube{
+    background-color: #E02A20;
+}
+#pinterest{
+    background-color: #C92619;
+}
+#rss-wifi{
+    background-color: #F26109;
+}
+/* Footer */
+footer{
+    background-color: #24252A;
+
+}
+.foot-info .nav-link{
+    color: #DA463A;
+}
+

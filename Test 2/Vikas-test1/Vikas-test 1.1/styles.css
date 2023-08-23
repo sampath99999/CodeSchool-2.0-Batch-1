@@ -1,0 +1,19 @@
+li{
+    padding: 3px;
+}
+.body{
+    background-color: #929292;
+    justify-content: center;
+    align-items: center;
+}
+.card-img-top{
+    padding: 10px;
+    height: 200px;
+    width: auto;
+}
+.stack-top{
+    z-index: 10px;
+    padding-bottom: 20px;
+    
+   
+}
