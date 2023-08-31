@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <style>
+        textarea {
+            border: 1px solid rgb(144, 144, 144) !important;
+        }
+
+        .miniNavbar ul li {
+            padding-top: 3px;
+            font-size: 15px;
+            color: white;
+            font-weight: 500;
+            padding-right: 15px;
+        }
+
+        .miniNavbar ul li:hover {
+            background-color: rgb(255, 255, 255, 0.2);
+        }
+
+        table {
+            border: 1px solid rgb(198, 190, 190);
+
+        }
+
+        th {
+            color: rgb(96, 96, 189);
+        }
+
+        td {
+            width: 150px !important;
+        }
+        a:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body style="background-color: #CBD0D7 ;" id="body">
+    <div style="background-color: black;">
+        <div class="col-8 m-auto">
+            <div class=" d-flex justify-content-between">
+                <div style="padding: 3px;">
+                    <span style="font-size: 16px;color:rgb(205, 205, 205);font-weight:500">CONATCT MANAGEMENT APP</span>
+                    <span style="font-size: 13px;color:white"> Employees Interface</span>
+
+                </div>
+                <div style="padding: 3px;">
+                    <span style="color: rgb(252, 242, 242);"></span>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <div style="background-color: #5390b9;height:25px" class="miniNavbar">
+        <ul class="col-lg-8 m-auto list-unstyled d-flex">
+           
+
+        </ul>
+
+    </div>
+    <div style="background-color: #CBD0D7; height: auto;" id="tableBody" class="">
+        <div class="col-sm-12 col-lg-8 m-auto" style="background-color: white; height: auto;">
+            <p class="text-center" style="font-weight: 600;font-size:20px">Search Results</p>
+            <table class="w-100" id="table">
+                <tr>
+                    <th class="tableHeadings">Date</th>
+                    <th class="tableHeadings">Last Name</th>
+                    <th class="tableHeadings">First Name</th>
+                    <th class="tableHeadings">Company</th>
+                    <th class="tableHeadings">Status</th>
+                    <th class="tableHeadings">Follow up</th>
+                    <th class="tableHeadings"></th>
+                </tr>
+            </table>
+
+
+        </div>
+        <div class="container d-flex col-4 mt-2 m-auto">
+            <span>This application was created by Caspio for demo purpose only</span>
+
+        </div>
+        <div class="container d-flex col-4 mt-2 m-auto">
+            <span style="font-size: 15px;">@capsico. Inc . <u>All rights reserved More App Templates</u>/
+                <u>Capsico.com</u> </span>
+
+        </div>
+    </div>
+    <div class="d-none row col-8 m-auto" style="background-color: white;padding:10px" id="tableBody2">
+        <div style="border: 1px solid rgb(202, 197, 197);background-color:white" class="col-8">
+            <div>
+<form action="" onsubmit="updateDetails(event)">
+                <p>Contact Details</p>
+                <p>Contact Information</p>
+                <div class="row">
+                    <div class="col-3">
+                        <span>Contact ID</span>
+                    </div>
+                    <div class="col-9">
+                        <span id="contactId"></span>
+                    </div>
+                    <div class="col-3">
+                        <span>Date Submitted</span>
+                    </div>
+                    <div class="col-9">
+                        <span id="dateSubmitted"></span>
+                    </div>
+                    <div class="col-3">
+                        <span>last Modified</span>
+                    </div>
+                    <div class="col-9">
+                        <span id="contactId"></span>
+                    </div>
+                    <div class="col-3">
+                        <span>IP Address</span>
+                    </div>
+                    <div class="col-9">
+                        <span id="contactId"></span>
+                    </div>
+                    <div class="col-3">
+                        <span>First Name</span>
+                    </div>
+                    <div class="col-9">
+                        <input type="text" class="form-control" id="firstName">
+                    </div>
+                    <div class="col-3 mt-1">
+                        <span>last Name</span>
+                    </div>
+                    <div class="col-9 mt-1">
+                        <input type="text" class="form-control" id="lastName">
+                    </div>
+                    <div class="col-3 mt-1">
+                        <span>Title</span>
+                    </div>
+                    <div class="col-9 mt-1">
+                        <input type="text" class="form-control" id="title">
+                    </div>
+                    <div class="col-3 mt-1">
+                        <span>Phone</span>
+                    </div>
+                    <div class="col-9 mt-1">
+                        <input type="text" class="form-control" id="phone">
+                    </div>
+                    <div class="col-3 mt-1">
+                        <span>Email</span>
+                    </div>
+                    <div class="col-9 mt-1">
+                        <input type="text" class="form-control" id="email">
+                    </div>
+                    <div class="col-3 mt-1">
+                        <span>Contact Method</span>
+                    </div>
+                    <div class="col-9 mt-1">
+                        <input type="radio" checked>phone
+                        <input type="radio">email
+                        <input type="radio">no Preference
+                    </div>
+                    <p>Comments</p>
+                    <span>Do you offer multilingual support?We have number of offices overseas</span>
+
+                    <p style="font-weight: 500;">Company Information</p>
+                    <div class="col-3 mt-1">
+                        <span>Company</span>
+                    </div>
+                    <div class="col-9 mt-1">
+                        <input type="text" class="form-control" id="company">
+                    </div>
+                    <div class="col-3 mt-1">
+                        <span>Address</span>
+                    </div>
+                    <div class="col-9 mt-1">
+                        <input type="text" class="form-control" id="address">
+                    </div>
+                    <div class="col-3 mt-1">
+                        <span>Address Line 2.</span>
+                    </div>
+                    <div class="col-9 mt-1">
+                        <input type="text" class="form-control" id="addressLine">
+                    </div>
+                    <div class="col-3 mt-1">
+                        <span>City</span>
+                    </div>
+                    <div class="col-9 mt-1">
+                        <input type="text" class="form-control" id="city">
+                    </div>
+                    <div class="col-3 mt-1">
+                        <span>State</span>
+                    </div>
+                    <div class="col-9 mt-1">
+                        <input type="text" class="form-control" id="state">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div style="background-color:white;" class="col-4" >
+            <div style="border: 1px solid rgb(202, 197, 197);padding: 15px;">
+                <p>Add New Log</p>
+                <div class="row">
+                    <div class="col-3 mt-1">
+                        <span>Channel</span>
+                    </div>
+                    <div class="col-9 mt-1">
+                        <select name="" id="" class="form-control">
+                            <option value="">Select</option>
+                            <option value="">Email</option>
+    
+                            <option value="">Phone</option>
+    
+                            <option value="">Chat</option>
+    
+                            <option value="">Internal</option>
+    
+                        </select>
+                    </div>
+
+                </div>
+                <p>Notes</p>
+                <textarea name="" id="" cols="35" rows="7"></textarea>
+                <p>Attachment</p>
+                <input type="file" class="form-control">
+               <p class="text-center mt-3"><button class="btn btn-primary" type="submit">SUBMIT</button></p>
+
+            </div>
+            <div style="border: 1px solid rgb(161, 161, 161);" class="mt-3 p-2">
+                <p>Login History</p>
+                <span>No Records Found</span>
+            </div>
+        </div>
+</form>
+        
+    </div>
+
+
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="./assets/customerDetails.js"></script>
+
+</html>
