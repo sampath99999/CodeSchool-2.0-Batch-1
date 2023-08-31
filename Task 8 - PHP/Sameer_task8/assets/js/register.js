@@ -1,4 +1,5 @@
-function login(event) {
+
+function register(event) {
     event.preventDefault();
 
     let username = $("#username").val();
@@ -23,16 +24,15 @@ function login(event) {
 
     $.ajax({
         method: "POST",
-        url: "./api/login.php",
+        url: "./api/register.php",
         data: {
             username,
             password,
         },
         success: function (data) {
             data = JSON.parse(data);
-            console.log(data);
             if (data.status) {
-                window.location.replace("./index1.html");
+                window.location.replace("./login.html");
             } else {
                 $("#usernameError").text(data.message);
             }
@@ -40,3 +40,5 @@ function login(event) {
         error: function (error) {},
     });
 }
+
+

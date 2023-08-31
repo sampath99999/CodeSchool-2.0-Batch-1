@@ -8,6 +8,12 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         echo "Password is required!";
         exit;
     }
+    $pdo = new PDO("pgsql:host=localhost;port=5432;dbname=sameerhrms;user=postgres;password=postgres");
+    if (!$pdo) {
+        $response["message"] = "Database Not Connected!";
+        echo json_encode($response);
+        exit;
+    }
 
     $username = $_POST["username"];
     $password = md5($_POST["password"]);
@@ -16,38 +22,27 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     if ($username == '' || $password == '') {
         $response["status"] = false;
         $response["message"] = "Username & Password shouldn't be empty";
-        echo ($response);
+        echo json_encode($response);
         exit;
     }
-    function getPDO() {
-         $pdo= new PDO("pgsql:host=localhost;port=5432;dbname=pixelvidehrms;user=postgres;password=postgres");
-    return $pdo; 
-}
 
-    $pdo = getPDO();
-    // if (!$pdo) {
-    //     $response["status"] = false;
-    //     $response["message"] = "Database Not Connected!";
-    //     echo json_encode($response);
-    //     exit;
-    // }
-
-    $query = "SELECT * FROM admin WHERE username = ? AND password = ?";
+   
+    $query = "SELECT * FROM users WHERE username = ? AND password = ?";
 
     $statment = $pdo->prepare($query);
     $statment->execute([$username, $password]);
     $user = $statment->fetchAll(PDO::FETCH_ASSOC);
     if (count($user) == 1) {
         $response["message"] = "LoggedIn Successfully!";
-        echo ("Valid");
+        $response["status"] = true;
+        $response["data"] = $user[0]["id"];
+        echo json_encode($response);
         exit;
     } else {
         $response["status"] = false;
         $response["message"] = "Username & Password shouldn't be empty";
-        echo ("Invalid");
+        echo json_encode($response);
         exit;
     }
-    header('Content-Type: application/json');
-    echo json_encode($response);
 }
 echo "Only POST request is accepted!";

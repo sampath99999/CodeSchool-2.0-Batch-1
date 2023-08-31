@@ -13,7 +13,7 @@
 <body>
   <div class="container">
     <div class="py-4">
-      <a href="../create_emp.html" class="btn btn-secondary">
+      <a href="../addemployee.html" class="btn btn-secondary">
         <i class="bi bi-plus-circle-fill"></i> Add Employee
       </a>
     </div>
@@ -64,10 +64,10 @@
                 <td><?= $row["email_id"]; ?></td>
                 <td><?= $row["phone_no"]; ?></td>
                 <td class="d-flex">
-                  <a href="../update.html" class="btn btn-primary btn-sm">
+                  <a href="#" class="btn btn-primary btn-sm">
                     <i class="bi bi-pencil-square"></i>
                   </a>&nbsp;
-                  <a href="./delete.php" class="btn btn-danger btn-sm">
+                  <a href="#" class="btn btn-danger btn-sm">
                     <i class="bi bi-trash-fill"></i>
                   </a>
                 </td>
