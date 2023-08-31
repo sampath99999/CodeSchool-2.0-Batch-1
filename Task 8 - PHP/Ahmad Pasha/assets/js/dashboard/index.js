@@ -37,6 +37,7 @@ $(".navbar-toggler").click(function () {
     $("#projects").val("");
     $("#staf").val("");
     $("#salary").val("");
+    $('#attendence').val('');
     let departmentInput = $("#department").val();
     if (departmentInput == 1) {
       let content = `
@@ -127,6 +128,7 @@ $(".navbar-toggler").click(function () {
     $("#department").val("");
     $("#projects").val("");
     $("#salary").val("");
+    $('#attendence').val('');
     let stafInput = $("#staf").val();
     if (stafInput == 1) {
       let content = `
@@ -423,6 +425,8 @@ $(".navbar-toggler").click(function () {
     $("#department").val("");
     $("#projects").val("");
     $("#staf").val("");
+    $('#attendence').val('');
+
     let salaryInput = $("#salary").val();
     if (salaryInput == 1) {
       let content = `
@@ -601,6 +605,7 @@ $(".navbar-toggler").click(function () {
     $("#department").val("");
     $("#staf").val("");
     $("#salary").val("");
+    $('#attendence').val('');
     let projectsInput = $("#projects").val();
     if (projectsInput == 1) {
       let content = `
