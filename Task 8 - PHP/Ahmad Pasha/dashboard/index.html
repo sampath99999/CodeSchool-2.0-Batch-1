@@ -21,7 +21,7 @@
   <div class="main_container mt-0 pt-0">
     <div class="container-fluid mt-0 pt-0">
       <div class="row mt-0 pt-0">
-        <div class="left_section  m-0 col-lg-2 p-0" id="navBg">
+        <!-- <div class="left_section  m-0 col-lg-2 p-0" id="navBg">
           <div class="d-none d-lg-block">
             <h1 class="text-white text-center mt-2">HRMS</h1>
             <hr class="text-white">
@@ -56,9 +56,6 @@
                   <option value="1">Add Attendence</option>
                   <option value="2">Attendence List</option>
                 </select></li>
-
-
-
             </ul>
           </div>
           <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
@@ -79,7 +76,88 @@
               </ul>
             </div>
           </div>
+        </div> -->
+
+        <div class="left_section m-0 col-lg-2 p-0 d-none d-lg-block" id="navBg">
+          <div class="d-none d-lg-block">
+            <h1 class="text-white text-center mt-2">HRMS</h1>
+            <hr class="text-white">
+            <ul class="navbar-nav pb-4">
+              <li class="menu_home"><a href="index.html"><i class="fa-solid fa-house"></i>&nbsp;Dashboard</a></li>
+              <li><select class="form-select form-select-sm border-0" id="department">
+                  <option value="" selected>Department</option>
+                  <option value="1">Add Department</option>
+                  <option value="2">Departments List</option>
+                </select></li>
+
+              <li><select class="form-select form-select-sm border-0" id="staf" aria-label="Large select example">
+                  <option value="" selected>Employees</option>
+                  <option value="1">Add Employee</option>
+                  <option value="2">Employees List</option>
+                </select></li>
+
+              <li><select class="form-select form-select-sm border-0" id="salary" aria-label="Large select example">
+                  <option value="" selected>Pay Roll</option>
+                  <option value="1">Add Salary</option>
+                  <option value="2">Pay Roll List</option>
+                </select></li>
+              <li><select class="form-select form-select-sm border-0" id="projects" aria-label="Large select example">
+                  <option value="" selected>Projects</option>
+                  <option value="1">Add Projects</option>
+                  <option value="2">Assign Project</option>
+                  <option value="3">View Project Details</option>
+                </select></li>
+
+              <li><select class="form-select form-select-sm border-0" id="attendence" aria-label="Large select example">
+                  <option value="" selected>Attendence</option>
+                  <option value="1">Add Attendence</option>
+                  <option value="2">Attendence List</option>
+                </select></li>
+            </ul>
+          </div>
+          
         </div>
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header" id="navBg">
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body h-100" id="navBg">
+              <ul class="navbar-nav">
+                <li class="menu_home"><a href="index.html"><i class="fa-solid fa-house"></i>&nbsp;Dashboard</a></li>
+                <li><select class="form-select form-select-sm border-0" id="department">
+                    <option value="" selected>Department</option>
+                    <option value="1">Add Department</option>
+                    <option value="2">Departments List</option>
+                  </select></li>
+  
+                <li><select class="form-select form-select-sm border-0" id="staf" aria-label="Large select example">
+                    <option value="" selected>Employees</option>
+                    <option value="1">Add Employee</option>
+                    <option value="2">Employees List</option>
+                  </select></li>
+  
+                <li><select class="form-select form-select-sm border-0" id="salary" aria-label="Large select example">
+                    <option value="" selected>Pay Roll</option>
+                    <option value="1">Add Salary</option>
+                    <option value="2">Pay Roll List</option>
+                  </select></li>
+                <li><select class="form-select form-select-sm border-0" id="projects" aria-label="Large select example">
+                    <option value="" selected>Projects</option>
+                    <option value="1">Add Projects</option>
+                    <option value="2">Assign Project</option>
+                    <option value="3">View Project Details</option>
+                  </select></li>
+  
+                <li><select class="form-select form-select-sm border-0" id="attendence" aria-label="Large select example">
+                    <option value="" selected>Attendence</option>
+                    <option value="1">Add Attendence</option>
+                    <option value="2">Attendence List</option>
+                  </select></li>>
+              </ul>
+            </div>
+          </div>
+        
 
         <div class="right_section flex-grow-1 m-0 p-0 col-10">
           <nav class="navbar align-items-center col-12">

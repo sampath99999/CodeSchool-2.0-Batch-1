@@ -10,6 +10,27 @@ $('#employeecount').text('Employees ' + localStorage.getItem('employeeCount'));
 
 
 $(document).ready(function () {
+
+// canvas menu
+ 
+ $offcanvas = new bootstrap.Offcanvas($("#offcanvasWithBothOptions"), {
+  backdrop: true,
+  scroll: true,
+});
+
+$("#offcanvasToggleButton").click(function () {
+  $("body").toggleClass("offcanvas-show");
+  $offcanvas.toggle();
+});
+
+$("#offcanvasWithBothOptions").on("hidden.bs.offcanvas", function () {
+  $("body").removeClass("offcanvas-show");
+});
+
+$(".navbar-toggler").click(function () {
+  $(".left_section").toggle(50);
+});
+
   // department section
 
   $("#department").change(function () {
@@ -26,6 +47,7 @@ $(document).ready(function () {
     <label for="exampleInputEmail1" class="form-label">Department Name</label>
     <input type="text" class="form-control" id="depName">
   </div>
+  <p id="depNameErr" class="text-danger"></p>
   <button class="btn btn-primary" id="onDep">Submit</button>
     </div>`;
       $(".details_section").html(content);
@@ -42,8 +64,10 @@ $(document).ready(function () {
             },
             error: (response) => { },
           });
+          $('#depNameErr').text('');
         } else {
-          console.log("should not be empty");
+          $('#depNameErr').text('Department name should not be empty');
+          
         }
       });
     } else if (departmentInput == 2) {
@@ -322,20 +346,21 @@ $(document).ready(function () {
     }
     else if (stafInput == 2) {
       let content = `
-      <div class="d-flex justify-content-center mt-5">
-    <table id='empTable'>
+      <div class="table-responsive mt-5">
+    <table id='empTable' class="table">
+    <thead>
     <tr>
-      <th>Employee Id</th>
-      <th>Name</th>
-      <th>Phone</th>
-      <th>Mail</th>
-      <th>Gender</th>
-      <th>Hire Date</th>
-      <th>Department</th>
-      <th>Job Title</th>
-      <th>Reporting Manager</th>
-      <th>Manager Mail</th>
+      <th  scope="col">Employee Id</th>
+      <th  scope="col">Name</th>
+      <th  scope="col">Phone</th>
+      <th  scope="col">Mail</th>
+      <th  scope="col">Gender</th>
+      <th  scope="col">Hire Date</th>
+      <th  scope="col">Department</th>
+      <th  scope="col">Job Title</th>
+      <th  scope="col">Reporting Manager</th>
     </tr>
+    </thead>
     </table>
 
       </div>`;
@@ -351,20 +376,25 @@ $(document).ready(function () {
             let employeeCount = employeesData.length;
             localStorage.setItem('employeeCount', employeeCount)
             let empContainerElements = "";
-            let empTabeHeadingPart = `<tr>
-            <th>Employee Id</th>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Mail</th>
-            <th>Gender</th>
-            <th>Hire Date</th>
-            <th>Department</th>
-            <th>Job Title</th>
-            <th>Reporting ManagerId</th>
-          </tr>`;
+            let empTabeHeadingPart = `
+            <thead>
+            <tr>
+              <th  scope="col">Employee Id</th>
+              <th  scope="col">Name</th>
+              <th  scope="col">Phone</th>
+              <th  scope="col">Mail</th>
+              <th  scope="col">Gender</th>
+              <th  scope="col">Hire Date</th>
+              <th  scope="col">Department</th>
+              <th  scope="col">Job Title</th>
+              <th  scope="col">Reporting Manager</th>
+            </tr>
+            </thead>`;
             empContainerElements += empTabeHeadingPart;
             for (let i of employeesData) {
-              let item = `<tr class="text-center">
+              let item = `
+              <tbody>
+              <tr class="text-center">
               <td>${i.employee_id}</td>
               <td>${i.emp_name}</td>
               <td>${i.emp_phone}</td>
@@ -374,7 +404,8 @@ $(document).ready(function () {
               <td>${i.emp_department}</td>
               <td>${i.emp_jobtitle}</td>
               <td>${i.reportingto}</td>
-              </tr>`;
+              </tr>
+              </tbody>`;
               empContainerElements += item;
             }
             $("#empTable").html(empContainerElements);
@@ -404,12 +435,15 @@ $(document).ready(function () {
           <select class="form-select" aria-label="Default select example" id="empNames">
             <option value="" selected>Select Employee</option>
           </select>
+          <p id="empNamesErr" class="text-danger"></p>
         </div>
         <div class="col-lg-5 mb-3">
           <input type="number" class="form-control" placeholder="Monthly Salary ex:70000" id="empSalary">
+          <p id="empSalaryErr" class="text-danger"></p>
         </div>
         <div class="col-lg-5 mb-3">
           <input type="number" class="form-control" placeholder="Perday Salary ex:3000" id="empPerdaySalary">
+          <p id="empPerdaySalaryErr" class="text-danger"></p>
         </div>
 
       </div>
@@ -421,7 +455,7 @@ $(document).ready(function () {
         method: "GET",
         url: "./../api/employeeSalaryDetails.php",
         success: (response) => {
-
+        let data = JSON.parse(response);
           if (data.status) {
             let empdetails = data.data;
             let employeeNamesContainer = "";
@@ -448,6 +482,25 @@ $(document).ready(function () {
         let empIdInput = $("#empNames").val();
         let empSalMonth = $("#empSalary").val();
         let empPerdaySal = $("#empPerdaySalary").val();
+ 
+        if(empIdInput==""){
+            $('#empNamesErr').text('Select Employee')
+        }
+        else{
+          ('#empNamesErr').text('');
+        }
+        if(empSalMonth ==""){
+          $('#empSalaryErr').text('Employee salary should not be empty');
+        }else{
+          $('#empSalaryErr').text('');
+        }
+        if(empPerdaySal ==""){
+          $('#empPerdaySalaryErr').text('Employee perday salary should not be empty')
+        }
+        else{
+          $('#empPerdaySalaryErr').text('');
+        }
+
         if (empIdInput !== "" && empSalMonth !== "" && empPerdaySal !== "") {
           $.ajax({
             method: "POST",
@@ -558,10 +611,12 @@ $(document).ready(function () {
           <label for="exampleInputEmail1" class="form-label col-12">Project Name</label>
           <div class="col-lg-5 mb-3">
           <input type="text" class="form-control" placeholder="ex:IFMIS" id="projectName">
+          <p id="projectNameErr" class="text-danger"></p>
           </div>
           <label for="exampleInputEmail1" class="form-label col-12">dead line</label>
           <div class="col-lg-5 mb-3">
             <input type="date" class="form-control" placeholder="ex: 12-01-2023" id="projectDeadLine">
+            <p id="projectDeadLineErr" class="text-danger"></p>
           </div>
          
         </div>
@@ -574,6 +629,17 @@ $(document).ready(function () {
       $("#onPro").click(function () {
         let projectName = $("#projectName").val();
         let projectDeadLine = $("#projectDeadLine").val();
+
+        if(projectName==""){
+          $('#projectNameErr').text('Project name should not be empty');
+        }else{
+          $('#projectNameErr').text('');
+        }
+        if(projectDeadLine ==""){
+          $("#projectDeadLineErr").text('Project deadline should not be empty');
+        }else{
+          $("#projectDeadLineErr").text('');
+        }
 
 
         if (projectName !== "" && projectDeadLine !== "") {
@@ -604,12 +670,14 @@ $(document).ready(function () {
             <select class="form-select" aria-label="Default select example" id="projNames">
               <option value="" selected>Select Project</option>
             </select>
+            <p id="projNamesErr" class="text-danger"></p>
           </div>
           <label for="exampleInputEmail1" class="form-label col-12">Employee Name</label>
           <div class="col-lg-5 mb-3">
             <select class="form-select" aria-label="Default select example" id="empNames">
               <option value="" selected>Select Employee</option>
             </select>
+            <p id="empNamesErr" class="text-danger"></p>
           </div>
          
         </div>
@@ -653,7 +721,7 @@ $(document).ready(function () {
             let projectDetails = data.data;
             let projectNamesContainer = "";
             let projOptionItem = `
-            <option value="" selected>Select Employee</option>
+            <option value="" selected>Select project name</option>
             `;
             projectNamesContainer += projOptionItem;
 
@@ -674,7 +742,19 @@ $(document).ready(function () {
       $("#onProAssign").click(function () {
         let projectName = $("#projNames").val();
         let empId = $("#empNames").val();
-        if (projectName !== "" && empNames !== "") {
+
+        if(projectName ==""){
+          $("#projNamesErr").text('Select project name');
+        }else{
+          $("#projNamesErr").text('');
+        }
+        if(empId ==""){
+          $("#empNamesErr").text('Select employee name')
+        }else{
+          $("#empNamesErr").text('')
+        }
+
+        if (projectName !== "" && empId !== "") {
           $.ajax({
             method: "POST",
             url: "./../api/assignProjects.php",
@@ -759,11 +839,12 @@ $(document).ready(function () {
             <select class="form-select" aria-label="Default select example" id="empNames">
               <option value="" selected>Select Employee</option>
             </select>
+            <p id="empNamesErr" class="text-danger"></p>
           </div>
           <label for="exampleInputEmail1" class="form-label">Date</label>
           <div class="col-lg-5 mb-3">
-          <input type="date" class="form-control" id="date" aria-describedby="emailHelp">
-          <div id="emailHelp" class="form-text">If your not specify any date it will take current date.</div>
+          <input type="date" class="form-control" id="date" >
+          <p id="dateErr" class="text-danger"></p>
           </div>
           <label for="loginTime" class="form-label col-12">Login Time</label>
           <div class="col-lg-5 mb-3">
@@ -810,6 +891,20 @@ $(document).ready(function () {
         let date = $('#date').val();
         let loginTime = $('#loginTime').val();
         let logoutTime = $('#logoutTime').val();
+
+        if(empId==""){
+          $("#empNamesErr").text('Select employee')
+        }
+        else{
+          $("#empNamesErr").text('');
+        }
+        if(date==""){
+          $('#dateErr').text('Enter date')
+        }else{
+          $('#dateErr').text('');
+        }
+
+
         if (empId !== "" && date !== "" && loginTime !== "" && logoutTime !== "") {
           $.ajax({
             method: "POST",
@@ -904,12 +999,7 @@ $(document).ready(function () {
           },
           error: (response) => { },
         });
-
-
-
-
       })
-
 
     }
   });
@@ -924,25 +1014,7 @@ $(document).ready(function () {
     window.location.replace("./../login.html");
   });
 
-  // canvas
-  $offcanvas = new bootstrap.Offcanvas($("#offcanvasWithBothOptions"), {
-    backdrop: true,
-    scroll: true,
-  });
-
-  $("#offcanvasToggleButton").click(function () {
-    $("body").toggleClass("offcanvas-show");
-    offcanvas.toggle();
-  });
-
-  $("#offcanvasWithBothOptions").on("hidden.bs.offcanvas", function () {
-    $("body").removeClass("offcanvas-show");
-  });
-
-  $(".navbar-toggler").click(function () {
-    $(".left_section").toggle(50);
-  });
-
+ 
   // get logedIn user details
   function getData() {
     $.ajax({

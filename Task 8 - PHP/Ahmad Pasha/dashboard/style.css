@@ -54,24 +54,7 @@
   width: 95px;
 }
 
-/* 
-  .navbar .nav-item .dropdown-menu{display:block;   visibility: hidden;margin-top:0; margin-left: -25px;}
-      .navbar .nav-item:hover .nav-link{color: white;}
-      
-      .navbar .nav-item:hover .dropdown-menu{visibility:visible;top:100%;} */
 
-.issue_cheque_section {
-  background-color: #e0ecfc;
-  color: #0066cb;
-}
-
-.points {
-  background-color: #fcf8e3;
-}
-
-.points ul li::marker {
-  color: #7b6301 !important;
-}
 
 .right_section {
   overflow-y: scroll;
@@ -113,6 +96,12 @@
   }
 }
 
+@media screen and (width <= 900px) {
+  .left_section{
+     display: none!important;
+  }
+  
+}
 /* table style */
 table,
 th,

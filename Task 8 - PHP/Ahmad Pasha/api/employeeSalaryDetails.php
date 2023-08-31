@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
     $pdo = getPDO();
 
     $query = "SELECT
-    employees.employee_id,emp_name,employees.emp_email,salary,loan_amount,deduction_amount,
+    employees.employee_id,emp_name,employees.emp_email,salary,loan_amount,remaining_amount,deduction_amount,
     ROUND(daily_payout - (
         SELECT
             L.deduction_amount

@@ -2,6 +2,29 @@ let userId = localStorage.getItem('user_id');
 
 $(document).ready(function () {
 
+
+  var offcanvas = new bootstrap.Offcanvas(
+    document.getElementById("offcanvasWithBothOptions"),
+    {
+      backdrop: true,
+      scroll: true,
+    }
+  );
+
+  $("#offcanvasToggleButton").click(function () {
+    $("body").toggleClass("offcanvas-show");
+    offcanvas.toggle();
+  });
+
+  $("#offcanvasWithBothOptions").on("hidden.bs.offcanvas", function () {
+    $("body").removeClass("offcanvas-show");
+  });
+
+  $(".navbar-toggler").click(function () {
+    $(".left_section").toggle(50);
+  });
+
+
   $('#salary').click(function () {
 
     let content = `
