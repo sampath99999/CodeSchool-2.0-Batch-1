@@ -1,15 +1,15 @@
-.btn{
-   padding: 8px;
-    height: 40px;
-    width:100% ;
-    background-color: green;
+.btn {
+  padding: 8px;
+  height: 40px;
+  width: 100%;
+  background-color: green;
 }
-.login-btn{
-    background-color: white;
-    border: 0;
-    color: green;
+.login-btn {
+  background-color: white;
+  border: 0;
+  color: green;
 }
-.h-btn{
-    background-color: white;
-    border: 0;
+.h-btn {
+  background-color: white;
+  border: 0;
 }

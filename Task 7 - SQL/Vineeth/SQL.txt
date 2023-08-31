@@ -1,0 +1,262 @@
+-- creating the transaction table.
+
+CREATE TABLE Transactions(
+    tran_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    user_id INT NOT NULL,
+    hoa_id INT REFERENCES HeadOfAccounts(hoa_id)  NOT NULL ,
+    gross DECIMAL(20,2) NOT NULL,
+    deduction DECIMAL(20,2) NOT NULL,
+    net DECIMAL(20,2) NOT NULL,
+    project_id INT NOT NULL ,
+    status_id INT NOT NULL,
+    vocherno varchar(10) NOT NULL,
+    vocherdate DATE NOT NULL,
+    reject_reason CHAR(400),
+    FOREIGN KEY (user_id) REFERENCES Users(user_id),
+    FOREIGN KEY (project_id) REFERENCES Projects(project_id)
+);
+
+CREATE TABLE Users(
+    user_id  INT  GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    user_name CHAR(20) NOT NULL,
+    user_role VARCHAR(20) NOT NULL 
+);
+SELECT * FROM users
+
+CREATE TABLE  Projects(
+    project_id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    Project_name CHAR(40) NOT NULL,
+    User_id INT  REFERENCES Users(user_id) ,
+    hoa  VARCHAR(23) NOT NULL,
+    agreement_amount DECIMAL(20,2) NOT NULL,
+    goverment_order VARCHAR(10) NOT NULL
+);
+
+
+CREATE TABLE GovtOrders(
+    govtOrder_id INT NOT NULL PRIMARY KEY,
+    orderNo VARCHAR(50) NOT NULL,
+    orderDate DATE NOT NULL,
+    amount DECIMAL(12,2) NOT NULL,
+    description CHAR(200) 
+);
+
+
+
+CREATE TABLE Govtorder_hoas(
+    govtOrder_id INT NOT NULL,
+    hoa_id INT NOT NULL,
+    FOREIGN KEY (govtOrder_id ) references GovtOrders(govtOrder_id ),
+    FOREIGN KEY (hoa_id ) references HeadOfAccounts(hoa_Id)
+);
+
+
+
+
+INSERT INTO  Govtorder_hoas(govtOrder_id,hoa_id) VALUES(101,101);
+INSERT INTO  Govtorder_hoas(govtOrder_id,hoa_id) VALUES(102,102);
+INSERT INTO  Govtorder_hoas(govtOrder_id,hoa_id) VALUES(103,103);
+INSERT INTO  Govtorder_hoas(govtOrder_id,hoa_id) VALUES(104,104);
+INSERT INTO  Govtorder_hoas(govtOrder_id,hoa_id) VALUES(105,105);
+INSERT INTO  Govtorder_hoas(govtOrder_id,hoa_id) VALUES(106,106);
+INSERT INTO  Govtorder_hoas(govtOrder_id,hoa_id) VALUES(107,107);
+INSERT INTO  Govtorder_hoas(govtOrder_id,hoa_id) VALUES(108,108);
+INSERT INTO  Govtorder_hoas(govtOrder_id,hoa_id) VALUES(109,109);
+INSERT INTO  Govtorder_hoas(govtOrder_id,hoa_id) VALUES(110,110);
+
+
+CREATE TABLE HeadOfAccounts(
+    hoa_id INT Primary Key Not Null,
+    hoa_no VARCHAR(80) Unique Not Null,
+    description char(100) NOT NULL
+);
+DROP TABLE headofaccounts;
+
+CREATE TABLE BUDGET(
+    budgetId INT PRIMARY KEY NOT NULL,
+    hoa_id INT REFERENCES HeadOfAccounts(hoa_id),
+    years INT NOT NULL,
+    budgetAmount decimal (20,2) NOT NULL
+);
+
+
+
+-- INSERTING VALUES INTO USERS TABLE
+
+INSERT INTO Users(user_name,user_role) VALUES('vineeth','admin');
+INSERT INTO Users(user_name,user_role) VALUES('ashok','user');
+INSERT INTO Users(user_name,user_role) VALUES('sam','user');
+INSERT INTO Users(user_name,user_role) VALUES('anu','user');
+INSERT INTO Users(user_name,user_role) VALUES('ahmad','user');
+INSERT INTO Users(user_name,user_role) VALUES('ganesh','user');
+INSERT INTO Users(user_name,user_role) VALUES('rohit','user');
+INSERT INTO Users(user_name,user_role) VALUES('anudeep','user');
+INSERT INTO Users(user_name,user_role) VALUES('ahmad basha','user');
+INSERT INTO Users(user_name,user_role) VALUES('lobo','user');
+INSERT INTO Users(user_name,user_role) VALUES('living stone','user');
+
+
+-- INSERTING VALUES INTO HEAD_OF_ACCOUNT TABLE
+INSERT INTO headofaccounts(hoa_id,hoa_no,description) VALUES(101,'4700012322527530531PVN','MAJOR HEADS');
+INSERT INTO headofaccounts(hoa_id,hoa_no,description) VALUES(102,'4515001012522530531PVN','SUB-MAJOR HEADS');
+INSERT INTO headofaccounts(hoa_id,hoa_no,description) VALUES(103,'4435011010706530531PVN','MINOR HEADS');
+INSERT INTO headofaccounts(hoa_id,hoa_no,description) VALUES(104,'5054808002539530531PVN','SUB-HEADS');
+INSERT INTO headofaccounts(hoa_id,hoa_no,description) VALUES(105,'2700011740027270272NVN','DETAILED HEADS');
+INSERT INTO headofaccounts(hoa_id,hoa_no,description) VALUES(106,'2700011742527270274PVN','OBJECT HEADS');
+INSERT INTO headofaccounts(hoa_id,hoa_no,description) VALUES(107,'8443001080001000014NVN','MINOR HEADS');
+INSERT INTO headofaccounts(hoa_id,hoa_no,description) VALUES(108,'4700011642527530531PVN','DETAILED HEADS');
+INSERT INTO headofaccounts(hoa_id,hoa_no,description) VALUES(109,'4406010702505530531PVN','SUB-MAJOR HEADS');
+INSERT INTO headofaccounts(hoa_id,hoa_no,description) VALUES(110,'4702001012523530531PVN','MINOR HEADS');
+INSERT INTO headofaccounts(hoa_id,hoa_no,description) VALUES(111,'3054048000007270272NVN','OBJECT HEADS');
+
+
+-- INSERTING VALUES INTO PROJECTS TABLE
+INSERT INTO projects(project_name,hoa,User_id,agreement_amount,goverment_order) values('mee seva app','4700012322527530531PVN',1,1000000.00,'GOV101');
+INSERT INTO projects(project_name,hoa,User_id,agreement_amount,goverment_order) values('Aarogya setu','4515001012522530531PVN',2,2120000.50,'GOV102');
+INSERT INTO projects(project_name,hoa,User_id,agreement_amount,goverment_order) values('Mygov app','4435011010706530531PVN',3,3003000.00,'GOV103');
+INSERT INTO projects(project_name,hoa,User_id,agreement_amount,goverment_order) values('Voter Helpline','5054808002539530531PVN',4,4000000.00,'GOV104');
+INSERT INTO projects(project_name,hoa,User_id,agreement_amount,goverment_order) values('DigiLocker app','2700011740027270272NVN',5,1060000.00,'GOV105');
+INSERT INTO projects(project_name,hoa,User_id,agreement_amount,goverment_order) values('GST Rate Finder app','2700011742527270274PVN',6,90020.00,'GOV106');
+INSERT INTO projects(project_name,hoa,User_id,agreement_amount,goverment_order) values('PMO India App','8443001080001000014NVN',7,5000100.00,'GOV107');
+INSERT INTO projects(project_name,hoa,User_id,agreement_amount,goverment_order) values('UMANG App','4700011642527530531PVN',8,902000.00,'GOV108');
+INSERT INTO projects(project_name,hoa,User_id,agreement_amount,goverment_order) values('ePathshala App','4406010702505530531PVN',9,6800000.00,'GOV109');
+INSERT INTO projects(project_name,hoa,User_id,agreement_amount,goverment_order) values('mAadhaar App','4702001012523530531PVN',10,45678910.00,'GOV110');
+INSERT INTO projects(project_name,hoa,User_id,agreement_amount,goverment_order) values('Aaykar setu App','3054048000007270272NVN',11,3400000.00,'GOV111');
+
+-- INSERTING VALUES INTO govtorders TABLE
+
+INSERT INTO Govtorders(govtOrder_id,orderNo, orderDate, amount,description) VALUES(101,'GO101', '2023-01-15', 500000.00, 'Order is sucessfull');
+INSERT INTO GovtOrders (govtOrder_id,orderNo, orderDate, amount,description) VALUES(102,'GO102', '2023-03-20', 300000.00, 'Order is pending');
+INSERT INTO GovtOrders (govtOrder_id,orderNo, orderDate, amount,description)  VALUES(103,'GO103', '2023-04-10', 600000.00, 'Order is sucessfull');
+INSERT INTO GovtOrders (govtOrder_id,orderNo, orderDate, amount,description) VALUES(104,'GO104', '2023-06-15', 500000.00, 'Order is pending');
+INSERT INTO GovtOrders (govtOrder_id,orderNo, orderDate, amount,description) VALUES(105,'GO105', '2023-07-20', 300000.00, 'Order is pending');
+INSERT INTO GovtOrders (govtOrder_id,orderNo, orderDate, amount,description)  VALUES(106,'GO106', '2023-05-10', 600000.00, 'Order is sucessfull');
+
+-- INSERTING VALUES INTO BUDGET
+INSERT INTO BUDGET(budgetId,hoa_id,years,budgetAmount) VALUES(1,101,'2023',101000.00);
+INSERT INTO BUDGET(budgetId,hoa_id,years,budgetAmount) VALUES(3,102,'2024',202000.00);
+INSERT INTO BUDGET(budgetId,hoa_id,years,budgetAmount) VALUES(4,103,'2001',3014000.00);
+INSERT INTO BUDGET(budgetId,hoa_id,years,budgetAmount) VALUES(5,104,'2002',401000.00);
+INSERT INTO BUDGET(budgetId,hoa_id,years,budgetAmount) VALUES(6,105,'2004',301400.00);
+INSERT INTO BUDGET(budgetId,hoa_id,years,budgetAmount) VALUES(7,106,'2005',107000.00);
+INSERT INTO BUDGET(budgetId,hoa_id,years,budgetAmount) VALUES(8,107,'2007',901000.00);
+INSERT INTO BUDGET(budgetId,hoa_id,years,budgetAmount) VALUES(9,108,'2020',1101000.00);
+INSERT INTO BUDGET(budgetId,hoa_id,years,budgetAmount) VALUES(10,109,'2021',121000.00);
+INSERT INTO BUDGET(budgetId,hoa_id,years,budgetAmount) VALUES(11,110,'2006',6621000.00);
+INSERT INTO BUDGET(budgetId,hoa_id,years,budgetAmount) VALUES(12,111,'2008',112300.00);
+
+-- INSERTING VALUES INTO Transactions table
+
+INSERT INTO Transactions(user_id,hoa_id,gross,deduction,net,project_id,status_id,vocherno,vocherdate,reject_reason)
+ VALUES(1,101,100000.00,200.00,99800.00,1,0,'voc101','2023-09-10',NULL);
+INSERT INTO Transactions(user_id,hoa_id,gross,deduction,net,project_id,status_id,vocherno,vocherdate,reject_reason) VALUES(2,102,200000.00,200.00,199800.00,2,1,'voc102','2022-08-10',NULL);
+INSERT INTO Transactions(user_id,hoa_id,gross,deduction,net,project_id,status_id,vocherno,vocherdate,reject_reason) VALUES(3,103,300000.00,200.00,299800.00,3,21,'voc103','2023-07-10','DUE TO OVER PRIZED');
+INSERT INTO Transactions(user_id,hoa_id,gross,deduction,net,project_id,status_id,vocherno,vocherdate,reject_reason) VALUES(4,104,400000.00,200.00,399800.00,4,0,'voc104','2023-06-10',NULL);
+INSERT INTO Transactions(user_id,hoa_id,gross,deduction,net,project_id,status_id,vocherno,vocherdate,reject_reason) VALUES(5,105,500000.00,200.00,499800.00,5,0,'voc105','2023-08-15',NULL);
+INSERT INTO Transactions(user_id,hoa_id,gross,deduction,net,project_id,status_id,vocherno,vocherdate,reject_reason) VALUES(6,106,600000.00,200.00,599800.00,6,21,'voc106','2023-06-30','DUE TO INCOMPLETE INFORMATION');
+INSERT INTO Transactions(user_id,hoa_id,gross,deduction,net,project_id,status_id,vocherno,vocherdate,reject_reason) VALUES(7,107,700000.00,200.00,699800.00,7,1,'voc107','2023-07-20',NULL);
+INSERT INTO Transactions(user_id,hoa_id,gross,deduction,net,project_id,status_id,vocherno,vocherdate,reject_reason) VALUES(8,108,800000.00,200.00,799800.00,8,1,'voc108','2023-01-19',NULL);
+
+INSERT INTO Transactions(user_id,hoa_id,gross,deduction,net,project_id,status_id,vocherno,vocherdate,reject_reason) VALUES(8,108,900000.00,200.00,899800.00,8,310,'voc109','2023-03-19',NULL);
+
+-- QUERIES......
+
+-- 1. List all pending transactions in detailed
+SELECT Transactions.tran_id,users.user_id,users.user_name,users.user_role,Transactions.hoa_id,headofaccounts.hoa_no,headofaccounts.description,Transactions.gross,Transactions.deduction,Transactions.net,projects.project_id,projects.project_name,projects.agreement_amount,Transactions.status_id,Transactions.vocherno,Transactions.vocherdate,Transactions.reject_reason,
+CASE 
+    WHEN Transactions.status_id = 0 THEN 'NEW Transaction'
+    WHEN Transactions.status_id = 1 THEN 'Token GENERATED'
+    WHEN Transactions.status_id= 21 THEN 'REJECTED'
+    WHEN Transactions.status_id= 310 THEN 'PAYMENT DONE'
+END AS Status_desc
+FROM Transactions
+LEFT JOIN users ON users.user_id=Transactions.user_id
+LEFT JOIN headofaccounts on Transactions.hoa_id=headofaccounts.hoa_id
+LEFT JOIN projects on projects.project_id=Transactions.project_id
+WHERE status_id = 0;
+
+-- 2.List voucher-paid-expenditure report based on financial year
+SELECT t.tran_id, t.vocherno, t.vocherdate, t.gross, t.deduction, t.net, t.status_id
+FROM Transactions t
+JOIN BUDGET b ON t.hoa_id = b.hoa_id
+WHERE t.status_id=310 AND b.years = '2023';
+
+-- 3.List all rejected transactions with reason
+SELECT Transactions.tran_id,Transactions.user_id,users.user_name,projects.project_name,projects.agreement_amount,projects.goverment_order,reject_reason
+FROM Transactions
+LEFT JOIN users on users.user_id=Transactions.user_id
+LEFT JOIN projects on projects.project_id=Transactions.project_id
+WHERE status_id = 21;
+
+-- 4.List all users who made transactions
+SELECT DISTINCT user_name FROM Transactions 
+LEFT JOIN Users ON Transactions.user_id=Users.user_id ;
+
+-- 5.List all transactions by a user who made the highest transactions
+SELECT Transactions.tran_id, Users.user_name, Transactions.project_id, Transactions.net
+FROM Transactions
+LEFT JOIN Users ON Transactions.user_id = Users.user_id
+GROUP BY Transactions.tran_id, Users.user_name, Transactions.project_id, Transactions.net
+ORDER BY COUNT(Transactions.project_id) DESC;
+
+
+
+-- 6.List all head of accounts budget based on financial year
+
+SELECT Budget.hoa_id,headofaccounts.hoa_no,headofaccounts.description
+FROM Budget 
+LEFT JOIN headofaccounts on headofaccounts.hoa_id=Budget.hoa_id
+WHERE years ='2023';
+
+-- 7.List head of account-wise expenditure
+
+SELECT t.hoa_id,headofaccounts.hoa_no,SUM(t.net) AS total_expenditure
+FROM Transactions t
+LEFT JOIN headofaccounts on headofaccounts.hoa_id=t.hoa_id
+GROUP BY t.hoa_id, headofaccounts.hoa_no;
+
+-- 8.List all projects in detail
+SELECT  projects.project_id,projects.project_name,projects.user_id,users.user_name,projects.hoa,projects.agreement_amount,projects.goverment_order
+FROM projects
+LEFT JOIN users on users.user_id=projects.user_id;
+
+-- 9.List all govt orders with their head of accounts and projects
+
+
+SELECT gov.orderNo, gov.orderDate, gov.amount, gov.description,hoa.hoa_no,p.project_name
+FROM GovtOrders AS gov
+JOIN Govtorder_hoas gohoa ON gov.govtOrder_id = gohoa.govtOrder_id
+JOIN HeadOfAccounts hoa ON gohoa.hoa_id = hoa.hoa_id
+JOIN Projects p ON p.hoa = hoa.hoa_no;
+
+
+-- 10.List project-wise expenditure
+
+SELECT p.project_name,SUM(t.net) AS total_expenditure
+FROM Transactions t
+JOIN projects p ON t.project_id = p.User_id
+GROUP BY p.project_name;
+
+
+-- 
+
+SELECT status_id,SUM(deduction),sum(gross),sum(net),
+CASE 
+    WHEN status_id = 0 THEN 'NEW Transaction'
+    WHEN status_id = 1 THEN 'Token GENERATED'
+    WHEN status_id= 21 THEN 'REJECTED'
+    WHEN status_id= 310 THEn 'PAYMENT DONE'
+END AS Status_desc
+FROM transactions
+GROUP BY status_id;
+
+-- 
+
+SELECT transactions.hoa_id,sum(transactions.gross),budget.budgetamount
+from transactions 
+LEFT JOIN  budget ON budget.hoa_id = transactions.hoa_id
+GROUP BY budget.budgetamount , transactions.hoa_id
+HAVING SUM(transactions.gross)>budget.budgetamount;
+
+
+ 
