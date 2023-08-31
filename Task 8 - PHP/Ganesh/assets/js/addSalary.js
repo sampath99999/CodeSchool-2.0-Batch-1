@@ -61,7 +61,7 @@ function loadSalaryDetails(empcode, feedback) {
                 let jsonData = JSON.parse(data);
                 if(jsonData["status"]){
                     $("#serverMessage").addClass("d-none");
-
+                    console.log(jsonData['data'][0]['id'])
                     // HTML template to display the salary input fields to user.
                     let htmlTemplate = `
                         <!-- Employee Name -->
@@ -69,7 +69,7 @@ function loadSalaryDetails(empcode, feedback) {
                             <label for="empName" class="form-label m-0 col-md-2">Employee Name</label>
                             <div class="col-md-6">
                             <input type="text" class="form-control-plaintext" id="empName" value="${jsonData["data"][0]["first_name"]} ${jsonData["data"][0]["last_name"]}" placeholder="Employee Name" readonly>
-                            <input type="text" class="d-none" value="${jsonData['data'][0]['id']}" id="empid">
+                            <input type="text" class="d-none" value="${jsonData['data'][0]['emp_id']}" id="empid">
                             </div>
                         </div>
                         <!-- Salary Type -->

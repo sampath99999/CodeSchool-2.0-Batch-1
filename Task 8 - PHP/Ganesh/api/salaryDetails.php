@@ -78,6 +78,7 @@
             }
         }
 
+        // Check for all the validations to be true.
         if($count != 3){
             $response["status"] = false;
             $response["message"] = "Please check all the input.";
@@ -95,34 +96,75 @@
             exit;
         }
 
-        $query = "INSERT INTO 
+        // Check whether the employee with that salary_id exist.
+        $query = "SELECT *
+        FROM 
+        salary_details
+        WHERE employee_id = ? AND earnings_id = ?";
+        $statement = $pdo->prepare($query);
+        $result = $statement->execute([
+            $empId, 
+            $componentType
+        ]);
+
+        // Check for the employee already exist in the DB.
+        if($result){
+            $query = "UPDATE salary_details
+            SET amount = ?
+            WHERE employee_id = ? AND earnings_id = ?";
+            $statement = $pdo->prepare($query);
+            $result = $statement->execute([
+                $componentAmount,
+                $empId, 
+                $componentType
+            ]);
+
+            // Error while updating data.
+            if(!$result){
+                $response["status"] = false;
+                $response["message"] = $statement->errorInfo();
+                echo json_encode($response);
+                exit;
+            }
+
+            // On successful updating the value.
+            $response["status"] = true;
+            $response["message"] = "Amount updated successfully.";
+            $response["data"] = $result;
+            echo json_encode($response);
+            exit;
+            
+        } else {
+            // Insertion query.
+            $query = "INSERT INTO 
             salary_details( 
                 employee_id,
                 earnings_id,
                 amount
             )
             VALUES ( ?, ?, ? )";
-        $statement = $pdo->prepare($query);
-        $result = $statement->execute([
-            $empId, 
-            $componentType, 
-            $componentAmount
-        ]);
+            $statement = $pdo->prepare($query);
+            $result = $statement->execute([
+                $empId, 
+                $componentType, 
+                $componentAmount
+            ]);
 
 
-        // Error while inserting data.
-        if(!$result){
-            $response["status"] = false;
-            $response["message"] = $statement->errorInfo();
+            // Error while inserting data.
+            if(!$result){
+                $response["status"] = false;
+                $response["message"] = $statement->errorInfo();
+                echo json_encode($response);
+                exit;
+            }
+
+            // On successful insertion.
+            $response["status"] = true;
+            $response["message"] = "Amount added successfully.";
             echo json_encode($response);
             exit;
         }
-
-
-        $response["status"] = true;
-        $response["message"] = "Amount added successfully.";
-        echo json_encode($response);
-        exit;
 
     }
 

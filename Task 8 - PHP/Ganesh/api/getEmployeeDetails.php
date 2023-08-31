@@ -27,7 +27,7 @@
     }
 
     // Query the employee through employee code.
-    $query = "SELECT *
+    $query = "SELECT employees.id as emp_id, *
     FROM employees
     INNER JOIN statuses
     ON statuses.id = employees.working_status_id
