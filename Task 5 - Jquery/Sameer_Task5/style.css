@@ -1,0 +1,95 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  .navbar-brand{
+    font-size: 25px;
+    font-weight: bold;
+  }
+.head-con{
+    height:350px;
+    width: 510px;
+}
+.footer{
+
+    bottom: 0;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+}
+
+#newsContainer{
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+
+
+.news-card h5{
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+.latest-card{
+  display: grid;
+  
+   }
+  .latest-card p{
+    font-size: 10px;
+    padding-left: 20px;
+  }
+  .latest-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.latest-card img {
+    margin-right: 10px;
+}
+
+.nav-link:hover{
+  background-color: white; 
+}
+
+.fashion-card{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+}
+.fashion-card img{
+  width: 150px;
+  height: 150px;
+}
+
+.lifestyle-card{
+  
+  display: flex;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+}
+
+.feathers-card{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  text-align: center;
+}
+.feathers-card h6{
+  font-size: 12px;
+ }
+ h6{
+    font:bold;
+ }

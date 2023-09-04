@@ -97,14 +97,22 @@
                 </ul>
             </div>
           </nav>
-
-
-    <div>
-        <div class="banner">
-            <img src="https://previews.123rf.com/images/tenkende/tenkende1701/tenkende170100200/70070138-wooden-clothes-hangers-on-bright-background-what-nothing-to-wear-concept-woman-clothing-banner.jpg" style="height: 150px; width:1300px; border-bottom:3px solid red;">
-        </div>
-    </div>
+          <div class="container-img">
+            <img class="img-fluid" src="https://previews.123rf.com/images/tenkende/tenkende1701/tenkende170100200/70070138-wooden-clothes-hangers-on-bright-background-what-nothing-to-wear-concept-woman-clothing-banner.jpg" alt="Snow" style="width:100%;">
+            <div class="centered">
+              <h3>Fashion</h3>
+              <h5>Home</h5>
+            </div>
+          </div>
 </div>
+
+<!--
+<div>
+  <div class="banner col-lg-12">
+      <img src="https://previews.123rf.com/images/tenkende/tenkende1701/tenkende170100200/70070138-wooden-clothes-hangers-on-bright-background-what-nothing-to-wear-concept-woman-clothing-banner.jpg" style="height: 150px; width:1300px; border-bottom:3px solid red;">
+  </div>
+</div>
+-->
 <div class="filter row">
     <div class="col-8 d-flex">
         <nav class="navbar navbar-expand-lg navbar-light d-none d-lg-block">
@@ -170,16 +178,16 @@
             </div>
           </nav>
           
-          <div class="d-lg-none d-sm-flex justify-content-sm-between">
-            <div class="d-lg-none d-sm-flex">
+          <div class="d-lg-none d-inline-flex gap-5 bg-secondary">
+            <div class="d-lg-none d-inline-flex">
               <img
                 style="height: 70px; color: #000"
                 src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRLqocrmfmRC_i9b-IfEwdCWfDhDaOpFx9ckiaox_LmZuHTTb5j"
                 alt=""/>
               <h1 class="d-flex align-items-sm-center text-black">Filters</h1>
             </div>
-            <div class="d-lg-none d-sm-flex">
-              <h1 class="d-flex align-items-sm-center text-black">Sort By</h1>
+            <div class="d-lg-none d-inline-flex">
+              <h1 class="d-inline-flex align-items-sm-center text-black">Sort By</h1>
               <img
                 style="height: 70px; color: #000"
                 src="data:image/png;base64,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"
@@ -188,7 +196,7 @@
             </div>
           </div>
     </div>
-    <div class="col-2 d-flex gap-1">
+    <div class="col-2 d-flex gap-1 ">
         <nav class="navbar navbar-expand-lg navbar-light d-none d-lg-block">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Sort by</a>
@@ -213,10 +221,11 @@
             </div>
           </nav>
     </div>
-    <div class="col-2 d-flex gap-3 d-none d-lg-block align-content-center">
-        <i class="fa fa-filter"></i>
-        <i class="fa fa-filter"></i>
-        <i class="fa fa-filter"></i>
+    <div class="col-2 d-flex gap-3 d-none d-lg-block align-content-center mt-3">
+        <i class="fa fa-align-center"></i>
+        <i class="fa fa-align-justify"></i>
+        <i class="fa fa-align-left"></i>
+        <i class="fa fa-align-right"></i>
     </div>
 </div>
 

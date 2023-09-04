@@ -1,6 +1,6 @@
 //For left Image
 function reloadImage() {
-  var imageUrl = "https://source.unsplash.com/collection/928423/1920x1080"; // Replace this with the URL that returns the image.
+  var imageUrl = "https://source.unsplash.com/collection/928423/1920x1080";
   var imgElement = document.getElementById("imageElement");
   var xhr = new XMLHttpRequest();
   xhr.open("GET", imageUrl, true);
