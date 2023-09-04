@@ -1,54 +1,40 @@
-/* Side Menu Bar */
-.offcanvas-start{
-    background-color: #1B354D;
-    width: 300px !important;
+/* Form Submit Style for login and register */
+.credential-navigation-btn, .credential-navigation-btn:hover, .credential-navigation-btn:focus {
+    background-color: #FF9900;
 }
-.offcanvas-header{
-    border-bottom: 1px solid #305678;
-}
-.nav-link{
-    color: white;
-    font-size: 14px;
-}
-.nav-link:hover{
-    color: aliceblue;
-    border-left: 3px solid #E5B96A;
-    background-color: #2B4259;
-}
-.nav-link:visited{
-    color: aliceblue;
-    border-left: 3px solid #E5B96A;
-    background-color: #2B4259;
+/* Form Input Fields */
+/* Removing default css for input type number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
 }
 /* Navbar */
 .navbar{
-    background-image: url('https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg');
+  background-color: #131921;
 }
-.navbar p{
-    margin: 0px;
-    font-size: 14px;
-    color: white;
+.navbar-notification-alert{
+  font-size: 10px;
 }
-.wrapper-block p{
-    font-size: 12px !important;
+/* product card */
+.card-img-top {
+  height: 180px;
+  object-fit: contain;
 }
-svg{
-    margin: 4px;
+/* Text Overflow for product name */
+.title{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.container-wrapper{
-    background-color:  #4D6273;
-    height: 44px;
-    border-radius: 5%;
+/* Cart Quantity */
+.quantity-toggle{
+  border-radius: 50%;
+  margin: 0px 4px;
+  padding: 0px 6px;
+  border: 1px groove #babfc5;
+  background-color: #E9ECEF;
+  width: 30px;
+  height: 30px;
+  
 }
-.dropdown-item{
-    font-size: 14px;
-}
-.dropdown-menu{
-    width: 205px;
-}
-label{
-    font-weight: 500;
-}
-label span{
-    color: red;
-}
+

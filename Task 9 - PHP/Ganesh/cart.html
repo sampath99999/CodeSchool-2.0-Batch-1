@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/images/amazon-favicon.png" type="image/x-icon">
+  <title>Amazon | IN</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body class="bg-body-secondary">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid row">
+      <!-- Navbar Brand -->
+      <div class="col-2">
+        <a class="navbar-brand text-white" href="#">
+          <img src="./assets/images/user-amazon-logo.png" width="120" height="48" alt="amazon-brand">
+        </a>
+      </div>
+      <!-- Cart -->
+      <div class="col-3">
+        <a class="nav-link text-white float-end" href="#">
+          <button type="button" class="btn text-white position-relative border-white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-cart2"
+              viewBox="0 0 16 16">
+              <path
+                d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+            </svg><span
+              class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger navbar-notification-alert">0</span>
+            Cart
+          </button>
+        </a>
+        <a class="nav-link text-white float-end" href="./orders.html">
+          <button type="button" class="btn text-white">
+            My Orders
+          </button>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <!-- MAIN BODY OF CONTENTS -->
+  <div class="container-fluid p-4">
+    <div class="row">
+      <!-- Shopping Cart -->
+      <div class="col-8 bg-white py-3 mx-2 ms-5">
+        <h3>Shopping Cart</h3>
+        <hr class="mb-4">
+        <!-- Cart Contents -->
+        <div class="card text-start p-2 pe-3 mb-3 mx-4 rounded border">
+          <div class="row">
+            <div class="col-4 p-0 ps-2">
+              <img class="card-img-top text-center m-auto "
+                src="http://localhost/TASK-9/assets/images/products/hp-pavilion-15-eg308.webp" />
+            </div>
+            <div class="card-body col-4">
+              <p class="title mb-1 fs-5">Samsung Galaxy S21 FE</p>
+              <p class="text-danger original-price m-0 fs-5">₹32,400</p>
+              <p class="text-secondary mb-4">
+                <small> M.R.P ₹<s>40,000</s> (19% OFF)</small>
+              </p>
+              <div class="d-inline-flex">
+                <button type="button" class="quantity-toggle">-</button>
+                <input type="number" class="form-control form-control-sm" style="width:30px;
+              height:20px;">
+                <button type="button" class="quantity-toggle">+ </button>
+              </div>
+              <button class="btn credential-navigation-btn float-end">Remove</button>
+            </div>
+          </div>
+        </div>
+        <!-- Place Order -->
+        <hr class="mt-4">
+        <button class="btn credential-navigation-btn float-end px-3 me-4" type="submit">PLACE ORDER</button>
+      </div>
+      <!-- Order Details -->
+      <div class="col-3 bg-white border-start me-4 ms-2 py-3">
+        <h5 class="text-secondary">PRICE DETAILS</h5>
+        <hr>
+        <h6 class="mb-3 text-secondary">Price ( 1 item ) <p class="d-inline float-end me-2 mb-0">40,000</p> </h6>
+        <h6 class="mb-3 text-secondary">Discount <p class="d-inline float-end me-2 mb-0 text-success">-7,600</p></h6>
+        <h5 class="mb-3 fs-5 border-top border-bottom py-3">Final Amount <p class="d-inline float-end me-2 mb-0">32,400</p></h5>
+        <p class="d-inline me-2 mb-0 text-success fs-5">You will save 7,600 on this order</p>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>
+<!-- class="btn border rounded-circle ms-1" -->
