@@ -36,5 +36,3 @@ ORDER BY c.id;";
         exit;
     }
 }
-
-?>

@@ -12,10 +12,6 @@ CREATE TABLE
         image_url VARCHAR NOT NULL
     );
 
-SELECT * FROM movies;
-
-DROP TABLE movies;
-
 CREATE TABLE
     cinema_hall(
         id SERIAL NOT NULL PRIMARY KEY,
@@ -25,8 +21,6 @@ CREATE TABLE
         city VARCHAR(100) NOT NULL,
         address VARCHAR(150) NOT NULL
     );
-
-SELECT * from cinema_hall;
 
 INSERT INTO
     cinema_hall(
@@ -62,19 +56,12 @@ VALUES (
         'Ameerpet Hyderabad'
     );
 
-DROP TABLE cinema_hall;
-
 CREATE TABLE
     movie_theaters(
         id SERIAL PRIMARY KEY,
         movie_id INT NOT NULL REFERENCES movies(id),
         cinema_hall_id INT NOT NULL REFERENCES cinema_hall(id)
     );
-
-SELECT * from movie_theaters;
-
-DROP TABLE movie_theaters;
-
 
 CREATE TABLE
 show (
@@ -87,29 +74,16 @@ INSERT INTO
 show (start_time, cinema_hall_id)
 VALUES ('10:15 AM', 1), ('2:30 PM', 1), ('5:45 PM', 1), ('9:00 PM', 1), ('11:45 AM', 2), ('3:00 PM', 2), ('7:45 PM', 2), ('11:00 PM', 2), ('10:35 AM', 3), ('2:50 PM', 3), ('6:45 PM', 3), ('10:00 PM', 3), ('10:00 AM', 4), ('2:30 PM', 4), ('6:25 PM', 4), ('9:30 PM', 4);
 
-select * from show;
-
-SELECT
-    cinema_hall_id,
-    STRING_AGG(start_time, ', ') AS start_times
-FROM
-show
-GROUP BY cinema_hall_id
-ORDER BY cinema_hall_id;
-
-DROP TABLE show;
-
 CREATE TABLE
     bookings(
         id SERIAL NOT NULL PRIMARY KEY,
         seats VARCHAR NOT NULL,
-        show_id INT REFERENCES show(id) NOT NULL,
-        cinema_hall_id INT REFERENCES cinema_hall(id) NOT NULL,
-        movie_id INT REFERENCES movies(id),
-        user_id INT REFERENCES users(id) 
+        show_id INT REFERENCES
+        show (id) NOT NULL,
+            cinema_hall_id INT REFERENCES cinema_hall(id) NOT NULL,
+            movie_id INT REFERENCES movies(id),
+            user_id INT REFERENCES users(id)
     );
-
-DROP TABLE bookings;
 
 CREATE TABLE
     users(
@@ -121,34 +95,16 @@ CREATE TABLE
         type VARCHAR(50)
     );
 
-SELECT * FROM users;
-
-DROP TABLE users;
-
-
-select * from movie_theaters;
-
-SELECT * from cinema_seat;
-
 CREATE Table
     cinema_seat (
         id SERIAL PRIMARY KEY,
         seat_number VARCHAR NOT NULL,
         status SMALLINT,
         show_id INT REFERENCES
-        show
-(id),
+        show (id),
             movie_id INT REFERENCES movies(id),
             cinema_hall_id INT REFERENCES cinema_hall(id)
     );
-
-
-DROP Table cinema_seat;
-
-SELECT * FROM cinema_seat;
-
-
-SELECT * FROM users;
 
 INSERT INTO
     users(
@@ -158,8 +114,7 @@ INSERT INTO
         password,
         type
     )
-VALUES
-(
+VALUES (
         'admin',
         'admin123@gmail.com',
         'admin_123',

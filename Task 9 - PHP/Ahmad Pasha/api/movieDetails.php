@@ -3,7 +3,7 @@
 require_once "./dbConfig.php";
 
 if ($_SERVER["REQUEST_METHOD"] == 'GET') {
-    $response = ["status" => false, "message" => "", "data" => null,"todoData" => null];
+    $response = ["status" => false, "message" => "", "data" => null, "todoData" => null];
     if (!isset($_GET["id"])) {
         $response["message"] = "Movie Id is missing!";
         echo json_encode($response);
@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
 
     $movieId = $_GET["id"];
     $pdo = getPDO();
-    $query ="SELECT * FROM movies WHERE id = ?";
+    $query = "SELECT * FROM movies WHERE id = ?";
 
     $statment = $pdo->prepare($query);
     $statment->execute([$movieId]);
@@ -32,5 +32,3 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
         exit;
     }
 }
-
-?>

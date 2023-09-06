@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $query = "INSERT INTO bookings (seats,show_id, cinema_hall_id,movie_id,user_id) VALUES (?, ?, ?, ?,?)";
 
     $statment = $pdo->prepare($query);
-    $result = $statment->execute([$selectedSeats,$showId,$cinemaHallId, $movieId,$userId]);
+    $result = $statment->execute([$selectedSeats, $showId, $cinemaHallId, $movieId, $userId]);
 
     if (!$result) {
         $response["message"] = $statment->errorInfo();
@@ -60,8 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     exit;
     $response["message"] = "ONLY POST method Accepted";
     echo json_encode($response);
-}
-else if ($_SERVER["REQUEST_METHOD"] == 'GET') {
+} else if ($_SERVER["REQUEST_METHOD"] == 'GET') {
     $response = ["status" => false, "message" => "", "data" => null];
     if (!isset($_GET["user_id"])) {
         $response["message"] = "userId is missing!";
@@ -71,7 +70,7 @@ else if ($_SERVER["REQUEST_METHOD"] == 'GET') {
 
     $userId = $_GET["user_id"];
     $pdo = getPDO();
-    $query ="SELECT seats,start_time,cinema_hall.name as cName,movies.name as mName,cinema_hall.address FROM bookings INNER join show on show.id=bookings.show_id
+    $query = "SELECT seats,start_time,cinema_hall.name as cName,movies.name as mName,cinema_hall.address,movies.image_url as img FROM bookings INNER join show on show.id=bookings.show_id
     inner JOIN cinema_hall on cinema_hall.id= bookings.cinema_hall_id
     INNER JOIN movies on movies.id = bookings.movie_id
     INNER JOIN users on users.id = bookings.user_id
@@ -95,6 +94,3 @@ else if ($_SERVER["REQUEST_METHOD"] == 'GET') {
         exit;
     }
 }
-
-
-?>

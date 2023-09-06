@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $query = "INSERT INTO users (name,mail,user_name, password) VALUES (?, ?, ?, ?)";
 
     $statment = $pdo->prepare($query);
-    $result = $statment->execute([$name,$mail,$userName, $password]);
+    $result = $statment->execute([$name, $mail, $userName, $password]);
 
     if (!$result) {
         $response["message"] = $statment->errorInfo();
@@ -70,5 +70,3 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
 $response["message"] = "ONLY POST method Accepted";
 echo json_encode($response);
-
-?>

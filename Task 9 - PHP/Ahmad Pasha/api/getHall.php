@@ -5,10 +5,18 @@ require_once "./dbConfig.php";
 if ($_SERVER["REQUEST_METHOD"] == 'GET') {
     $response = ["status" => false, "message" => "", "data" => null];
 
-    $cinemaHallId= $_GET['cinema_hall_id'];
+    if (!isset($_GET['cinema_hall_id'])) {
+        $response["message"] = "cinema hall id is missing!";
+        echo json_encode($response);
+        exit;
+    }
+
+    $cinemaHallId = $_GET['cinema_hall_id'];
     $pdo = getPDO();
 
     $query = "SELECT * FROM cinema_hall where id= ?";
+
+
 
     $statment = $pdo->prepare($query);
     $statment->execute([$cinemaHallId]);
@@ -20,5 +28,3 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
     echo json_encode($response);
     exit;
 }
-
-?>

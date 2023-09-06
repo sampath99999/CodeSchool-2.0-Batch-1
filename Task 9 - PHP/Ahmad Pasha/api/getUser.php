@@ -3,7 +3,7 @@
 require_once "./dbConfig.php";
 
 if ($_SERVER["REQUEST_METHOD"] == 'GET') {
-    $response = ["status" => false, "message" => "", "data" => null,"todoData" => null];
+    $response = ["status" => false, "message" => "", "data" => null];
     if (!isset($_GET["user_id"])) {
         $response["message"] = "User ID is missing!";
         echo json_encode($response);
@@ -13,22 +13,17 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
     $userId = $_GET["user_id"];
     $pdo = getPDO();
     $query = "SELECT * FROM users WHERE id = ?";
-    $query2 ="SELECT * FROM todoContainer WHERE user_id = ?";
+
 
     $statment = $pdo->prepare($query);
     $statment->execute([$userId]);
     $user = $statment->fetchAll(PDO::FETCH_ASSOC);
 
-   
-    $yyy = $pdo->prepare($query2);
-    $yyy->execute([$userId]);
-    $todo = $yyy->fetchAll(PDO::FETCH_ASSOC);
 
     if (count($user) == 1) {
         $response["message"] = "Success";
         $response["status"] = true;
         $response["data"] = $user[0];
-        $response['todoData']=$todo;
         echo json_encode($response);
         exit;
     } else {
@@ -38,5 +33,3 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
         exit;
     }
 }
-
-?>
