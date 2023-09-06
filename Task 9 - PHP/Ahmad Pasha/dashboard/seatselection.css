@@ -1,0 +1,13 @@
+.seats button {
+    background-color: slategrey;
+    color: white;
+}
+
+.book_button {
+    background-color: #F84464;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
