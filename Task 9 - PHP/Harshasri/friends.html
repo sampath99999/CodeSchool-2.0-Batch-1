@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="assets/css/home.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+
+  <script src="https://kit.fontawesome.com/2061e7e031.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-static-top m-auto col-12 col-md-12 navbarCard">
+    <div class="container-fluid">
+      <div class="d-flex justify-content-center align-items-center gap-2">
+
+        <a class="nav-link" href="#"><i class="fa fa-facebook-official fa-2x text-primary"> </i></a>
+        <input type="search" placeholder="search" size="30" class="d-none d-md-block" />
+
+
+      </div>
+      <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 m-auto gap-2 col-md-5 d-flex justify-content-between">
+          <li class="follow-us-icon-container1">
+            <a class="nav-link" id="homeButton" href="./home.html"><i class="fas fa-home fs-5 text-secondary"></i></a>
+          </li>
+          <li class="follow-us-icon-container1">
+            <a class="nav-link" href="#" id="friendsButton"> <i class="fas fa-user-friends fs-5 text-secondary"></i></a>
+          </li>
+          <li class="follow-us-icon-container1">
+            <a class="nav-link" href="#"> <i class="fas fa-tv fs-5 text-secondary"></i></a>
+          </li>
+          <li class="follow-us-icon-container1">
+            <a class="nav-link" href="#"> <i class="fas fa-store fs-5 text-secondary"></i></a>
+          </li>
+
+
+
+
+        </ul>
+      </div>
+    </div>
+    <ul class="navbar-nav ml-auto d-flex flex-row d-none d-md-flex gap-3">
+      <li class="follow-us-icon-container2 d-flex justify-content-center align-items-center border border-0 nav-icons">
+        <a class="nav-link" href="#"><i class="bi bi-grid-3x3-gap fs-5 text-black"></i></a>
+      </li>
+      <li class="follow-us-icon-container2 d-flex justify-content-center align-items-center border border-0 nav-icons">
+        <a class="nav-link" href="#"><i class="fab fa-facebook-messenger fs-5 text-black"></i></a>
+      </li>
+      <li class="follow-us-icon-container2 d-flex justify-content-center align-items-center border border-0 nav-icons">
+        <a class="nav-link" href="#"><i class="fas fa-bell fs-6 text-black"></i></a>
+      </li>
+      <li class="follow-us-icon-container2 d-flex justify-content-center align-items-center border border-0 nav-icons">
+        <a class="nav-link" href="#" id="logout"><i class="fas fa-user-cog fs-6 text-black"></i></a>
+      </li>
+
+
+    </ul>
+  </nav>
+  <div class="d-flex">
+    <div class="contentContainer d-none d-md-flex ">
+      <div class="sideBar bg-sidebar shadow-sm text-black">
+        <ul class="p-0">
+          <li id="createPost">
+            <a herf="#" type="button">
+              <i class="fas fa-user-friends fs-5 text-black me-2"> </i>Friends
+            </a>
+          </li>
+          <li id="createPost">
+            <a herf="./home.html" type="button">
+              <i class="fas fa-home fs-5 text-black me-2"></i>Home
+            </a>
+          </li>
+          <li id="createPost"><a herf="#" type="button"><i class="fa fa-bookmark-o fs-5 text-black me-2"></i>Saved</a>
+          </li>
+          <li id="createPost"><a herf="#" type="button"><i class="fas fa-tv fs-5 text-black me-2"></i>Video</a></li>
+          <li id="createPost"><a herf="#" type="button"><i class="fa fa-calendar-o fs-5 text-black me-2"></i>Events</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 m-auto mt-2" style="height:100vh;overflow-y: scroll;">
+      <div class="d-flex flex-row gap-3">
+        <div
+          class="friends-container d-flex  justify-content-center align-items-center justify-content-md-start  gap-2 flex-wrap"
+          id="friendsContainer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="assets/js/friends.js"></script>
+</body>
+
+</html>

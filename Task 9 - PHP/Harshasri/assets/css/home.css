@@ -1,0 +1,144 @@
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none !important;
+}
+
+/* Reset some default styles */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  margin: 0;
+  padding: 4px 8px;
+  list-style: none;
+  display: flex;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+
+}
+
+.navbar .navbar-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+
+.follow-us-icon-container1 {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav li a i {
+  font-size: 24px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+
+.navbar-nav li a i:hover {
+  color: blue;
+}
+
+.follow-us-icon-container1 a {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  text-align: center;
+  color: #333;
+  transition: color 0.3s;
+  padding: 5px;
+}
+
+
+.follow-us-icon-container1 a:hover {
+  /* color: blue;  */
+  background-color: blue;
+}
+
+.follow-us-icon-container2 {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.068);
+}
+
+
+
+
+
+
+/*  sideBar */
+
+.sideBar {
+  height: 90vh;
+  width: 250px;
+}
+
+.bg-sidebar {
+  background-color: lightgray;
+}
+
+.sideBar ul li {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: underline;
+
+}
+
+.sideBar ul li:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* .contentCard {
+  height: 90vh;
+  overflow-y: scroll;
+} */
+/* 
+
+
+/* Style the like icon */
+.like-icon {
+  cursor: pointer;
+}
+
+.liked {
+  color: blue;
+}
+
+
+.likeButton {
+  border: none;
+  padding: 2px 4px;
+  background-color: transparent;
+
+}
+
+.myCard {
+  width: 33rem;
+}
+
+@media (max-width:576px) {
+  .myCard {
+    width: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .post-img {
+    /* height: 250px; */
+    width: 18rem;
+  }
+}
