@@ -154,19 +154,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode($response);
         exit;
     }
+
     // On success.
-    // Connect DB.
-    $pdo = getPDO();
-
-    // Check the connection.
-    if (!$pdo) {
-        $response["status"] = false;
-        $response["message"] = "Database is not connected, please try again !";
-        echo json_encode($response);
-        exit;
-    }
-
-    // On successful connection.
     $query = "SELECT id 
              FROM users_master 
              WHERE email = :email_id or phone = :phone_no";

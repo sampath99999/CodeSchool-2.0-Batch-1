@@ -1,3 +1,10 @@
+$(document).ready(function () {
+    let userToken = window.localStorage.getItem("token");
+    if (userToken) {
+        window.location.replace("./index.html");
+    }
+});
+
 // Validate Name.
 function validateUserName(name, feedback){
     // On Key Down Remove Invalid Class.
@@ -186,7 +193,7 @@ $('#registerUser').on("submit", function (event) {
                 }
             },
             error: function(error){
-// 
+                console.log(error);
             }
         })
     }

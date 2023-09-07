@@ -152,10 +152,16 @@ $('#addProduct').on("submit", function (event) {
                     $("#serverMessage").removeClass("d-none bg-success border-success text-success");
                     $("#serverMessage").addClass("bg-danger border-danger text-danger");
                     $("#serverMessage").text(jsonData["message"]);
+                    setTimeout(()=>{
+                        location.reload();
+                    }, 2000);
                 } else {
                     $("#serverMessage").removeClass("d-none bg-success border-success text-success");
                     $("#serverMessage").addClass("bg-danger border-danger text-danger");
                     $("#serverMessage").text(jsonData["message"]);
+                    setTimeout(()=>{
+                        location.reload();
+                    }, 2000);
                 }
             },
             error: function (error) {
@@ -166,4 +172,44 @@ $('#addProduct').on("submit", function (event) {
         });
 
     }
+});
+
+$(document).ready(function () {  
+    let userToken = window.localStorage.getItem("token");
+    let user = window.localStorage.getItem("name");
+    if (userToken) {
+        $("#userProfileView").html(user);
+    } 
+});
+
+// On User Logout.
+$("#removeCredentials").click( function () {
+
+    let userToken = window.localStorage.getItem("token");
+
+    $.ajax({
+        method: "POST",
+        url: "./api/logout.php",
+        data: {userToken},
+        success: function (data){
+            let jsonData = JSON.parse(data);
+            if(jsonData['status']){
+                window.localStorage.removeItem("token");
+                window.localStorage.removeItem("name");
+                window.localStorage.removeItem("user");
+                if(window.localStorage.getItem("token")){
+                    console.log("Unable to logout. Please try again.");
+                }
+                $("#removeCredentials").attr("href", "./login.html");
+                window.location.replace("./login.html");
+            } else {
+                console.log("Unable to logout!");
+            }
+        },
+        error: function (error){
+            console.log(error);
+        }
+    });
+
+   
 });

@@ -141,17 +141,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode($response);
         exit;
     }
-    // On success.
-    // Connect DB.
-    $pdo = getPDO();
-
-    // Check the connection.
-    if (!$pdo) {
-        $response["status"] = false;
-        $response["message"] = "Database is not connected, please try again !";
-        echo json_encode($response);
-        exit;
-    }
 
     // On successful connection.
     $search = "%$image%";

@@ -23,35 +23,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // On success.
-    // Connect DB.
-    $pdo = getPDO();
-
-    // Check the connection.
-    if (!$pdo) {
-        $response["status"] = false;
-        $response["message"] = "Database is not connected, please try again !";
-        echo json_encode($response);
-        exit;
-    }
-
-    // On successful connection.
+    // If user login by email.
     if(gettype($name) == gettype("string")){
-        $query = "SELECT (id,
+        $query = "SELECT id,
         name,
         email,
         phone,
         password, 
-        role_id)
+        role_id
         FROM users_master 
         WHERE email = :username AND password = :password ";
-    } else {
-        $query = "SELECT (id,
+    } else { 
+        //If user login by phone number.
+        $query = "SELECT id,
         name,
         email,
         phone,
         password, 
-        role_id)
+        role_id
         FROM users_master 
         WHERE phone = :username AND password = :password ";
     }
@@ -63,6 +52,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ]);
     $result = $statement->fetchAll(PDO::FETCH_ASSOC);
 
+    $roleID = $result[0]['role_id'];
+    $userID = $result[0]['id'];
+    $userName = $result[0]['name'];
+
     // Check whether user already exist in the DB.
     if (count($result) != 1) {
         $response["status"] = false;
@@ -70,11 +63,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode($response);
         exit;
     } else {
-        // On successful data insertion.
+        // On success.
+        // Generate token.
+        $TOKEN = hash('sha256', $password);
+
+        // Maintain user token and expiry.
+        $query = "INSERT INTO sessions(user_id, token, token_expiry) 
+                VALUES
+                (?, ?, NOW() + INTERVAL '23 hours 59 minutes 59 seconds')
+        ";
+        $statement = $pdo->prepare($query);
+        $statement->execute([
+            $userID,
+            $TOKEN
+        ]);
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+
+        // Error while inserting data.
+        if (!$result) {
+            $response["status"] = false;
+            $response["message"] = $statement->errorInfo();
+            echo json_encode($response);
+            exit;
+        }
+
+        // On successful insertion of user session.
         $response["status"] = true;
         $response["message"] = "Login Successful. You are redirected to home page in 3 seconds please wait.";
+        $response["data"] = [$TOKEN, $userName, $roleID];
         echo json_encode($response);
         exit;
+
     }
 }
 

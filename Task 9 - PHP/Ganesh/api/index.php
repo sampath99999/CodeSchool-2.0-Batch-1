@@ -3,22 +3,8 @@ require_once "./dbConfig.php";
 
 $response = ["status" => false, "message" => "", "data" => ""];
 
-if (isset($_GET['type'])) {
-    if (($_GET['type']) == 'getfeed') {
-
-        // DB Connection.
-        $pdo = getPDO();
-        // Error Handling for DB Connection.
-        if (!$pdo) {
-            $response["message"] = "Database Not Connected!";
-            echo json_encode($response);
-            exit;
-        }
-
-        // On successful DB connection.
-        // Get the products.
-        // repeated 0.
-        $query = "SELECT id,
+function getAllFeed($pdo){
+    $query = "SELECT id,
                 product_image,
                 name,
                 price,
@@ -26,9 +12,16 @@ if (isset($_GET['type'])) {
                 category_id
                 FROM products
             ";
-        $statment = $pdo->prepare($query);
-        $statment->execute();
-        $feed = $statment->fetchAll(PDO::FETCH_ASSOC);
+    $statment = $pdo->prepare($query);
+    $statment->execute();
+    $feed = $statment->fetchAll(PDO::FETCH_ASSOC);
+    return $feed;
+}
+
+if (isset($_GET['type'])) {
+    if (($_GET['type']) == 'getfeed') {
+
+        $feed = getAllFeed($pdo);
 
         // Get the product categories.
         $query = "SELECT id,
@@ -61,18 +54,10 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
         echo json_encode($response);
         exit;
     } else {
-        // DB Connection.
-        $pdo = getPDO();
-        // Error Handling for DB Connection.
-        if (!$pdo) {
-            $response["message"] = "Database Not Connected!";
-            echo json_encode($response);
-            exit;
-        }
 
         // ALL Categories feed.
         if($_POST["filter_option"] == -1){
-            // all category with input filter.s
+            // all category with input filter.
             if($_POST['search_keyword']){
                 $input = $_POST['search_keyword'];
                 $search = "%$input%";
@@ -101,17 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
                 exit;
             }
 
-            // repeated 1.
-            $query = "SELECT id,
-            product_image,
-            name,
-            price,
-            discount,
-            category_id
-            FROM products";
-            $statment = $pdo->prepare($query);
-            $statment->execute();
-            $feed = $statment->fetchAll(PDO::FETCH_ASSOC);
+            $feed = getAllFeed($pdo);
 
             if (empty($feed)) {
                 $response["message"] = "Error while loading products! Please try again.";
@@ -144,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
             $feed = $statment->fetchAll(PDO::FETCH_ASSOC);
 
             if (empty($feed)) {
-                $response["message"] = "<h3>No results for " . $input . ".</h3><p>Try checking your spelling or use more general terms</p> ";
+                $response["message"] = "<h3>No results for \"" . $input . "\".</h3><p>Try checking your spelling or use more general terms</p> ";
                 echo json_encode($response);
                 exit;
             }

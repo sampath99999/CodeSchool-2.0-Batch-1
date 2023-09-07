@@ -1,3 +1,10 @@
+$(document).ready(function () {
+    let userToken = window.localStorage.getItem("token");
+    if (userToken) {
+        window.location.replace("./index.html");
+    }
+});
+
 // Validate Password.
 function validatePassword(password, feedback){
     // On Key Down Remove Invalid Class.
@@ -25,7 +32,7 @@ $("#loginUser").on("submit", ()=>{
     let username = $("#userNameInput");
     let password = $("#userPasswordInput");
 
-    if((username.val()).match(/[0-9]/)){
+    if((username.val()).match(/^\d+$/)){
         validations.push(validateUserPhone(username, $("#userNameInputFeedback")));
     } else {
         validations.push(validateUserEmail(username, $("#userNameInputFeedback")));
@@ -50,7 +57,6 @@ $("#loginUser").on("submit", ()=>{
                 "password": password.val()
             },
             success: function(data){
-                console.log(data)
                 let jsonData = JSON.parse(data);
                 if(!(jsonData["status"])){
                     $("#serverMessage").removeClass("d-none bg-success border-success text-success");
@@ -60,13 +66,24 @@ $("#loginUser").on("submit", ()=>{
                     $("#serverMessage").removeClass("d-none bg-danger border-danger text-danger");
                     $("#serverMessage").addClass("bg-success border-success text-success");
                     $("#serverMessage").html(jsonData["message"]);
-                    setTimeout(()=>{
-                        location.replace("./index.html");
-                    }, 3000);
+                    // Set the local Storage.
+                    window.localStorage.setItem("token", jsonData['data'][0]);
+                    window.localStorage.setItem("name", jsonData['data'][1]);
+                    window.localStorage.setItem("user", jsonData['data'][2]);
+                    if(jsonData['data'][2] == 1){
+                        setTimeout(()=>{
+                            location.replace("./admin.html");
+                        }, 3000);
+                    } else {
+                        setTimeout(()=>{
+                            location.replace("./index.html");
+                        }, 3000);
+                    }
+                    
                 }
             },
             error: function(error){
-                
+                console.log(error);
             }
         });
 
