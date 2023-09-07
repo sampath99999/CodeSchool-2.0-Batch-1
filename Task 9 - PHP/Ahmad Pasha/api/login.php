@@ -36,6 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     $statment = $pdo->prepare($query);
     $statment->execute([$username, $password]);
     $user = $statment->fetchAll(PDO::FETCH_ASSOC);
+
     if (count($user) == 1) {
         $response["message"] = "LoggedIn Successfully!";
         $response["data"] = $user[0];

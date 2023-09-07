@@ -6,7 +6,6 @@ $(document).ready(function () {
     url: "../api/bookings.php?user_id=" + userId,
     success: function (response) {
       let data = JSON.parse(response).data;
-
       for (let i of data) {
         let ticket = `
                 <div class="col-12 col-lg-4 flex-grow-1 m-auto shadow-lg p-2 row align-items-center">

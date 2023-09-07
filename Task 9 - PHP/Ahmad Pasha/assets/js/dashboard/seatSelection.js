@@ -3,7 +3,6 @@ let movieId = localStorage.getItem("movie_id");
 let cinemaHallId = localStorage.getItem("cenimaHallId");
 let showId = localStorage.getItem("selectedShowId");
 let userId = localStorage.getItem("user_id");
-
 var ticketPrice;
 
 function viewFun() {

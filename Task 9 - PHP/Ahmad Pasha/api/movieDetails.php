@@ -3,7 +3,7 @@
 require_once "./dbConfig.php";
 
 if ($_SERVER["REQUEST_METHOD"] == 'GET') {
-    $response = ["status" => false, "message" => "", "data" => null, "todoData" => null];
+    $response = ["status" => false, "message" => "", "data" => null];
     if (!isset($_GET["id"])) {
         $response["message"] = "Movie Id is missing!";
         echo json_encode($response);

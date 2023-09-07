@@ -24,6 +24,9 @@ function details(e) {
 $("#logout").click(function () {
   localStorage.removeItem("user_id");
   localStorage.removeItem("user_type");
+  localStorage.removeItem("movie_id");
+  localStorage.removeItem("cenimaHallId");
+  localStorage.removeItem("selectedShowId");
   window.location.replace("./login.html");
 });
 

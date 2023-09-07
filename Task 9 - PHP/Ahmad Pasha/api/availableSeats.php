@@ -107,7 +107,5 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
     exit;
 }
 
-
-
 $response["message"] = "ONLY POST method Accepted";
 echo json_encode($response);

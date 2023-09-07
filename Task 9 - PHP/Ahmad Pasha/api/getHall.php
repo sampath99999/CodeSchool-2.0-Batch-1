@@ -16,8 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
 
     $query = "SELECT * FROM cinema_hall where id= ?";
 
-
-
     $statment = $pdo->prepare($query);
     $statment->execute([$cinemaHallId]);
     $user = $statment->fetchAll(PDO::FETCH_ASSOC);

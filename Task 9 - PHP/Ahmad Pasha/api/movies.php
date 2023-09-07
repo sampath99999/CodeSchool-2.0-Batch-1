@@ -20,16 +20,16 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
     exit;
 } else if ($_SERVER["REQUEST_METHOD"] == 'POST') {
 
-    $productData = $_POST;
+    $movieData = $_POST;
 
-    $movieName = strval($productData['movie_name']);
+    $movieName = strval($movieData['movie_name']);
     $image = $_FILES['image_url']['name'];
-    $description = strval($productData['description']);
-    $duration = strval($productData['duration']);
-    $language = strval($productData['language']);
-    $releaseDate = strval($productData['releaseDate']);
-    $genre = strval($productData['genre']);
-    $cinemaHallId = $productData['cinemaHallId'];
+    $description = strval($movieData['description']);
+    $duration = strval($movieData['duration']);
+    $language = strval($movieData['language']);
+    $releaseDate = strval($movieData['releaseDate']);
+    $genre = strval($movieData['genre']);
+    $cinemaHallId = $movieData['cinemaHallId'];
 
     $inputString = $cinemaHallId;
     $explodedArray = explode(",", $inputString);
@@ -37,38 +37,38 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
     // Convert string elements to integers if needed
     $integerArray = array_map('intval', $explodedArray);
 
-    // if (!isset($_POST["movieName"])) {
-    //     echo "movieName is required!";
-    //     exit;
-    // }
-    // if (!isset($_POST["description"])) {
-    //     echo "description is required!";
-    //     exit;
-    // }
-    // if (!isset($_POST["duration"])) {
-    //     echo "duration is required!";
-    //     exit;
-    // }
-    // if (!isset($_POST["language"])) {
-    //     echo "language is required!";
-    //     exit;
-    // }
-    // if (!isset($_POST["releaseDate"])) {
-    //     echo "releaseDate is required!";
-    //     exit;
-    // }
-    // if (!isset($_POST["genre"])) {
-    //     echo "genre is required!";
-    //     exit;
-    // }
-    // if (!isset($_POST["imageUrl"])) {
-    //     echo "imageUrl is required!";
-    //     exit;
-    // }
-    // if (!isset($_POST["cinemaHallId"])) {
-    //     echo "cinemaHallId is required!";
-    //     exit;
-    // }
+    if (!isset($movieName)) {
+        echo "movieName is required!";
+        exit;
+    }
+    if (!isset($description)) {
+        echo "description is required!";
+        exit;
+    }
+    if (!isset($duration)) {
+        echo "duration is required!";
+        exit;
+    }
+    if (!isset($language)) {
+        echo "language is required!";
+        exit;
+    }
+    if (!isset($releaseDate)) {
+        echo "releaseDate is required!";
+        exit;
+    }
+    if (!isset($genre)) {
+        echo "genre is required!";
+        exit;
+    }
+    if (!isset($image)) {
+        echo "imageUrl is required!";
+        exit;
+    }
+    if (!isset($cinemaHallId)) {
+        echo "cinemaHallId is required!";
+        exit;
+    }
 
 
 
@@ -101,8 +101,6 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
     // On successful storing image to path.
     if (move_uploaded_file($_FILES['image_url']['tmp_name'], $imageLocation)) {
 
-
-
         $query = "INSERT INTO movies (name,description, duration,language,release_date,genre,image_url) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         $statement = $pdo->prepare($query);
@@ -124,12 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'GET') {
         ]);
         $selectResult = $statement2->fetch(PDO::FETCH_ASSOC);
         $movieId = $selectResult['id'];
-
-
-
         foreach ($integerArray as $hall => $val) {
-
-
             $status = 0;
             $query3 = "INSERT INTO movie_theaters(movie_id,cinema_hall_id) VALUES (?, ?)";
 

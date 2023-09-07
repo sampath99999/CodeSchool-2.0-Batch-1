@@ -5,6 +5,7 @@ $("#logout").click(function () {
 });
 
 let userId = window.localStorage.getItem("user_id");
+
 let userType = window.localStorage.getItem("user_type");
 
 if (!userId) {
@@ -57,9 +58,9 @@ $(document).ready(function () {
       );
       return false;
     }
-    if (description.length < 5 || description.length > 105) {
+    if (description.length < 5 || description.length > 1000) {
       $("#descriptionErr").text(
-        "description should be at least 5 characters and at most 505 characters"
+        "description should be at least 5 characters and at most 1000 characters"
       );
       return false;
     }
@@ -90,15 +91,15 @@ $(document).ready(function () {
       return false;
     }
 
-    let productData = new FormData();
-    productData.append("movie_name", $("#movieName").val());
-    productData.append("image_url", $("#image")[0].files[0]);
-    productData.append("description", $("#description").val());
-    productData.append("duration", $("#duration").val());
-    productData.append("language", $("#language").val());
-    productData.append("releaseDate", $("#releaseDate").val());
-    productData.append("genre", $("#genre").val());
-    productData.append("cinemaHallId", $("#cinema_hall_list").val());
+    let movieData = new FormData();
+    movieData.append("movie_name", $("#movieName").val());
+    movieData.append("image_url", $("#image")[0].files[0]);
+    movieData.append("description", $("#description").val());
+    movieData.append("duration", $("#duration").val());
+    movieData.append("language", $("#language").val());
+    movieData.append("releaseDate", $("#releaseDate").val());
+    movieData.append("genre", $("#genre").val());
+    movieData.append("cinemaHallId", $("#cinema_hall_list").val());
 
     if (
       movieName !== "" &&
@@ -113,7 +114,7 @@ $(document).ready(function () {
       $.ajax({
         method: "POST",
         url: "../api/movies.php",
-        data: productData,
+        data: movieData,
         contentType: false,
         processData: false,
         success: function (data) {

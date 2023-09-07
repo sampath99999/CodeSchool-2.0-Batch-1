@@ -69,6 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
     }
 
     $userId = $_GET["user_id"];
+
     $pdo = getPDO();
     $query = "SELECT seats,start_time,cinema_hall.name as cName,movies.name as mName,cinema_hall.address,movies.image_url as img FROM bookings INNER join show on show.id=bookings.show_id
     inner JOIN cinema_hall on cinema_hall.id= bookings.cinema_hall_id

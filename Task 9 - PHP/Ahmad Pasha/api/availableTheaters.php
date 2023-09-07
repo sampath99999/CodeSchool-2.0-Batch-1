@@ -31,7 +31,7 @@ ORDER BY c.id;";
         exit;
     } else {
         $response["status"] = false;
-        $response["message"] = "no theaters found!";
+        $response["message"] = "No theaters found!";
         echo json_encode($response);
         exit;
     }
