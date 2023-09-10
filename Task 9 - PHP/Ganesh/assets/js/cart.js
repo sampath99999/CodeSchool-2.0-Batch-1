@@ -49,14 +49,27 @@ function loadPrice(cartPrice){
         
     for(let item in cartPrice){
 
-        let discountAmount = Math.round((cartPrice[item]['price'] * (cartPrice[item]['discount']/100)));
-        let saleprice = Math.round((cartPrice[item]['price']) - discountAmount);
+        // quantity = cartPrice[item]['quantity'];
 
-        productPrice += cartPrice[item]['price'];
+        let discountAmount = Math.round(
+            (
+                ( cartPrice[item]['quantity'] * cartPrice[item]['price'] ) * 
+                ( ( cartPrice[item]['quantity'] * cartPrice[item]['discount'] )  /
+                ( cartPrice[item]['quantity'] * 100 ) )
+            ));
+        let saleprice = Math.round(( cartPrice[item]['quantity'] * cartPrice[item]['price']) - discountAmount);
+
+        productPrice += (cartPrice[item]['quantity'] * cartPrice[item]['price']);
         productDiscount += discountAmount
         finalAmount += saleprice;
 
-        quantity++;
+        if(cartPrice[item]['quantity'] > 1){ 
+            let count = 1;
+            quantity += count * cartPrice[item]['quantity'];
+        } else {
+            quantity++;
+        }
+
     }
 
     $("#itemQuantity").html(quantity);
@@ -75,22 +88,51 @@ function loadPrice(cartPrice){
 
 }
 
+// function to update cart.
+function updateCart(prodID, quantity){
+
+    let token = window.localStorage.getItem("token");
+
+    $.ajax({
+        method: "POST",
+        url: "./api/updateCart.php",
+        data: {
+            token,
+            prodID,
+            quantity
+        },
+        success: function(data){
+            let jsonData = JSON.parse(data);
+            if(jsonData['status']){
+                getCartDetails();
+            }
+        },
+        error: function(error){
+            console.log(error);
+        }
+    });
+
+}
+
+
 // Function to increase product quantity.
-function increaseQuantity(){
-    let quantity = $("#productQuantity").val();
+function increaseQuantity(prodID){
+    let quantity = $(`#productQuantity${prodID}`).val();
     if(quantity > 0 && quantity < 10){
         quantity++;
     }
-    $("#productQuantity").val(quantity);
+    $(`#productQuantity${prodID}`).val(quantity);
+    updateCart(prodID, quantity);
     
 }
 // Function to decrease product quantity.
-function decreaseQuantity(){
-    let quantity = $("#productQuantity").val();
+function decreaseQuantity(prodID){
+    let quantity = $(`#productQuantity${prodID}`).val();
     if(quantity > 1 && quantity < 11){
         quantity--;
     } 
-    $("#productQuantity").val(quantity);
+    $(`#productQuantity${prodID}`).val(quantity);
+    updateCart(prodID, quantity);
 }
 
 // Function to load the cart details.
@@ -100,7 +142,13 @@ function loadCart(cartDetails){
 
     for(let item in cartDetails){
 
-        let saleprice = Math.round((cartDetails[item]['price']) - ((cartDetails[item]['price'] * (cartDetails[item]['discount']/100))));
+        let discountAmount = Math.round(
+        (
+            ( cartDetails[item]['quantity'] * cartDetails[item]['price'] ) * 
+            ( ( cartDetails[item]['quantity'] * cartDetails[item]['discount'] )  /
+            ( cartDetails[item]['quantity'] * 100 ) )
+        ));
+        let saleprice = Math.round(( cartDetails[item]['quantity'] * cartDetails[item]['price']) - discountAmount);
 
         let cartProducts = `
         <div class="card text-start p-2 pe-3 mb-3 mx-4 rounded border">
@@ -113,13 +161,13 @@ function loadCart(cartDetails){
                     <p class="title mb-1 fs-5">${cartDetails[item]['name']}</p>
                     <p class="text-danger original-price m-0 fs-5">&#8377;${saleprice.toLocaleString('en-IN')}</p>
                     <p class="text-secondary mb-4">
-                        <small> M.R.P &#8377;<s>${cartDetails[item]['price'].toLocaleString('en-IN')}</s> (${cartDetails[item]['discount']}% OFF)</small>
+                        <small> M.R.P &#8377;<s>${(cartDetails[item]['quantity'] * cartDetails[item]['price']).toLocaleString('en-IN')}</s> (${cartDetails[item]['discount']}% OFF)</small>
                     </p>
                     <div class="d-inline-flex">
-                        <button type="button" class="quantity-toggle" onclick="decreaseQuantity()">-</button>
-                        <input type="number" class="form-control form-control-sm" min="1" max="10" value="${cartDetails[item]['quantity']}" id="productQuantity" style="width:30px;
+                        <button type="button" class="quantity-toggle" onclick="decreaseQuantity(${cartDetails[item]['product_id']})">-</button>
+                        <input type="number" class="form-control form-control-sm" min="1" max="10" value="${cartDetails[item]['quantity']}" id="productQuantity${cartDetails[item]['product_id']}" style="width:30px;
                         height:20px;">
-                        <button type="button" class="quantity-toggle" onclick="increaseQuantity()">+</button>
+                        <button type="button" class="quantity-toggle" onclick="increaseQuantity(${cartDetails[item]['product_id']})">+</button>
                     </div>
                     <button class="btn credential-navigation-btn float-end" onclick="removeProductCart(${cartDetails[item]['product_id']})" value="${cartDetails[item]['product_id']}">Remove</button>
                 </div>
@@ -184,10 +232,12 @@ function placeOrder(){
             console.log(error);
         }
     });
+    
 }
 
-// LOAD SERVER ON DOCUMENT READY.
-$(document).ready(function () {
+
+// Function to get the cart details.
+function getCartDetails(){
 
     let token = window.localStorage.getItem("token");
 
@@ -244,5 +294,11 @@ $(document).ready(function () {
             console.log("Server Connection Error!" + error);
         }
     });
+}
+
+// LOAD SERVER ON DOCUMENT READY.
+$(document).ready(function () {
+
+    getCartDetails();
 
 });

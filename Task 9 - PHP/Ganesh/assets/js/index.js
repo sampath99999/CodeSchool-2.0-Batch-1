@@ -56,6 +56,8 @@ function addProductCart(prodID){
             } else {
                 // add alert that they are not allowed.
                 alert(jsonData['message']);
+                // if user is authenticated but the token is expired.
+                // then end session and navigate to login page.
                 if(jsonData['end_session']){
                     window.localStorage.removeItem("name");
                     window.localStorage.removeItem("user");
