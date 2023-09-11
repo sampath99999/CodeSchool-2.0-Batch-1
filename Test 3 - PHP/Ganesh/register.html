@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Rooms | Register</title>
+    <link rel="shortcut icon" href="./assets/images/chatroom-logo.png"  type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+
+<body>
+
+    <main class="form-signin bg-body-tertiary p-4 col-11 col-md-4 m-auto my-5">
+        <form id="registerUser">
+            <div class="d-flex justify-content-center">
+                <img src="./assets/images/chatroom-logo.png" alt="chatroom-logo" width="240" height="180" />
+            </div>
+            <h1 class="h3 mb-3 text-center fw-normal">Please Register here.</h1>
+            <div class="p-3 mb-2 bg-opacity-10 border rounded d-none" id="serverMessage"></div>
+            <!-- Name -->
+            <div class="mb-3">
+                <label for="userName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="userName" placeholder="First and last name">
+                <div id="userNameFeedback" class="invalid-feedback"></div>
+            </div>
+            <!-- User Profile Image -->
+            <div class="mb-3">
+                <label for="userImage" class="form-label">Upload Profile Picture</label>
+                <input type="file" class="form-control" name="image" id="userImage" >
+                <div id="userImageFeedback" class="invalid-feedback"></div>
+            </div>
+            <!-- Email -->
+            <div class="mb-3">
+                <label for="userEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="userEmail" placeholder="user@example.com">
+                <div id="userEmailFeedback" class="invalid-feedback"></div>
+            </div>
+            <!-- password -->
+            <div class="mb-3">
+                <label for="userPassword" class="form-label">Password</label>
+                <input type="password" class="form-control" id="userPassword">
+                <div id="userPasswordFeedback" class="invalid-feedback"></div>
+            </div>
+            <!-- Confirm Password -->
+            <div class="mb-3">
+                <label for="userConfirmPassword" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="userConfirmPassword">
+                <div id="userConfirmPasswordFeedback" class="invalid-feedback"></div>
+            </div>
+            <button class="btn w-100 py-2 btn-primary" type="submit">
+                Register
+            </button>
+            <p class="text-body-secondary my-2">Already a user <a href="./index.html">Login here.</a></p>
+        </form>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/js/register.js"></script>
+</body>
+
+</html>
