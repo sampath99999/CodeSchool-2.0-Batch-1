@@ -1,0 +1,62 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.left-image {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-image: url("https://imgix.bustle.com/uploads/getty/2021/4/21/0ba95818-7a4a-435c-8ae0-dd82d57445ef-getty-1184466000.jpg?w=800&h=1200&fit=crop&crop=focalpoint&auto=format%2Ccompress&fp-x=0.3776223776223776&fp-y=0.16614906832298137");
+}
+.bg-container {
+  background-color: black;
+  padding: 5px;
+}
+.right-container {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow-y: scroll;
+  background-color: white;
+  height: 100vh;
+}
+
+.plus-button {
+  background-color: blueviolet;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding-left: 9px;
+  border: none;
+  color: white;
+}
+.product {
+  width: 80%;
+}
+
+.anchor {
+  right: 0;
+  margin-top: -10vh;
+}
+.top-heading {
+  padding-left: 90px;
+}
+
+@media (max-height: 576px) {
+  .top-heading {
+    padding-left: 20px;
+  }
+  .plus-button {
+    background-color: blueviolet;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding-left: 9px;
+    border: none;
+    color: white;
+  }
+}
+
+
+
