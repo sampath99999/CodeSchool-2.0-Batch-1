@@ -1,0 +1,39 @@
+
+
+.logo{
+    height: 35vh;
+
+}
+.loginSection{
+    height:40vh;
+}
+.logoLetters
+{
+    color: green;
+    font-weight: 500;
+    font-size: 100px;
+    font-style: italic;
+}
+.logoLetter_i{
+    color: rgb(228, 224, 0);
+    font-weight: 500;
+    font-size: 100px;
+    font-style: italic;
+
+}
+.signUpButton{
+    border: none;
+    color: blue;
+    background-color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+.loginButton{
+    border: none;
+    background-color: white;
+    border-radius: 12px;
+    border: 3px solid yellow;
+    width: 80px;
+    height: 30px;   
+    font-weight: 500;
+}
