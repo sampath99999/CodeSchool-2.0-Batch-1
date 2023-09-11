@@ -1,0 +1,8 @@
+.register-page-container{
+    height: 100vh;
+    background:linear-gradient(green,white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
