@@ -1,0 +1,8 @@
+.post_card {
+  min-height: 350px;
+  max-height: 700px;
+}
+
+.card-img-top{
+    height: 350px;
+}
