@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Site</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container-fluid p-0" style="background-color: #efa38c">
+      <div class="d-flex justify-content-between p-3">
+        <div class="d-flex flex-column">
+          <div style="color: black"><h3>VINEETH BOSS</h3></div>
+          <div><small style="color: black">Digital Media Expert</small></div>
+        </div>
+        <div>
+          <button
+            class="border-0"
+            style="color: black; background-color: #efa38c"
+            onclick="login()"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+      <div class="row col-12 p-0 m-auto">
+        <div class="col-lg-6 p-5">
+          <div class="col-10">
+            <h1>Free Digital Marketing</h1>
+            <h1>Webinar.</h1>
+            <div>Unlock Marketing Secrets That Work</div>
+            <div class="mt-5">
+              <button
+                class="border-dark rounded-pill px-4 py-2"
+                style="background-color: #efa38c"
+              >
+                Reserve My Spot
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="container-fluid col-lg-6 mb-5">
+          <img class="w-100" src="./html-css-collage-concept-with-person.jpg" />
+        </div>
+      </div>
+    </div>
+    <div class="mt-5">
+      <div id="accordion" class="mb-5">
+        <div class="card col-10 col-md-6 m-auto">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                Show
+              </button>
+            </h5>
+          </div>
+          <div
+            id="collapseOne"
+            class="collapse show"
+            aria-labelledby="headingOne"
+            data-parent="#accordion"
+          >
+            <div class="card-body">
+              <!-- <form> -->
+              <div class="mb-3">
+                <label class="form-label">Name </label>
+                <input
+                  oninput="isValidate_name()"
+                  class="form-control"
+                  id="name"
+                  aria-describedby="emailHelp"
+                />
+                <small class="text-danger" id="name-error"></small>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label"
+                  >Email address</label
+                >
+                <input
+                  oninput="isValidEmail()"
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  aria-describedby="emailHelp"
+                />
+                <small class="text-danger" id="email-error"></small>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label"
+                  >Phone no</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  onkeypress="return isNumberKey(event)"
+                  id="phone_no"
+                  oninput="validatePhone()"
+                  maxlength="10"
+                />
+                <small class="text-danger" id="phone-error"></small>
+              </div>
+              <button type="submit" class="btn btn-primary" onclick="submit()">
+                Submit
+              </button>
+              <!-- </form> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row col-12">
+      <div class="col-lg-6 bg-dark">
+        <div class="col-6 m-auto text-white mt-5">
+          <h6>Sign up for all the latest tips, <br />trice and trends.</h6>
+        </div>
+        <div class="col-6 p-2 m-auto border text-white mt-5 mb-2">
+          Enter your email here
+        </div>
+        <div
+          class="col-3 m-auto border rounded-pill mb-5"
+          style="background-color: #efa38c"
+        >
+          <div class="text-center text-white py-2">send</div>
+        </div>
+      </div>
+      <div class="col-lg-6" style="background-color: #efa38c">
+        <div class="col-6 m-auto mt-5 text-center">
+          <h6>Yes I want to join the webinar,<br />sign me up!</h6>
+        </div>
+        <div class="col-3 m-auto text-center mt-5 mb-5">
+          <button
+            class="border-dark rounded-pill py-1 px-3"
+            style="background-color: #efa38c"
+          >
+            Reserve my spot
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./../assets/index.js"></script>
+  </body>
+</html>

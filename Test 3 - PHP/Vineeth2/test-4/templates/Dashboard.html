@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Site</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div>
+      <!-- header -->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <div class="col-4 m-auto text-center">
+            <a class="navbar-brand" href="./index.html">Digital Logo</a>
+          </div>
+          <span class="navbar-text d-flex gap-2">
+            <div>
+              <i class="bi fs-2 bi-person-circle"></i>
+            </div>
+            <div>
+              <div class="mt-2">
+                <div id="user_name"></div>
+              </div>
+            </div>
+            <div>
+              <button class="border bg-body-tertiary mt-2" onclick="logout()">
+                Logout
+              </button>
+            </div>
+          </span>
+        </div>
+      </nav>
+    </div>
+    <div class="row col-12">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-10 mt-5 mb-5">
+        <div class="col-lg-3 p-5 border text-center">
+          <h5 class="">Total subscribers</h5>
+          <span id="count" class="mt-2 p-2 rounded-circle bg-light">15</span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-6 bg-body-secondary p-3 text-center m-auto"
+      onclick="get_details()"
+    >
+      Show emails
+    </div>
+    <div class="col-lg-6 border m-auto">
+      <div id="show-details"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./../assets/Dashboard.js"></script>
+  </body>
+</html>
