@@ -1,0 +1,65 @@
+body{
+    background-image: url(https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?ixid=M3wxMjA3fDB8MXxzZWFyY2h8MTV8fGJhY2tncm91bmQlMjBpbWFnZXxlbnwwfHx8fDE2OTQ1MzM5NjN8MA&ixlib=rb-4.0.3) ;
+}
+
+.newsLetter {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	width: 100vw;
+	z-index: 50;
+}
+
+
+.newsLetterBody{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 400px;
+	opacity: 1;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.RowDialogBody > div:not(.confirm-body) {
+	padding: 8px 10px;
+}
+
+.confirm-header {
+	width: 100%;
+	border-radius: 4px 4px 0 0;
+	font-size: 13pt;
+	font-weight: bold;
+	margin: 0;
+}
+
+.row-dialog-hdr-success {
+	border-top: 4px solid #5cb85c;
+	border-bottom: 1px solid transparent;
+}
+
+.row-dialog-hdr-info {
+	border-top: 4px solid #5bc0de;
+	border-bottom: 1px solid transparent;
+}
+
+.confirm-body {
+	border-top: 1px solid #ccc;
+	padding:20px 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.confirm-btn-panel {
+	width: 100%;
+}
+.row-dialog-btn {
+	cursor: pointer;
+}
+
+.btn-naked {
+	background-color: transparent;
+}
