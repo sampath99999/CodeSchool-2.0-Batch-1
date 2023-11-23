@@ -1,0 +1,14 @@
+myApp.controller('SeeController',function($scope,$http,$rootScope){
+    $http.get($rootScope.server_url+'get_data')
+    .then(function(response){
+        console.log(response.data)
+        $scope.data=response.data
+    })
+    $scope.order=(id)=>{
+        console.log(id)
+        $http.post($rootScope.server_url+'order',{upload_id:id})
+        .then(function(response){
+            console.log(response.data)
+        })
+    }
+})
