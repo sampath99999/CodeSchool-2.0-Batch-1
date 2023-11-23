@@ -1,0 +1,116 @@
+.main-bg-container {
+  background-color: #bdc1c6;
+}
+
+.register-button {
+  background-color: #ff5050;
+  color: white !important;
+  font-size: 14px;
+  line-height: 1.4;
+  padding: 8px 18px !important;
+  border-radius: 20px;
+  height: auto;
+  margin-top: 0;
+  border: none;
+  white-space: nowrap !important;
+}
+
+.text-container {
+  color: white;
+}
+
+.card1 {
+  height: 300px;
+}
+
+
+
+
+
+.button1 {
+  cursor: pointer;
+  border: 0;
+  border-radius: 4px;
+  font-weight: 600;
+  margin: 0 10px;
+  width: 200px;
+  padding: 10px 0;
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.2);
+  transition: 0.4s;
+}
+
+.reg {
+  color: white;
+  background-color: #6855e0;
+}
+
+.log {
+  color: rgb(104, 85, 224);
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid #6855e0;
+}
+
+.button1:hover {
+  color: white;
+
+  box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+  background-color: rgba(104, 85, 224, 1);
+}
+
+.wrapper .sidebar ul li a {
+  display: block;
+  padding: 13px 30px;
+  border-bottom: 1px solid #10558d;
+  color: rgb(241, 237, 237);
+  font-size: 16px;
+  position: relative;
+}
+
+.wrapper .sidebar ul li a .icon {
+  color: #dee4ec;
+  width: 30px;
+  display: inline-block;
+}
+
+/*  */
+.search-container {
+  padding: 4px;
+  border: 1px solid #888c8c;
+
+
+
+}
+
+.search {
+  border: none;
+  outline: none;
+}
+
+.listRight {
+  left: auto !important;
+  right: 0 !important;
+}
+
+.img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+.carousel .carousel-item {
+  max-height: 300px;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  max-height: 550px;
+}
+
+.login-container {
+  margin-left: 270px;
+}
+
+.register-container {
+  margin-left: 310px;
+}

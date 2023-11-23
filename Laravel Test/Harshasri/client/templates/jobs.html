@@ -1,0 +1,209 @@
+<header1></header1>
+<div class="d-flex flex-column justify-content-center align-items-center mt-2">
+
+
+    <button type="button" class="btn btn-primary mb-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <i class="fa fa-user-plus" aria-hidden="true"></i> Create New Job
+    </button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Create New Job</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="Title" ng-model="title" />
+                        <label for="title">Title</label>
+
+                        <p class="text-danger">
+                            {{titleError}}</p>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="Description" ng-model="description" />
+                        <label for="description">Description</label>
+
+                        <p class="text-danger">
+                            {{descriptionError}}</p>
+                    </div>
+
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="Company" ng-model="company" />
+                        <label for="company">Company</label>
+                        <p class="text-danger">
+                            {{companyError}}</p>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="Location" ng-model="located" />
+                        <label for="located">Location</label>
+                        <p class="text-danger">
+                            {{locatedError}}</p>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="Salary" ng-model="salary" />
+                        <label for="salary">Salary</label>
+                        <p class="text-danger">
+                            {{salaryError}}</p>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="Skills" ng-model="skills" />
+                        <label for="skills">Skills</label>
+                        <p class="text-danger">
+                            {{skillsError}}</p>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" placeholder="Experience" ng-model="experience" />
+                        <label for="experience">Experience</label>
+                        <p class="text-danger">
+                            {{experienceError}}</p>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        ng-click="craeteJob()">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="container-fluid bg-white col-10">
+    <div class="row m-2">
+        <h4 style="text-align: center;">My jobs List</h4>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">TITLE</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Salary</th>
+
+                    <th scope="col">Skills</th>
+                    <th scope="col">Experience</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+
+
+                <tr ng-repeat="job in myJobs track by $index">
+                    <th scope="row">{{$index+1}}</th>
+                    <td>{{job.title}}</td>
+                    <td>{{job.description}}</td>
+                    <td>{{job.company}}</td>
+                    <td>{{job.located}}</td>
+                    <td>{{job.salary}}</td>
+
+                    <td>{{job.skills}}</td>
+                    <td>{{job.experience}}</td>
+
+                    <td>
+
+                        <!-- <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" ng-click="editProduct(item.id,item.name,item.description,item.category_id,item.price,item.size,item.color)" data-bs-target="#exampleModal1">
+                Edit
+              </button>
+      
+              <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel1">Update Product Information</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+      
+                    <div class="modal-body">
+      
+                      <div>
+      
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" placeholder="name" ng-model="updateName" 
+            >
+                  
+                          <label for="email">Name</label>
+                         
+                        
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" placeholder="Description" ng-model="updateDescription">
+                  
+                          <label for="updateDescription">Description</label>
+                         
+                        
+                        </div>
+                    
+      
+      
+      
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" placeholder="Category ID" ng-model="updateCategoryId" />
+                          <label for="updateCategoryId">Category ID</label>
+                      
+                        </div>
+                     
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" placeholder="Price" ng-model="updatePrice" />
+                          <label for="updatePrice">Price</label>
+                         
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" placeholder="Size" ng-model="updateSize" />
+                          <label for="updateSize">Size</label>
+                        
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" placeholder="Color" ng-model="updateColor" />
+                          <label for="updateColor">Color</label>
+                        
+                        </div>
+      
+      
+      
+                      </div>
+      
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        ng-click="updateProductData(updateName,updateDescription,updateCategoryId,updatePrice,updateSize,updateColor)">Update</button>
+                    </div>
+                </div>
+              </div>
+            </div> -->
+
+                        <!-- <button class="btn btn-outline-danger" ng-click="deleteProduct(job.id)">Delete</button> -->
+
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</div>

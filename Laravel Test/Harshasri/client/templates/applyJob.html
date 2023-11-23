@@ -1,0 +1,162 @@
+<header1></header1>
+<div class="container-fluid bg-white col-10">
+    <div class="row m-2">
+        <h4 style="text-align: center;">Posted jobs Lists</h4>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">TITLE</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Company</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Salary</th>
+                    <th scope="col">User Id</th>
+                    <th scope="col">Skills</th>
+                    <th scope="col">Experience</th>
+                    <th scope="col">Action</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+
+
+                <tr ng-repeat="job in postedJobs track by $index">
+                    <th scope="row">{{$index+1}}</th>
+                    <td>{{job.title}}</td>
+                    <td>{{job.description}}</td>
+                    <td>{{job.company}}</td>
+                    <td>{{job.located}}</td>
+                    <td>{{job.salary}}</td>
+                    <td>{{job.posted_by_user_id}}</td>
+                    <td>{{job.skills}}</td>
+                    <td>{{job.experience}}</td>
+
+                    <td>
+                        <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                            ng-click="applyJob(job.id)" data-bs-target="#exampleModal1">
+                            Apply
+                        </button>
+                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel1">Apply for Job</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+
+                                        <div>
+
+                                            <div class="form-floating mb-3">
+                                                <input type="text" class="form-control" placeholder="Job Id"
+                                                    ng-model="jobId">
+
+                                                <label for="jobId">Job Id</label>
+
+
+                                            </div>
+
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                                            ng-click="applyForJob(jobId)">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" ng-click="editProduct(item.id,item.name,item.description,item.category_id,item.price,item.size,item.color)" data-bs-target="#exampleModal1">
+                Edit
+              </button>
+      
+              <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel1">Update Product Information</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+      
+                    <div class="modal-body">
+      
+                      <div>
+      
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" placeholder="name" ng-model="updateName" 
+            >
+                  
+                          <label for="email">Name</label>
+                         
+                        
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" placeholder="Description" ng-model="updateDescription">
+                  
+                          <label for="updateDescription">Description</label>
+                         
+                        
+                        </div>
+                    
+      
+      
+      
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" placeholder="Category ID" ng-model="updateCategoryId" />
+                          <label for="updateCategoryId">Category ID</label>
+                      
+                        </div>
+                     
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" placeholder="Price" ng-model="updatePrice" />
+                          <label for="updatePrice">Price</label>
+                         
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" placeholder="Size" ng-model="updateSize" />
+                          <label for="updateSize">Size</label>
+                        
+                        </div>
+                        <div class="form-floating mb-3">
+                          <input type="text" class="form-control" placeholder="Color" ng-model="updateColor" />
+                          <label for="updateColor">Color</label>
+                        
+                        </div>
+      
+      
+      
+                      </div>
+      
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                        ng-click="updateProductData(updateName,updateDescription,updateCategoryId,updatePrice,updateSize,updateColor)">Update</button>
+                    </div>
+                </div>
+              </div>
+            </div>  -->
+
+                        <!-- <button class="btn btn-outline-danger" ng-click="deleteProduct(job.id)">Delete</button> -->
+
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</div>
