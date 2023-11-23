@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.1.0/angular-ui-router.min.js"
+    integrity="sha512-BWLZUPMCCZGKazkRadkF9YXKQcVv1uAsyfvVx7T6pojT72iTrD6wegUBpaF8H3dCpLOeMDeXu+W58qgqZ0iwvA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="./assests/styles/styles.css">
+</head>
+<body ng-controller="loginAndRegistrationController">
+  <nav class="navbar navbar-expand-lg" style="background-color: #00475F !important;">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">BookEventz</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        </ul>
+        <div class="d-flex" role="search">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Register
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="row">
+    <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center mt-5 pt-3">
+      <img ng-src="https://media.bookeventz.com/html/bookeventz.com/asset/images/bzMainLogo.svg" alt="" width="80%">
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="loginDivison row col-8 mt-5 m-auto">
+        <p class="text-center mt-5" style="font-size: 35px;">Login</p>
+        <div class="form-floating mb-3">
+          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+            ng-model="userEmail">
+          <label for="floatingInput">Email</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+            ng-model="userPassword">
+          <label for="floatingPassword">Password</label>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary mt-3" ng-click="login()">login</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="form-text text-bg-danger">{{errorMessage}}</p>
+          <label for="" class="form-label">Name: <span class="text-danger">*</span></label>
+          <input type="text" class="form-control" ng-model="name">
+          <label for="" class="form-label">email:<span class="text-danger">*</span></label>
+          <input type="text" name="" id="" ng-model="email" class="form-control">
+          <label for="" class="form-label">Password:<span class="text-danger">*</span></label>
+          <input type="password" class="form-control" ng-model="password">
+          <div class="loaderContainer" ng-class="{'d-none':loader}">
+            <loader></loader>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" ng-click="register()">Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="loginDivison">
+    <div class="loaderContainer" ng-class="{'d-none':loader}">
+      <loader></loader>
+    </div>
+  </div>
+
+  <p class="text-center mt-5 pt-5" style="color: #00475F;">
+    "Where moments become memories and dreams find a stage. Book your journey through time with us, as we turn events
+    into experiences and create a tapestry of memories just for you."</p>
+</body>
+<script src="./assests/app.js"></script>
+<script src="./assests/controllers/mainController.js"></script>
+<script src="./assests/controllers/loginAndRegistrationController.js"></script>
+<script src="../client/assests/controllers/homeController.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</html>
