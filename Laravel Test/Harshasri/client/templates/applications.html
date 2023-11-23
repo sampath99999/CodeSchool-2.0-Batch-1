@@ -1,0 +1,38 @@
+<header1></header1>
+<div class="container-fluid bg-white col-10">
+    <div class="row m-2">
+        <h4 style="text-align: center;">Applications</h4>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Job ID</th>
+                    <th scope="col">User ID</th>
+                    <th scope="col">Status</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+
+
+                <tr ng-repeat="job in applications track by $index">
+                    <th scope="row">{{$index+1}}</th>
+                    <td>{{job.jobid}}</td>
+                    <td>{{job.userid}}</td>
+                    <td>{{job.Status}}</td>
+
+
+                    <td>
+
+
+
+                    </td>
+
+                </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+</div>

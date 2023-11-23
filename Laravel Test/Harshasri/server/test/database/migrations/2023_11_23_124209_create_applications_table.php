@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('applications', function (Blueprint $table) {
+            $table->id();
+            $table->integer('jobid');
+            $table->integer('userid');
+            $table->string('Status')->default('Pending');
+            $table->foreign('jobid')->references('id')->on('jobs');
+            $table->foreign('userid')->references('id')->on('users');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('applications');
+    }
+};
