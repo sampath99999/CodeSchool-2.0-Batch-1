@@ -15,11 +15,20 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: './Templates/donate.html',
             controller: "DonateController"
         })
-        .state('see', {
-            url: '/see',
+        .state('adopt', {
+            url: '/adopt',
             templateUrl: './Templates/see.html',
             controller: "SeeController"
         })
-
+        .state('order', {
+            url: '/order',
+            templateUrl: './Templates/order.html',
+            controller: "OrderController"
+        })
+        .state('request', {
+            url: '/request',
+            templateUrl: './Templates/request.html',
+            controller: "RequestController"
+        })
     $urlRouterProvider.otherwise('/');
 })

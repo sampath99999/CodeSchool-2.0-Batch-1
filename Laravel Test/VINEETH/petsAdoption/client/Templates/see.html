@@ -1,7 +1,7 @@
-<div  >
-    <div class="row row-cols-2 row-cols-lg-4 mb-3 gap-5 d-flex justify-content-center" ng-repeat="dog in data">
-        <div class="card" style="width: 18rem;">
-            <img src={{dog.image_url}} class="card-img-top" alt="...">
+<div>
+    <div class="row row-cols-2 row-cols-lg-4 mb-3 gap-5 d-flex justify-content-center mt-5" >
+        <div class="card" style="width: 18rem;" ng-repeat="dog in data">
+            <img class="p-2 " src={{dog.image_url}} class="card-img-top" alt="..." height="250px">
             <div class="card-body">
                 <h2>{{dog.name}}</h2>
               <a  class="btn btn-warning text-white" ng-click="order(dog.id)">ORDER</a>

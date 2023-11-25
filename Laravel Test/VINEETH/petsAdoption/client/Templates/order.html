@@ -1,0 +1,28 @@
+<div class="col-12">
+    <div class="col-lg-10 m-auto mt-5" >
+        <table class="table border border-1 border-warning">
+            <thead>
+              <tr>
+                <th scope="col" class="text-center col-1">NO</th>
+                <th scope="col" class="text-center col-4">DOG</th>
+                <th scope="col">SELLER NAME</th>
+                <th scope="col" >STATUS</th>
+              </tr>
+            </thead>
+            <tbody ng-repeat="order in orders">
+              <tr>
+                <td class="text-center col-1">{{$index+1}}</td>
+                <td class="col-4 text-center" ><img class="col-4" src="{{order.image_url}}" width="100%" height="100px"></td>
+                <td>{{order.name}}</td>
+                <td>       
+                    <div ng-switch="order.status">
+                        <div ng-switch-when="0">PENDING</div>
+                        <div ng-switch-when="1">REJECTED</div>
+                        <div ng-switch-when="21">ACCEPT</div>
+                    </div>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

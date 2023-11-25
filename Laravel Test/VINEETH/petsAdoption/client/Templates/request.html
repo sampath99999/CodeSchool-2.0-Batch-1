@@ -1,0 +1,33 @@
+<div>
+    <div class="col-lg-10 m-auto mt-5" >
+        <table class="table border border-1 border-warning">
+            <thead>
+              <tr>
+                <th scope="col" class="text-center col-1">NO</th>
+                <th scope="col" class="text-center col-4">DOG</th>
+                <th scope="col" class="text-center">CUSTOMER NAME</th>
+                <th scope="col" class="text-center">STATUS</th>
+                <th scope="col" class="text-center">EDIT</th>
+              </tr>
+            </thead>
+            <tbody ng-repeat="request in requests">
+              <tr >
+                <td class="text-center col-1">{{$index+1}}</td>
+                <td class="col-4 text-center" ><img class="col-4" src="{{request.image_url}}" width="100%" height="100px"></td>
+                <td class="text-center">{{request.name}}</td>
+                <td class="text-center">       
+                    <div ng-switch="request.status">
+                        <div ng-switch-when="0">PENDING</div>
+                        <div ng-switch-when="1">REJECTED</div>
+                        <div ng-switch-when="21">ACCEPT</div>
+                    </div>
+                </td>
+                <td class="text-center">
+                  <div ng-if="request.status === 0" class="btn btn-warning text-white" ng-click="approve(request.upload_id, request.name)">APPROVE</div>
+                  <div ng-if="request.status !== 0">CHANGED</div>
+                </td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

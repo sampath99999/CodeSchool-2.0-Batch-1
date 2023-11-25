@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('upload_id');
             $table->integer('user_id');
+            $table->integer('seller_id');
             $table->integer('status');
             $table->foreign('upload_id')->references('id')->on('upload');
             $table->foreign('user_id')->references('id')->on('user');

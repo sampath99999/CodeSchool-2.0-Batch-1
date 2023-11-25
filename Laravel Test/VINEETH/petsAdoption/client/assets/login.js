@@ -1,7 +1,6 @@
-myApp.controller('LoginController',function($scope,$rootScope,$http){
+myApp.controller('LoginController',function($scope,$rootScope,$http,$state,$window){
     $scope.login_form=true
     $scope.registration_form=false
-
     $scope.show_registration=()=>{
         $scope.login_form=false
         $scope.registration_form=true
@@ -20,20 +19,20 @@ myApp.controller('LoginController',function($scope,$rootScope,$http){
             return
         }
         if($scope.login_email &&$scope.login_password ){
-
             $http.post($rootScope.server_url+'login',{email:$scope.login_email,password:$scope.login_password})
             .then(function(response){
                 console.log(response.data)
                 if(response.data.status){
                     localStorage.setItem('token',response.data.data.token)
-                    
+                    const home=$state.href('home')
+                    $window.location.replace(home) 
                 }
-            })
-
+            }).catch(function(error){
+                console.log(error)
+            });
         } 
     }
     $scope.register=()=>{
-
         if(! $scope.register_name){
             $scope.errors="INVALID NAME FORMAT";
             return;
@@ -48,13 +47,17 @@ myApp.controller('LoginController',function($scope,$rootScope,$http){
             $scope.errors="PASSWORD MUST BE AT LEAST 8 CHARACTERS LONG AND INCLUDE AT LEAST ONE UPPERCASE LETTER, ONE LOWERCASE LETTER, AND ONE NUMBER.";
             return;
         }
-
         if ($scope.register_name && $scope.register_email  &&  $scope.register_password && $scope.register_confirm_password) {
             $scope.errors=''
             $http.post($rootScope.server_url+'user',{name:$scope.register_name,email:$scope.register_email,password:$scope.register_password})
             .then(function(response){
                 console.log(response.data)
-            })
+                if(response.data.status){
+                    $scope.show_login()
+                }
+            }).catch(function(error){
+                console.log(error)
+            });
         }
 
     }

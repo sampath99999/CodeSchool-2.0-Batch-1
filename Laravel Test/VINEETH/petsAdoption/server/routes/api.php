@@ -3,7 +3,7 @@
 use App\Http\Controllers\SellerController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserController;
-
+use App\Models\Upload;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +21,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::POST('/user',[UserController::class,'user']);
 Route::POST('/login',[UserController::class,'Login']);
-Route::GET('/get_data',[UploadController::class,'getData']);
-Route::POST('/uploads',[UploadController::class,'upload'])->middleware('auth');
-Route::POST('/order',[SellerController::class,'sell']);
+Route::get('/get_data', function () {
+    $data = Upload::all();
+    return response()->json(['status' => true, 'data' => $data]);
+});
+Route::group(["middleware" => ["auth"]], function(){
+    Route::POST('/uploads', [UploadController::class, 'upload']);
+    Route::POST('/order', [SellerController::class, 'postOrder']);
+    Route::GET('/get_order',[SellerController::class,'getOrders']);
+    Route::GET('/get_request',[SellerController::class,'getRequests']);
+    ROUTE::POST('/status_update',[SellerController::class,'statusUpdate']);
+});

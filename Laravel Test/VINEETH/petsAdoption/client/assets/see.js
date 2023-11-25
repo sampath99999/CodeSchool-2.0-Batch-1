@@ -1,14 +1,17 @@
 myApp.controller('SeeController',function($scope,$http,$rootScope){
+
+
     $http.get($rootScope.server_url+'get_data')
     .then(function(response){
         console.log(response.data)
-        $scope.data=response.data
-    })
-    $scope.order=(id)=>{
-        console.log(id)
-        $http.post($rootScope.server_url+'order',{upload_id:id})
-        .then(function(response){
+        if(response.data.status){
+            $scope.data=response.data.data
+        }
+        else{
             console.log(response.data)
-        })
-    }
+        } 
+    }).catch(function(error){
+        console.log(error)
+    });
+
 })
