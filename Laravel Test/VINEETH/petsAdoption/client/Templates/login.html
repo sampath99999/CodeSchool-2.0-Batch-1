@@ -1,0 +1,51 @@
+<div class="col-12 d-lg-flex" style="min-height:100vh;">
+    <div class="col-lg-6">
+        <img src="../images/Screenshot 2023-11-23 at 12.46.34 PM.png" width="100%">
+    </div>
+    <div class="col-lg-6">
+         <div class="col-8 m-auto mt-lg-5 pt-lg-5" ng-show="login_form"  >
+            <h4 class="mb-5 text-center text-warning">LOGIN FORM</h4>
+             <div class="form-floating mb-3">
+                <input type="text" ng-model="login_email" class="form-control border-warning shadow-none" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput ">Email address*</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" ng-model="login_password" class="form-control border-warning shadow-none" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword ">Password*</label>
+              </div>
+              <div><small class="text-danger mb-2" ng-bind="error"></small></div>
+              <div class="d-flex justify-content-between">
+                 <div class="col-4 p-2 text-center text-white rounded" ng-click="login()" type="button" style="background-color: #FCA909;">LOGIN</div>
+                 <div type="button" class="text-warning mt-2" ng-click="show_registration()">NEW USER</div>
+              </div>
+         </div>
+         <div class="col-8 m-auto mt-lg-5 pt-lg-5"  ng-show="registration_form" >
+            <h4 class="mb-5 text-center text-warning">REGISTRATION FORM</h4>
+            
+            <div class="form-floating mb-3">
+                <input type="text" ng-model="register_name" class="form-control border-warning shadow-none" placeholder="name@example.com">
+                <label for="floatingInput ">Name*</label>
+                
+              </div>
+             <div class="form-floating mb-3">
+                <input type="text" ng-model="register_email" class="form-control border-warning shadow-none"  placeholder="name@example.com">
+                <label for="floatingInput ">Email address*</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" ng-model="register_password" class="form-control border-warning shadow-none"  placeholder="Password">
+                <label for="floatingPassword ">Password*</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="password" ng-model="register_confirm_password" class="form-control border-warning shadow-none"  placeholder="ConfirmPassword">
+                <label for="floatingConfirmPassword ">Confirm Password*</label>
+              </div>
+              <small class="ms-1 text-danger" ng-bind="errors"></small>
+              <div class="d-flex justify-content-between">
+                <div class="col-4 p-2 text-center text-white rounded" ng-click="register()" type="button" style="background-color: #FCA909;">SIGN UP</div>
+                <div type="button" class="text-warning mt-2" ng-click="show_login()">ALREADY USER</div>
+             </div>
+         </div>
+        
+    </div>
+
+</div>
