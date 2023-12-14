@@ -1,0 +1,12 @@
+.registerBgContainer {
+    height: 100vh;
+    background-color: black;
+    background-size: cover;
+  }
+  
+  .registerHead {
+    -webkit-text-stroke-color: red;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width: 1px;
+    font-family: cursive;
+  }

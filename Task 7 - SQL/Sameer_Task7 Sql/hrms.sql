@@ -4,6 +4,25 @@ CREATE TABLE departments (
     departmentname VARCHAR(50),
     managerid INT
 );
+drop departments;
+
+CREATE TABLE managers(
+    managerid INT PRIMARY KEY Generated AlWAYS AS IDENTITY,
+    managername VARCHAR(50),
+    departmentname VARCHAR(50)
+);
+
+drop table managers;
+INSERT INTO managers (managername,departmentname)
+VALUES
+    ('Rahul sharma', 'sales'),
+    ('Rohit Yadav', 'marketing'),
+    ('Sameer Pradhan', 'it'),
+    ('Abhi Singh','Human Resources');
+
+INSERT INTO managers(managername,departmentname)
+VALUES
+('David Brown','Head Manager');
 
 -- Insert Departments
 INSERT INTO departments (departmentname, managerid)
@@ -23,12 +42,17 @@ CREATE TABLE employees (
     gender VARCHAR(10),
     address VARCHAR(150),
     departmentid INT,
+    managerid int,
     position VARCHAR(50),
     hiredate DATE,
     mobile VARCHAR(150),
     FOREIGN KEY (departmentid) REFERENCES departments(departmentid)
+    FOREIGN Key (managerid) REFERENCES managers(managerid)
 );
 
+ALTER TABLE employees
+ADD managerid int REFERENCES managers(managerid);
+;
 INSERT INTO Employees (firstname, lastname, dob, gender, address, departmentid, position, hiredate, mobile)
 VALUES 
 ('Sameer', 'Pradhan', '1995-09-12', 'Male','jamshedpur', 3, 'Sales Manager', '2023-01-15', '9570856322'),
@@ -41,7 +65,6 @@ VALUES
 ('Olivia', 'Miller', '1991-12-03', 'Female','Patna', 6, 'HR Manager', '2021-07-15', '4567890123'),
 ('Ethan', 'Wilson', '1993-06-25', 'Male','gaya', 3, 'Sales Associate', '2023-03-02', '3456789012'),
 ('Isabella', 'Taylor', '1994-10-12', 'Female','ctc', 4, 'Marketing Manager', '2022-11-18', '2345678901');
-
 ;
 
 
@@ -253,3 +276,37 @@ WHERE
     dp.Date IN ('2023-08-01', '2023-08-02', '2023-08-04')
 ORDER BY
     dp.Date;
+
+ SELECT managers.managername, departments.departmentname,employees.employeeid, employees.firstname, employees.lastname, employees.managerid
+ from managers
+ left join departments
+ on managers.managerid=departments.departmentid
+ left JOIN employees
+ on employees.departmentid=departments.departmentid;
+
+ select * from employees;
+
+ select * from managers;
+
+ INSERT INTO Employees (firstname, lastname, dob, gender, address, departmentid, position, hiredate, mobile,managerid)
+VALUES 
+('Rahul', 'sharma', '1995-09-12', 'Male','jamshedpur', 3, 'Sales Manager', '2023-01-15', '9570856322',5),
+('Rohit','Yadav','1997-05-22','Male','ranchi',5,'Marketing manager','2023-06-10','7978626945',5),
+('sameer', 'Pradhan', '1988-11-10', 'Male','bbsr', 6, 'It Manager', '2018-08-01', '8239456454',5),
+('Abhi', 'singh', '1992-04-05', 'Male','mumbai', 5, 'HR manager', '2022-02-20', '4561237891',5),
+('David', 'Brown', '1987-09-18', 'Male', 'Delhi', 3, 'Head Manager', '2023-04-12', '7890123456',5)
+;
+
+SELECT managers.managername, departments.departmentname,employees.employeeid, employees.firstname, employees.lastname, employees.managerid
+ from managers
+ left join departments
+ on managers.managerid=departments.departmentid
+ left JOIN employees
+ on employees.departmentid=departments.departmentid ;
+
+DELETE FROM employees WHERE managerid=;
+
+ select employeeid,firstname,lastname,departmentid,position, managers.managername
+ from employees
+ LEFT JOIN managers
+ on employees.managerid=managers.managerid;

@@ -1,0 +1,12 @@
+.loginBgContainer {
+    height: 100vh;
+    background-color: black;
+    background-size: cover;
+  }
+  
+  .loginHead {
+    -webkit-text-stroke-color: red;
+    -webkit-text-fill-color: red;
+    -webkit-text-stroke-width: 1px;
+    font-family: cursive;
+  }
