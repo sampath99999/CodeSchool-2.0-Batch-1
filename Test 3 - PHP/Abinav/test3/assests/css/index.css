@@ -1,0 +1,44 @@
+.logoLetters {
+  color: green;
+  font-weight: 700;
+  font-size: 40px;
+  font-style: italic;
+}
+.logoLetter_i {
+  color: rgb(228, 224, 0);
+  font-weight: 700;
+  font-size: 40px;
+  font-style: italic;
+}
+.far {
+  background-color: aliceblue !important;
+}
+.userName {
+  font-weight: 500;
+  color: rgb(84, 84, 84);
+}
+.logoutOption {
+  color: green !important;
+  text-align: center;
+}
+
+.menuBar {
+  border-right: 2px solid rgb(232, 232, 232);
+  height: 100vh;
+  padding-top: 40px;
+  padding-right: 0%;
+}
+
+.menuBar li {
+  list-style: none;
+  padding-left: 40px;
+  padding-top: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(88, 88, 88);
+}
+.menuBar li:hover {
+  border-right: 3px solid rgb(0, 83, 0);
+  background-color: rgb(242, 249, 255);
+  color: rgb(0, 83, 0);
+}

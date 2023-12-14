@@ -1,0 +1,226 @@
+body {
+  transition: margin-left 5s;
+}
+
+.offcanvas-show {
+  margin-left: 220px;
+  /* Width of the offcanvas sidebar */
+}
+
+.offcanvas {
+  width: 250px !important;
+  background-color: #1b364d !important;
+
+  /* Set your desired width here */
+}
+header {
+  background-image: url(https://d20exy1ygbh3sg.cloudfront.net/fms/images/newUi/header-bg.jpg);
+  height: 70px;
+  display: flex;
+
+  align-items: center !important;
+  padding-left: 10px;
+  width: 100%;
+}
+.bi-justify {
+  color: white !important;
+  font-size: 20px !important;
+}
+
+.offcanvas-body {
+  width: 100% !important;
+}
+.offcanvasHeading {
+  color: white;
+  padding-left: 28%;
+  font-weight: 600;
+  font-size: 30px;
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+.offcanvasmenu {
+  color: white;
+  font-size: 14px;
+}
+.offcanvasmenu li {
+  padding-left: 5%;
+  margin-bottom: 3px;
+  font-weight: 300;
+  height: 30px;
+  padding-top: 2%;
+  align-items: center;
+}
+.offcanvasmenu li:hover {
+  background-color: rgb(241, 241, 238, 0.1);
+  border-left: 1px solid #f49b2e;
+}
+.offcanvasMenuHome {
+  background-color: rgb(241, 241, 238, 0.1);
+  border-left: 1px solid #f49b2e;
+}
+
+.modulesButton {
+  background-color: rgb(138, 138, 138, 0.1);
+  border: none;
+  color: white;
+  
+
+}
+.moduleDivison {
+    background-color: rgb(138, 138, 138, 0.4);
+    border: none;
+    color: white;
+    
+    border-radius: 4px;
+    font-weight: 400;
+    align-items: center;
+    
+  }
+  .dropdown{
+    width: auto !important;
+    padding-right: 23px !important;
+
+  }
+  .dropdown-menu{
+    background-color: white !important;
+    
+  }
+  .drop{
+    width: vh !important;
+  }
+.dropdown-toggle {
+  padding: 8px;
+  margin: 0px;
+  font-size: 18px !important;
+  color: white !important;
+}
+.userDivison {
+  background-color: rgb(138, 138, 138, 0.3) !important;
+  border: none;
+  color: white !important;
+
+  border-radius: 4px;
+  font-weight: 400;
+  width: 180px;
+  padding: 0px !important;
+  
+  
+
+  
+}
+
+.userButton {
+  border: none !important;
+  background-color: rgb(138, 138, 138, 0.1);
+ 
+  align-items: center;
+  
+  color: white;
+  font-weight: 300;
+}
+.userId {
+  font-size: 12px;
+  color: white;
+  font-weight: 300;
+  padding-top: 0px !important;
+}
+.userName {
+  font-weight: 300;
+  font-size: 12px;
+}
+.logoutDivison{
+    background-color: rgb(138, 138, 138, 0.3);
+    margin: 13px;
+    width: 90px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    
+
+}
+.chequeText{
+  font-weight: 600;
+  color: #136DC1;
+}
+.mainPoints{
+  background-color: #FCF8E3;
+  margin: 15px;
+  padding-bottom: 10px;
+}
+.mainPoints ul li{
+  margin-left: 10px;
+}
+.mainPoints ul li::marker{
+  color: rgb(175, 100, 72) !important;
+
+}
+form{
+  padding-left: 15px;
+}
+.form-check-label{
+  font-size: 15px !important;
+}
+.files{
+  background-color: #FCF8E3;
+  padding-top: 5px;
+}
+#files .files {
+  margin-bottom: 10px !important;
+}
+.filesClass{
+ border: none;
+ background-color: #FCF8E3;
+ margin-left: auto;
+  
+}
+
+@media (min-width: 992px) {
+  .moveLeft {
+    /* transition: transform 0.3s ease; Adjust the duration and easing as needed */ 
+    margin-left: 16%;
+    transition: margin-left 1s ease;
+  
+  }
+  .moveRight {
+    /* transition: transform 0.3s ease; */
+    transition: margin-left 1s ease;
+  }
+
+  .offcanvas {
+    transition: transform 1s !important;
+  }
+}
+
+.bi-person-circle{
+  padding-top: 100px !important;
+  margin-top: 50% !important;
+}
+.bi-person{
+  color: green !important;
+}
+.bi-gear{
+  color: green !important;
+}
+.dropdown-menu .bi-box-arrow-in-right{
+  color: green !important;
+}
+.userDivisonmv{
+  margin-left: 80px !important;
+  background-color: rgb(240, 240, 240,0.2);
+  margin-right: 10px !important;
+  width: 50px !important;
+  height: 80% !important;
+  align-items: center !important;
+  padding: 8px !important;
+  font-size: 10px !important;
+}
+@media (max-width: 767px) {
+  .modulesButton {
+    padding: 12px !important;
+  }
+}
+.radioButtons .col-3 .col-4{
+  padding: 0px !important;
+  margin: 0px !important;
+
+}
