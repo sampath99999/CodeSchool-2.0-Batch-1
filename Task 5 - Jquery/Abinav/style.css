@@ -1,0 +1,178 @@
+header{
+    background-color:#DA463A;
+}
+.collapse li{
+    padding-left: 0px !important;
+    margin: 0px !important;
+    border-left: 1px solid rgb(237, 237, 237);
+    border-right: 1px solid rgb(237, 237, 237);
+
+}
+.navbar-nav .dropdown:hover .dropdown-menu {
+  display: block;
+ }
+.fa-chevron-down{
+    font-size: 12px !important;
+}
+.headerlist ul li{
+    padding-left: 10px !important;
+    padding-top:5px ;
+}
+
+@media (min-width: 992px) {
+    .navbar{
+        border: 1px solid rgb(255, 254, 254) !important;
+        padding: 0px !important;
+        margin: 0px !important;
+        margin-left: 17% !important;
+    }
+
+  }
+  /* .col-4{
+    padding: 0px !important;
+    margin: 0px !important;
+    height: 400px !important;
+    width: 450px !important;
+  } */
+  .imagecontainer{
+    margin-left: 20px !important;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15%;
+    padding-bottom: 15%;
+  }
+.button1{
+    border: 1px solid rgb(115, 137, 236);
+    background-color: #607EC7;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 15px;
+    font-weight: 600;
+} 
+.button2{
+    border: 1px solid rgb(115, 137, 236);
+    background-color:#CA85CA;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 15px;
+    font-weight: 600;
+} 
+.button3{
+    border: 1px solid rgb(115, 137, 236);
+    background-color: #61C436;
+    color: white;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 15px;
+    font-weight: 600;
+} 
+.headings{
+    color: white;
+    font-weight: 600;
+}
+.dateClass{
+    color: white;
+}
+.card-title{
+    font-size: 15px !important;
+    text-align: center;
+}
+.card-title2{
+    font-size: 10px !important;
+}
+.fashiontitle{
+    color: rgb(232, 67, 67);
+    padding-left: 40%;
+}
+.fashiontitle2{
+    color: rgb(232, 67, 67);
+    padding-left: 0%;
+}
+.cardDate{
+     text-align: center;
+}
+.card-text{
+    font-size: 13px;
+    text-align: center !important;
+    justify-content: center !important;
+   
+}
+.miniHeader{
+    font-size: 16px !important;
+    font-weight: 700;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+.cardMainImage{
+    height: 250px !important;
+}
+.card-img-top{
+    height: 135px !important;
+    width: 290px !important;
+    padding-left: 40px;
+}
+#secondmaincontainer{
+    height: 600px !important;
+    display: flex;
+}
+#cardsection
+{
+    height: 600px !important;
+}
+.custom-card {
+    height: 340px !important; /* !important to ensure your rule takes precedence */
+  }
+
+  .img{
+    
+    width: 100% !important;
+  }
+.card-text{
+    text-align: left !important;
+}
+.minicard{
+    height: 100px !important;
+    background-color:white !important;
+    padding-top: 20px !important;
+    margin-bottom: 5px !important;
+    border: 1px solid rgb(192, 192, 192) !important;
+}
+.maintext{
+    text-align: center !important;
+}
+.loadmore{
+    background-color: red;
+    width: 110px;
+    border: none;
+    margin-left:35%;
+    color: white;
+    padding: 5px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+.footercards{
+    background-color: #2e2e2e !important;
+    border: none !important;
+}
+#lasttag{
+    background-color: #373941 !important;
+}
+.navbar-brand{
+    padding-right: 30% !important;
+    color:black !important;
+    font-size: 30px;
+    font-weight: 600;
+}
+/* #cardsection{
+    white-space: normal;
+}
+#cardsection2{
+    white-space: normal;
+}
+#cardsection3{
+    white-space: normal;
+} */
