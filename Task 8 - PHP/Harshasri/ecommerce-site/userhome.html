@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Userhome</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://kit.fontawesome.com/0e1ba3dc39.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="navbar bg-dark d-flex">
+      <div>
+        <p class="ms-3 pt-2 text-white">
+          <i class="fa-solid fa-cart-shopping"></i> Elessi.
+        </p>
+      </div>
+
+      <ul class="nav ms-2">
+        <li class="nav-item ms-2" id="allProducts">
+          <a class="nav-link text-white" href="#">Shop</a>
+        </li>
+        <li class="nav-item ms-2">
+          <a class="nav-link text-white" id="ordersList" href="viewCart.html"
+            >Cart</a
+          >
+        </li>
+      </ul>
+
+      <div class="logout d-flex mt-1" id="logout">
+        <p class="logoutText me-5 text-white">
+          LOG OUT <i class="fa-solid fa-right-from-bracket"></i>
+        </p>
+      </div>
+    </div>
+
+    <div class="results">
+      <div class="products-list m-3 text-center" id="itemsList"></div>
+      <div class="results">
+        <div class="products-list m-3" id="itemsList"></div>
+
+        <div class="container mt-5">
+          <div class="table-responsive">
+            <table class="table table-bordered border-dark text-black">
+              <thead>
+                <tr>
+                  <th>Select</th>
+                  <th>Product Id</th>
+                  <th>Product Name</th>
+                  <th>Price</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody id="tableContent"></tbody>
+            </table>
+          </div>
+          <a href="viewCart.html">
+            <button class="btn btn-primary" id="addToCartBtn">
+              Add to Cart
+            </button>
+          </a>
+        </div>
+
+        <div class="admin" id="welcomeMsg">
+          <div class="img mt-4 text-center">
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-login-img.png"
+              style="height: 500px; width: 700px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="./assets/js/userhome.js"></script>
+  </body>
+</html>
