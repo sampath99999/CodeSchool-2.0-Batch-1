@@ -1,0 +1,64 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control {
+  box-shadow: 0 0 5px #ccc;
+  background-color: #fafcfd;
+}
+
+.btn {
+  width: 100%;
+  background-image: linear-gradient(to bottom, lightgreen, lightblue);
+  justify-content: center;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container-login {
+  height: 450px;
+  width: 400px;
+  background-color: white;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.loginButton {
+  background-image: linear-gradient(to bottom, lightgreen, lightblue);
+}
+
+.signIn {
+  color: skyblue;
+  font-weight: 700;
+  text-decoration: none;
+}
+.signIn:hover {
+  text-decoration: underline;
+  color: green;
+}
+
+.logIn {
+  color: skyblue;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+}
+
+.logIn:hover {
+  text-decoration: underline;
+  color: green !important;
+}

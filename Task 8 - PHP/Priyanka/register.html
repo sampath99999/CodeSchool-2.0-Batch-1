@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="assests/css/style.css" />
+  </head>
+  <body>
+    <div class="main-container d-flex flex-column justify-content-center align-items-center" id="mainContainer">
+      <div class="bg-white rounded pe-5 ps-5 pt-3 pb-3 d-flex flex-column align-items-center">
+        <form id="registrationForm" onsubmit="return false" class="p-4">
+        <h3 class="text-dark">CREATE ACCOUNT</h3>
+        <br>
+
+        <!-- Name Field -->
+
+          <div class="col-12">
+            <label for="firstName" class="form-label">First Name*</label>
+            <input type="text" class="form-control" id="firstNameInput" name="firstName" placeholder="Enter First Name"/>
+            <span id="firstNameError" class="text-danger font-weight-bold"></span>
+          </div>
+           <br>
+          <div class="col-12">
+            <label for="lastName" class="form-label">Last Name*</label>
+            <input type="text" class="form-control" id="lastNameInput" name="lastName" placeholder="Enter last Name"/>
+            <span id="lastNameError" class="text-danger font-weight-bold"></span>
+          </div>
+       <br>
+
+        <!-- Email Field -->
+      
+          <div class="col-12">
+            <label for="Email" class="form-label">Email*</label>
+            <input type="Email" class="form-control" id="emailInput" name="email" placeholder="Enter Email" />
+            <span id="emailError" class="text-danger font-weight-bold"></span>
+          </div>
+          <br>
+        
+        <!-- Password -->
+       
+          <div class="col-12">
+            <label for="password" class="form-label">Password*</label>
+            <input type="password" class="form-control" id="passwordInput" name="password" placeholder="Enter Password"autocomplete="on"/>
+            <span id="passwordError" class="text-danger font-weight-bold"></span>
+          </div>
+          <br>
+          <div class="col-12">
+            <label for="confirmed-password" class="form-label">Confirmed password*</label>
+            <input type="password" class="form-control" id="confirmed-password" name="confirmed-password" placeholder="Confirm Password" autocomplete="on"/>
+            <span id="confirmedPasswordError" class="text-danger font-weight-bold"></span>
+          </div>
+          <br>
+
+          <!-- Button -->
+       
+        <button class="sign btn text-light mb-3" id="submitBtn"> SIGN IN </button>
+        <div class="">
+          <p class=""> Have already an account ?
+           <button class=" text-light mb-3" style="text-decoration: none; border: none;">
+            <a href="login.html" class="logIn">Login Here</a>
+          </button>
+          </p>
+        </div>
+        
+      </form>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="assests/js/register.js"></script>
+  </body>
+</html>

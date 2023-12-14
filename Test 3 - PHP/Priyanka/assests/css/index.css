@@ -1,0 +1,72 @@
+.search-box {
+  position: relative;
+  display: inline-block;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.form-control {
+  padding-right: 30px;
+}
+
+.navbar-nav .nav-item a.nav-link {
+  font-weight: 600;
+}
+
+.navbar-nav .nav-item a.nav-link:hover {
+  color: red;
+}
+
+.search-box {
+  border: none;
+}
+
+.search {
+  position: relative;
+  display: inline-block;
+  margin: 2px;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white;
+  background-color: red;
+  border-radius: 25%;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+i.fa-regular:hover {
+  color: red;
+  cursor: pointer;
+}
+
+i.fa-solid:hover {
+  color: red;
+  cursor: pointer;
+}
